@@ -61,7 +61,7 @@ Replaced value:
 ```sqf
 [0,0]
 ```
-File: [client\ClientData\ClientData.sqf at line 48](../../../Src/client/ClientData/ClientData.sqf#L48)
+File: [client\ClientData\ClientData.sqf at line 50](../../../Src/client/ClientData/ClientData.sqf#L50)
 ## printerr(code,text)
 
 Type: constant
@@ -74,7 +74,7 @@ Replaced value:
 ```sqf
 if (_code == code) exitWith {[text] call (getDisplay getVariable ["printError",{}])}
 ```
-File: [client\ClientData\ClientData.sqf at line 538](../../../Src/client/ClientData/ClientData.sqf#L538)
+File: [client\ClientData\ClientData.sqf at line 540](../../../Src/client/ClientData/ClientData.sqf#L540)
 ## cd_clientName
 
 Type: Variable
@@ -86,7 +86,7 @@ Initial value:
 ```sqf
 ""
 ```
-File: [client\ClientData\ClientData.sqf at line 44](../../../Src/client/ClientData/ClientData.sqf#L44)
+File: [client\ClientData\ClientData.sqf at line 46](../../../Src/client/ClientData/ClientData.sqf#L46)
 ## cd_charName
 
 Type: Variable
@@ -98,7 +98,7 @@ Initial value:
 ```sqf
 "Обитатель Сети"
 ```
-File: [client\ClientData\ClientData.sqf at line 46](../../../Src/client/ClientData/ClientData.sqf#L46)
+File: [client\ClientData\ClientData.sqf at line 48](../../../Src/client/ClientData/ClientData.sqf#L48)
 ## cd_skillNames
 
 Type: Variable
@@ -110,7 +110,7 @@ Initial value:
 ```sqf
 ["СЛ","ИН","ЛВ","ЗД","ВНС","ВОЛЯ","ВОС","ЖЗ"]
 ```
-File: [client\ClientData\ClientData.sqf at line 50](../../../Src/client/ClientData/ClientData.sqf#L50)
+File: [client\ClientData\ClientData.sqf at line 52](../../../Src/client/ClientData/ClientData.sqf#L52)
 ## cd_skills
 
 Type: Variable
@@ -122,7 +122,7 @@ Initial value:
 ```sqf
 [sk_nan,sk_nan,sk_nan,sk_nan,sk_nan,sk_nan,sk_nan,sk_nan] //массив со скиллами
 ```
-File: [client\ClientData\ClientData.sqf at line 52](../../../Src/client/ClientData/ClientData.sqf#L52)
+File: [client\ClientData\ClientData.sqf at line 54](../../../Src/client/ClientData/ClientData.sqf#L54)
 ## cd_stamina_cur
 
 Type: Variable
@@ -134,7 +134,7 @@ Initial value:
 ```sqf
 100
 ```
-File: [client\ClientData\ClientData.sqf at line 56](../../../Src/client/ClientData/ClientData.sqf#L56)
+File: [client\ClientData\ClientData.sqf at line 58](../../../Src/client/ClientData/ClientData.sqf#L58)
 ## cd_stamina_max
 
 Type: Variable
@@ -146,7 +146,7 @@ Initial value:
 ```sqf
 100
 ```
-File: [client\ClientData\ClientData.sqf at line 58](../../../Src/client/ClientData/ClientData.sqf#L58)
+File: [client\ClientData\ClientData.sqf at line 60](../../../Src/client/ClientData/ClientData.sqf#L60)
 ## cd_curSelection
 
 Type: Variable
@@ -158,7 +158,7 @@ Initial value:
 ```sqf
 TARGET_ZONE_TORSO
 ```
-File: [client\ClientData\ClientData.sqf at line 90](../../../Src/client/ClientData/ClientData.sqf#L90)
+File: [client\ClientData\ClientData.sqf at line 92](../../../Src/client/ClientData/ClientData.sqf#L92)
 ## cd_specialAction
 
 Type: Variable
@@ -170,7 +170,7 @@ Initial value:
 ```sqf
 SPECIAL_ACTION_NO
 ```
-File: [client\ClientData\ClientData.sqf at line 92](../../../Src/client/ClientData/ClientData.sqf#L92)
+File: [client\ClientData\ClientData.sqf at line 94](../../../Src/client/ClientData/ClientData.sqf#L94)
 ## cd_curDefType
 
 Type: Variable
@@ -182,7 +182,7 @@ Initial value:
 ```sqf
 DEF_TYPE_DODGE
 ```
-File: [client\ClientData\ClientData.sqf at line 96](../../../Src/client/ClientData/ClientData.sqf#L96)
+File: [client\ClientData\ClientData.sqf at line 98](../../../Src/client/ClientData/ClientData.sqf#L98)
 ## cd_curCombatStyle
 
 Type: Variable
@@ -194,7 +194,7 @@ Initial value:
 ```sqf
 COMBAT_STYLE_NO
 ```
-File: [client\ClientData\ClientData.sqf at line 98](../../../Src/client/ClientData/ClientData.sqf#L98)
+File: [client\ClientData\ClientData.sqf at line 100](../../../Src/client/ClientData/ClientData.sqf#L100)
 ## cd_curAttackType
 
 Type: Variable
@@ -206,7 +206,7 @@ Initial value:
 ```sqf
 ATTACK_TYPE_THRUST
 ```
-File: [client\ClientData\ClientData.sqf at line 100](../../../Src/client/ClientData/ClientData.sqf#L100)
+File: [client\ClientData\ClientData.sqf at line 102](../../../Src/client/ClientData/ClientData.sqf#L102)
 ## cd_activeHand
 
 Type: Variable
@@ -218,7 +218,7 @@ Initial value:
 ```sqf
 INV_HAND_L
 ```
-File: [client\ClientData\ClientData.sqf at line 102](../../../Src/client/ClientData/ClientData.sqf#L102)
+File: [client\ClientData\ClientData.sqf at line 104](../../../Src/client/ClientData/ClientData.sqf#L104)
 ## cd_lca_r
 
 Type: Variable
@@ -230,7 +230,7 @@ Initial value:
 ```sqf
 0
 ```
-File: [client\ClientData\ClientData.sqf at line 105](../../../Src/client/ClientData/ClientData.sqf#L105)
+File: [client\ClientData\ClientData.sqf at line 107](../../../Src/client/ClientData/ClientData.sqf#L107)
 ## cd_lca_l
 
 Type: Variable
@@ -242,7 +242,7 @@ Initial value:
 ```sqf
 0
 ```
-File: [client\ClientData\ClientData.sqf at line 107](../../../Src/client/ClientData/ClientData.sqf#L107)
+File: [client\ClientData\ClientData.sqf at line 109](../../../Src/client/ClientData/ClientData.sqf#L109)
 ## cd_internal_lastTPPos
 
 Type: Variable
@@ -254,7 +254,7 @@ Initial value:
 ```sqf
 vec3(0,0,0)
 ```
-File: [client\ClientData\ClientData.sqf at line 251](../../../Src/client/ClientData/ClientData.sqf#L251)
+File: [client\ClientData\ClientData.sqf at line 253](../../../Src/client/ClientData/ClientData.sqf#L253)
 ## cd_internal_lastTPDir
 
 Type: Variable
@@ -266,7 +266,7 @@ Initial value:
 ```sqf
 null
 ```
-File: [client\ClientData\ClientData.sqf at line 253](../../../Src/client/ClientData/ClientData.sqf#L253)
+File: [client\ClientData\ClientData.sqf at line 255](../../../Src/client/ClientData/ClientData.sqf#L255)
 ## cd_internal_tpHandle
 
 Type: Variable
@@ -278,7 +278,7 @@ Initial value:
 ```sqf
 -1
 ```
-File: [client\ClientData\ClientData.sqf at line 255](../../../Src/client/ClientData/ClientData.sqf#L255)
+File: [client\ClientData\ClientData.sqf at line 257](../../../Src/client/ClientData/ClientData.sqf#L257)
 ## cd_internal_hasTPError
 
 Type: Variable
@@ -290,7 +290,7 @@ Initial value:
 ```sqf
 false
 ```
-File: [client\ClientData\ClientData.sqf at line 257](../../../Src/client/ClientData/ClientData.sqf#L257)
+File: [client\ClientData\ClientData.sqf at line 259](../../../Src/client/ClientData/ClientData.sqf#L259)
 ## cd_internal_lastTPObj
 
 Type: Variable
@@ -302,7 +302,7 @@ Initial value:
 ```sqf
 objnull
 ```
-File: [client\ClientData\ClientData.sqf at line 259](../../../Src/client/ClientData/ClientData.sqf#L259)
+File: [client\ClientData\ClientData.sqf at line 261](../../../Src/client/ClientData/ClientData.sqf#L261)
 ## cd_internal_startLoadTime
 
 Type: Variable
@@ -314,7 +314,7 @@ Initial value:
 ```sqf
 0
 ```
-File: [client\ClientData\ClientData.sqf at line 261](../../../Src/client/ClientData/ClientData.sqf#L261)
+File: [client\ClientData\ClientData.sqf at line 263](../../../Src/client/ClientData/ClientData.sqf#L263)
 ## cd_OnSkillsUpdate
 
 Type: function
@@ -323,7 +323,7 @@ Description:
 - Param: _id
 - Param: _val
 
-File: [client\ClientData\ClientData.sqf at line 62](../../../Src/client/ClientData/ClientData.sqf#L62)
+File: [client\ClientData\ClientData.sqf at line 64](../../../Src/client/ClientData/ClientData.sqf#L64)
 ## cd_setVideoSettings
 
 Type: function
@@ -331,7 +331,7 @@ Type: function
 Description: 
 - Param: _value
 
-File: [client\ClientData\ClientData.sqf at line 114](../../../Src/client/ClientData/ClientData.sqf#L114)
+File: [client\ClientData\ClientData.sqf at line 116](../../../Src/client/ClientData/ClientData.sqf#L116)
 ## cd_onPrepareClient
 
 Type: function
@@ -340,7 +340,7 @@ Description:
 - Param: _atlPos
 - Param: _vision
 
-File: [client\ClientData\ClientData.sqf at line 136](../../../Src/client/ClientData/ClientData.sqf#L136)
+File: [client\ClientData\ClientData.sqf at line 138](../../../Src/client/ClientData/ClientData.sqf#L138)
 ## cd_tpLoad
 
 Type: function
@@ -349,7 +349,7 @@ Description:
 - Param: _pos
 - Param: _dir
 
-File: [client\ClientData\ClientData.sqf at line 264](../../../Src/client/ClientData/ClientData.sqf#L264)
+File: [client\ClientData\ClientData.sqf at line 266](../../../Src/client/ClientData/ClientData.sqf#L266)
 ## cd_syncObjTransform
 
 Type: function
@@ -359,7 +359,7 @@ Description:
 - Param: _pos
 - Param: _dir
 
-File: [client\ClientData\ClientData.sqf at line 379](../../../Src/client/ClientData/ClientData.sqf#L379)
+File: [client\ClientData\ClientData.sqf at line 381](../../../Src/client/ClientData/ClientData.sqf#L381)
 ## cd_clientDisconnect
 
 Type: function
@@ -367,7 +367,7 @@ Type: function
 Description: 
 - Param: _args
 
-File: [client\ClientData\ClientData.sqf at line 390](../../../Src/client/ClientData/ClientData.sqf#L390)
+File: [client\ClientData\ClientData.sqf at line 392](../../../Src/client/ClientData/ClientData.sqf#L392)
 ## cd_authproc
 
 Type: function
@@ -375,7 +375,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 418](../../../Src/client/ClientData/ClientData.sqf#L418)
+File: [client\ClientData\ClientData.sqf at line 420](../../../Src/client/ClientData/ClientData.sqf#L420)
 ## cd_openAuth
 
 Type: function
@@ -383,7 +383,7 @@ Type: function
 Description: 
 - Param: _mes
 
-File: [client\ClientData\ClientData.sqf at line 425](../../../Src/client/ClientData/ClientData.sqf#L425)
+File: [client\ClientData\ClientData.sqf at line 427](../../../Src/client/ClientData/ClientData.sqf#L427)
 ## cd_authResult
 
 Type: function
@@ -392,7 +392,7 @@ Description:
 - Param: _code
 - Param: _nick
 
-File: [client\ClientData\ClientData.sqf at line 531](../../../Src/client/ClientData/ClientData.sqf#L531)
+File: [client\ClientData\ClientData.sqf at line 533](../../../Src/client/ClientData/ClientData.sqf#L533)
 ## cd_switchMove_anim
 
 Type: function
@@ -400,7 +400,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 562](../../../Src/client/ClientData/ClientData.sqf#L562)
+File: [client\ClientData\ClientData.sqf at line 564](../../../Src/client/ClientData/ClientData.sqf#L564)
 ## cd_switchMove_force_anim
 
 Type: function
@@ -408,7 +408,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 567](../../../Src/client/ClientData/ClientData.sqf#L567)
+File: [client\ClientData\ClientData.sqf at line 569](../../../Src/client/ClientData/ClientData.sqf#L569)
 ## cd_playMove_anim
 
 Type: function
@@ -416,7 +416,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 574](../../../Src/client/ClientData/ClientData.sqf#L574)
+File: [client\ClientData\ClientData.sqf at line 576](../../../Src/client/ClientData/ClientData.sqf#L576)
 ## cd_setMimic_anim
 
 Type: function
@@ -424,7 +424,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 580](../../../Src/client/ClientData/ClientData.sqf#L580)
+File: [client\ClientData\ClientData.sqf at line 582](../../../Src/client/ClientData/ClientData.sqf#L582)
 ## cd_switchAction_anim
 
 Type: function
@@ -432,7 +432,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 585](../../../Src/client/ClientData/ClientData.sqf#L585)
+File: [client\ClientData\ClientData.sqf at line 587](../../../Src/client/ClientData/ClientData.sqf#L587)
 ## cd_syncongrabrot_setvdirup
 
 Type: function
@@ -440,7 +440,7 @@ Type: function
 Description: 
 - Param: _m
 
-File: [client\ClientData\ClientData.sqf at line 590](../../../Src/client/ClientData/ClientData.sqf#L590)
+File: [client\ClientData\ClientData.sqf at line 592](../../../Src/client/ClientData/ClientData.sqf#L592)
 ## cd_camshake_proc
 
 Type: function
@@ -448,7 +448,7 @@ Type: function
 Description: 
 
 
-File: [client\ClientData\ClientData.sqf at line 599](../../../Src/client/ClientData/ClientData.sqf#L599)
+File: [client\ClientData\ClientData.sqf at line 601](../../../Src/client/ClientData/ClientData.sqf#L601)
 ## cd_replicate_replloc
 
 Type: function
@@ -457,7 +457,7 @@ Description:
 - Param: _method
 - Param: _ctx
 
-File: [client\ClientData\ClientData.sqf at line 604](../../../Src/client/ClientData/ClientData.sqf#L604)
+File: [client\ClientData\ClientData.sqf at line 606](../../../Src/client/ClientData/ClientData.sqf#L606)
 ## repl_doLocal
 
 Type: function
@@ -466,7 +466,7 @@ Description:
 - Param: _method
 - Param: _ctx
 
-File: [client\ClientData\ClientData.sqf at line 613](../../../Src/client/ClientData/ClientData.sqf#L613)
+File: [client\ClientData\ClientData.sqf at line 615](../../../Src/client/ClientData/ClientData.sqf#L615)
 # ClientDataGamemode.sqf
 
 ## cd_onChangeGameState

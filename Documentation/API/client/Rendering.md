@@ -758,6 +758,68 @@ Description:
 - Param: _fromORX
 
 File: [client\Rendering\Camera\Camera_DEBUG.sqf at line 32](../../../Src/client/Rendering/Camera/Camera_DEBUG.sqf#L32)
+# cul_init.sqf
+
+## cul_culledObjects
+
+Type: Variable
+
+Description: 
+
+
+Initial value:
+```sqf
+[]
+```
+File: [client\Rendering\Culling\cul_init.sqf at line 30](../../../Src/client/Rendering/Culling/cul_init.sqf#L30)
+## cul_lastPlayerDir
+
+Type: Variable
+
+Description: 
+
+
+Initial value:
+```sqf
+0
+```
+File: [client\Rendering\Culling\cul_init.sqf at line 31](../../../Src/client/Rendering/Culling/cul_init.sqf#L31)
+## cul_handleUpdate
+
+Type: Variable
+
+Description: 
+
+
+Initial value:
+```sqf
+-1
+```
+File: [client\Rendering\Culling\cul_init.sqf at line 32](../../../Src/client/Rendering/Culling/cul_init.sqf#L32)
+## cul_init
+
+Type: function
+
+Description: 
+
+
+File: [client\Rendering\Culling\cul_init.sqf at line 15](../../../Src/client/Rendering/Culling/cul_init.sqf#L15)
+## cul_setEnable
+
+Type: function
+
+Description: 
+- Param: _mode
+
+File: [client\Rendering\Culling\cul_init.sqf at line 34](../../../Src/client/Rendering/Culling/cul_init.sqf#L34)
+## cul_processUpdate
+
+Type: function
+
+Description: 
+
+
+File: [client\Rendering\Culling\cul_init.sqf at line 47](../../../Src/client/Rendering/Culling/cul_init.sqf#L47)
 # Decals_debug.sqf
 
 ## dec_debug_const_layercolors
@@ -1304,3 +1366,99 @@ Description:
 - Param: _showError (optional, default true)
 
 File: [client\Rendering\PostProcessing\PPInit.sqf at line 100](../../../Src/client/Rendering/PostProcessing/PPInit.sqf#L100)
+# vd_dynamicFog.sqf
+
+## SPHERE_CLASS
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+"Sphere_3DEN"
+```
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 6](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L6)
+## SPHERE_NOGROUND_CLASS
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+"SphereNoGround_3DEN"
+```
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 7](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L7)
+## SPHERE_OUTER_CLASS
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+"sign_sphere200cm_f"
+```
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 8](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L8)
+## SPHERE_USERTEX_CLASS
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+"usertexture10m_f"
+```
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 9](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L9)
+## vd_dynFog_objects
+
+Type: Variable
+
+Description: 
+
+
+Initial value:
+```sqf
+[]
+```
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 37](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L37)
+## vd_dynFog_init
+
+Type: function
+
+Description: 
+
+
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 11](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L11)
+## vd_dynFog_createObj
+
+Type: function
+
+Description: 
+- Param: _objclass
+
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 39](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L39)
+## vd_dynFog_procRender
+
+Type: function
+
+Description: 
+- Param: _obj
+
+File: [client\Rendering\ViewDistance\vd_dynamicFog.sqf at line 46](../../../Src/client/Rendering/ViewDistance/vd_dynamicFog.sqf#L46)
+# vd_init.sqf
+
+## vd_init
+
+Type: function
+
+Description: 
+
+
+File: [client\Rendering\ViewDistance\vd_init.sqf at line 11](../../../Src/client/Rendering/ViewDistance/vd_init.sqf#L11)
