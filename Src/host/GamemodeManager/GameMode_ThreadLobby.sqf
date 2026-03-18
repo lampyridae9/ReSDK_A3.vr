@@ -53,4 +53,4 @@ if (gm_lobbyTimeLeft < 0) then {
 };
 
 
-call gm_syncLobbyTimer;
+[] call gm_syncLobbyTimer;
