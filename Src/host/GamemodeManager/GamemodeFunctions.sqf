@@ -129,7 +129,7 @@ gm_init = {
 			RETURN(0);
 		};
 		
-		call gm_syncLobbyTimer;
+		[] call gm_syncLobbyTimer;
 
 	};
 	gm_preLobbyHandler = startUpdate(_code,1);
