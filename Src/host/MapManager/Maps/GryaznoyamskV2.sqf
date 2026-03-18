@@ -3365,7 +3365,7 @@ _3982_870853979_0715332_05015 = ['ConcretePanel',[3982.87,3979.07,37.1689,true],
 ['OldWoodenBox',[3986.79,3980.35,40.2609,true],5.00002,[-0.00187772,0.00163454,0.999997]] call InitStruct; 
 ['ChestCabinet',[3983.31,3977.84,35.2351],180,[0,0,1]] call InitStruct; 
 ['SmallWoodenTable4',[3965.22,3984.8,35.355],90,[0,0,1]] call InitStruct; 
-['AcientClock',[3964.94,3987.66,35.124],270,[0,0,1]] call InitStruct; 
+['AncientClock',[3964.94,3987.66,35.124],270,[0,0,1]] call InitStruct; 
 ['hotelwardrobebig',[3968.9,3988.13,35.3029],270.001,[0,0,1]] call InitStruct; 
 ['hotelwardrobe',[3965.45,3990.98,35.294],180,[0,0,1]] call InitStruct; 
 ['hoteldesk',[3968.6,3991.12,35.2693],180,[0,0,1]] call InitStruct; 
@@ -4860,7 +4860,7 @@ _4270_875003980_124511_00000 = ['IStruct',[4270.88,3980.12,1],270,[0,0,1], {_thi
 ['WoodenMediumFence',[4283.75,3929.62,0],9.8184e-06,[0,0,1]] call InitStruct; 
 _4520_625003943_125000_00000 = ['IStruct',[4520.63,3943.13,0],0,[0,0,1], {_thisObj setvariable ['model','ml_shabut\svarka\svarka.p3d'];}] call InitStruct; // !!! realocated model !!!
 ['SteelThinWallGreen',[4281.63,3939.75,0],9.8184e-06,[0,0,1]] call InitStruct; 
-['AcientClock',[4451.37,3912.5,4.76837e-07],90,[0,0,1]] call InitStruct; 
+['AncientClock',[4451.37,3912.5,4.76837e-07],90,[0,0,1]] call InitStruct; 
 ['LuxuryMediumWoodenWall',[4281.88,3944.88,0],270,[0,0,1]] call InitStruct; 
 ['ElectricalShieldRed',[4526.38,3943.13,0.25],0,[0,0,1]] call InitStruct; 
 ['WoodenMediumFloor',[4354.23,3893.66,0],0,[0,0,1]] call InitStruct; 

@@ -59821,7 +59821,7 @@ class Mission
 									flags=1;
 									class Attributes
 									{
-										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""AcientClock""]]}";
+										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""AncientClock""]]}";
 									};
 									id=9675;
 									type="Land_chasiks";
@@ -86086,7 +86086,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""AcientClock""]]}";
+						init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""AncientClock""]]}";
 					};
 					id=5978;
 					type="Land_chasiks";

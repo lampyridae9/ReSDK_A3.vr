@@ -57,7 +57,7 @@ class(MetalProcessor) extends(InteractibleInterior)
 endclass
 
 editor_attribute("EditorGenerated")
-class(AcientClock) extends(InteractibleInterior)
+class(AncientClock) extends(InteractibleInterior)
 	var(model,"ml_shabut\chasiks\chasiks.p3d");
 	var(name,"Тикалка");
 endclass
