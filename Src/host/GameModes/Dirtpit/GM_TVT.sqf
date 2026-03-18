@@ -425,7 +425,7 @@ class(GMTVTGame) extends(GMStationBase)
 	func(pickHeadUniform)
 	{
 		objParams();
-		private _l = ["hatshemag","hatoldushanka","workercap","cookercap","","","",""];
+		private _l = ["hatshemag","HatUshankaUp2","workercap","cookercap","","","",""];
 		if (getSelf(stage)>=1) then {
 			_l pushBack "CombatHat";
 			_l pushBack "CombatHat";

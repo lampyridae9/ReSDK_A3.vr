@@ -67,7 +67,7 @@
           "name":"Рандомные шапки Лазутчика",
           "type":"array[classname]",
           "value":[
-            "HatOldUshanka",
+            "HatUshankaUp2",
             "HatUshanka",
             "WorkerCap",
             "WorkerCoolCap",
