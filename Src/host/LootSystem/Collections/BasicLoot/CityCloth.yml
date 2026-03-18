@@ -104,8 +104,6 @@ CityCloth_tier3:
       prob: 2%
     WorkerCap2:
       prob: 2%
-    WorkerCap2:
-      prob: 2%
 
     #Маски
     BrownBandannaMask:
