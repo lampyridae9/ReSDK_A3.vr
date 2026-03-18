@@ -364,7 +364,7 @@ class(GMBase) extends(IGameEvent) attribute(Story)
 				gm_lobbyTimeLeft = gm_lobbyTimeToStart;
 			};
 
-			call gm_syncLobbyTimer;
+			[] call gm_syncLobbyTimer;
 		};
 
 		//ограничение по времени
