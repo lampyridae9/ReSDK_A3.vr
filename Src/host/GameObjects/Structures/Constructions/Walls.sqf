@@ -414,7 +414,7 @@ class(ClayWallpartThick2Damaged) extends(ClayWallpartThick2)
 endclass
 
 editor_attribute("EditorGenerated")
-class(ClayWallSmallCornrer) extends(ClayWallSmall)
+class(ClayWallSmallCorner) extends(ClayWallSmall)
 	var(model,"ca\structures_e\wall\wall_l\wall_l_2m5_corner_ep1.p3d");
 endclass
 

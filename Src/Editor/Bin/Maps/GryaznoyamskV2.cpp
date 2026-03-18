@@ -17642,7 +17642,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCornrer""]]}";
+										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCorner""]]}";
 									};
 									id=11656;
 									type="CUP_A2_2m5_corner_ep1";
@@ -21817,7 +21817,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCornrer""]]}";
+										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCorner""]]}";
 									};
 									id=12348;
 									type="CUP_A2_2m5_corner_ep1";
@@ -21834,7 +21834,7 @@ class Mission
 									side="Empty";
 									class Attributes
 									{
-										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCornrer""]]}";
+										init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCorner""]]}";
 									};
 									id=12350;
 									type="CUP_A2_2m5_corner_ep1";
@@ -36965,7 +36965,7 @@ class Mission
 							side="Empty";
 							class Attributes
 							{
-								init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCornrer""]]}";
+								init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCorner""]]}";
 							};
 							id=8336;
 							type="CUP_A2_2m5_corner_ep1";
@@ -82435,7 +82435,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCornrer""]]}";
+						init="{createHashMapFromArray[[""customProps"",createHashMapFromArray[]],[""class"",""ClayWallSmallCorner""]]}";
 					};
 					id=5870;
 					type="CUP_A2_2m5_corner_ep1";
