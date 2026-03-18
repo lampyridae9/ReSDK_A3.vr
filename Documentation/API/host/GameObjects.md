@@ -336,6 +336,222 @@ Replaced value:
 ['Левая сторона:SIDE_LEFT','Правая сторона:SIDE_RIGHT']
 ```
 File: [host\GameObjects\GameConstants.hpp at line 112](../../../Src/host/GameObjects/GameConstants.hpp#L112)
+## CAUT_SKILL_REFERENCE
+
+Type: constant
+
+Description: Референсный уровень навыка (без модификатора при этом значении)
+
+
+Replaced value:
+```sqf
+10
+```
+File: [host\GameObjects\GameConstants.hpp at line 119](../../../Src/host/GameObjects/GameConstants.hpp#L119)
+## CAUT_DEATH_BASE_SELF
+
+Type: constant
+
+Description: Базовый шанс смерти
+
+
+Replaced value:
+```sqf
+0.10
+```
+File: [host\GameObjects\GameConstants.hpp at line 122](../../../Src/host/GameObjects/GameConstants.hpp#L122)
+## CAUT_DEATH_BASE_OTHER
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+0.04
+```
+File: [host\GameObjects\GameConstants.hpp at line 123](../../../Src/host/GameObjects/GameConstants.hpp#L123)
+## CAUT_DEATH_ESCALATION
+
+Type: constant
+
+Description: Эскалация шанса смерти за каждое предыдущее успешное прижигание
+
+
+Replaced value:
+```sqf
+0.04
+```
+File: [host\GameObjects\GameConstants.hpp at line 125](../../../Src/host/GameObjects/GameConstants.hpp#L125)
+## CAUT_DEATH_CAP
+
+Type: constant
+
+Description: Потолок шанса смерти
+
+
+Replaced value:
+```sqf
+0.60
+```
+File: [host\GameObjects\GameConstants.hpp at line 127](../../../Src/host/GameObjects/GameConstants.hpp#L127)
+## CAUT_SKILL_DEATH_REDUCTION
+
+Type: constant
+
+Description: Снижение шанса смерти за каждый пункт навыка выше референса
+
+
+Replaced value:
+```sqf
+0.015
+```
+File: [host\GameObjects\GameConstants.hpp at line 129](../../../Src/host/GameObjects/GameConstants.hpp#L129)
+## CAUT_SKILL_DEATH_INCREASE
+
+Type: constant
+
+Description: Увеличение шанса смерти за каждый пункт навыка ниже референса
+
+
+Replaced value:
+```sqf
+0.02
+```
+File: [host\GameObjects\GameConstants.hpp at line 131](../../../Src/host/GameObjects/GameConstants.hpp#L131)
+## CAUT_SEV_DEATH_MINOR
+
+Type: constant
+
+Description: Модификатор шанса смерти от тяжести раны (лёгкая/обычная/тяжёлая)
+
+
+Replaced value:
+```sqf
+0.0
+```
+File: [host\GameObjects\GameConstants.hpp at line 134](../../../Src/host/GameObjects/GameConstants.hpp#L134)
+## CAUT_SEV_DEATH_NORMAL
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+0.02
+```
+File: [host\GameObjects\GameConstants.hpp at line 135](../../../Src/host/GameObjects/GameConstants.hpp#L135)
+## CAUT_SEV_DEATH_SEVERE
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+0.05
+```
+File: [host\GameObjects\GameConstants.hpp at line 136](../../../Src/host/GameObjects/GameConstants.hpp#L136)
+## CAUT_FAIL_BASE
+
+Type: constant
+
+Description: Лучший случай (высокий навык): ~4%, худший случай (низкий навык): ~18%
+
+
+Replaced value:
+```sqf
+0.10
+```
+File: [host\GameObjects\GameConstants.hpp at line 140](../../../Src/host/GameObjects/GameConstants.hpp#L140)
+## CAUT_FAIL_SKILL_REDUCTION
+
+Type: constant
+
+Description: Снижение шанса провала за пункт навыка выше референса
+
+
+Replaced value:
+```sqf
+0.015
+```
+File: [host\GameObjects\GameConstants.hpp at line 142](../../../Src/host/GameObjects/GameConstants.hpp#L142)
+## CAUT_FAIL_SKILL_INCREASE
+
+Type: constant
+
+Description: Увеличение шанса провала за пункт навыка ниже референса
+
+
+Replaced value:
+```sqf
+0.02
+```
+File: [host\GameObjects\GameConstants.hpp at line 144](../../../Src/host/GameObjects/GameConstants.hpp#L144)
+## CAUT_FAIL_MIN
+
+Type: constant
+
+Description: Абсолютные границы
+
+
+Replaced value:
+```sqf
+0.04
+```
+File: [host\GameObjects\GameConstants.hpp at line 146](../../../Src/host/GameObjects/GameConstants.hpp#L146)
+## CAUT_FAIL_MAX
+
+Type: constant
+
+Description: 
+
+
+Replaced value:
+```sqf
+0.18
+```
+File: [host\GameObjects\GameConstants.hpp at line 147](../../../Src/host/GameObjects/GameConstants.hpp#L147)
+## CAUT_PAIN_LEVELS
+
+Type: constant
+
+Description: Уровней боли при прижигании
+
+
+Replaced value:
+```sqf
+2
+```
+File: [host\GameObjects\GameConstants.hpp at line 150](../../../Src/host/GameObjects/GameConstants.hpp#L150)
+## CAUT_VAR_SUCCESSES
+
+Type: constant
+
+Description: Переменная на цели — счётчик успешных прижиганий
+
+
+Replaced value:
+```sqf
+"__cautSuccesses"
+```
+File: [host\GameObjects\GameConstants.hpp at line 153](../../../Src/host/GameObjects/GameConstants.hpp#L153)
+## CAUT_GET_HEALING_SKILL(actor)
+
+Type: constant
+
+Description: Получить уровень навыка первой помощи актора
+- Param: actor
+
+Replaced value:
+```sqf
+callFunc(actor,gethealing)
+```
+File: [host\GameObjects\GameConstants.hpp at line 156](../../../Src/host/GameObjects/GameConstants.hpp#L156)
 # GameObject.sqf
 
 ## PIC_PREP
@@ -3909,6 +4125,36 @@ Replaced value:
 FalloutPort
 ```
 File: [host\GameObjects\Items\Clothes\port_models.sqf at line 6](../../../Src/host/GameObjects/Items/Clothes/port_models.sqf#L6)
+# Natural.sqf
+
+## caut_classifyBleedingSeverity
+
+Type: function
+
+Description: Работает с картой WOUND_TYPE_BLEEDING объекта BodyPart.
+- Param: _partObj
+- Param: _targ
+- Param: _bp
+
+File: [host\GameObjects\Items\Lighting\Natural.sqf at line 253](../../../Src/host/GameObjects/Items/Lighting/Natural.sqf#L253)
+## caut_severityDeathBonus
+
+Type: function
+
+Description: --- хелпер: тяжесть → бонус к шансу смерти ------------------------------
+- Param: _sev
+
+File: [host\GameObjects\Items\Lighting\Natural.sqf at line 265](../../../Src/host/GameObjects/Items/Lighting/Natural.sqf#L265)
+## caut_clearBleedingOnPart
+
+Type: function
+
+Description: --- хелпер: убрать все кровоточащие раны с части тела --------------------
+- Param: _partObj
+- Param: _targ
+- Param: _bp
+
+File: [host\GameObjects\Items\Lighting\Natural.sqf at line 273](../../../Src/host/GameObjects/Items/Lighting/Natural.sqf#L273)
 # Books.sqf
 
 ## __CONST_WRITABLE_ITEM_CONTENT_MAX_LEN__
@@ -4319,7 +4565,7 @@ Replaced value:
 ```sqf
 _d = D6 <= 3; [p1,p2] select _d
 ```
-File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 794](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L794)
+File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 797](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L797)
 ## debuginfo(mes)
 
 Type: constant
@@ -4333,7 +4579,7 @@ Replaced value:
 ```sqf
 breakpoint("("+getSelf(name)+")::EVENT::("+_mode+") " + mes)
 ```
-File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1059](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1059)
+File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1062](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1062)
 ## debuginfo(mes)
 
 Type: constant
@@ -4347,7 +4593,7 @@ Replaced value:
 ```sqf
 
 ```
-File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1061](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1061)
+File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1064](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1064)
 ## __isZoneIn(zones,modif)
 
 Type: constant
@@ -4360,7 +4606,7 @@ Replaced value:
 ```sqf
 if (_attTargetZone in [zones]) exitWith {MOD(_mod,modif)}
 ```
-File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1476](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1476)
+File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 1479](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L1479)
 ## go_static_internal_map_redirzones
 
 Type: Variable
@@ -4372,7 +4618,7 @@ Initial value:
 ```sqf
 createHashMapFromArray[...
 ```
-File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 824](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L824)
+File: [host\GameObjects\Mobs\Mob_Combat.sqf at line 827](../../../Src/host/GameObjects/Mobs/Mob_Combat.sqf#L827)
 # Mob_combat_attdam_enum.hpp
 
 ## COMBAT_ATTDAM_ATTACK
