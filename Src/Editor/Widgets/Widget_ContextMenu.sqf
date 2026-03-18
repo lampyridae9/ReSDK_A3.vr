@@ -23,6 +23,10 @@ function(contextMenu_getContextParams)
 	(call contextMenu_getDisplay) getVariable ["_ctx",[]];
 }
 
+function(contextMenu_getCurrentActionContext)
+{
+	_actionContext
+}
 /*
 	//vec2: name, [code | list] ,["_condToVisible",{true}],["_desc",""]
 	[
@@ -68,12 +72,12 @@ function(contextMenu_create) {
 	
 	widget_internal_contextmenu_tree = [];
 	
-	[_elements,_posBase,0] call contextMenu_internal_loadContext;
+	[_elements,_posBase,0,nullPtr,1,-1] call contextMenu_internal_loadContext;
 };
 
 function(contextMenu_internal_loadContext)
 {
-	params ["_elements","_pointStart","_level","_pressedWidget"];
+	params ["_elements","_pointStart","_level","_pressedWidget",["_parentDirection",1],["_parentPosX",-1]];
 
 	private _sizeX = 15;
 	private _sizeY = 4;
@@ -87,6 +91,7 @@ function(contextMenu_internal_loadContext)
 	_back setBackgroundColor [.2,.2,.2,0.9];
 	_back ctrlEnable false;
 	_back setVariable ["level",_level];
+	_back setVariable ["direction",_parentDirection];
 	private _backItems = [];
 	_back setVariable ["items",_backItems];
 	if (_level > 0) then {
@@ -99,9 +104,12 @@ function(contextMenu_internal_loadContext)
 
 	
 	for "_i" from 0 to (count _elements) - 1 do {
-		(_elements select _i) params ["_name",["_includedListOrAction",{}],["_condToVisible",{true}],["_desc",""]];
+		(_elements select _i) params ["_name",["_includedListOrAction",{}],["_condToVisible",{true}],["_desc",""],["_currentActionContext",[]]];
 		private _w = [_d,TEXT,[_posX,_posY + (_i*_sizeY)+0.5,_sizeX,_sizeY-1],_ctg] call createWidget;
-		_w ctrlSetTooltip _desc;
+		if (_level == 0) then {
+			_w ctrlSetTooltip _desc;
+		};
+		_w setvariable ["originalDesc",_desc];
 		_w setVariable ["level",_level];
 		_w setVariable ["back",_back];
 		_w setVariable ["index",_i];
@@ -177,12 +185,77 @@ function(contextMenu_internal_loadContext)
 		if equalTypes(_includedListOrAction,[]) then {
 			if (count _includedListOrAction > 0) then {
 				private _miniOfs = 0.5;
-				private _addOffset = if (_posX+_sizeX+_miniOfs>=(100-_sizeX)) then {-_sizeX-_miniOfs} else {_sizeX+_miniOfs};
-				[_includedListOrAction,[_posX + _addOffset,_posY+(_i*_sizeY)],_level + 1,_w] call contextMenu_internal_loadContext;
+				// Вычисляем абсолютную позицию для следующего уровня
+				private _nextPosXRight = _posX + _sizeX + _miniOfs;
+				private _nextPosXLeft = _posX - _sizeX - _miniOfs;
+				// Определяем направление размещения следующего уровня
+				// Если родитель находится слева, пытаемся разместить слева, иначе справа
+				private _nextDirection = _parentDirection;
+				private _addOffset = 0;
+				
+				// Если родитель справа или это первый уровень, пытаемся разместить справа
+				if (_parentDirection >= 0) then {
+					if (_nextPosXRight >= (100-_sizeX)) then {
+						// Не помещается справа, размещаем слева
+						_addOffset = -_sizeX-_miniOfs;
+						_nextDirection = -1;
+					} else {
+						// Помещается справа
+						_addOffset = _sizeX+_miniOfs;
+						_nextDirection = 1;
+					};
+				} else {
+					// Родитель слева, размещаем слева
+					if (_nextPosXLeft < 0) then {
+						// Не помещается слева, размещаем справа
+						_addOffset = _sizeX+_miniOfs;
+						_nextDirection = 1;
+					} else {
+						// Помещается слева
+						_addOffset = -_sizeX-_miniOfs;
+						_nextDirection = -1;
+					};
+				};
+				
+				private _nextPosX = _posX + _addOffset;
+				
+				if (_nextDirection != _parentDirection && _parentPosX >= 0) then {
+					private _parentMenuLeftEdge = _parentPosX;
+					private _parentMenuRightEdge = _parentPosX + _sizeX;
+					private _nextMenuLeftEdge = _nextPosX;
+					private _nextMenuRightEdge = _nextPosX + _sizeX;
+					
+					if (_nextDirection < 0 && _parentDirection > 0) then {
+						if (_nextMenuRightEdge > _parentMenuLeftEdge) then {
+							_addOffset = _addOffset - (_nextMenuRightEdge - _parentMenuLeftEdge + _miniOfs);
+							_nextPosX = _posX + _addOffset;
+
+							if (_nextPosX < 0) then {
+								_nextPosX = 0;
+								_addOffset = _nextPosX - _posX;
+							};
+						};
+					};
+
+					if (_nextDirection > 0 && _parentDirection < 0) then {
+						if (_nextMenuLeftEdge < _parentMenuRightEdge) then {
+							_addOffset = _addOffset + (_parentMenuRightEdge - _nextMenuLeftEdge + _miniOfs);
+							_nextPosX = _posX + _addOffset;
+
+							if (_nextPosX + _sizeX > 100) then {
+								_nextPosX = 100 - _sizeX;
+								_addOffset = _nextPosX - _posX;
+							};
+						};
+					};
+				};
+				
+				[_includedListOrAction,[_posX + _addOffset,_posY+(_i*_sizeY)],_level + 1,_w,_nextDirection,_posX] call contextMenu_internal_loadContext;
 			};
 		} else {
 			
 			_w setVariable ["_action",_includedListOrAction];
+			_w setvariable ["_actionContext",_currentActionContext];
 			_w setvariable ["enabled__",_canVisible];
 			_w ctrlAddEventHandler ["MouseButtonUp",{
 				["enabled action %1",(_this select 0) getvariable "enabled__"] call printTrace;
@@ -192,6 +265,7 @@ function(contextMenu_internal_loadContext)
 					_nameContext = sanitizeHTML(ctrlText _buttonContext);
 					_indexContext = _buttonContext getVariable "index";
 					_levelContext = _buttonContext getVariable "level";
+					private _actionContext = _buttonContext getvariable "_actionContext";
 					call (_buttonContext getVariable "_action");
 				};
 
@@ -214,6 +288,8 @@ function(contextMenu_internal_hideCat)
 		_x setFade 1;
 		_x commit 0.1;
 		_x ctrlEnable false;
+		//! убираем описание так как выключенные элементы продолжают показывать описание
+		_x ctrlSetTooltip "";
 	} foreach (_back getVariable "items");
 }
 
@@ -226,6 +302,7 @@ function(contextMenu_internal_showCat)
 		_x setFade 0;
 		_x commit 0.2;
 		_x ctrlEnable true;
+		_x ctrlSetTooltip (_x getvariable "originalDesc");
 	} foreach (_back getVariable "items");
 }
 
@@ -236,6 +313,22 @@ function(ContextMenu_loadMouseObjectList)
 	_stackMenu = [["Отмена",{}]];
 	["Context selected object count %1",count _objList] call printTrace;
 	private _ctxParams = [_objList];
+
+
+	private _actionsList = [];
+	_stackMenu pushBack ["Слои",_actionsList];
+
+	private _curLayer = call LayersUtility_getSelectedLayer;
+	if (_curLayer != -1) then {
+		_actionsList pushBack ["Назначить в раб.слой",{
+			private _objList = (call contextMenu_getContextParams) select 0;
+			private _curLayer = call LayersUtility_getSelectedLayer;
+			if (_curLayer == -1) exitWith {};
+			
+			[_objList,_curLayer] call LayersUtility_addObject;
+		}];
+	};
+	
 
 	private _energyListIs = _objList apply {_x call golib_en_obj_isEnergyObject};
 	if (any_of(_energyListIs)) then {
@@ -395,6 +488,194 @@ function(ContextMenu_loadMouseObject)
 		]
 	];
 	};
+
+
+	private _commonLayers = {
+		private _listActions = [];
+		private _data = ["Слои",_listActions];
+
+		private _currentLayer = [_obj,false] call layer_getObjectLayer;
+		if (_currentLayer != -1) then {
+			_listActions pushBack ["Убрать из слоя",{
+				_obj = (call contextMenu_getContextParams) select 0;
+				private _layer = _obj call layer_getObjectLayer;
+				[_obj] call layer_removeObject;
+				nextFrame(inspector_menuLoad);
+			}];
+			
+			if ([_obj] call layer_isObjectLocked) then {
+				_listActions pushBack ["Выделить объект",{
+					private _obj = (call contextMenu_getContextParams) select 0;
+					[_obj] call golib_setSelectedObjects;
+				},null,"Выделяет объект в заблокированном слое"];
+			};
+		};
+		
+		if (call LayersUtility_getSelectedLayer != -1) then {
+
+			_listActions pushBack ["Добавить в раб.слой",{
+				private _obj = (call contextMenu_getContextParams) select 0;
+				private _curLayer = call LayersUtility_getSelectedLayer;
+				if (_curLayer == -1) exitWith {};
+				[_obj,_curLayer] call LayersUtility_addObject;
+			}];
+		};
+
+		if (_currentLayer != -1) then {
+			if ([_obj] call layer_isObjectLocked) then {
+				_listActions pushBack ["Разблокировать слой",{
+					private _obj = (call contextMenu_getContextParams) select 0;
+					private _curLayer = [_obj,false] call layer_getObjectLayer;
+
+					private _parents = [_curLayer] call layer_getAllParentLayers;
+					if (count _parents > 0 && any_of(_parents apply {[_x] call layer_isLocked})) then {
+						{
+							[_x,false] call layer_setLocked;
+						} foreach _parents;
+						["Родительские слои также разблокированы"] call showInfo;
+					};
+
+					[_curLayer,false] call layer_setLocked;
+
+					nextFrame(inspector_menuLoad);
+				},null,"Разблокировать слой, в котором находится объект"];
+				_listActions pushBack ["Копировать объект",{
+					private _obj = (call contextMenu_getContextParams) select 0;
+					private _oldSelected = call golib_getSelectedObjects;
+					[_obj] call golib_setSelectedObjects;
+					do3denAction "CopyUnit";
+					[_oldSelected] call golib_setSelectedObjects;
+					
+				}];
+			} else {
+				_listActions pushBack ["Заблокировать слой",{
+					private _obj = (call contextMenu_getContextParams) select 0;
+					private _curLayer = [_obj,false] call layer_getObjectLayer;
+					[_curLayer,true] call layer_setLocked;
+					nextFrame(inspector_menuLoad);
+				},null,"Заблокировать слой, в котором находится объект"];
+			};
+
+			private _workLayer = call LayersUtility_getSelectedLayer;
+			if (_workLayer != -1 && 
+				{_workLayer != _currentLayer}
+			) then {
+				_listActions pushBack ["Заменить слой в раб.области",{
+					private _obj = (call contextMenu_getContextParams) select 0;
+					private _curLayer = [_obj,false] call layer_getObjectLayer;
+					[_curLayer] call LayersUtility_setSelectedLayer;
+				},null,format["Устанавливает слой '%1' в активный рабочий слой",([_obj,false] call layer_getObjectLayer) call layer_internal_getLayerNameByPtr]];
+			};
+		};
+		
+
+		// Функция для сбора родительских слоев (от текущего до корня)
+		private _collectParentLayers = {
+			params ["_currentLayer"];
+			private _parents = [];
+			private _layer = _currentLayer;
+			
+			while {_layer != -1} do {
+				_parents pushBack _layer;
+				_layer = get3DENLayer _layer;
+			};
+			
+			// Убираем текущий слой из списка родителей
+			if (count _parents > 0) then {
+				_parents deleteAt 0;
+			};
+			
+			_parents
+		};
+
+		// Функция для сбора дочерних слоев (рекурсивно)
+		private _collectChildLayers = {
+			params ["_parentLayer"];
+			private _allChildren = [];
+			
+			// Проверяем доступность карты дочерних слоев
+			if isNullVar(layer_internal_map_childs) exitWith {_allChildren};
+			
+			private _childsMap = layer_internal_map_childs;
+			
+			if (_parentLayer in _childsMap) then {
+				private _directChildren = _childsMap get _parentLayer;
+				if !isNullVar(_directChildren) then {
+					{
+						_allChildren pushBack _x;
+						// Рекурсивно собираем дочерние слои
+						private _nestedChildren = [_x] call _collectChildLayers;
+						_allChildren = _allChildren + _nestedChildren;
+					} foreach _directChildren;
+				};
+			};
+			
+			_allChildren
+		};
+
+		// Функция-обертка для создания обработчика с захваченным ID слоя
+		private _layerMoveHandler = {
+			private _targetLayerId = (call contextMenu_getCurrentActionContext) select 0;
+			_obj = (call contextMenu_getContextParams) select 0;
+			[_obj,_targetLayerId] call layer_addObject;
+			nextFrame(inspector_menuLoad); //sync inspector menu
+		};
+
+		// Добавляем категории "Выше" и "Ниже" если объект в слое
+		
+		if (_currentLayer != -1) then {
+			// Собираем родительские слои
+			private _parentLayers = [_currentLayer] call _collectParentLayers;
+			if (count _parentLayers > 0) then {
+				private _parentMenu = [];
+				{
+					private _layerId = _x;
+					private _layerName = _layerId call layer_internal_getLayerNameByPtr;
+					if (_layerName != "") then {
+						_parentMenu pushBack [
+							_layerName,
+							_layerMoveHandler,
+							null,
+							format["Переместить объект в родительский слой: %1",_layerName],
+							[_layerId]
+						];
+					};
+				} foreach _parentLayers;
+				
+				if (count _parentMenu > 0) then {
+					_listActions pushBack ["Выше",_parentMenu];
+				};
+			};
+
+			// Собираем дочерние слои
+			private _childLayers = [_currentLayer] call _collectChildLayers;
+			if (count _childLayers > 0) then {
+				private _childMenu = [];
+				{
+					private _layerId = _x;
+					private _layerName = _layerId call layer_internal_getLayerNameByPtr;
+					if (_layerName != "") then {
+						_childMenu pushBack [
+							_layerName,
+							_layerMoveHandler,
+							null,
+							format["Переместить объект в дочерний слой: %1",_layerName],
+							[_layerId]
+						];
+					};
+				} foreach _childLayers;
+				
+				if (count _childMenu > 0) then {
+					_listActions pushBack ["Ниже",_childMenu];
+				};
+			};
+		};
+
+		if (count _listActions > 0) then {
+			_stackMenu pushBack _data;
+		};
+	};
+	
 	private _commonCheckDistance = {
 		_stackMenu pushBack ["Измерить расстояние",{
 			_obj = (call contextMenu_getContextParams) select 0;
@@ -493,16 +774,50 @@ function(ContextMenu_loadMouseObject)
 	};
 
 	call _commonSimStart;
+	call _commonLayers;
 
 	_stackMenu pushBack [
-		"Создать префаб (новый класс)",
-		{
-			_obj = (call contextMenu_getContextParams) select 0;
-			if (([_obj] call golib_getChangedCustomPropsCount) == 0) exitWith {
-				["Нельзя создать новый класс с такими же свойствами. Измените свойства и попробуйте снова."] call showWarning
-			};
-			//TODO open input new classname
-		}
+		"Создать",[
+			["Набор IStruct-ов",
+				{
+					_next = {
+						
+						[{
+							_n = {
+								ContextMenu_internal_openedMousePos call mouseSetPosition;
+								private _value = _this;
+								//["items: %1",_value] call printTrace;
+
+								private _sel = [];
+								{
+									private _cfg = core_model2cfg getVariable _x;	
+									if equalTypes(_cfg,[]) then {
+										_cfg = _cfg select 0;
+									};
+									//["===============mcfg: %1",[_cfg,_x]] call printTrace;
+									_o = ["IStruct",false,[_cfg,_x],true] call golib_om_placeObjectAtMouse;
+									_sel pushBack _o;
+								} foreach _value;
+								//["selected: %1",_sel] call printTrace;
+								set3DENSelected _sel;
+							};
+							invokeAfterDelayParams(_n,0.1,_value);
+						},{
+							
+						},true] call golib_openModelViewer;
+					};
+					invokeAfterDelay(_next,0.1);
+				}
+			],
+			["Создать префаб (новый класс)",
+			{
+				_obj = (call contextMenu_getContextParams) select 0;
+				if (([_obj] call golib_getChangedCustomPropsCount) == 0) exitWith {
+					["Нельзя создать новый класс с такими же свойствами. Измените свойства и попробуйте снова."] call showWarning
+				};
+				//TODO open input new classname
+			}]
+		]
 	];
 
 	private _class = [_obj] call golib_getClassName;
@@ -582,24 +897,26 @@ function(ContextMenu_loadMouseObject)
 	call _commonSelectQuery;
 	call _commonCheckDistance;
 
-	_stackMenu pushBack ["<t size='0.9'>Открыть редактор позиций модели</t>",{nextFrameParams(vcom_relposEditorOpen,(call contextMenu_getContextParams) select 0)}];
-	_stackMenu pushBack ["Открыть редактор эмиттеров",{
-		private _obj = (call contextMenu_getContextParams) select 0;
-		private _params = [_obj];
-		private _cfg = [_obj] call lsim_resolveObjectConfig;
-		if (_cfg != "") then {
-			_params pushBack _cfg;
-		};
-		private _code = {
-			params ["_obj",["_cfg",""]];
-			[_obj] call vcom_emit_createVisualWindow;
-			
+	_stackMenu pushBack ["Редакторы",[
+		["<t size='0.9'>Открыть редактор позиций модели</t>",{nextFrameParams(vcom_relposEditorOpen,(call contextMenu_getContextParams) select 0)}],
+		["Открыть редактор эмиттеров",{
+			private _obj = (call contextMenu_getContextParams) select 0;
+			private _params = [_obj];
+			private _cfg = [_obj] call lsim_resolveObjectConfig;
 			if (_cfg != "") then {
-				[_cfg] call vcom_emit_io_loadConfigCheck;
+				_params pushBack _cfg;
 			};
-		};
-		nextFrameParams(_code,_params);
-	}];
+			private _code = {
+				params ["_obj",["_cfg",""]];
+				[_obj] call vcom_emit_createVisualWindow;
+				
+				if (_cfg != "") then {
+					[_cfg] call vcom_emit_io_loadConfigCheck;
+				};
+			};
+			nextFrameParams(_code,_params);
+		}]
+	]];
 
 	// _stackMenu pushBack ["Добавить комментарий",{
 	// 	do3DENAction "CreateComment";
@@ -630,7 +947,6 @@ function(ContextMenu_loadMouseObject)
 		_obj set3DENAttribute ["Name","debug_mob_gen_" + ((toArray hashValue _obj)joinString "_")];
 		[_obj,_atlPos,false,golib_history_skippedHistoryStageFlag + " - fixpos"] call golib_om_setPosition;
 	}];
-
 
 	[
 		_stackMenu,

@@ -19,6 +19,67 @@ class(SmallWall) extends(Constructions)
 endclass
 
 editor_attribute("EditorGenerated")
+class(WoodenArch) extends(SmallWall)
+	var(model,"ml_shabut\exodus\woodarka.p3d");
+	var(name,"Арка");
+	var(material,"MatWood");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteGreenWall) extends(SmallWall)
+	var(model,"a3\structures_f_exp\military\pillboxes\pillboxwall_01_3m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteGreenWall2) extends(ConcreteGreenWall)
+	var(model,"a3\structures_f_exp\military\pillboxes\pillboxwall_01_6m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteWallLightDark) extends(SmallWall)
+	var(model,"a3\structures_f_exp\walls\concrete\concretewall_01_m_4m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteWallLightDark2) extends(ConcreteWallLightDark)
+	var(model,"a3\structures_f_exp\walls\concrete\concretewall_01_l_4m_f.p3d");
+endclass
+
+
+
+editor_attribute("EditorGenerated")
+class(BlackConcreteWall) extends(SmallWall)
+	var(model,"ca\structures\wall\wall_indcnc_4.p3d");
+	var(name,"Бетон");
+endclass
+
+editor_attribute("EditorGenerated")
+class(GreenConcreteWallWithWire) extends(BlackConcreteWall)
+	var(model,"a3\structures_f_enoch\walls\concrete\camoconcretewall_01_l_4m_v2_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BlackConcreteWallPieces) extends(BlackConcreteWall)
+	var(model,"ca\structures\wall\wall_indcnc_end_3.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BlackConcreteWallWithHole) extends(BlackConcreteWall)
+	var(model,"ca\structures\wall\wall_indcnc_4_d.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BlackConcreteWallPillar) extends(BlackConcreteWall)
+	var(model,"a3\structures_f_enoch\walls\concrete\camoconcretewall_01_l_end_v1_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BlackConcreteWallPiecesPillar) extends(BlackConcreteWall)
+	var(model,"ca\structures\wall\wall_indcnc_end_2.p3d");
+	var(name,"Бетон");
+endclass
+
+editor_attribute("EditorGenerated")
 class(SmallBlueConcreteWall) extends(SmallWall)
 	var(model,"a3\structures_f_argo\walls\city\wallcity_01_4m_plain_blue_f.p3d");
 endclass
@@ -38,9 +99,49 @@ class(WhiteBrickWall) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(WhiteBrickWall5) extends(WhiteBrickWall)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_02_l_end_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(WhiteBrickWall4) extends(WhiteBrickWall)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_03_l_5m_v1_d_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(WhiteBrickWall3) extends(WhiteBrickWall)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_03_l_5m_v2_d_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(WhiteBrickWall2) extends(WhiteBrickWall)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_03_l_5m_v1_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(OldBrickWallMedium) extends(SmallWall)
 	var(model,"a3\structures_f_enoch\walls\brick\brickwall_04_l_5m_old_f.p3d");
 	var(name,"Стена");
+endclass
+
+editor_attribute("EditorGenerated")
+class(OldBrickWallMediumDamaged2) extends(OldBrickWallMedium)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_04_l_5m_d_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(OldBrickWallMediumDamaged) extends(OldBrickWallMedium)
+	var(model,"a3\structures_f_enoch\ruins\housewallruin_door_01_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(OldBrickWallDamagedCorner) extends(OldBrickWallMedium)
+	var(model,"ca\structures\ruins\ruin_corner_2.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(OldBrickWallSmallDamaged) extends(OldBrickWallMedium)
+	var(model,"a3\structures_f_enoch\walls\brick\brickwall_04_l_5m_old_d_f.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -56,6 +157,27 @@ class(StoneWall) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(LightStoneWall) extends(StoneWall)
+	var(model,"a3\structures_f\dominants\castle\castle_01_church_a_ruin_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(LightStoneWall2) extends(LightStoneWall)
+	var(model,"a3\structures_f\dominants\castle\castle_01_church_b_ruin_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(GreenStoneWall) extends(StoneWall)
+	var(model,"ca\structures\castle\a_castle_walls_10.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(StoneWallLong) extends(StoneWall)
+	var(model,"a3\structures_f\walls\stone_8m_f.p3d");
+endclass
+
+
+editor_attribute("EditorGenerated")
 class(BigStoneWallWithPassage) extends(StoneWall)
 	var(model,"ml\ml_object_new\model_24\barikada.p3d");
 endclass
@@ -64,6 +186,16 @@ editor_attribute("EditorGenerated")
 class(MediumLightWall) extends(SmallWall)
 	var(model,"a3\structures_f_argo\walls\city\wallcity_01_4m_plain_grey_f.p3d");
 	var(name,"Стена");
+endclass
+
+editor_attribute("EditorGenerated")
+class(MediumLightWallDamaged) extends(MediumLightWall)
+	var(model,"a3\structures_f\walls\city_8md_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(MediumLightWallDamaged2) extends(MediumLightWallDamaged)
+	var(model,"a3\structures_f\walls\city2_8md_f.p3d");
 endclass
 
 class(MediumLightWall1) extends(MediumLightWall)
@@ -104,6 +236,11 @@ class(MediumWhiteConcreteWall) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(MediumCleanWhiteConcreteWall) extends(MediumWhiteConcreteWall)
+	var(model,"a3\structures_f\walls\city2_8m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(SmallWhiteConcreteWall) extends(MediumWhiteConcreteWall)
 	var(model,"a3\structures_f_argo\walls\city\wallcity_01_4m_plain_whiteblue_f.p3d");
 endclass
@@ -113,6 +250,17 @@ class(MediumWoodenWall) extends(SmallWall)
 	var(model,"ml_shabut\sbs\woodstenka.p3d");
 	var(name,"Стена");
 	var(material,"MatWood");
+endclass
+
+editor_attribute("EditorGenerated")
+class(MediumWoodenWallNew) extends(MediumWoodenWall)
+	var(model,"ml_shabut\sbs\woodstenka2.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(LuxuryMediumWoodenWall) extends(MediumWoodenWall)
+	var(model,"ml_shabut\sbs\woodstenka3.p3d");
+	var(name,"Роскошная стена");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -127,8 +275,33 @@ class(ConcreteWallWithNetfence) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(ConcreteWallWithRustyNetfence) extends(ConcreteWallWithNetfence)
+	var(model,"a3\structures_f_exp\walls\net\netfence_01_m_8m_nolc_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteWallWithRustyNetfence4) extends(ConcreteWallWithRustyNetfence)
+	var(model,"a3\structures_f_exp\walls\net\netfence_01_m_4m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteWallWithRustyNetfence3) extends(ConcreteWallWithRustyNetfence)
+	var(model,"a3\structures_f_exp\walls\net\netfence_01_m_4m_nolc_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ConcreteWallWithRustyNetfence2) extends(ConcreteWallWithRustyNetfence)
+	var(model,"a3\structures_f_exp\walls\net\netfence_01_m_d_nolc_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(SmallWallNetfence) extends(ConcreteWallWithNetfence)
 	var(model,"a3\structures_f_exp\walls\net\netfence_02_m_2m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SmallWallNetfenceDamaged) extends(SmallWallNetfence)
+	var(model,"a3\structures_f_exp\walls\net\netfence_02_m_d_f.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -153,8 +326,23 @@ class(SmallConcreteArch) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(SmallConcreteArch2) extends(SmallConcreteArch)
+	var(model,"ml_shabut\arka\arka.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(ConcreteWall) extends(SmallWall)
 	var(model,"a3\structures_f_exp\walls\concrete\concretewall_01_l_8m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ThinConcreteWall) extends(ConcreteWall)
+	var(model,"a3\structures_f_enoch\walls\concrete\silagewall_01_l_5m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ThinConcreteWallDamaged) extends(ThinConcreteWall)
+	var(model,"a3\structures_f_enoch\walls\concrete\silagewall_01_l_d_f.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -189,10 +377,55 @@ class(ConcreteWallDestroyed) extends(ConcreteWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(ConcreteWallDestroyed2) extends(ConcreteWallDestroyed)
+	var(model,"a3\structures_f_exp\walls\concrete\concretewall_01_l_d_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(ClayWallSmall) extends(SmallWall)
 	var(model,"ca\structures_e\wall\wall_l\wall_l_2m5_ep1.p3d");
 	var(name,"Глиняная стена");
 	var(material,"MatDirt");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallMini) extends(ClayWallSmall)
+	var(model,"ca\structures_e\wall\wall_l\wall_l1_2m5_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallpartThick) extends(ClayWallSmall)
+	var(model,"ca\structures_e\wall\wall_l\wall_l_mosque_1_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallpartThickDamaged) extends(ClayWallpartThick)
+	var(model,"ca\structures_e\wall\wall_l\wall_l_mosque_1_ruins_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallpartThick2) extends(ClayWallpartThick)
+	var(model,"ca\structures_e\wall\wall_l\wall_l_mosque_2_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallpartThick2Damaged) extends(ClayWallpartThick2)
+	var(model,"ca\structures_e\wall\wall_l\wall_l_mosque_2_ruins_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(ClayWallSmallCorner) extends(ClayWallSmall)
+	var(model,"ca\structures_e\wall\wall_l\wall_l_2m5_corner_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BigLuxuryClayWall) extends(ClayWallSmall)
+	var(model,"ca\structures_e\wall\wall_l\wall_l3_5m_ep1.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BigLuxuryClayWallPile) extends(BigLuxuryClayWall)
+	var(model,"ca\structures_e\wall\wall_l\wall_l3_5m_ruins_ep1.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -223,6 +456,11 @@ class(BrickThinWallWindow) extends(BrickThinWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(BrickThinWallWindow4) extends(BrickThinWallWindow)
+	var(model,"csa_constr\csa_obj\kr_stena_2o.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(BrickThinWallWindow3) extends(BrickThinWallWindow)
 	var(model,"csa_constr\csa_obj\kr_stena_3o.p3d");
 endclass
@@ -235,6 +473,11 @@ endclass
 editor_attribute("EditorGenerated")
 class(BrickThinWallDoorway) extends(BrickThinWall)
 	var(model,"csa_constr\csa_obj\kr_stena_1d.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BrickThinWallDoorwayCenter) extends(BrickThinWallDoorway)
+	var(model,"csa_constr\csa_obj\kr_stena_d.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -260,6 +503,21 @@ class(SteelThinWallSmall) extends(SmallWall)
 endclass
 
 editor_attribute("EditorGenerated")
+class(SteelThinWallSmall2) extends(SteelThinWallSmall)
+	var(model,"ml_shabut\panviet\panviet.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SteelThinWallNew) extends(SteelThinWallSmall)
+	var(model,"a3\structures_f_exp\walls\tin\tinwall_02_l_4m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SteelThinWallBigNew) extends(SteelThinWallNew)
+	var(model,"a3\structures_f_exp\walls\tin\tinwall_02_l_8m_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(SteelThinWallMedium) extends(SteelThinWallSmall)
 	var(model,"ml_exodusnew\ganzazhelezo2.p3d");
 	var(material,"MatMetal");
@@ -268,6 +526,17 @@ endclass
 editor_attribute("EditorGenerated")
 class(SteelThinWallBig) extends(SteelThinWallSmall)
 	var(model,"ml_shabut\exoduss\zhelstenabig.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SteelThinWallGreen) extends(SteelThinWallBig)
+	var(model,"ml_shabut\ferrum\zasran_fence2.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SteelThinRoofBig) extends(SteelThinWallBig)
+	var(model,"ml_exodusnew\zhelezoxyeta.p3d");
+	var(name,"Железо");
 endclass
 
 

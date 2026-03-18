@@ -19,6 +19,26 @@ class(SmallHouse) extends(Constructions)
 endclass
 
 editor_attribute("EditorGenerated")
+class(ConcreteSewageSegment) extends(SmallHouse)
+	var(model,"ml_shabut\exodus\betondarkone.p3d");
+	var(name,"Канализация");
+endclass
+
+editor_attribute("EditorGenerated")
+class(CanopyBig) extends(SmallHouse)
+	var(name,"Навес");
+	var(material,"MatWood");
+	var(model,"ca\structures\shed_ind\ind_sideroof.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SmallWoodenGridShelter) extends(SmallHouse)
+	var(name,"Навес");
+	var(material,"MatWood");
+	var(model,"a3\structures_f_epc\civ\tourism\touristshelter_01_f.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(SmallBrickHouse) extends(SmallHouse)
 	var(model,"ml_shabut\exodusss\domdiridom.p3d");
 endclass
@@ -60,6 +80,11 @@ class(MediumClothCanopy) extends(SmallHouse)
 	var(model,"a3\structures_f_exp\commercial\market\clothshelter_02_f.p3d");
 	var(name,"Навес");
 	var(material,"MatCloth");
+endclass
+
+editor_attribute("EditorGenerated")
+class(BigClothCanopy) extends(MediumClothCanopy)
+	var(model,"a3\structures_f\civ\market\marketshelter_f.p3d");
 endclass
 
 editor_attribute("EditorGenerated")
@@ -126,6 +151,11 @@ class(SmallSheetMetalHouse) extends(SmallHouse)
 	var(name, "Хижина");
 	var(desc, "Сделана из дерева");
 	var(material,"MatWood");
+endclass
+
+editor_attribute("EditorGenerated")
+class(SmallSheetMetalHouse4) extends(SmallSheetMetalHouse)
+	var(model,"a3\structures_f_exp\civilian\sheds\shed_07_f.p3d");
 endclass
 
 editor_attribute("EditorGenerated")

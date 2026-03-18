@@ -225,9 +225,12 @@ init_function(menu_internal_initialize)
 	//hide mission cat
 	_mcat = (getEdenDisplay displayCtrl 10306);
 	_mcat ctrlEnable false;
+	_mcat ctrlshow false;
+
 	//night vision
 	_mcat = (getEdenDisplay displayCtrl 10304);
 	_mcat ctrlEnable false;
+	_mcat ctrlshow false;
 	
 	//steam
 	_mcat = (getEdenDisplay displayCtrl 10091);
@@ -242,6 +245,18 @@ init_function(menu_internal_initialize)
 	_e = getEdenDisplay displayCtrl 10302;
 	_e ctrlEnable false;
 	_e ctrlshow false;
+
+	_pos = ctrlposition _e;
+	_ctg = ctrlParentControlsGroup _e;
+	_layerPalette = [getEdenDisplay,"ctrlButtonToolbar",[0,0,100,100],_ctg] call createWidget;
+	["layerpalette_bind",_layerPalette] call widget_bind;
+	_layerPalette ctrlsetposition _pos;
+	_layerPalette ctrlcommit 0;
+	_layerPalette ctrlsettext "a3\3den\data\displays\display3den\PanelLeft\entityList_layerShow_ca.paa";
+	_layerPalette ctrlsettooltip "Рабочий набор слоев";
+	_layerPalette ctrlAddEventHandler ["MouseButtonClick",{
+		call layersUtility_toggleMode;
+	}];
 
 
 	//disable create entitymenu (in right panel)

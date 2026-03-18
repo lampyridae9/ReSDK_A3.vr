@@ -430,10 +430,10 @@ _4061_715823666_9343326_52360 = ['SquareWoodenBox',[4061.72,3666.93,26.5236],0,[
 ['SleepingMatras',[4062.12,3665.18,26.6594],85,[0,0,1], {go_editor_globalRefs set ["RCleanerTrubaBed",_thisObj];
 }] call InitStruct; 
 ['FabricBagBig2',[4061.66,3680.31,26.4759],81,[0,0,1]] call InitItem; 
-['LongSteelPipe',[4033.29,3627.42,32.2332,true],353.526,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
+['NewIndPipe20m',[4033.29,3627.42,32.2332,true],353.526,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
 ['BetonTrapeciaSmall',[4033.6,3625.72,26.442],0,[0,0,1]] call InitStruct; 
 ['BigPilePipes',[4053.09,3663.87,32.0986,true],170.002,[0.00667979,0.00221612,0.999975]] call InitStruct; 
-['LongSteelPipe',[4031.82,3649.3,32.2914,true],0,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
+['NewIndPipe20m',[4031.82,3649.3,32.2914,true],0,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
 ['ShortRottenBoards',[4050.69,3647.06,26.4346],3,[0,0,1]] call InitStruct; 
 _4052_278083659_4321322_66663 = ['IStruct',[4052.28,3659.43,22.6666],5,[0,0,1], {_thisObj setvariable ['model','ca\structures_e\misc\misc_cables\misc_cable_rugs1_ep1.p3d'];}] call InitStruct; // !!! realocated model !!!
 ['ShortRottenBoards',[4050.69,3651.72,26.4767],1.02453e-05,[0,0,1]] call InitStruct; 
@@ -447,8 +447,8 @@ _4052_278083659_4321322_66663 = ['IStruct',[4052.28,3659.43,22.6666],5,[0,0,1], 
 ['BigDestroyedLightConcreteBuilding',[4051.31,3619.77,26.5402],330.337,[0,0,1]] call InitDecor; 
 ['OldBrickWallMedium',[4046.76,3656.29,27.3715],0,[0,0,1]] call InitStruct; 
 ['BigLightRuinedBuilding',[4061.44,3629.56,26.0587],5.00034,[0,0,1]] call InitDecor; 
-['LongSteelPipe',[4061.14,3646.39,43.6262,true],[-0.00692557,0.999367,0.0349004],[-0.99996,-0.00711875,0.00541386]] call InitStruct; 
-['LongSteelPipe',[4060.96,3668.29,44.2252,true],[-0.00692557,0.999976,1.90735e-06],[-0.99996,-0.00692547,0.005659]] call InitStruct; 
+['NewIndPipe20m',[4061.14,3646.39,43.6262,true],[-0.00692557,0.999367,0.0349004],[-0.99996,-0.00711875,0.00541386]] call InitStruct; 
+['NewIndPipe20m',[4060.96,3668.29,44.2252,true],[-0.00692557,0.999976,1.90735e-06],[-0.99996,-0.00692547,0.005659]] call InitStruct; 
 _4049_277343656_2790523_25386 = ['IStruct',[4049.28,3656.28,32.0638,true],270,[0.00692678,0.00566174,0.99996], {_thisObj setvariable ['model','a3\structures_f\ind\pipes\indpipe2_big_support_f.p3d'];}] call InitStruct; // !!! realocated model !!!
 _4056_415773657_7605026_28660 = ['IStruct',[4056.42,3657.76,35.0965,true],180,[-0.00566241,0.00692522,0.99996], {_thisObj setvariable ['model','a3\structures_f\ind\pipes\indpipe2_big_support_f.p3d'];}] call InitStruct; // !!! realocated model !!!
 _4056_375003624_6621126_32448 = ['IStruct',[4056.38,3624.66,35.1344,true],180,[-0.00566241,0.00692522,0.99996], {_thisObj setvariable ['model','a3\structures_f\ind\pipes\indpipe2_big_support_f.p3d'];}] call InitStruct; // !!! realocated model !!!
@@ -682,7 +682,7 @@ _4043_605223649_7739327_76392 = ['ContainerGreen',[4043.61,3649.77,27.7639],180,
 ['SofaBrown',[4042.43,3655.09,31.2408],180,[0,0,1]] call InitStruct; 
 ['SmallRoundWoodenTable',[4045.93,3653.2,31.0715],6.65943e-05,[0,0,1]] call InitStruct; 
 ['SmallWoodenTableHandmade',[4035.07,3654.55,31.2408],270,[0,0,1]] call InitStruct; 
-['SmallChair2',[4045.03,3653.21,36.1226,true],270,[-2.10083e-06,0.00455207,0.99999]] call InitItem; 
+['SmallRedseatChair',[4045.03,3653.21,36.1226,true],270,[-2.10083e-06,0.00455207,0.99999]] call InitItem; 
 ['ButterPiece',[4041.57,3663.02,28.8199],6.53137e-05,[0,0,1]] call InitItem; 
 ['BreadChopped',[4040.96,3663.01,28.7822],280,[0,0,1]] call InitItem; 
 ['WoodenSmallShelf1',[4072.28,3653.55,34.8839,true],90,[-0.00692887,-0.00565972,0.99996]] call InitStruct; 
@@ -789,8 +789,8 @@ _4058_410163679_1208527_31193 = ['WoodenDoor',[4058.41,3679.12,27.3119],90.0005,
 _4036_867683673_8217827_45319 = ['SquareWoodenBox',[4036.87,3673.82,27.4532],0,[0,0,1]] call InitStruct; 
 ['SmallSteelTable1',[4038.12,3673.82,32.8885,true],0,[0.00566271,-0.00693096,0.99996]] call InitStruct; 
 ['BigConcretePipe',[4036.68,3678.57,32.5826,true],[-0.30302,0.947471,-0.102358],[0.196567,0.167239,0.966122]] call InitStruct; 
-['SmallDestroyedCornerPipe',[4037.48,3678.93,32.6085,true],[-0.252924,0.932497,0.257833],[0.0449428,-0.254886,0.965926]] call InitStruct; 
-['MediumRuinedPipe',[4038.36,3675.83,29.9943],0,[0,0,1]] call InitStruct; 
+['IndPipe45DegL',[4037.48,3678.93,32.6085,true],[-0.252924,0.932497,0.257833],[0.0449428,-0.254886,0.965926]] call InitStruct; 
+['IndPipeValve',[4038.36,3675.83,29.9943],0,[0,0,1]] call InitStruct; 
 ['BigPilePipes',[4036.53,3672.85,29.4348],252.807,[0,0,1]] call InitStruct; 
 ['CampfireCreator',[4038.55,3674.02,33.4538,true],0,[0.00566271,-0.00693096,0.99996]] call InitItem; 
 ['OlderWoodenCup',[4037.61,3673.71,28.3256],0,[0,0,1]] call InitItem; 
@@ -1584,7 +1584,7 @@ _4049_223393769_5605516_19175 = ['BoardWoodenBox',[4049.22,3769.56,16.1918],139.
 ['SmallDirtGrey',[4044.6,3745.91,15.4013],285,[0,0,1]] call InitStruct; 
 ['SmallDirtGrey',[4045.49,3773.43,16.0842],275,[0,0,1]] call InitStruct; 
 ['SmallDirtGrey',[4028.38,3761.66,15.3831],20,[0,0,1]] call InitStruct; 
-['SmallDestroyedCornerPipe',[4023.62,3754.43,22.9072,true],[0,0.00693174,0.999976],[-0.00567329,-0.99996,0.00693163]] call InitStruct; 
+['IndPipe45DegL',[4023.62,3754.43,22.9072,true],[0,0.00693174,0.999976],[-0.00567329,-0.99996,0.00693163]] call InitStruct; 
 ['SleepingMatras',[4040.65,3773.8,16.7161],80,[0,0,1], {go_editor_globalRefs set ["RLordTrubaBed",_thisObj];
 }] call InitStruct; 
 ['SleepingMatras',[4024.04,3763.06,20.7061,true],209,[0.0305236,-0.0169193,0.999391], {go_editor_globalRefs set ["RRoistererTrubaBed",_thisObj];
@@ -1633,8 +1633,8 @@ _4030_971923756_2497615_64577 = ['BoardWoodenBox',[4030.97,3756.25,15.6458],79.0
 ['BetonTrapeciaSmall',[4041.17,3735.53,27.5491,true],[-0.00258911,0.0156958,0.999874],[-0.998749,-0.0499786,-0.00180164]] call InitStruct; 
 ['BetonTrapeciaSmall',[4045.82,3735.47,22.2103],185,[0,0,1]] call InitStruct; 
 ['SmallConcreteArch',[4035.15,3732.45,18.1381],184.158,[0,0,1]] call InitStruct; 
-['LongSteelPipe',[4035.03,3712.27,23.7773,true],0,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
-['MediumSteelUpperPipe',[4035.01,3727.6,18.4416],0,[0,0,1]] call InitStruct; 
+['NewIndPipe20m',[4035.03,3712.27,23.7773,true],0,[-0.00659628,-0.00161913,0.999977]] call InitStruct; 
+['NewIndPipeUUP',[4035.01,3727.6,18.4416],0,[0,0,1]] call InitStruct; 
 ['IndustrialPipes',[4040.29,3684.61,26.118],90.9925,[0,0,1]] call InitStruct; 
 ['SmallConcretePipe',[4044.02,3735.68,27.3028,true],90,[-0.00692887,-0.00565972,0.99996]] call InitStruct; 
 ['ShortRottenBoards',[4041.39,3686.63,30.6956,true],[-0.186093,0.92344,-0.335599],[-1.74274e-07,0.341566,0.939858]] call InitStruct; 
@@ -1747,8 +1747,8 @@ if ((random 1) < 0.5) then {
 ['PipeCutOnSupportingStructure',[3977.7,3714.86,17.0573,true],0,[0.00566319,-0.00693144,0.99996]] call InitStruct; 
 ['PipeCutOnSupportingStructure',[3977.61,3728.9,17.2307,true],0,[0.00566319,-0.00693144,0.99996]] call InitStruct; 
 ['PipeCutOnSupportingStructure',[3977.37,3740.14,17.3571,true],0,[0.00566319,-0.00693144,0.99996]] call InitStruct; 
-['SmallDestroyedCornerPipe',[3962.18,3742,13.5772,true],0,[0.00566271,-0.00693096,0.99996]] call InitStruct; 
-['MediumRuinedPipe',[3962.65,3735.08,12.4704,true],[3.89405e-07,-0.966193,-0.25782],[0.00700069,-0.257813,0.966169]] call InitStruct; 
+['IndPipe45DegL',[3962.18,3742,13.5772,true],0,[0.00566271,-0.00693096,0.99996]] call InitStruct; 
+['IndPipeValve',[3962.65,3735.08,12.4704,true],[3.89405e-07,-0.966193,-0.25782],[0.00700069,-0.257813,0.966169]] call InitStruct; 
 ['LongDestroyedPipeWithSupportingStructure',[3963.13,3717.94,11.9043,true],0,[-0.00659628,0.0507174,0.998691]] call InitStruct; 
 ['DestroyedPipeWithValve',[3973.95,3739.93,12.7832,true],180,[-0.00563837,0.00692672,0.99996]] call InitStruct; 
 ['DestroyedPipeWithValve',[3970.99,3739.86,12.7832,true],180,[-0.00563837,0.00692672,0.99996]] call InitStruct; 
@@ -1782,7 +1782,7 @@ if ((random 1) < 0.5) then {
 ['BigPileBurntGarbage',[3978.95,3711.25,12.5053,true],[-0.999848,-0.0173463,0.00182317],[0,0.104528,0.994522]] call InitStruct; 
 ['SmallConcretePipe',[3958.23,3727.47,12.5689,true],[-0.975376,-0.0681902,-0.20974],[-0.196874,-0.159439,0.967378]] call InitStruct; 
 ['SmallConcretePipe',[3984.85,3712.58,13.0237,true],[0.968504,-0.229083,0.0975795],[-0.0390155,0.24743,0.96812]] call InitStruct; 
-['MediumSteelUpperPipe',[3975.19,3712.04,7.02338],148,[0,0,1]] call InitStruct; 
+['NewIndPipeUUP',[3975.19,3712.04,7.02338],148,[0,0,1]] call InitStruct; 
 ['BigConcretePipe',[3971.06,3735.76,12.7184,true],22,[-0.0169294,-0.00063059,0.999857]] call InitStruct; 
 ['BigConcretePipe',[3970.21,3732.23,12.0478,true],0,[-0.0154596,-0.24861,0.96848]] call InitStruct; 
 ['BigConcretePipe',[3972.65,3708.02,17.2963,true],0,[-0.0154596,-0.00693025,0.999856]] call InitStruct; 
@@ -2128,9 +2128,9 @@ _3771_207523364_571534_65545 = ['IStruct',[3771.21,3364.57,10.9398,true],275,[0.
 ['ShortPipeBlueMetal',[3843.9,3496.14,5.13501],318.966,[0,0,1]] call InitStruct; 
 ['DestroyedPipeWithValve',[3889.95,3520.48,5.49712],173.152,[0,0,1]] call InitStruct; 
 ['LargeDestroyedVerticalPipe',[3889.9,3501.78,1.02515],0,[0,0,1]] call InitStruct; 
-['LongSteelPipe',[3865.36,3506.55,5.7182],78.2837,[0,0,1]] call InitStruct; 
-['LongSteelPipe',[3835.4,3478.02,10.4483,true],15.0973,[0.00522451,-0.000597771,0.999986]] call InitStruct; 
-['MediumRuinedPipe',[3850.11,3501.29,10.5992,true],58.0908,[-0.0354208,-0.00374016,0.999366]] call InitStruct; 
+['NewIndPipe20m',[3865.36,3506.55,5.7182],78.2837,[0,0,1]] call InitStruct; 
+['NewIndPipe20m',[3835.4,3478.02,10.4483,true],15.0973,[0.00522451,-0.000597771,0.999986]] call InitStruct; 
+['IndPipeValve',[3850.11,3501.29,10.5992,true],58.0908,[-0.0354208,-0.00374016,0.999366]] call InitStruct; 
 ['BigConcretePipe',[3897.83,3501.06,16.3729,true],0,[0.00512103,-0.00506232,0.999974]] call InitStruct; 
 ['BigConcretePipe',[3897.82,3503.83,16.3908,true],0,[0.00512103,-0.00506232,0.999974]] call InitStruct; 
 ['BigConcretePipe',[3897.82,3506.52,16.0289,true],0,[0.00512103,0.290289,0.956925]] call InitStruct; 
@@ -2147,9 +2147,9 @@ _3771_207523364_571534_65545 = ['IStruct',[3771.21,3364.57,10.9398,true],275,[0.
 ['LargeDestroyedVerticalPipe',[3754.37,3561.53,18.2411],0,[0,0,1]] call InitStruct; 
 ['LongDestroyedPipeWithSupportingStructure',[3763.68,3560.65,33.982,true],[-6.52472e-06,1,-2.71002e-06],[-1.20699e-06,-2.71003e-06,-1]] call InitStruct; 
 ['LongDestroyedPipeWithSupportingStructure',[3765.71,3560.66,33.9893,true],[-6.52472e-06,1,-2.71002e-06],[-1.20699e-06,-2.71003e-06,-1]] call InitStruct; 
-['SmallDestroyedCornerPipe',[3757.44,3526.14,23.2525,true],0,[-0.100657,0.110938,0.988717]] call InitStruct; 
-['SmallDestroyedCornerPipe',[3804.49,3587.59,15.2498,true],0,[0.243852,-0.00693502,0.969788]] call InitStruct; 
-['MediumRuinedPipe',[3789.17,3561.91,23.6572,true],0,[-0.0261903,-0.0384703,0.998916]] call InitStruct; 
+['IndPipe45DegL',[3757.44,3526.14,23.2525,true],0,[-0.100657,0.110938,0.988717]] call InitStruct; 
+['IndPipe45DegL',[3804.49,3587.59,15.2498,true],0,[0.243852,-0.00693502,0.969788]] call InitStruct; 
+['IndPipeValve',[3789.17,3561.91,23.6572,true],0,[-0.0261903,-0.0384703,0.998916]] call InitStruct; 
 ['BigConcretePipe',[3749.2,3489.85,22.9422,true],0,[0,-0.258819,0.965926]] call InitStruct; 
 ['BigConcretePipe',[3749.2,3487.05,22.1898,true],0,[0,-0.258819,0.965926]] call InitStruct; 
 ['BigConcretePipe',[3749.19,3484.45,21.4807,true],0,[0,-0.258819,0.965926]] call InitStruct; 
@@ -2166,15 +2166,15 @@ _3771_207523364_571534_65545 = ['IStruct',[3771.21,3364.57,10.9398,true],275,[0.
 ['BigConcretePipe',[3895.82,3578.57,10.5151],0,[0,0,1]] call InitStruct; 
 ['SmallConcretePipe',[3775.48,3565.72,25.5766,true],0,[0.00693107,0.00566264,0.99996]] call InitStruct; 
 ['BigPilePipes',[3758.89,3537.29,18.341],0,[0,0,1]] call InitStruct; 
-['LongSteelPipe',[3746.94,3525.06,22.978,true],0,[0.00693107,0.00566264,0.99996]] call InitStruct; 
-['MediumSteelUpperPipe',[3788.94,3584.87,21.084,true],[0,0.992646,-0.121055],[-0.140895,0.119847,0.982744]] call InitStruct; 
+['NewIndPipe20m',[3746.94,3525.06,22.978,true],0,[0.00693107,0.00566264,0.99996]] call InitStruct; 
+['NewIndPipeUUP',[3788.94,3584.87,21.084,true],[0,0.992646,-0.121055],[-0.140895,0.119847,0.982744]] call InitStruct; 
 ['IndustrialPipes',[3889.43,3577.07,13.2566,true],0,[0.00566271,-0.00693096,0.99996]] call InitStruct; 
 ['HighMetalConstruction',[3749.14,3470.49,2.69005],0,[0,0,1]] call InitStruct; 
 ['HighMetalConstruction',[3769.75,3394.12,8.97178],0,[0,0,1]] call InitStruct; 
 ['HighMetalConstruction',[3768.63,3376.83,8.91756],0,[0,0,1]] call InitStruct; 
-['LongSteelPipe',[3756.59,3542.76,33.1206,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
-['LongSteelPipe',[3756.96,3543.77,33.0127,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
-['LongSteelPipe',[3756.81,3544.92,32.9159,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
+['NewIndPipe20m',[3756.59,3542.76,33.1206,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
+['NewIndPipe20m',[3756.96,3543.77,33.0127,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
+['NewIndPipe20m',[3756.81,3544.92,32.9159,true],[-0.939672,0.342046,0.00458181],[-0.00693639,-0.00566093,-0.99996]] call InitStruct; 
 ['LongMetalBeams',[3772.86,3448.48,10.3892],225,[0,0,1]] call InitStruct; 
 ['BigConcretePipe',[3897.49,3603.88,14.4261],0,[0,0,1]] call InitStruct; 
 ['BigConcretePipe',[3897.5,3601.07,14.4339],0,[0,0,1]] call InitStruct; 
@@ -4092,7 +4092,7 @@ if (!isNil'_4040_653323631_8784230_24065') then {
 if (!isNil'_4045_488283633_1135327_37314') then {
 	[_4045_488283633_1135327_37314,'TorchDisabled',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4045_488283633_1135327_37314,'MatchBox',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4045_488283633_1135327_37314,'HatGrayOldUshanka',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4045_488283633_1135327_37314,'HatUshankaUp',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4045_488283633_1135327_37314,'WoolCoat',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4045_488283633_1135327_37314,'NomadCloth23',1,100] call (_4045_488283633_1135327_37314 getvariable 'proto' getvariable 'createItemInContainer');
 };
@@ -4132,8 +4132,8 @@ if (!isNil'_4074_545413642_7612328_64822') then {
 if (!isNil'_4075_711913642_8584028_66160') then {
 	[_4075_711913642_8584028_66160,'HatUshanka',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4075_711913642_8584028_66160,'CookerCap',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4075_711913642_8584028_66160,'HatOldUshanka',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4075_711913642_8584028_66160,'HatGrayOldUshanka',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4075_711913642_8584028_66160,'HatUshankaUp2',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4075_711913642_8584028_66160,'HatUshankaUp',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4075_711913642_8584028_66160,'HatShemag',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4075_711913642_8584028_66160,'HoodAbbat',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4075_711913642_8584028_66160,'HoodChemicalProt',1,100] call (_4075_711913642_8584028_66160 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4412,7 +4412,7 @@ if (!isNil'_4043_605223649_7739327_76392') then {
 if (!isNil'_4038_859623646_8256831_24920') then {
 	[_4038_859623646_8256831_24920,'CookerCloth',1,100] call (_4038_859623646_8256831_24920 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4038_859623646_8256831_24920,'CookerCap',1,100] call (_4038_859623646_8256831_24920 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4038_859623646_8256831_24920,'HatGrayOldUshanka',1,100] call (_4038_859623646_8256831_24920 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4038_859623646_8256831_24920,'HatUshankaUp',1,100] call (_4038_859623646_8256831_24920 getvariable 'proto' getvariable 'createItemInContainer');
 };
 if (!isNil'_4051_815193675_0297927_19326') then {
 	_4051_815193675_0297927_19326 setvariable ['countslots',100];
@@ -4515,7 +4515,7 @@ if (!isNil'_4049_223393769_5605516_19175') then {
 	[_4049_223393769_5605516_19175,'Tooth',1,61] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4049_223393769_5605516_19175,'Tooth',1,87] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4049_223393769_5605516_19175,'Tooth',1,63] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4049_223393769_5605516_19175,'WorkerCoolCap',1,72] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4049_223393769_5605516_19175,'WorkerCap2',1,72] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4049_223393769_5605516_19175,'BrownBandannaMask',1,84] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4049_223393769_5605516_19175,'WoolCoat',1,78] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4049_223393769_5605516_19175,'CuttingBoard',1,78] call (_4049_223393769_5605516_19175 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4528,7 +4528,7 @@ if (!isNil'_4049_223393769_5605516_19175') then {
 if (!isNil'_4030_971923756_2497615_64577') then {
 	[_4030_971923756_2497615_64577,'Tooth',1,76] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4030_971923756_2497615_64577,'Tooth',1,61] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
-	[_4030_971923756_2497615_64577,'WorkerCoolCap',1,72] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
+	[_4030_971923756_2497615_64577,'WorkerCap2',1,72] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4030_971923756_2497615_64577,'BrownBandannaMask',1,84] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4030_971923756_2497615_64577,'CuttingBoard',1,78] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
 	[_4030_971923756_2497615_64577,'Wrench',1,78] call (_4030_971923756_2497615_64577 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4572,11 +4572,11 @@ if (!isNil'_3841_580083595_613049_22495') then {
 	[_3841_580083595_613049_22495,'GreatcoatBlack',1,20] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'GromilaCloth',1,20] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'HatUshanka',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3841_580083595_613049_22495,'HatOldUshanka',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3841_580083595_613049_22495,'HatGrayOldUshanka',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3841_580083595_613049_22495,'HatUshankaUp2',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3841_580083595_613049_22495,'HatUshankaUp',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'HatShemag',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'WorkerCap',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3841_580083595_613049_22495,'WorkerCoolCap',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3841_580083595_613049_22495,'WorkerCap2',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'BrownBandannaMask',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'BlackBandannaMask',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3841_580083595_613049_22495,'FaceCoverMask',1,25] call (_3841_580083595_613049_22495 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4628,11 +4628,11 @@ if (!isNil'_3746_760993545_2321817_91538') then {
 	[_3746_760993545_2321817_91538,'GreatcoatBlack',1,20] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'GromilaCloth',1,20] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'HatUshanka',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3746_760993545_2321817_91538,'HatOldUshanka',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3746_760993545_2321817_91538,'HatGrayOldUshanka',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3746_760993545_2321817_91538,'HatUshankaUp2',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3746_760993545_2321817_91538,'HatUshankaUp',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'HatShemag',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'WorkerCap',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3746_760993545_2321817_91538,'WorkerCoolCap',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3746_760993545_2321817_91538,'WorkerCap2',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'BrownBandannaMask',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'BlackBandannaMask',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3746_760993545_2321817_91538,'FaceCoverMask',1,25] call (_3746_760993545_2321817_91538 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4683,11 +4683,11 @@ if (!isNil'_3753_539553557_0383322_11060') then {
 	[_3753_539553557_0383322_11060,'GreatcoatBlack',1,20] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'GromilaCloth',1,20] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'HatUshanka',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3753_539553557_0383322_11060,'HatOldUshanka',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3753_539553557_0383322_11060,'HatGrayOldUshanka',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3753_539553557_0383322_11060,'HatUshankaUp2',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3753_539553557_0383322_11060,'HatUshankaUp',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'HatShemag',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'WorkerCap',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3753_539553557_0383322_11060,'WorkerCoolCap',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3753_539553557_0383322_11060,'WorkerCap2',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'BrownBandannaMask',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'BlackBandannaMask',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3753_539553557_0383322_11060,'FaceCoverMask',1,25] call (_3753_539553557_0383322_11060 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4758,11 +4758,11 @@ if (!isNil'_3774_251463445_884774_79702') then {
 	[_3774_251463445_884774_79702,'GreatcoatBlack',1,20] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'GromilaCloth',1,20] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'HatUshanka',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3774_251463445_884774_79702,'HatOldUshanka',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3774_251463445_884774_79702,'HatGrayOldUshanka',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3774_251463445_884774_79702,'HatUshankaUp2',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3774_251463445_884774_79702,'HatUshankaUp',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'HatShemag',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'WorkerCap',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3774_251463445_884774_79702,'WorkerCoolCap',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3774_251463445_884774_79702,'WorkerCap2',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'BrownBandannaMask',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'BlackBandannaMask',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3774_251463445_884774_79702,'FaceCoverMask',1,25] call (_3774_251463445_884774_79702 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4813,11 +4813,11 @@ if (!isNil'_3749_366703481_8239710_31572') then {
 	[_3749_366703481_8239710_31572,'GreatcoatBlack',1,20] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'GromilaCloth',1,20] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'HatUshanka',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3749_366703481_8239710_31572,'HatOldUshanka',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3749_366703481_8239710_31572,'HatGrayOldUshanka',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3749_366703481_8239710_31572,'HatUshankaUp2',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3749_366703481_8239710_31572,'HatUshankaUp',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'HatShemag',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'WorkerCap',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3749_366703481_8239710_31572,'WorkerCoolCap',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3749_366703481_8239710_31572,'WorkerCap2',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'BrownBandannaMask',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'BlackBandannaMask',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3749_366703481_8239710_31572,'FaceCoverMask',1,25] call (_3749_366703481_8239710_31572 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4871,11 +4871,11 @@ if (!isNil'_3820_512943443_428966_36582') then {
 	[_3820_512943443_428966_36582,'GreatcoatBlack',1,20] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'GromilaCloth',1,20] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'HatUshanka',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3820_512943443_428966_36582,'HatOldUshanka',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3820_512943443_428966_36582,'HatGrayOldUshanka',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3820_512943443_428966_36582,'HatUshankaUp2',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3820_512943443_428966_36582,'HatUshankaUp',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'HatShemag',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'WorkerCap',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3820_512943443_428966_36582,'WorkerCoolCap',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3820_512943443_428966_36582,'WorkerCap2',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'BrownBandannaMask',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'BlackBandannaMask',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3820_512943443_428966_36582,'FaceCoverMask',1,25] call (_3820_512943443_428966_36582 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4956,11 +4956,11 @@ if (!isNil'_3817_342533443_407716_37011') then {
 	[_3817_342533443_407716_37011,'GreatcoatBlack',1,20] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'GromilaCloth',1,20] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'HatUshanka',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3817_342533443_407716_37011,'HatOldUshanka',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3817_342533443_407716_37011,'HatGrayOldUshanka',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3817_342533443_407716_37011,'HatUshankaUp2',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3817_342533443_407716_37011,'HatUshankaUp',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'HatShemag',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'WorkerCap',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3817_342533443_407716_37011,'WorkerCoolCap',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3817_342533443_407716_37011,'WorkerCap2',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'BrownBandannaMask',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'BlackBandannaMask',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3817_342533443_407716_37011,'FaceCoverMask',1,25] call (_3817_342533443_407716_37011 getvariable 'proto' getvariable 'createItemInContainer');
@@ -4998,11 +4998,11 @@ if (!isNil'_3899_852783562_475345_80502') then {
 	[_3899_852783562_475345_80502,'GreatcoatBlack',1,20] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'GromilaCloth',1,20] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'HatUshanka',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3899_852783562_475345_80502,'HatOldUshanka',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3899_852783562_475345_80502,'HatGrayOldUshanka',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3899_852783562_475345_80502,'HatUshankaUp2',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3899_852783562_475345_80502,'HatUshankaUp',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'HatShemag',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'WorkerCap',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3899_852783562_475345_80502,'WorkerCoolCap',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3899_852783562_475345_80502,'WorkerCap2',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'BrownBandannaMask',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'BlackBandannaMask',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3899_852783562_475345_80502,'FaceCoverMask',1,25] call (_3899_852783562_475345_80502 getvariable 'proto' getvariable 'createItemInContainer');
@@ -5048,11 +5048,11 @@ if (!isNil'_3939_572023499_193605_54820') then {
 	[_3939_572023499_193605_54820,'GreatcoatBlack',1,20] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'GromilaCloth',1,20] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'HatUshanka',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3939_572023499_193605_54820,'HatOldUshanka',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3939_572023499_193605_54820,'HatGrayOldUshanka',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3939_572023499_193605_54820,'HatUshankaUp2',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3939_572023499_193605_54820,'HatUshankaUp',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'HatShemag',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'WorkerCap',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3939_572023499_193605_54820,'WorkerCoolCap',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3939_572023499_193605_54820,'WorkerCap2',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'BrownBandannaMask',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'BlackBandannaMask',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3939_572023499_193605_54820,'FaceCoverMask',1,25] call (_3939_572023499_193605_54820 getvariable 'proto' getvariable 'createItemInContainer');
@@ -5134,11 +5134,11 @@ if (!isNil'_3844_984623458_976075_91157') then {
 	[_3844_984623458_976075_91157,'GreatcoatBlack',1,20] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'GromilaCloth',1,20] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'HatUshanka',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3844_984623458_976075_91157,'HatOldUshanka',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3844_984623458_976075_91157,'HatGrayOldUshanka',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3844_984623458_976075_91157,'HatUshankaUp2',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3844_984623458_976075_91157,'HatUshankaUp',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'HatShemag',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'WorkerCap',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3844_984623458_976075_91157,'WorkerCoolCap',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3844_984623458_976075_91157,'WorkerCap2',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'BrownBandannaMask',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'BlackBandannaMask',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3844_984623458_976075_91157,'FaceCoverMask',1,25] call (_3844_984623458_976075_91157 getvariable 'proto' getvariable 'createItemInContainer');
@@ -5189,11 +5189,11 @@ if (!isNil'_3937_157713502_771978_94925') then {
 	[_3937_157713502_771978_94925,'GreatcoatBlack',1,20] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'GromilaCloth',1,20] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'HatUshanka',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3937_157713502_771978_94925,'HatOldUshanka',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3937_157713502_771978_94925,'HatGrayOldUshanka',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3937_157713502_771978_94925,'HatUshankaUp2',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3937_157713502_771978_94925,'HatUshankaUp',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'HatShemag',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'WorkerCap',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
-	[_3937_157713502_771978_94925,'WorkerCoolCap',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
+	[_3937_157713502_771978_94925,'WorkerCap2',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'BrownBandannaMask',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'BlackBandannaMask',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');
 	[_3937_157713502_771978_94925,'FaceCoverMask',1,25] call (_3937_157713502_771978_94925 getvariable 'proto' getvariable 'createItemInContainer');

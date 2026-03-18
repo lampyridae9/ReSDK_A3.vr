@@ -434,7 +434,7 @@
       "port_deletion_allowed":false,
       "subgraph_session":{},
       "custom":{
-        "Тип предмета":"HatOldUshanka",
+        "Тип предмета":"HatUshankaUp2",
         "Слот":"Голова"
       },
       "class_":"func.createItemInInventory"

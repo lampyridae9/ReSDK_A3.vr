@@ -68,6 +68,11 @@ class(OldLightToilet) extends(OldGreenToiletBowl)
 endclass
 
 editor_attribute("EditorGenerated")
+class(OldLightToilet2) extends(OldLightToilet)
+	var(model,"ca\buildings\furniture\toilet_b.p3d");
+endclass
+
+editor_attribute("EditorGenerated")
 class(BrownOldArmchair) extends(IChair)
 	var(model,"ml\ml_object_new\model_14_10\kreslo.p3d");
 	getter_func(getChairOffsetPos,[0 arg 0.3 arg -0.5]);
@@ -97,6 +102,11 @@ class(ArmChair) extends(IChair)
 	var(model,"a3\props_f_orange\furniture\armchair_01_f.p3d");
 endclass
 
+editor_attribute("EditorGenerated")
+class(ArmChair2) extends(ArmChair)
+	var(model,"ml_exodusnew\kreslishko.p3d");
+endclass
+
 class(ArmChairBrown) extends(IChair)
 	getterconst_func(getChairOffsetDir,180);
 	getterconst_func(getChairOffsetPos,vec3(0,-0.1,0));
@@ -109,27 +119,18 @@ class(LobbyChair) extends(IChair)
 	var(model,"ca\structures\furniture\chairs\lobby_chair\lobby_chair.p3d");
 endclass
 
-editor_attribute("Deprecated" arg "Заменить на BrownLeatherChair. Будет удален с редактором 1.20")
-class(BumArmChair) extends(IChair)
+class(BrownLeatherChair) extends(IChair)
 	getterconst_func(getChairOffsetPos,vec3(0,0.2,-0.5));
 	getterconst_func(restBias,vec3(0,0.8,0));
 	var(model,"smg_metro_building\drugoe\smg_bomjkreslo.p3d");
 	var(dr,1);
 endclass
-	class(BrownLeatherChair) extends(BumArmChair)
-		var(model,"smg_metro_building\drugoe\smg_bomjkreslo.p3d");
-	endclass
 
 class(GreenArmChair) extends(IChair)
 	getterconst_func(getChairOffsetPos,vec3(0,-0.25,-0.4));
 	getterconst_func(getChairOffsetDir,180);
 	var(model,"ml\ml_object_new\model_14_10\diwan.p3d");
 endclass
-	//EQUALS
-	editor_attribute("Deprecated" arg "Заменить на GreenArmChair. Будет удален с редактором 1.20")
-	class(GreenChair) extends(GreenArmChair)
-		var(model,"ml\ml_object_new\model_14_10\diwan.p3d");
-	endclass
 
 class(Bath) extends(IChair)
 	var(model,"ca\structures\furniture\bathroom\bath\bath.p3d");
@@ -200,4 +201,10 @@ class(Bath) extends(IChair)
 		callSelfParams(playSound,"reagents\sink.ogg" arg getRandomPitchInRange(0.9,1.3));
 	};
 
+endclass
+
+editor_attribute("EditorGenerated")
+class(DrinkingBowl) extends(Bath)
+	var(model,"a3\structures_f_enoch\industrial\agriculture\trough_01_f.p3d");
+	var(name,"Поилка");
 endclass

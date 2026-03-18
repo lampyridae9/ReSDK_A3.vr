@@ -59,9 +59,9 @@ CityCloth_tier2:
     #Шапки
     HatRedSaloon:
       prob: 3%
-    HatOldUshanka:
+    HatUshankaUp2:
       prob: 3%
-    HatGrayOldUshanka:
+    HatUshankaUp:
       prob: 3%
     HatUshanka:
       prob: 3%
@@ -103,8 +103,6 @@ CityCloth_tier3:
     WorkerCap1:
       prob: 2%
     WorkerCap2:
-      prob: 2%
-    WorkerCoolCap:
       prob: 2%
 
     #Маски

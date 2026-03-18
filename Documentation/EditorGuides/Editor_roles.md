@@ -362,7 +362,7 @@ func(getEquipment)
 	["Bandage",_cloth] call createItemInContainer;
 
 	// Создание головного убора на слоте головы
-	["HatOldUshanka",_mob,INV_HEAD] call createItemInInventory;
+	["HatUshankaUp2",_mob,INV_HEAD] call createItemInInventory;
 };
 ```
 

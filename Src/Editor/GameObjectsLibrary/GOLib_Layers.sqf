@@ -39,6 +39,9 @@ function(layer_internal_reloadLayerTree)
 	private _flatChilds = createHashMap;
 	layer_internal_map_childs = _flatChilds; //base mother, child
 
+	private _flatParents = createHashMap;
+	layer_internal_map_parents = _flatParents; //base child, parent
+
 	{
 		private _p = __getparentlayer(_x);
 		if (_p != -1) then {
@@ -51,6 +54,30 @@ function(layer_internal_reloadLayerTree)
 			_ldict set [_x,[]];
 		};
 	} foreach _allLayers;
+
+	// Собираем массив всех родителей для каждого слоя (от ближайшего к корню)
+	// Используем рекурсивный обход по уже построенной мапе _flatChilds
+	private _buildParents = {
+		params ["_currentLayer", "_parentChain"];
+		// Сохраняем цепочку родителей для текущего слоя (если есть родители)
+		if (count _parentChain > 0) then {
+			_flatParents set [_currentLayer, _parentChain];
+		};
+		// Рекурсивно обрабатываем всех детей текущего слоя
+		if (_currentLayer in _flatChilds) then {
+			private _children = _flatChilds get _currentLayer;
+			{
+				// Для каждого ребенка добавляем текущий слой в начало цепочки родителей
+				private _newParentChain = [_currentLayer] + _parentChain;
+				[_x, _newParentChain] call _buildParents;
+			} foreach _children;
+		};
+	};
+	
+	// Начинаем обход с корневых слоев (те, которые есть в _ldict)
+	{
+		[_x, []] call _buildParents;
+	} foreach _ldict;
 
 	_search = {
 		params ["_cur","_plist","_mapping"];
@@ -69,7 +96,7 @@ function(layer_internal_reloadLayerTree)
 
 function(layer_openSelectLayer)
 {
-	params [["_tex","Выберите слой"],["_des","Выберите слой по названию"],["_firstId",-1]];
+	params [["_tex","Выберите слой"],["_des","Выберите слой по названию"],["_firstId",-1],["_multiple",false]];
 	private _dictinf_data = [];
 	private _getname_ = { format["%1 #%2",__getname(_this),_this] };
 	private _selItm = "";
@@ -101,13 +128,20 @@ function(layer_openSelectLayer)
 		_newval,
 		_tex,
 		_des,
-		_dictinf_data
+		_dictinf_data,
+		null,
+		_multiple
 	] call widget_winapi_openTreeView) then {
-		if (refget(_newval) == "") exitWith {-1};
+		if (refget(_newval) == "") exitWith {ifcheck(_multiple,[],-1)};
+		
 		private _v = refget(_newval);
-		parseNumber(_v select [(_v find "#") + 1])
+		if (_multiple) then {
+			_v splitString (toString [9]) apply {parseNumber(_x select [(_x find "#") + 1])};
+		} else {
+			parseNumber(_v select [(_v find "#") + 1]);
+		};
 	} else {
-		-1
+		ifcheck(_multiple,[],-1)
 	};
 }
 
@@ -231,7 +265,7 @@ function(layer_lockGuard)
 		};
 
 		private _allLayersPtr = call layer_internal_getLayerPtrList;
-		layer_internal_lockGuardCache = _allLayersPtr apply {[_x,_x call layer_isLocked]};
+		layer_internal_lockGuardCache = _allLayersPtr apply {[_x,[_x] call layer_isLocked]};
 		{
 			[_x,false,golib_history_skippedHistoryStageFlag+" Системное переключение"] call layer_setLocked;
 		} foreach _allLayersPtr;
@@ -246,12 +280,37 @@ function(layer_lockGuard)
 
 function(layer_isLocked)
 {
-	params ["_layer"];
+	params ["_layer",["_includeParent",false]];
 	if equalTypes(_layer,"") then {
 		_layer = _layer call layer_internal_getLayerPtrByName;
 	};
 	if (_layer == -1) exitwith {false};
-	!((_layer get3DENAttribute "Transformation") select 0)
+	if (_includeParent) then {
+		private _d = layer_internal_map_parents get _layer;
+		if (!((_layer get3DENAttribute "Transformation") select 0)) exitWith {true};
+		if isNullVar(_d) exitWith { !((_layer get3DENAttribute "Transformation") select 0) };
+
+		any_of(_d apply {[_x] call layer_isLocked})
+	} else {
+		!((_layer get3DENAttribute "Transformation") select 0)
+	}
+}
+
+//Высокоуровневая функция проверки заблокированности объекта (если в заблокированном слое или родительских заблокированных слоях)
+function(layer_isObjectLocked)
+{
+	params ["_object"];
+	private _layer = [_object,false] call layer_getObjectLayer;
+	if (_layer == -1) exitwith {false};
+	[_layer,true] call layer_isLocked;
+}
+
+function(layer_getAllParentLayers)
+{
+	params ["_layer"];
+	private _d = layer_internal_map_parents get _layer;
+	if isNullVar(_d) exitWith {[]};
+	_d
 }
 
 function(layer_setVisible)
@@ -286,6 +345,15 @@ function(layer_addObject)
 	if (_layer == -1) exitwith {false};
 
 	_object set3DENLayer _layer;
+}
+
+function(layer_removeObject)
+{
+	params ["_object"];
+	private _layer = [_object,false] call layer_getObjectLayer;
+	if (_layer == -1) exitwith {false};
+	_object set3DENLayer -1;
+	true
 }
 
 function(layer_getObjects)

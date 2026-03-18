@@ -85,12 +85,12 @@ class(RPomeshik) extends(RDetectiveModeRole)
 		skillrand(farming,4,7)
 	]};
 
-	//cloth GreatcoatBrown,back WoolCoat, head WorkerCoolCap
+	//cloth GreatcoatBrown,back WoolCoat, head WorkerCap2
 	func(getEquipment)
 	{
 		objParams_1(_mob);
 		["WoolCoat",_mob,INV_BACK] call createItemInInventory;
-		["WorkerCoolCap",_mob,INV_HEAD] call createItemInInventory;
+		["WorkerCap2",_mob,INV_HEAD] call createItemInInventory;
 
 		private _cloth = ["GreatcoatBrown",_mob,INV_CLOTH] call createItemInInventory;
 		setVar(_cloth,name,"Одеяние помещика");
@@ -563,13 +563,13 @@ class(RDetectiveTrader) extends(RDetectiveModeRole)
 	]};
 
 	//room give
-	//cloth TorgashPalthCloth,head HatGrayOldUshanka
+	//cloth TorgashPalthCloth,head HatUshankaUp
 	//SteelMedicalBox
 	func(getEquipment)
 	{
 		objParams_1(_mob);
 
-		["HatGrayOldUshanka",_mob,INV_HEAD] call createItemInInventory;
+		["HatUshankaUp",_mob,INV_HEAD] call createItemInInventory;
 		private _cloth = ["TorgashPalthCloth",_mob,INV_CLOTH] call createItemInInventory;
 		setVar(_cloth,name,"Торговское клетчатое пальто");
 
@@ -803,7 +803,7 @@ class(RDetectiveThief) extends(RDetectiveModeRole)
 		["Crowbar",_mob] call createItemInInventory;
 		regKeyInUniform(_cloth,["ohr"],"Дубликат ключа сторожа");
 		["BalaclavaMask2",_mob,INV_FACE] call createItemInInventory;
-		_back = ["SmallBackpack",_mob,INV_BACKPACK] call createItemInInventory;
+		_back = ["LeatherBackpackBrown",_mob,INV_BACKPACK] call createItemInInventory;
 		["Screwdriver",_back] call createItemInContainer;
 		["Flashlight",_back] call createItemInContainer;
 		["SmallBattery",_back] call createItemInContainer;
