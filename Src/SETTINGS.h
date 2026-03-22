@@ -240,6 +240,10 @@
 #ifdef CMD__DISABLETEAMSPEAK
 	#define DISABLETEAMSPEAK
 #endif
+//отключение проверки подписей dll
+#ifdef CMD__SERVERDISABLEDLLCHECK
+	#define SERVERDISABLEDLLCHECK
+#endif
 
 #ifdef RELEASE
 	#undef ENABLE_RPCLOG_CONSOLE_CLIENT

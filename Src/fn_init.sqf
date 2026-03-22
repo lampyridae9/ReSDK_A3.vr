@@ -248,6 +248,11 @@ if (__sha != "Unrevisioned") then {
 project_version = (((preprocessFile "src\VERSION") splitString endl) select 0) + "+" + (__sha);
 netSetGlobal(relicta_version,project_version);
 
+#ifdef SERVERDISABLEDLLCHECK
+	missionnamespace setvariable ["SERVERDISABLEDLLCHECK",true,true];
+	warning("Disabled client-side DLL signature checking");
+#endif
+
 #ifdef DISABLETEAMSPEAK
 vs_serverdisabled = true;
 netSetGlobal(vs_serverdisabled,vs_serverdisabled);

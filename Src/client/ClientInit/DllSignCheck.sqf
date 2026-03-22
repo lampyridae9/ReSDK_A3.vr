@@ -9,7 +9,7 @@
 private _signDLLError = false;
 private _signDLLErrorMessage = "";
 
-if (isMultiplayer) then {
+if (isMultiplayer && isNull(SERVERDISABLEDLLCHECK)) then {
 	private _extMap = createHashMapFromArray CLIENTSIDE_LIST_ALLOWED_EXTENSIONS;
 	{
 		private _ext = _x get "name";
