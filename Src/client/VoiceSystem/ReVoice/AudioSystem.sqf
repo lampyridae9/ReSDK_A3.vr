@@ -72,7 +72,9 @@ vs_audio_setMasterSoundVolume = {
 	apiCmd [CMD_AUDIO_SET_MASTER_SOUND_VOLUME,[_this]];
 };
 vs_audio_getMasterSoundVolume = {
-	parseNumber (apiRequest(REQ_AUDIO_GET_MASTER_SOUND_VOLUME));
+	private _strval = (apiRequest(REQ_AUDIO_GET_MASTER_SOUND_VOLUME));
+	private _clrval = _strval splitString ",." joinString "."; //fix for 1.5--
+	parseNumber _clrval;
 };
 
 /*

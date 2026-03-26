@@ -20,6 +20,12 @@ vs_max_voice_volume = 60;
 vs_horizontal_tab = toString [9]; //для запросов
 vs_isEnabledText = false;
 
+vs_voipVolCurrent = profileNamespace getvariable ["rel_voipvol",1];
+if not_equalTypes(vs_voipVolCurrent,0) then {
+	vs_voipVolCurrent = 1;
+};
+vs_voipVolCurrent = clamp(vs_voipVolCurrent,0,10);
+
 #ifdef REDITOR_VOICE_DEBUG
     //список процессируемых объектов
 	if isNull(vs_reditor_procObjList) then {
