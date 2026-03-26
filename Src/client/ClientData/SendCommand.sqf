@@ -427,6 +427,7 @@ localCommand("reloadvoice")
 
 localCommand("setvoipvol") 
 {
+	["В настройках Реликты (раздел Игра) вы можете более удобно настроить эту опцию","system"] call chatPrint;
 	_new = parseNumber arguments;
 	[_new] call vs_setMasterVoiceVolume;
 };
