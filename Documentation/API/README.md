@@ -3,7 +3,7 @@ Count modules: 33
  - [client](client//client.md) - 2 files
  - [BlastFx](client//BlastFx.md) - 2 files
  - [Chat](client//Chat.md) - 4 files
- - [ClientData](client//ClientData.md) - 14 files
+ - [ClientData](client//ClientData.md) - 15 files
  - [ClientInit](client//ClientInit.md) - 3 files
  - [ClientMenus](client//ClientMenus.md) - 1 files
  - [ClientRpc](client//ClientRpc.md) - 2 files
@@ -16,7 +16,7 @@ Count modules: 33
  - [InputSystem](client//InputSystem.md) - 6 files
  - [Interactions](client//Interactions.md) - 22 files
  - [Inventory](client//Inventory.md) - 7 files
- - [LightEngine](client//LightEngine.md) - 75 files
+ - [LightEngine](client//LightEngine.md) - 76 files
  - [Lobby](client//Lobby.md) - 8 files
  - [LocalEffects](client//LocalEffects.md) - 2 files
  - [NetDisplays](client//NetDisplays.md) - 16 files
@@ -24,7 +24,7 @@ Count modules: 33
  - [OneSync](client//OneSync.md) - 5 files
  - [PersonClient](client//PersonClient.md) - 1 files
  - [ProxyItems](client//ProxyItems.md) - 7 files
- - [Rendering](client//Rendering.md) - 14 files
+ - [Rendering](client//Rendering.md) - 17 files
  - [SoundSystem](client//SoundSystem.md) - 3 files
  - [StaminaControl](client//StaminaControl.md) - 3 files
  - [StrafeLock](client//StrafeLock.md) - 1 files
@@ -54,8 +54,8 @@ Count modules: 59
  - [FileSystem](host//FileSystem.md) - 2 files
  - [GameEvents](host//GameEvents.md) - 4 files
  - [GamemodeManager](host//GamemodeManager.md) - 11 files
- - [GameModes](host//GameModes.md) - 43 files
- - [GameObjects](host//GameObjects.md) - 149 files
+ - [GameModes](host//GameModes.md) - 46 files
+ - [GameObjects](host//GameObjects.md) - 150 files
  - [Gender](host//Gender.md) - 2 files
  - [GURPS](host//GURPS.md) - 3 files
  - [Logger](host//Logger.md) - 2 files

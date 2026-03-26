@@ -877,7 +877,7 @@ Description:
 
 Initial value:
 ```sqf
-true
+"enableFWS" call sdk_hasSystemFlag
 ```
 File: [host\Tools\HotReload\HotReload_init.sqf at line 9](../../../Src/host/Tools/HotReload/HotReload_init.sqf#L9)
 ## fileWatcher_autoReloadObjects
