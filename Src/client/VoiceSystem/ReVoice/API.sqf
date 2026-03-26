@@ -140,7 +140,7 @@ vs_setMasterVoiceVolume = {
 };
 
 vs_getMasterVoiceVolume = {
-    parseNumber apiRequest(REQ_SET_TEST_VOICE_ENABLED)
+    parseNumber apiRequest(REQ_GET_MASTER_VOICE_VOLUME)
 };
 
 vs_setTestVolumeMode = {
