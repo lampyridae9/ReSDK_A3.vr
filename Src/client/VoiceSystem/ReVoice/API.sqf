@@ -77,6 +77,7 @@ vs_connectToVoiceSystem = {
     [player,vs_localName] call vs_initMob;
 
     [2] call vs_changeVoiceVolume;
+    [vs_voipVolCurrent] call vs_setMasterVoiceVolume;
 
     vs_canProcess = true;
     _r
@@ -136,6 +137,24 @@ vs_setMasterVoiceVolume = {
     params ["_vol"];
     _vol = clamp(_vol,0,10);
     ((apiCmd [CMD_SET_MASTER_VOICE_VOLUME,[_vol]])select 0)=="True";
+};
+
+vs_getMasterVoiceVolume = {
+    parseNumber apiRequest(REQ_GET_MASTER_VOICE_VOLUME)
+};
+
+vs_setTestVolumeMode = {
+    params ["_mode"];
+    private _snd = pick [
+        "singleplayer\sp_guide\chap5\underground\under_kap1.ogg",
+        "singleplayer\sp_guide\chap5\warzone\kap1.ogg",
+        "singleplayer\sp_guide\begin\village\cac3.ogg",
+        "singleplayer\sp_guide\begin\village\talk2_2.ogg",
+        "singleplayer\sp_guide\begin\gate\sword1.ogg",
+        "singleplayer\sp_guide\begin\gate\na1_1.ogg",
+        "singleplayer\sp_guide\chap3\gg9.ogg"
+    ];
+    ((apiCmd [CMD_SET_TEST_VOICE_ENABLED,[_mode,PATH_SOUND(_snd),"auto"]]) select 0)=="True"
 };
 
 vs_startHandleProcessPlayerPos = {

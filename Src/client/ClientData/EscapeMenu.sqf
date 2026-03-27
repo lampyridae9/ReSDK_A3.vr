@@ -266,6 +266,19 @@ esc_settings_names = [
 decl(int)
 esc_settings_curIndex = -1;
 
+decl(bool(int))
+esc_settings_beginLoadSection = {
+	params ["_newIndex"];
+	if (esc_settings_curIndex == _newIndex) exitWith {false};
+
+	if (esc_settings_curIndex == 2) then {
+		call esc_settings_game_onLeaveSection;
+	};
+
+	esc_settings_curIndex = _newIndex;
+	true
+};
+
 decl(float)
 cd_settingsVersion = 1.0;
 
@@ -328,6 +341,7 @@ esc_settings_open = {
 	esc_settings_widgets = [_ctg,_ctgIn,_accept,_abort];
 
 	esc_settings_curIndex = -1;
+	cd_voipSessionPrepared = false;
 	call esc_settings_loader_keyboard;
 };
 
@@ -356,6 +370,7 @@ esc_settings_close = {
 	};
 	
 	_isSaved call esc_settings_game_unloading;
+	cd_voipSessionPrepared = false;
 };
 
 decl(void())

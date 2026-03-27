@@ -18,6 +18,8 @@
 #define REQ_SPEAK_STOP "speakStop"
 #define REQ_SPEAK_RELEASEALL "speakReleaseAll"
 
+#define REQ_GET_MASTER_VOICE_VOLUME "getMasterVoiceVolume"
+
 //=============== api command ===========================
 #define CMD_CONNECT_VOICE "connectVoice"
 
@@ -27,6 +29,7 @@
 #define CMD_SET_PLAYBACK_DEVICE "setPlaybackDevice"
 
 #define CMD_SET_MASTER_VOICE_VOLUME "setMasterVoiceVolume"
+#define CMD_SET_TEST_VOICE_ENABLED "setTestVoiceEnabled"
 
 #define CMD_GET_ALL_CLIENTS "getAllClients"
 

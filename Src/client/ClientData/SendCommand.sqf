@@ -427,8 +427,13 @@ localCommand("reloadvoice")
 
 localCommand("setvoipvol") 
 {
+	["В настройках Реликты (раздел Игра) вы можете более удобно настроить эту опцию","system"] call chatPrint;
 	_new = parseNumber arguments;
-	[_new] call vs_setMasterVoiceVolume;
+	if ([_new] call vs_setMasterVoiceVolume) then {
+		vs_voipVolCurrent = _new;
+		profileNamespace setVariable ["rel_voipvol",_new];
+		saveProfileNamespace;
+	};
 };
 
 localCommand("disablecolorcorrection")
