@@ -73,7 +73,7 @@ vs_audio_setMasterSoundVolume = {
 };
 vs_audio_getMasterSoundVolume = {
 	private _strval = (apiRequest(REQ_AUDIO_GET_MASTER_SOUND_VOLUME));
-	private _clrval = _strval splitString ",." joinString "."; //fix for 1.5--
+	private _clrval = _strval splitString ",." joinString "."; //fix for ReVoucer 1.5--
 	parseNumber _clrval;
 };
 
