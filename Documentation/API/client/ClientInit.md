@@ -18,7 +18,7 @@ File: [client\ClientInit\ClientInit.sqf at line 60](../../../Src/client/ClientIn
 
 Type: constant
 
-Description: Generated from systools::generateLibInfo (ReEditor 1.19)
+Description: Generated from make_sign.py
 
 
 Replaced value:
@@ -28,7 +28,7 @@ Replaced value:
 	["url_fetch", "54A1D7879C726D6EE9AF99D0AABEA6CE83765003"], \
 	["DiscordRichPresence", "98ADB813FF702F49743E830CE1C6A3A6FBEFFBD0"], \
 	["task_force_radio_pipe", "35F2CFED92ADBFE763F5C8FDD48764286F159AF5"], \
-	["revoicer", "EA9F84AA0573A8E8DED4DE9DB4348D993D1A6444"], \
+	["revoicer", "BDD631810DF4F1201A8B30DEE9FF422D442EB8E9"], \
 	["real_date", "179A73FD58174CA7B45B052F1777161D641163A9"] \
  ]
 ```
