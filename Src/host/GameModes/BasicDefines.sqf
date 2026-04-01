@@ -223,6 +223,8 @@ class(GMBase) extends(IGameEvent) attribute(Story)
 	//данные режима
 	//имя загружаемой карты
 	getterconst_func(getMapName,"Minimap");
+	//отображаемое имя локации для экрана начала раунда
+	getterconst_func(getLocationDisplayName,"");
 
 	//имя лобби звука
 	getterconst_func(getLobbySoundName,"lobby\First_Steps.ogg");

@@ -4,7 +4,7 @@
 // ======================================================
 
 //проверка эмуляции подключения клиентов. значение является количеством клиентов
-//#define TEST_SIMULATION_CLIENTS 5
+#define TEST_SIMULATION_CLIENTS 5
 
 #ifdef TEST_SIMULATION_CLIENTS
 	/*
