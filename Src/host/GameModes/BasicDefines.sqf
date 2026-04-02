@@ -44,6 +44,7 @@ class(GMBase) extends(IGameEvent) attribute(Story)
 	getterconst_func(isVotable,true); //включение в голосование
 
 	getterconst_func(isPlayableGamemode,true); //будет ли режим доступен при выборе админом
+	getterconst_func(getLocationDisplayName,"Сеть");
 
 	//Значения меньше или равны нулю автоматически добавляют режим на вероятность
 	getterconst_func(getReqPlayersMin,1); //сколько должно быть игроков для этого режима
@@ -223,8 +224,6 @@ class(GMBase) extends(IGameEvent) attribute(Story)
 	//данные режима
 	//имя загружаемой карты
 	getterconst_func(getMapName,"Minimap");
-	//отображаемое имя локации для экрана начала раунда
-	getterconst_func(getLocationDisplayName,"");
 
 	//имя лобби звука
 	getterconst_func(getLobbySoundName,"lobby\First_Steps.ogg");

@@ -35,9 +35,11 @@
 	*/
 	gm_editor_test_simCli = 
 	"
-		1-4.role RBanditMainSaloon
+		1.role RSlesarDorm
 		1-5.access ACCESS_FORSAKEN
-		5.role RBarmenSaloon
+		2.role RKomendantDorm
+		4.role RCexDorm
+		3.role RTorgDorm
 	";
 #endif
 
@@ -960,6 +962,8 @@ gm_internal_assignToImpl = {
 
 	#ifdef EDITOR
 	[_mob,this] call relicta_debug_internal_invokeEntryPoint;
+	//показываем экран начала раунда в редакторе (в обычном режиме показ происходит через систему сна)
+	callFuncAfter(_mob,getMemoriesUNSLEEP,1);
 	#endif
 
 	//Цацам добавим язык жестов

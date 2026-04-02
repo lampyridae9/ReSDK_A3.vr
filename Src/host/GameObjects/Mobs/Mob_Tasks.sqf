@@ -83,9 +83,9 @@ region(Memories)
 			// Верхняя строка: "Смена N. Локация."
 			private _headerLine = "";
 			if (_locationName != "") then {
-				_headerLine = format["Смена %1. %2.",gm_currentModeId,_locationName];
+				_headerLine = format["Шестое колено. Смена %1. %2.",gm_currentModeId,_locationName];
 			} else {
-				_headerLine = format["Смена %1.",gm_currentModeId];
+				_headerLine = format["Шестое колено. Смена %1.",gm_currentModeId];
 			};
 
 			// Строка персонажа: "Моё имя X. Я Y. Мне Z циклов."

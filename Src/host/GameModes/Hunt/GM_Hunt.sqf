@@ -30,7 +30,7 @@ class(GMHunt) extends(GMBase)
 		//данные режима
 	//имя загружаемой карты
 	getterconst_func(getMapName,"Okopovo");
-	getterconst_func(getLocationDisplayName,"Окопово");
+	getterconst_func(getLocationDisplayName,"Охота");
 	//имя лобби звука
 	getterconst_func(getLobbySoundName,"lobby\First_Steps.ogg");
 	//дефолтный бэкграунд

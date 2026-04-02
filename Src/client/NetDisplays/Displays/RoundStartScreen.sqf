@@ -4,6 +4,7 @@
 // ======================================================
 
 #include <..\..\..\host\lang.hpp>
+#include <..\..\..\SETTINGS.h>
 
 // Экран начала раунда (пробуждение персонажа)
 // Данные: [_headerLine, _charInfoLine, _descriptionText]
@@ -38,37 +39,45 @@ struct(RoundStartScreen) base(NDBase)
 		];
 
 		// === Верхняя строка: "Шестое колено. Смена 143. Грязноямск." ===
-		private _wid = [TEXT,[0,15,100,10],_ctg] call nd_regWidget;
+		private _wid = [TEXT,[0,10,100,10],_ctg] call nd_regWidget;
 		[_wid, format[
-			"<t align='center' size='1.6' font='RobotoCondensed' color='#C0B8A0' shadow='2' shadowColor='#000000'>%1</t>",
+			"<t align='center' size='2.7' font='Ringbear' color='#b3b3b3' shadow='2' shadowColor='#000000'>%1</t>",
 			_headerLine
 		]] call widgetSetText;
 
 		// === Информация о персонаже ===
-		// "Моё имя Хоба Савин. Я кухарь в баре Кабак."
-		// "Мне 36 циклов."
-		_wid = [TEXT,[0,28,100,12],_ctg] call nd_regWidget;
+		_wid = [TEXT,[0,18,100,12],_ctg] call nd_regWidget;
 		[_wid, format[
-			"<t align='center' size='1.3' font='RobotoCondensed' color='#C0B8A0' shadow='2' shadowColor='#000000'>%1</t>",
+			"<t align='center' size='2.7' font='Ringbear' color='#b3b3b3' shadow='2' shadowColor='#000000'>%1</t>",
 			_charInfoLine
 		]] call widgetSetText;
 
 		// === Описание роли (задачи, воспоминания и т.д.) ===
 		if (_descriptionText != "") then {
-			_wid = [TEXT,[15,44,70,20],_ctg] call nd_regWidget;
+			private _scrollCtg = [_disp,WIDGETGROUP_H,[15,36,70,40],_ctg] call createWidget;
+			_wid = [TEXT,[0,0,100,200],_scrollCtg] call nd_regWidget;
 			[_wid, format[
-				"<t align='center' size='0.95' font='RobotoCondensedLight' color='#A09880' shadow='1' shadowColor='#000000'>%1</t>",
+				"<t align='center' size='1.5' font='Ringbear' color='#b3b3b3' shadow='1' shadowColor='#000000'>%1</t>",
 				_descriptionText
 			]] call widgetSetText;
+			private _realH = _wid call widgetGetTextHeight;
+			_wid ctrlSetPositionH (_realH / 100 * ((ctrlPosition _scrollCtg) select 3));
+			_wid ctrlCommit 0;
 		};
 
-		// === Кнопка "Проснуться" ===
 		private _btnClose = [_disp,[35,82,30,6],_ctg,true] call nd_addClosingButton;
 		_btnClose ctrlSetText "Проснуться";
-		_btnClose ctrlSetFont "RobotoCondensed";
+		_btnClose ctrlSetFont "Ringbear";
+		_btnClose ctrlSetFontHeight 0.1;
 		if (nd_lobby_isOpen) then {
 			ctrlSetFocus _btnClose;
 		};
+
+		private _bedIcon = [_disp,ACTIVEPICTURE,[47,88,6,6],_ctg] call createWidget;
+		_bedIcon ctrlSetText PATH_PICTURE("bed_icon.paa");
+		_bedIcon ctrlAddEventHandler ["MouseButtonUp",{
+			nextFrame(ifcheck(nd_lobby_isOpen,nd_closeND_lobby,nd_onClose));
+		}];
 	};
 
 endstruct
