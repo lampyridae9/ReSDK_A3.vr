@@ -319,8 +319,7 @@ region(gameinfo)
 				callSelfParams(setSleep,false);
 			};
 		};
-		_t = "<t size='1.4' color='#3479E0'>"+_t+"</t>";
-		callSelfParams(ShowMessageBox,"Text" arg _t arg null arg null arg _evcls);
+		callSelfParams(ShowMessageBox,"UnsleepInfoScreen" arg _t arg null arg null arg _evcls);
 	};
 
 	//рантайм добавление подсказок

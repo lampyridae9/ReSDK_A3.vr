@@ -1542,6 +1542,13 @@ class(SystemMessageBoxND) extends(SystemInternalND)
 				getSelf(bufferedCtx)
 			},{
 				//no input action
+			}],
+
+			["UnsleepInfoScreen",
+			{
+				getSelf(bufferedCtx)
+			},{
+				//no input action
 			}]
 		]
 	};
@@ -1553,7 +1560,7 @@ class(SystemMessageBoxND) extends(SystemInternalND)
 		objParams_1(_usr);
 		super();
 		if (getSelf(ndName) in ["Input","MessageBox","Alert","Text","Listbox",
-		"VoteRep","RoundStartScreen"]) then {
+		"VoteRep","RoundStartScreen","UnsleepInfoScreen"]) then {
 			private __thisNDisplay = this;
 			this = _usr;
 			call getVar(__thisNDisplay,event_onClose);
