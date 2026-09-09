@@ -181,7 +181,7 @@ function(golib_om_placeObjectAtMouse)
 
 function(golib_setSelectedObjects)
 {
-	params [["_objList",["_unlockLayer",false]]];
+	params [["_objList",[]],["_unlockLayer",false]];
 	if not_equalTypes(_objList,[]) then {
 		_objList = [_objList];
 	};

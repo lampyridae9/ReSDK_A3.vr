@@ -159,5 +159,8 @@ componentInit(Viusal_components)
 componentInit(Visual_scripting)
 #include "VisualScripting\VisualScripting_init.sqf"
 
+componentInit(MapAutomation)
+#include "MapAutomation\MapAutomation_init.sqf"
+
 componentInit(Core_postInit)
 #include "Core\Core_postInit.sqf"

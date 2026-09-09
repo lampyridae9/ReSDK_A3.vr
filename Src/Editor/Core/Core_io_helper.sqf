@@ -304,7 +304,7 @@ function(file_copyAsync)
 
 				_this params ["_inc","_f","_t","_isRelativeList","_onCopy"];
 				private _result = [_f,_t,_isRelativeList] call file_copy;
-				[_result,_path] call _onCopy;
+				[_result,_f] call _onCopy;
 			},
 			[0] + _thisParams,
 			file_const_defaultAsyncWriteTimeout,
@@ -317,8 +317,8 @@ function(file_copyAsync)
 		endAsyncInvoke
 
 	} else {
-		[_path,_dest,[_isRelative,_isRelativeDest]] call file_copy;
-		[true,_path] call _onCopy;
+		private _result = [_path,_dest,[_isRelative,_isRelativeDest]] call file_copy;
+		[_result,_path] call _onCopy;
 	};
 
 	true

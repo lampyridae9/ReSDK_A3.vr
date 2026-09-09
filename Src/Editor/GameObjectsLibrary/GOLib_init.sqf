@@ -56,6 +56,7 @@ golib_internal_map_connected = createHashMap; //ссылки на которых
 golib_internal_map_contMarks = createhashMap;
 
 golib_hashData_keys = [
+	"__ai", // editor-only [semanticId, provenance, parentId]; never a runtime mark
 	"class", //референс на текущий объект (строка)
 	"initCode", //код, вызываемый после создания объекта. (строка)
 	"customProps", //свойства окна состояния установленные через инспектор (массив хэшкарты)
