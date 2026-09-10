@@ -58,10 +58,10 @@ def validate_readback(pipeline, planned, result, actual):
     return checks
 
 
-def run(timeout: float, interactive: bool = False) -> Path:
+def run(timeout: float, interactive: bool = False, *, brief: dict[str,Any] | None = None, source: str = "manual fixture") -> Path:
     tests=subprocess.run([sys.executable,str(ROOT/"Tools/MapAutomation/test_pattern_system.py")],cwd=ROOT,capture_output=True,text=True)
     if tests.returncode: raise RuntimeError(tests.stdout+tests.stderr)
-    brief=json.loads(FIXTURE.read_text(encoding="utf-8"));pipeline=PatternPipeline();scene=build_room_context()
+    brief=brief or json.loads(FIXTURE.read_text(encoding="utf-8"));pipeline=PatternPipeline();scene=build_room_context()
     before_fingerprint=scene.fingerprint();result=pipeline.run(brief,scene)
     if result.status != "PASS" or scene.fingerprint() != before_fingerprint: raise RuntimeError("semantic dry-run failed or mutated input scene")
     operations=create_operations(result,scene);created_ids=[x["arguments"]["semanticId"] for x in operations]
@@ -97,7 +97,7 @@ def run(timeout: float, interactive: bool = False) -> Path:
     final=send("inspectScene",revision);require_ok("final scene",final)
     if final["result"] != initial_scene: raise TransportError("cleanup did not restore initial scene")
     artifact={"schemaVersion":1,"status":"PASS","createdAtUtc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime()),
-        "sessionId":caps["sessionId"],"fixture":str(FIXTURE.relative_to(ROOT)).replace("\\","/"),"roomPlan":result.plan.json(),
+        "sessionId":caps["sessionId"],"plannerSource":source,"fixture":str(FIXTURE.relative_to(ROOT)).replace("\\","/") if source=="manual fixture" else None,"roomPlan":result.plan.json(),
         "semanticDryRun":result.json(),"actualReadback":{"objects":len(actual),"validation":checks},
         "screenshots":screenshots,"sceneUnchanged":True,"productionMapsTouched":False,"transcript":transcript}
     out=ROOT/"Tools/MapAutomation/artifacts"/f"phase4_live_{time.strftime('%Y%m%d_%H%M%S')}.json"

@@ -69,7 +69,8 @@ def validate_planner_brief(value: Any) -> dict[str, Any]:
     if req["sleeping"] < people: raise PlannerContractError("sleeping requirement is below people capacity")
     prefs = value["preferences"]
     if not isinstance(prefs, dict): raise PlannerContractError("preferences must be object")
-    _exact_keys(prefs, {"workSurface", "seating", "compact"}, set(), "preferences")
+    preference_keys = {"workSurface", "seating", "compact"}
+    _exact_keys(prefs, preference_keys, preference_keys, "preferences")
     if any(type(v) is not bool for v in prefs.values()): raise PlannerContractError("preference values must be boolean")
     if type(value["seed"]) is not int or not 0 <= value["seed"] <= 2147483647: raise PlannerContractError("seed out of range")
     return copy.deepcopy(value)
@@ -193,7 +194,7 @@ class PatternValidator:
             if slot.function not in FUNCTIONAL_ROLES:
                 diagnostics.append(SemanticDiagnostic("INVALID_RELATION", (slot.id,), "ERROR", {"function": slot.function}))
             for rel in slot.relations:
-                if rel.kind not in RELATIONS or rel.target not in valid_targets:
+                if rel.kind not in RELATIONS or (rel.target not in valid_targets and rel.hard):
                     diagnostics.append(SemanticDiagnostic("INVALID_RELATION", (slot.id,), "ERROR", {"relation": rel.kind, "target": rel.target}))
             if slot.placement != "virtual" and slot.asset is None and slot.status not in {"DROPPED_OPTIONAL", "DROPPED_PREFERRED"}:
                 diagnostics.append(SemanticDiagnostic("UNRESOLVED_ASSET", (slot.id,), "ERROR", {}))

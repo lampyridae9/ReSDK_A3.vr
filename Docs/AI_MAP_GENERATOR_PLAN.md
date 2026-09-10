@@ -1378,3 +1378,17 @@ assignSemanticParent
 
 10. **Есть ли архитектурная причина отказаться?**  
     Нет. Есть причина строго ограничить первые версии: проверенные ассеты, модульные patterns, неизменённый runtime и измеряемые критерии качества. Текущая Relicta даёт достаточный фундамент для такого подхода.
+
+---
+
+## Phase 5 — LLM Planner Integration
+
+Состояние: **PASS**. Structured Planner, real-model evaluation, deterministic dry-run и natural-language live test на `AI_AutomationProbe` завершены.
+
+Граница Phase 5: OpenAI Responses API переводит natural-language запрос только в `planner_room_brief.schema.json`. Локальная validation обязательна. PatternPipeline, AssetResolver, PlacementSolver и MapAutomation по-прежнему единолично выбирают assets, transforms и операции Eden.
+
+Production provider: `OpenAIResponsesProvider`; модель по умолчанию `gpt-5.6-luna`, меняется через `RELICTA_PLANNER_MODEL`. Prompt: `room-planner-v1`. Контекст ограничен bedroom, стилями и функциональными ролями. Максимум две попытки; schema/semantic ошибки допускают repair, provider/timeout/refusal завершаются сразу, spatial ошибки модели не возвращаются.
+
+CLI: `run_planner.py` работает в plan-only по умолчанию, `--dry-run` запускает deterministic stack без Eden, `--live` явно разрешает тестовую запись через существующий gateway `AI_AutomationProbe`. `--fixture` воспроизводит сохранённый brief без сети.
+
+Неоднозначная «комната для двух» получает `UNSUPPORTED_REQUEST` с diagnostic `AMBIGUOUS_ROOM_TYPE`. Неподдерживаемые room types отклоняются локально и не превращаются в bedroom.
