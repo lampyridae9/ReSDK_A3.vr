@@ -1,0 +1,171 @@
+{
+  "sourceCandidates": 2303,
+  "allOopLoadedCount": 2894,
+  "liveGameObjectClasses": 2305,
+  "editorPlaceableClasses": 2182,
+  "sourceOnly": [],
+  "liveOnly": [
+    "5mm_ammo",
+    "9vbattery"
+  ],
+  "coreProbed": 41,
+  "coreExpected": 41,
+  "m2cComparisonCounts": {
+    "MATCH": 41
+  },
+  "errors": [],
+  "status": "PASS",
+  "door": {
+    "status": "VERIFIED_PHASES",
+    "errors": [],
+    "sourceContract": {
+      "animation": "xlamdoor",
+      "closed": 0,
+      "open": 0.7,
+      "source": "source",
+      "evidence": "WoodenDoors.sqf / DoorDynamic.animateSource"
+    },
+    "closedState": {
+      "sample": {
+        "selectionPositions": [
+          [
+            "xlamdoor",
+            [
+              -0.724373,
+              -0.0710739,
+              -1.11276
+            ]
+          ]
+        ],
+        "actualPhase": 0,
+        "geometryBounds": [
+          [
+            -0.724373,
+            -0.0710739,
+            -1.11276
+          ],
+          [
+            0.730551,
+            0.0490038,
+            1.11276
+          ],
+          1.3308
+        ],
+        "visualBounds": [
+          [
+            -0.730551,
+            -0.115548,
+            -1.11276
+          ],
+          [
+            0.730551,
+            0.115548,
+            1.11276
+          ],
+          1.33304
+        ],
+        "requestedPhase": 0
+      },
+      "status": "VERIFIED",
+      "source": "engineMeasured"
+    },
+    "openState": {
+      "sample": {
+        "selectionPositions": [
+          [
+            "xlamdoor",
+            [
+              -0.642377,
+              -0.0977586,
+              -1.11199
+            ]
+          ]
+        ],
+        "actualPhase": 0.7,
+        "geometryBounds": [
+          [
+            -0.724373,
+            -0.0710739,
+            -1.11276
+          ],
+          [
+            0.730551,
+            0.0490038,
+            1.11276
+          ],
+          1.3308
+        ],
+        "visualBounds": [
+          [
+            -0.730551,
+            -0.115548,
+            -1.11276
+          ],
+          [
+            0.730551,
+            0.115548,
+            1.11276
+          ],
+          1.33304
+        ],
+        "requestedPhase": 0.7
+      },
+      "status": "VERIFIED",
+      "source": "engineMeasured",
+      "meaning": "Configured phase read back; functional passage not tested"
+    },
+    "hingeAxisSelection": {
+      "value": [
+        -0.667856,
+        -0.0337174,
+        -1.00733
+      ],
+      "status": "VERIFIED",
+      "source": "engineMeasured",
+      "selection": "xlamdoor_axis"
+    },
+    "hingeSide": {
+      "value": "negativeX",
+      "status": "APPROXIMATE",
+      "source": "ruleDerived",
+      "confidence": 0.7,
+      "meaning": "Axis selection proximity to closed visual AABB edge; requires human orientation review"
+    },
+    "trackedSelectionMotion": {
+      "value": [
+        0.08199600000000007,
+        -0.026684700000000006,
+        0.0007699999999999374
+      ],
+      "status": "VERIFIED",
+      "source": "engineMeasured",
+      "meaning": "xlamdoor Geometry named-position delta from phase 0 to 0.7; not a leaf transform or angle"
+    },
+    "sampledOpeningEnvelope": {
+      "bounds": [
+        [
+          -0.730551,
+          -0.115548,
+          -1.11276
+        ],
+        [
+          0.730551,
+          0.115548,
+          1.11276
+        ]
+      ],
+      "source": "ruleDerived",
+      "status": "APPROXIMATE",
+      "meaning": "Union of eight sampled AABBs; not exact collision or guaranteed continuous sweep; not human passage clearance"
+    },
+    "semanticFront": {
+      "value": null,
+      "status": "UNKNOWN"
+    },
+    "openingDirection": {
+      "value": null,
+      "status": "UNKNOWN",
+      "reason": "Requires tracking geometry/axis, phase value is not an angle"
+    }
+  }
+}

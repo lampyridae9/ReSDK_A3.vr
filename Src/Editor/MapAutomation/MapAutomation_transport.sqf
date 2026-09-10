@@ -86,16 +86,18 @@ function(ma_transportDispatch)
     if (_embeddedId isNotEqualTo _requestId) exitWith {[_requestId,"FAIL",[],[["REQUEST_ID_FILENAME_MISMATCH",_embeddedId]]] call ma_transportResponse};
     if !(_expected isEqualType 0) exitWith {[_requestId,"FAIL",[],[["EXPECTED_REVISION_MUST_BE_NUMBER"]]] call ma_transportResponse};
     if !(_arguments isEqualType createHashMap) exitWith {[_requestId,"FAIL",[],[["ARGUMENTS_MUST_BE_JSON_OBJECT"]]] call ma_transportResponse};
-    if !(_operation in ["getCapabilities","inspectScene","inspectObjects","applyPatch","captureViews"]) exitWith {
+    if !(_operation in ["getCapabilities","inspectScene","inspectObjects","applyPatch","captureViews","catalogPage","probeGeometry"]) exitWith {
         [_requestId,"FAIL",[],[["UNKNOWN_OPERATION",_operation]]] call ma_transportResponse
     };
     if (_operation != "getCapabilities" && {_sessionId isNotEqualTo ma_session}) exitWith {
         [_requestId,"FAIL",[],[["SESSION_MISMATCH",_sessionId,ma_session]]] call ma_transportResponse
     };
-    if (_operation in ["applyPatch","captureViews"] && {_expected isNotEqualTo ma_revision}) exitWith {
+    if (_operation in ["applyPatch","captureViews","catalogPage","probeGeometry"] && {_expected isNotEqualTo ma_revision}) exitWith {
         [_requestId,"FAIL",call ma_sceneData,[["REVISION_MISMATCH",_expected,ma_revision]]] call ma_transportResponse
     };
     if (_operation == "getCapabilities") exitWith {[_requestId,call ma_getCapabilities] call ma_transportWrapInternal};
+    if (_operation == "catalogPage") exitWith {[_requestId,[_arguments] call ma_catalogPage] call ma_transportWrapInternal};
+    if (_operation == "probeGeometry") exitWith {[_requestId,[_arguments] call ma_probeGeometry] call ma_transportWrapInternal};
     if (_operation == "inspectScene") exitWith {[_requestId,call ma_inspectScene] call ma_transportWrapInternal};
     if (_operation == "inspectObjects") exitWith {
         private _ids = _arguments getOrDefault ["semanticIds",[]];

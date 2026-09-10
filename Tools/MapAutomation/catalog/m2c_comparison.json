@@ -1,0 +1,1478 @@
+[
+  {
+    "classname": "BlockDirt",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -4.000000000026205e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "liveBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BlockStone",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -4.000000000026205e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "liveBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BlockBrick",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -4.000000000026205e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "liveBounds": [
+      [
+        -5.6533,
+        -5.80177,
+        -5.63155
+      ],
+      [
+        5.6533,
+        5.80177,
+        5.63155
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ConcretePanel",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      -3.999999999837467e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.01802,
+        -2.00591,
+        -0.0922552
+      ],
+      [
+        1.01802,
+        2.00591,
+        0.0922552
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.01802,
+        -2.00591,
+        -0.0922552
+      ],
+      [
+        1.01802,
+        2.00591,
+        0.0922552
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "WoodenSmallFloor",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.0000000000065512e-05,
+      1.0000000000065512e-05,
+      -9.999999999732445e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.91356,
+        -1.77017,
+        -0.134262
+      ],
+      [
+        1.91356,
+        1.77017,
+        0.134262
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.91356,
+        -1.77017,
+        -0.134262
+      ],
+      [
+        1.91356,
+        1.77017,
+        0.134262
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ConcreteSmallFloor2",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.4158,
+        -2.28615,
+        -0.124
+      ],
+      [
+        1.4158,
+        2.28615,
+        0.124
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.4158,
+        -2.28615,
+        -0.124
+      ],
+      [
+        1.4158,
+        2.28615,
+        0.124
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "LargeConcreteWallWithReinforcement",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -4.5,
+        -0.56308,
+        -2.5128
+      ],
+      [
+        4.5,
+        0.56308,
+        2.5128
+      ]
+    ],
+    "liveBounds": [
+      [
+        -4.5,
+        -0.56308,
+        -2.5128
+      ],
+      [
+        4.5,
+        0.56308,
+        2.5128
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ConcreteGreenWall",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      1.0000000000065512e-05,
+      -1.0000000000287557e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.68861,
+        -0.396442,
+        -2.11962
+      ],
+      [
+        1.68861,
+        0.396442,
+        2.11962
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.68861,
+        -0.396442,
+        -2.11962
+      ],
+      [
+        1.68861,
+        0.396442,
+        2.11962
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BrickThinWall",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0,
+    "dimensionsDelta": [
+      0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -3,
+        -0.15,
+        -1.5
+      ],
+      [
+        3,
+        0.15,
+        1.5
+      ]
+    ],
+    "liveBounds": [
+      [
+        -3,
+        -0.15,
+        -1.5
+      ],
+      [
+        3,
+        0.15,
+        1.5
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "WoodenDoor",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.9999999998354667e-06,
+      0.0,
+      -1.0000000000065512e-05
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.730551,
+        -0.115548,
+        -1.11276
+      ],
+      [
+        0.730551,
+        0.115548,
+        1.11276
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.730551,
+        -0.115548,
+        -1.11276
+      ],
+      [
+        0.730551,
+        0.115548,
+        1.11276
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SteelDoorThinSmall",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.9999999998354667e-06,
+      3.000000000086267e-07,
+      5.399999999600169e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.588556,
+        -0.119085,
+        -0.0247746
+      ],
+      [
+        0.699826,
+        0.0506657,
+        2.3805
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.588556,
+        -0.119085,
+        -0.0247746
+      ],
+      [
+        0.699826,
+        0.0506657,
+        2.3805
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "WoodenArch",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      1.0000000000065512e-05,
+      0.0,
+      9.999999999621423e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.50575,
+        -1.66371,
+        -2.18404
+      ],
+      [
+        1.50575,
+        1.66371,
+        2.18404
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.50575,
+        -1.66371,
+        -2.18404
+      ],
+      [
+        1.50575,
+        1.66371,
+        2.18404
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SingleWhiteBed",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      3.999999999892978e-06,
+      0.0,
+      1.0000000000287557e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.595883,
+        -1.14318,
+        -0.473423
+      ],
+      [
+        0.595883,
+        1.14318,
+        0.473423
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.595883,
+        -1.14318,
+        -0.473423
+      ],
+      [
+        0.595883,
+        1.14318,
+        0.473423
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SleepingMatras",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      4.000000000115023e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.1744,
+        -0.617103,
+        -0.1397
+      ],
+      [
+        1.1744,
+        0.617103,
+        0.1397
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.1744,
+        -0.617103,
+        -0.1397
+      ],
+      [
+        1.1744,
+        0.617103,
+        0.1397
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BedOld",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -4.000000000115023e-06,
+      0.0,
+      -3.000000000086267e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.205084,
+        -1.10777,
+        -0.0154553
+      ],
+      [
+        1.17436,
+        1.08493,
+        0.33064
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.205084,
+        -1.10777,
+        -0.0154553
+      ],
+      [
+        1.17436,
+        1.08493,
+        0.33064
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "MediumWoodenTable",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.9999999998354667e-06,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.583251,
+        -1.10503,
+        -0.432296
+      ],
+      [
+        0.583251,
+        1.10503,
+        0.432296
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.583251,
+        -1.10503,
+        -0.432296
+      ],
+      [
+        0.583251,
+        1.10503,
+        0.432296
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SmallWoodenTable",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.9999999998354667e-06,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.583251,
+        -0.738505,
+        -0.432296
+      ],
+      [
+        0.583251,
+        0.738505,
+        0.432296
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.583251,
+        -0.738505,
+        -0.432296
+      ],
+      [
+        0.583251,
+        0.738505,
+        0.432296
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "WoodenChair",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      -2.220446049250313e-16
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.227221,
+        -0.214317,
+        -2.85993e-16
+      ],
+      [
+        0.214495,
+        0.316039,
+        1.01664
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.227221,
+        -0.214317,
+        -2.85993e-16
+      ],
+      [
+        0.214495,
+        0.316039,
+        1.01664
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ChairCasual",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      1.0000000000287557e-06,
+      0.0,
+      3.999999999892978e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.348883,
+        -0.3033,
+        -0.624973
+      ],
+      [
+        0.348883,
+        0.3033,
+        0.624973
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.348883,
+        -0.3033,
+        -0.624973
+      ],
+      [
+        0.348883,
+        0.3033,
+        0.624973
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BrownLeatherChair",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -4.000000000115023e-06,
+      4.000000000115023e-06,
+      -4.000000000115023e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.688702,
+        -0.524708,
+        -0.526912
+      ],
+      [
+        0.688702,
+        0.524708,
+        0.526912
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.688702,
+        -0.524708,
+        -0.526912
+      ],
+      [
+        0.688702,
+        0.524708,
+        0.526912
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "Shelves",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      4.000000000115023e-06,
+      -1.0000000000287557e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.552248,
+        -0.159616,
+        -0.9
+      ],
+      [
+        0.552248,
+        0.159616,
+        0.9
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.552248,
+        -0.159616,
+        -0.9
+      ],
+      [
+        0.552248,
+        0.159616,
+        0.9
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "WoodenSmallShelf",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      1.9999999998354667e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.1983,
+        -0.776089,
+        -0.75495
+      ],
+      [
+        0.1983,
+        0.776089,
+        0.75495
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.1983,
+        -0.776089,
+        -0.75495
+      ],
+      [
+        0.1983,
+        0.776089,
+        0.75495
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "LampCeiling",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -9.999999999732445e-07,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.212164,
+        -0.207958,
+        -0.221622
+      ],
+      [
+        0.212164,
+        0.207958,
+        0.221622
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.212164,
+        -0.207958,
+        -0.221622
+      ],
+      [
+        0.212164,
+        0.207958,
+        0.221622
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "Candle",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -9.999999999593667e-08,
+      -1.9999999997799556e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.0315766,
+        -0.0307905,
+        -0.0839311
+      ],
+      [
+        0.0315766,
+        0.0307905,
+        0.0839311
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.0315766,
+        -0.0307905,
+        -0.0839311
+      ],
+      [
+        0.0315766,
+        0.0307905,
+        0.0839311
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SquareWoodenBox",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      2.0000000000575113e-06,
+      4.000000000115023e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.501549,
+        -0.501548,
+        -0.486694
+      ],
+      [
+        0.501549,
+        0.501548,
+        0.486694
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.501549,
+        -0.501548,
+        -0.486694
+      ],
+      [
+        0.501549,
+        0.501548,
+        0.486694
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SteelGreenCabinet",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.32425,
+        -0.6013,
+        -0.7785
+      ],
+      [
+        0.32425,
+        0.6013,
+        0.7785
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.32425,
+        -0.6013,
+        -0.7785
+      ],
+      [
+        0.32425,
+        0.6013,
+        0.7785
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BoardWoodenBox",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      4.000000000115023e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.347199,
+        -0.713598,
+        -0.409566
+      ],
+      [
+        0.347199,
+        0.713598,
+        0.409566
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.347199,
+        -0.713598,
+        -0.409566
+      ],
+      [
+        0.347199,
+        0.713598,
+        0.409566
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SmallDirtGrey",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -3.04146,
+        -4.14898,
+        -1.00309
+      ],
+      [
+        3.04146,
+        4.14898,
+        1.00309
+      ]
+    ],
+    "liveBounds": [
+      [
+        -3.04146,
+        -4.14898,
+        -1.00309
+      ],
+      [
+        3.04146,
+        4.14898,
+        1.00309
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "DirtCraterLong",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -2.0000000001019203e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -3.98536,
+        -5.73481,
+        -0.928445
+      ],
+      [
+        3.98536,
+        5.73481,
+        0.928445
+      ]
+    ],
+    "liveBounds": [
+      [
+        -3.98536,
+        -5.73481,
+        -0.928445
+      ],
+      [
+        3.98536,
+        5.73481,
+        0.928445
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BigGreenRock",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.00010000000000331966,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -22.9121,
+        -9.37085,
+        -11.5168
+      ],
+      [
+        22.9121,
+        9.37085,
+        11.5168
+      ]
+    ],
+    "liveBounds": [
+      [
+        -22.9121,
+        -9.37085,
+        -11.5168
+      ],
+      [
+        22.9121,
+        9.37085,
+        11.5168
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BigDarkRock",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      4.0000000002038405e-05,
+      9.999999999976694e-05,
+      -3.999999999848569e-05
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -8.54388,
+        -14.3095,
+        -9.95497
+      ],
+      [
+        8.54388,
+        14.3095,
+        9.95497
+      ]
+    ],
+    "liveBounds": [
+      [
+        -8.54388,
+        -14.3095,
+        -9.95497
+      ],
+      [
+        8.54388,
+        14.3095,
+        9.95497
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "MediumPileOfDirtAndStones",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      4.000000000026205e-05,
+      0.0,
+      1.0000000000065512e-05
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -6.60923,
+        -3.05554,
+        -1.45028
+      ],
+      [
+        6.60923,
+        3.05554,
+        1.45028
+      ]
+    ],
+    "liveBounds": [
+      [
+        -6.60923,
+        -3.05554,
+        -1.45028
+      ],
+      [
+        6.60923,
+        3.05554,
+        1.45028
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ConcreteGarbage",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.0000000000509601e-05,
+      -4.000000000115023e-06,
+      9.999999999732445e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -3.24888,
+        -0.996877,
+        -0.235299
+      ],
+      [
+        3.24888,
+        0.996877,
+        0.235299
+      ]
+    ],
+    "liveBounds": [
+      [
+        -3.24888,
+        -0.996877,
+        -0.235299
+      ],
+      [
+        3.24888,
+        0.996877,
+        0.235299
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SheetMetalGarbage1",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.62225,
+        -1.86328,
+        -0.431004
+      ],
+      [
+        1.62225,
+        1.86328,
+        0.431004
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.62225,
+        -1.86328,
+        -0.431004
+      ],
+      [
+        1.62225,
+        1.86328,
+        0.431004
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "LogDebris1",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      -2.0000000000575113e-06,
+      1.0000000000287557e-06
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.171167,
+        -0.623231,
+        -0.143418
+      ],
+      [
+        0.171167,
+        0.623231,
+        0.143418
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.171167,
+        -0.623231,
+        -0.143418
+      ],
+      [
+        0.171167,
+        0.623231,
+        0.143418
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "ClothDebris1",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      9.999999999732445e-07,
+      1.0000000000287557e-06,
+      3.999999999976245e-07
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.225033,
+        -0.181639,
+        -0.0579943
+      ],
+      [
+        0.225033,
+        0.181639,
+        0.0579943
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.225033,
+        -0.181639,
+        -0.0579943
+      ],
+      [
+        0.225033,
+        0.181639,
+        0.0579943
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BigMushroom3",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.9999999998354667e-06,
+      -1.0000000000065512e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.899241,
+        -1.61889,
+        -3.90935
+      ],
+      [
+        0.899241,
+        1.61889,
+        3.90935
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.899241,
+        -1.61889,
+        -3.90935
+      ],
+      [
+        0.899241,
+        1.61889,
+        3.90935
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "SmallMushroom1",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      9.999999999621423e-06,
+      1.0000000000065512e-05,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.07668,
+        -1.0086,
+        -1.07046
+      ],
+      [
+        1.07668,
+        1.0086,
+        1.07046
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.07668,
+        -1.0086,
+        -1.07046
+      ],
+      [
+        1.07668,
+        1.0086,
+        1.07046
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "PowerGenerator",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      0.0,
+      4.000000000115023e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.29624,
+        -0.633293,
+        -0.66417
+      ],
+      [
+        1.29624,
+        0.633293,
+        0.66417
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.29624,
+        -0.633293,
+        -0.66417
+      ],
+      [
+        1.29624,
+        0.633293,
+        0.66417
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "IndPipeValve",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      2.0000000000575113e-06,
+      0.0,
+      1.0000000000065512e-05
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -0.808439,
+        -3.79723,
+        -1.0674
+      ],
+      [
+        0.808439,
+        3.79722,
+        1.0674
+      ]
+    ],
+    "liveBounds": [
+      [
+        -0.808439,
+        -3.79723,
+        -1.0674
+      ],
+      [
+        0.808439,
+        3.79722,
+        1.0674
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  },
+  {
+    "classname": "BigConcretePipe",
+    "classification": "MATCH",
+    "boundsMaxAbsDelta": 0.0,
+    "dimensionsDelta": [
+      -1.0000000000065512e-05,
+      -9.999999999621423e-06,
+      0.0
+    ],
+    "source": "ruleDerived",
+    "historicalBounds": [
+      [
+        -1.40236,
+        -1.90681,
+        -1.33311
+      ],
+      [
+        1.40236,
+        1.90681,
+        1.33311
+      ]
+    ],
+    "liveBounds": [
+      [
+        -1.40236,
+        -1.90681,
+        -1.33311
+      ],
+      [
+        1.40236,
+        1.90681,
+        1.33311
+      ]
+    ],
+    "policy": "MATCH <=5mm on every AABB coordinate; MINOR <=max(2cm,1% corresponding historical dimension); else SIGNIFICANT"
+  }
+]

@@ -4,7 +4,9 @@
 
 - Research: COMPLETE
 - Automation Gateway: PHASE 1 COMPLETE
-- Object Catalog: NOT STARTED
+- Object Catalog: PHASE 2 COMPLETE — live reflection: 2894 OOP / 2305 GameObject / 2182 editor-placeable
+- Existing Map Usage Mining: COMPLETE — 9 maps, 21170 placed objects, runtime counts matched
+- Geometry Foundation: PHASE 2 COMPLETE — 41/41 Core probed; 41 M2C MATCH; explicit geometry/contact UNKNOWN fields retained
 - Placement Solver: NOT STARTED
 - Room Generator: NOT STARTED
 - Vision Feedback: NOT STARTED
@@ -13,7 +15,7 @@
 
 ## Current Milestone
 
-`Phase 1 — Automation Round-Trip Probe`
+`Phase 2 — Object Catalog + Geometry Foundation + Existing Map Usage Mining`
 
 Архитектурный source of truth. Ниже сохранён полный результат исследовательской фазы; описания предлагаемых систем не являются утверждением об их реализации. Текущий ход реализации и инструкции тестирования: [MapAutomation README](../Tools/MapAutomation/README.md).
 
@@ -24,6 +26,28 @@ save/load, screenshot, history, failure handling, stopped-state и reconcile п�
 подтвердили requestId idempotency, expectedRevision protection и полный внешний цикл в настоящем
 Eden 2026-09-09. Transcript и engine-отчёты сохранены в `Tools/MapAutomation/artifacts`.
 Содержимое PNG не анализируется автоматически: `REQUIRES MANUAL PNG REVIEW`.
+
+Phase 2: `PASS`. Реализованы воспроизводимый анализ девяти существующих карт,
+каталог source candidates, M2C geometry, curated набор из 41 объекта, валидаторы,
+OOP reflection exporter и geometry probe через тот же Automation Gateway.
+Подсчитано 21170 размещённых объектов / 939 используемых классов. Источник офлайн-каталога
+не следует путать с подтверждённой editor availability: Eden reflection получен 2026-09-09,
+2182 editor-placeable из 2305 GameObject; все 2303 source candidates найдены, дополнительно
+5mm_ammo и 9vbattery. Все 41 Core модели разрешены и измерены fresh engine probe;
+cleanup/scene preservation подтверждены для каждого и для batch. Historical/live comparison:
+41 MATCH, без различий или missing data. Geometry LOD AABB валиден для 40/41;
+degenerate профиль явно UNKNOWN. LandContact не дал named selections, а engine отклонил
+`Roadway` enum для `selectionNames`, поэтому эти данные не выданы за доказательство контакта.
+Строгий validator и 14 tests проходят. Placement/contact/semantic front остаются curated
+APPROXIMATE или UNKNOWN там, где engine evidence недостаточно.
+Отчёт: [Phase 2 results](AI_MAP_GENERATOR_PHASE2_REPORT.md).
+Воспроизведение и отдельный engine test: [Catalog guide](../Tools/MapAutomation/CATALOG.md).
+Следующая согласованная фаза — **Phase 3: Placement Solver + Spatial Validation**,
+но она не начинается до отдельного проектирования и закрытия оставшихся Phase 2 проверок.
+
+Нумерация в историческом roadmap ниже сохранена как исследовательский baseline:
+его Early capture/round-trip уже включён в завершённую Phase 1, а Object catalog теперь
+является текущей Phase 2 вместе с existing-map mining. Текущий milestone выше приоритетен.
 
 ## 1. Executive Summary
 

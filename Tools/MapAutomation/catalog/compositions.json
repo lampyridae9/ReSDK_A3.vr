@@ -1,0 +1,1929 @@
+{
+  "method": "translation-only; anchor plus nearest four origins in 5m, positions quantized 5cm, absolute Euler angles 0.001rad; overlapping occurrences retained",
+  "patterns": [
+    {
+      "patternId": "ad6fa97d934d222c",
+      "anchorClass": "PowerSwitcher_Activator",
+      "anchorAngles": [
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            -0.5,
+            0.0,
+            -0.6000000000000001
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            -0.5,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.6000000000000001
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        3392,
+        3394
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "617350d10cdd9023",
+      "anchorClass": "PowerSwitcher_Activator",
+      "anchorAngles": [
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            -0.5,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            -0.5,
+            0.0,
+            0.6000000000000001
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.6000000000000001
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "PowerSwitcher_Activator",
+          "relativePosition": [
+            0.5,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        3398,
+        3400
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "7e0201dda28e1325",
+      "anchorClass": "SpirtBottle",
+      "anchorAngles": [
+        0,
+        0,
+        0
+      ],
+      "members": [
+        {
+          "classname": "GlassGoblet",
+          "relativePosition": [
+            -0.1,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "GlassGoblet",
+          "relativePosition": [
+            0.0,
+            -0.15000000000000002,
+            -0.05
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "GlassGoblet",
+          "relativePosition": [
+            0.0,
+            0.15000000000000002,
+            -0.05
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "classname": "GlassGoblet",
+          "relativePosition": [
+            0.1,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        5898,
+        5912
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "cbcbaa2fa09005f3",
+      "anchorClass": "FoodPlate",
+      "anchorAngles": [
+        6.276,
+        0,
+        0.015
+      ],
+      "members": [
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.15000000000000002
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        8238,
+        8249
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "1f5635e50a787afc",
+      "anchorClass": "FoodPlate",
+      "anchorAngles": [
+        6.276,
+        0,
+        0.015
+      ],
+      "members": [
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        8239,
+        8245
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "555d70be57e8d2e4",
+      "anchorClass": "FoodPlate",
+      "anchorAngles": [
+        6.276,
+        0,
+        0.015
+      ],
+      "members": [
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        }
+      ],
+      "occurrences": 4,
+      "anchorEntityIds": [
+        8240,
+        8241,
+        8244,
+        8246
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "11f21411bd943bc5",
+      "anchorClass": "FoodPlate",
+      "anchorAngles": [
+        6.276,
+        0,
+        0.015
+      ],
+      "members": [
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        8242,
+        8247
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "3676b63f7a271312",
+      "anchorClass": "FoodPlate",
+      "anchorAngles": [
+        6.276,
+        0,
+        0.015
+      ],
+      "members": [
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.15000000000000002
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        },
+        {
+          "classname": "FoodPlate",
+          "relativePosition": [
+            0.0,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            0.015
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        8243,
+        8248
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "barony"
+      ]
+    },
+    {
+      "patternId": "42a6b6fe58bbc46d",
+      "anchorClass": "BlockBrick",
+      "anchorAngles": [
+        0.175,
+        1.571,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -3.0,
+            3.7,
+            1.1500000000000001
+          ],
+          "anglesRadians": [
+            0.175,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            3.0,
+            3.7,
+            1.1500000000000001
+          ],
+          "anglesRadians": [
+            0.175,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7583,
+        7585
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "99907f561e4e7031",
+      "anchorClass": "BlockBrick",
+      "anchorAngles": [
+        0.349,
+        1.571,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -3.0,
+            2.3000000000000003,
+            0.65
+          ],
+          "anglesRadians": [
+            0.349,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            3.0,
+            2.3000000000000003,
+            0.65
+          ],
+          "anglesRadians": [
+            0.349,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 3,
+      "anchorEntityIds": [
+        7611,
+        7613,
+        7615
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "83dc8a897c60404d",
+      "anchorClass": "BlockBrick",
+      "anchorAngles": [
+        5.899,
+        4.712,
+        0.0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -3.0,
+            -2.0,
+            0.55
+          ],
+          "anglesRadians": [
+            5.899,
+            1.571,
+            0.0
+          ]
+        },
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            3.0,
+            -2.0,
+            0.55
+          ],
+          "anglesRadians": [
+            5.899,
+            4.712,
+            0.0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7810,
+        7812
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "d885299af0cfb65a",
+      "anchorClass": "BigStoneWall",
+      "anchorAngles": [
+        0,
+        1.571,
+        0
+      ],
+      "members": [
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            1.0,
+            -4.0,
+            2.85
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            1.0,
+            4.0,
+            2.85
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7146,
+        7040
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "8fb741cb7428f24a",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -1.0,
+            -4.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 7,
+      "anchorEntityIds": [
+        7168,
+        7063,
+        7941,
+        7047,
+        7971,
+        7981,
+        7915
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "4568c0a7f9873667",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        3.142,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            4.0,
+            1.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            3.142,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            0.0,
+            -4.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            3.142,
+            0
+          ]
+        }
+      ],
+      "occurrences": 3,
+      "anchorEntityIds": [
+        7322,
+        7330,
+        7126
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "430f04ccd23e6c01",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        0.0,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -4.0,
+            1.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            3.142,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            0.0,
+            -4.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0.0,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7328,
+        7128
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "ec1b83ec1b82a65e",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        0.0,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -4.0,
+            -1.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            0.0,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            0.0,
+            4.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            0.0,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7329,
+        7127
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "e0f778b2b6a02237",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        3.142,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            4.0,
+            -1.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            0.0,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            0.0,
+            4.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            3.142,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7331,
+        7125
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "688a04af44093bab",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        1.571,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            1.0,
+            4.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            -4.0,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7052,
+        7165
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "b37eafb40049234d",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        1.571,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -1.0,
+            4.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            4.0,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7053,
+        7166
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "7c857e4761c44577",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            1.0,
+            -4.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            -4.0,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 7,
+      "anchorEntityIds": [
+        7062,
+        7159,
+        7940,
+        7167,
+        7046,
+        7970,
+        7980
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "1d5721cba01b6bbb",
+      "anchorClass": "MediumPileOfDirtAndStones",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigStoneWall",
+          "relativePosition": [
+            -1.0,
+            -4.0,
+            -2.85
+          ],
+          "anglesRadians": [
+            0,
+            1.571,
+            0
+          ]
+        },
+        {
+          "classname": "MediumPileOfDirtAndStones",
+          "relativePosition": [
+            4.0,
+            1.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 2,
+      "anchorEntityIds": [
+        7164,
+        7051
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "dorm"
+      ]
+    },
+    {
+      "patternId": "297047651090a0ad",
+      "anchorClass": "BigConcretePipe",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            -2.9000000000000004,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        },
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            2.9000000000000004,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 3,
+      "anchorEntityIds": [
+        9197,
+        9200,
+        9221
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "truba"
+      ]
+    },
+    {
+      "patternId": "b6a95370cc8bc7ab",
+      "anchorClass": "BigConcretePipe",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            -2.8000000000000003,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        },
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            2.9000000000000004,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 3,
+      "anchorEntityIds": [
+        9201,
+        9204,
+        9225
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "truba"
+      ]
+    },
+    {
+      "patternId": "2a7bd28b97ee5f89",
+      "anchorClass": "BigConcretePipe",
+      "anchorAngles": [
+        0,
+        4.712,
+        0
+      ],
+      "members": [
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            -2.9000000000000004,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        },
+        {
+          "classname": "BigConcretePipe",
+          "relativePosition": [
+            2.8000000000000003,
+            0.0,
+            0.0
+          ],
+          "anglesRadians": [
+            0,
+            4.712,
+            0
+          ]
+        }
+      ],
+      "occurrences": 4,
+      "anchorEntityIds": [
+        9202,
+        9205,
+        9223,
+        9226
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "truba"
+      ]
+    },
+    {
+      "patternId": "b60abc2551a253c2",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.1,
+            0.75,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.4,
+            0.5,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.55,
+            -0.15000000000000002,
+            -0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.8,
+            0.4,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2657,
+        2667,
+        2674,
+        2681,
+        2688,
+        2695
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "3203ef11a5096da6",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.65,
+            0.0,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.35000000000000003,
+            -0.30000000000000004,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.05,
+            -0.4,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.35000000000000003,
+            -0.8,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2658,
+        2669,
+        2676,
+        2683,
+        2690,
+        2697
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "25629ca405af514d",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.1,
+            -0.75,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.30000000000000004,
+            -0.25,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.65,
+            0.0,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.7000000000000001,
+            -0.4,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2659,
+        2670,
+        2677,
+        2684,
+        2691,
+        2698
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "d2fbd5974210d2e0",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.7000000000000001,
+            0.55,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.55,
+            -0.15000000000000002,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.35000000000000003,
+            0.8,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.30000000000000004,
+            0.4,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2660,
+        2666,
+        2673,
+        2680,
+        2687,
+        2694
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "3590f4a2f44357ce",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.4,
+            0.1,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.25,
+            -0.55,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.05,
+            0.4,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.30000000000000004,
+            -0.4,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2661,
+        2664,
+        2671,
+        2678,
+        2685,
+        2692
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "3a57f63929b1fd33",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.4,
+            -0.5,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.30000000000000004,
+            0.25,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.35000000000000003,
+            0.30000000000000004,
+            -0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.4,
+            -0.1,
+            0.0
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2662,
+        2668,
+        2675,
+        2682,
+        2689,
+        2696
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    },
+    {
+      "patternId": "05d6bc1fb67d14de",
+      "anchorClass": "Egg",
+      "anchorAngles": [
+        6.276,
+        0,
+        6.278
+      ],
+      "members": [
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.55,
+            0.15000000000000002,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            -0.2,
+            0.65,
+            0.1
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.25,
+            0.55,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        },
+        {
+          "classname": "Egg",
+          "relativePosition": [
+            0.55,
+            0.15000000000000002,
+            0.05
+          ],
+          "anglesRadians": [
+            6.276,
+            0,
+            6.278
+          ]
+        }
+      ],
+      "occurrences": 6,
+      "anchorEntityIds": [
+        2663,
+        2665,
+        2672,
+        2679,
+        2686,
+        2693
+      ],
+      "confidence": 0.4,
+      "source": "mapUsageDerived",
+      "reviewed": false,
+      "maps": [
+        "hunt"
+      ]
+    }
+  ]
+}

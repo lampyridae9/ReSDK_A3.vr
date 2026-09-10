@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "classname": "BlockDirt",
+      "category": "terrain",
+      "placementType": "terrain",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BlockStone",
+      "category": "terrain",
+      "placementType": "terrain",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BlockBrick",
+      "category": "terrain",
+      "placementType": "terrain",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ConcretePanel",
+      "category": "floor",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated compact floor module: SmallFloor inheritance, 2.036 x 4.012m historical AABB, actual multi-map usage; contact/orientation await review"
+    },
+    {
+      "classname": "WoodenSmallFloor",
+      "category": "floor",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ConcreteSmallFloor2",
+      "category": "floor",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "LargeConcreteWallWithReinforcement",
+      "category": "wall",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ConcreteGreenWall",
+      "category": "wall",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BrickThinWall",
+      "category": "wall",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "WoodenDoor",
+      "category": "door",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SteelDoorThinSmall",
+      "category": "door",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "WoodenArch",
+      "category": "door",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SingleWhiteBed",
+      "category": "bed",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SleepingMatras",
+      "category": "bed",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BedOld",
+      "category": "bed",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "MediumWoodenTable",
+      "category": "table",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SmallWoodenTable",
+      "category": "table",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "WoodenChair",
+      "category": "chair",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ChairCasual",
+      "category": "chair",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BrownLeatherChair",
+      "category": "chair",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "Shelves",
+      "category": "storage",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "WoodenSmallShelf",
+      "category": "storage",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "LampCeiling",
+      "category": "light",
+      "placementType": "ceiling",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "Candle",
+      "category": "light",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SquareWoodenBox",
+      "category": "container",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SteelGreenCabinet",
+      "category": "container",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BoardWoodenBox",
+      "category": "container",
+      "placementType": "floor",
+      "orientation": "vertical",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SmallDirtGrey",
+      "category": "decoration",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "DirtCraterLong",
+      "category": "decoration",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BigGreenRock",
+      "category": "rock",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BigDarkRock",
+      "category": "rock",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "MediumPileOfDirtAndStones",
+      "category": "rock",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ConcreteGarbage",
+      "category": "garbage",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SheetMetalGarbage1",
+      "category": "garbage",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "LogDebris1",
+      "category": "debris",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "ClothDebris1",
+      "category": "debris",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BigMushroom3",
+      "category": "mushroom",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "SmallMushroom1",
+      "category": "mushroom",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "PowerGenerator",
+      "category": "industrial",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "IndPipeValve",
+      "category": "industrial",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    },
+    {
+      "classname": "BigConcretePipe",
+      "category": "industrial",
+      "placementType": "free",
+      "orientation": "UNKNOWN",
+      "source": "ruleDerived",
+      "confidence": 0.75,
+      "reviewed": false,
+      "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+    }
+  ]
+}

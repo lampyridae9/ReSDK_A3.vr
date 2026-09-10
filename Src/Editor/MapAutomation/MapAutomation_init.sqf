@@ -1,6 +1,7 @@
 // Relicta editor automation probe. No transport or generated SQF execution.
 #include "MapAutomation_api.sqf"
 #include "MapAutomation_capture.sqf"
+#include "MapAutomation_catalog.sqf"
 #include "MapAutomation_transport.sqf"
 #include "MapAutomation_tests.sqf"
 
@@ -9,6 +10,7 @@ init_function(ma_initialize)
     ma_transportRequestDir = "Tools\MapAutomation\queue\requests";
     ma_transportResponseDir = "Tools\MapAutomation\queue\responses";
     ma_transportCache = createHashMap;
+    ma_catalogGeneration = str diag_tickTime;
     ma_mapName = "AI_AutomationProbe";
     ma_allowedClasses = ["BigConcreteFloor","ConcreteGreenWall","WoodenArch"];
     ma_busy = false;

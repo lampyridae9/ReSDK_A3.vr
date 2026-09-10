@@ -1,0 +1,3688 @@
+{
+  "schemaVersion": 1,
+  "status": "LIVE_VERIFIED_CORE_WITH_CURATED_PLACEMENT_ASSUMPTIONS",
+  "assets": [
+    {
+      "classname": "BlockDirt",
+      "model": "rel_vox\\obj\\block_dirt.p3d",
+      "category": "terrain",
+      "chunkType": "DECOR",
+      "dimensions": {
+        "value": [
+          11.3066,
+          11.6035,
+          11.2631
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 846,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "hunt",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 1,
+        "perMapCounts": {
+          "minimap": 353,
+          "saloonv2": 6,
+          "barony": 115,
+          "detective": 25,
+          "dorm": 6,
+          "truba": 160,
+          "holiday": 30,
+          "hunt": 151
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review",
+        "humanHint": "грунт / коричневая земля"
+      },
+      "placementType": {
+        "value": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          11.3066,
+          11.60354,
+          11.2631
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -5.63155,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BlockStone",
+      "model": "rel_vox\\obj\\block_dirt.p3d",
+      "category": "terrain",
+      "chunkType": "DECOR",
+      "dimensions": {
+        "value": [
+          11.3066,
+          11.6035,
+          11.2631
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 805,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 2,
+        "perMapCounts": {
+          "minimap": 98,
+          "saloonv2": 143,
+          "barony": 63,
+          "detective": 10,
+          "dorm": 165,
+          "truba": 286,
+          "holiday": 40
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review",
+        "humanHint": "камень / серая земля"
+      },
+      "placementType": {
+        "value": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          11.3066,
+          11.60354,
+          11.2631
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -5.63155,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BlockBrick",
+      "model": "rel_vox\\obj\\block_dirt.p3d",
+      "category": "terrain",
+      "chunkType": "DECOR",
+      "dimensions": {
+        "value": [
+          11.3066,
+          11.6035,
+          11.2631
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 548,
+        "mapsUsedIn": [
+          "detective",
+          "dorm",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 5,
+        "frequencyRank": 4,
+        "perMapCounts": {
+          "minimap": 61,
+          "saloonv2": 173,
+          "detective": 6,
+          "dorm": 122,
+          "theatre": 186
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review",
+        "humanHint": "тёмный блок / тёмная почва"
+      },
+      "placementType": {
+        "value": "terrain",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          11.3066,
+          11.60354,
+          11.2631
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -5.63155,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ConcretePanel",
+      "model": "a3\\structures_f_enoch\\infrastructure\\roads\\concretepanels_02_single_v1_f.p3d",
+      "category": "floor",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.03604,
+          4.01182,
+          0.18451
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 83,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 50,
+        "perMapCounts": {
+          "minimap": 1,
+          "saloonv2": 3,
+          "barony": 15,
+          "detective": 3,
+          "dorm": 2,
+          "truba": 3,
+          "theatre": 50,
+          "holiday": 6
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated compact floor module: SmallFloor inheritance, 2.036 x 4.012m historical AABB, actual multi-map usage; contact/orientation await review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.03604,
+          4.01182,
+          0.1845104
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.0922552,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "WoodenSmallFloor",
+      "model": "ml_shabut\\sbs\\poldrevko.p3d",
+      "category": "floor",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          3.82711,
+          3.54035,
+          0.268523
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 204,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 12,
+        "perMapCounts": {
+          "minimap": 12,
+          "saloonv2": 4,
+          "barony": 15,
+          "detective": 13,
+          "theatre": 77,
+          "holiday": 83
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          3.82712,
+          3.54034,
+          0.268524
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.134262,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ConcreteSmallFloor2",
+      "model": "ml_shabut\\exoduss\\concrete_slub.p3d",
+      "category": "floor",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.8316,
+          4.5723,
+          0.248
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 174,
+        "mapsUsedIn": [
+          "barony",
+          "holiday",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 4,
+        "frequencyRank": 15,
+        "perMapCounts": {
+          "saloonv2": 4,
+          "barony": 1,
+          "theatre": 151,
+          "holiday": 18
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.8316,
+          4.5723,
+          0.248
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.124,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "LargeConcreteWallWithReinforcement",
+      "model": "a3\\structures_f\\walls\\canal_wallsmall_10m_f.p3d",
+      "category": "wall",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          9,
+          1.12616,
+          5.0256
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 509,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 5,
+        "perMapCounts": {
+          "minimap": 62,
+          "saloonv2": 238,
+          "barony": 73,
+          "detective": 52,
+          "dorm": 15,
+          "truba": 16,
+          "theatre": 35,
+          "holiday": 18
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "wall",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          9.0,
+          1.12616,
+          5.0256
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -2.5128,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ConcreteGreenWall",
+      "model": "a3\\structures_f_exp\\military\\pillboxes\\pillboxwall_01_3m_f.p3d",
+      "category": "wall",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          3.37723,
+          0.792883,
+          4.23924
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 5,
+        "mapsUsedIn": [
+          "barony"
+        ],
+        "mapCount": 1,
+        "frequencyRank": 560,
+        "perMapCounts": {
+          "barony": 5
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "wall",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          3.37722,
+          0.792884,
+          4.23924
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -2.11962,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BrickThinWall",
+      "model": "csa_constr\\csa_obj\\kr_stena.p3d",
+      "category": "wall",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          6,
+          0.3,
+          3
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 141,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 25,
+        "perMapCounts": {
+          "minimap": 17,
+          "saloonv2": 46,
+          "barony": 2,
+          "detective": 28,
+          "dorm": 27,
+          "theatre": 5,
+          "holiday": 16
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "wall",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          6,
+          0.3,
+          3.0
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.5,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "WoodenDoor",
+      "model": "ml_shabut\\xlamdoor\\xlamdoor.p3d",
+      "category": "door",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.4611,
+          0.231096,
+          2.22551
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 180,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 13,
+        "perMapCounts": {
+          "minimap": 39,
+          "saloonv2": 58,
+          "barony": 12,
+          "detective": 2,
+          "dorm": 21,
+          "truba": 26,
+          "theatre": 4,
+          "holiday": 18
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "door",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.461102,
+          0.231096,
+          2.22552
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.11276,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SteelDoorThinSmall",
+      "model": "apalon\\metro_a3\\door_solar\\door_solar.p3d",
+      "category": "door",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.28838,
+          0.169751,
+          2.40528
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 76,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 56,
+        "perMapCounts": {
+          "minimap": 13,
+          "saloonv2": 13,
+          "barony": 2,
+          "detective": 7,
+          "dorm": 6,
+          "truba": 19,
+          "theatre": 9,
+          "holiday": 7
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "door",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.288382,
+          0.1697507,
+          2.4052746000000003
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.0247746,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "WoodenArch",
+      "model": "ml_shabut\\exodus\\woodarka.p3d",
+      "category": "door",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          3.01151,
+          3.32742,
+          4.36809
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 4,
+        "mapsUsedIn": [
+          "barony",
+          "minimap",
+          "saloonv2"
+        ],
+        "mapCount": 3,
+        "frequencyRank": 643,
+        "perMapCounts": {
+          "minimap": 1,
+          "saloonv2": 1,
+          "barony": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "door",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          3.0115,
+          3.32742,
+          4.36808
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -2.18404,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SingleWhiteBed",
+      "model": "relicta_models\\models\\interier\\bed4.p3d",
+      "category": "bed",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.19177,
+          2.28636,
+          0.946847
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 44,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 100,
+        "perMapCounts": {
+          "minimap": 8,
+          "saloonv2": 11,
+          "barony": 1,
+          "detective": 3,
+          "dorm": 9,
+          "truba": 7,
+          "theatre": 3,
+          "holiday": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "bed",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.191766,
+          2.28636,
+          0.946846
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.473423,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SleepingMatras",
+      "model": "ml\\ml_object_new\\model_05\\matras_2.p3d",
+      "category": "bed",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.3488,
+          1.23421,
+          0.2794
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 62,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 66,
+        "perMapCounts": {
+          "minimap": 32,
+          "saloonv2": 15,
+          "barony": 2,
+          "dorm": 1,
+          "truba": 11,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "bed",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.3488,
+          1.234206,
+          0.2794
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.1397,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BedOld",
+      "model": "ca\\buildings\\furniture\\postel_panelak2.p3d",
+      "category": "bed",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.37944,
+          2.1927,
+          0.346095
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 22,
+        "mapsUsedIn": [
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 206,
+        "perMapCounts": {
+          "minimap": 4,
+          "saloonv2": 10,
+          "detective": 4,
+          "dorm": 1,
+          "truba": 2,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "bed",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.3794440000000001,
+          2.1927,
+          0.3460953
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.0154553,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "MediumWoodenTable",
+      "model": "a3\\structures_f_epa\\civ\\camping\\woodentable_large_f.p3d",
+      "category": "table",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.1665,
+          2.21006,
+          0.864592
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 57,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 73,
+        "perMapCounts": {
+          "minimap": 12,
+          "saloonv2": 15,
+          "barony": 8,
+          "detective": 4,
+          "dorm": 7,
+          "truba": 8,
+          "theatre": 2,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "table",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.166502,
+          2.21006,
+          0.864592
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.432296,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SmallWoodenTable",
+      "model": "a3\\structures_f_epa\\civ\\camping\\woodentable_small_f.p3d",
+      "category": "table",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.1665,
+          1.47701,
+          0.864592
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 63,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 64,
+        "perMapCounts": {
+          "minimap": 13,
+          "saloonv2": 27,
+          "barony": 1,
+          "detective": 4,
+          "dorm": 9,
+          "truba": 8,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "table",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.166502,
+          1.47701,
+          0.864592
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.432296,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "WoodenChair",
+      "model": "a3\\structures_f\\furniture\\chairwood_f.p3d",
+      "category": "chair",
+      "chunkType": "ITEM",
+      "dimensions": {
+        "value": [
+          0.441716,
+          0.530356,
+          1.01664
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 153,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 22,
+        "perMapCounts": {
+          "minimap": 20,
+          "saloonv2": 44,
+          "barony": 20,
+          "detective": 7,
+          "dorm": 24,
+          "truba": 26,
+          "holiday": 12
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "chair",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.441716,
+          0.530356,
+          1.0166400000000002
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -2.85993e-16,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ChairCasual",
+      "model": "ml_exodusnew\\stulcasual.p3d",
+      "category": "chair",
+      "chunkType": "ITEM",
+      "dimensions": {
+        "value": [
+          0.697767,
+          0.6066,
+          1.24995
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 14,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 301,
+        "perMapCounts": {
+          "minimap": 2,
+          "saloonv2": 1,
+          "barony": 4,
+          "detective": 1,
+          "dorm": 1,
+          "truba": 2,
+          "theatre": 2,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "chair",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.697766,
+          0.6066,
+          1.249946
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.624973,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BrownLeatherChair",
+      "model": "smg_metro_building\\drugoe\\smg_bomjkreslo.p3d",
+      "category": "chair",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.3774,
+          1.04942,
+          1.05382
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 21,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 219,
+        "perMapCounts": {
+          "minimap": 6,
+          "saloonv2": 4,
+          "barony": 2,
+          "detective": 2,
+          "dorm": 2,
+          "truba": 2,
+          "theatre": 1,
+          "holiday": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "chair",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.377404,
+          1.049416,
+          1.053824
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.526912,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "Shelves",
+      "model": "a3\\structures_f\\furniture\\metal_rack_f.p3d",
+      "category": "storage",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.1045,
+          0.319231,
+          1.8
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 48,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 90,
+        "perMapCounts": {
+          "minimap": 13,
+          "saloonv2": 7,
+          "barony": 2,
+          "detective": 5,
+          "dorm": 9,
+          "truba": 6,
+          "theatre": 4,
+          "holiday": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "storage",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.104496,
+          0.319232,
+          1.8
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.9,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "WoodenSmallShelf",
+      "model": "ml\\ml_object_new\\shabbat\\bar_stoika.p3d",
+      "category": "storage",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          0.3966,
+          1.55218,
+          1.5099
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 22,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 215,
+        "perMapCounts": {
+          "minimap": 3,
+          "saloonv2": 5,
+          "barony": 4,
+          "detective": 1,
+          "dorm": 2,
+          "truba": 4,
+          "theatre": 2,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "storage",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.3966,
+          1.552178,
+          1.5099
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.75495,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "LampCeiling",
+      "model": "atmobjects\\lamps\\data\\model\\lamp_tarelka.p3d",
+      "category": "light",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          0.424327,
+          0.415916,
+          0.443244
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 304,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "hunt",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 8,
+        "perMapCounts": {
+          "minimap": 46,
+          "saloonv2": 57,
+          "barony": 25,
+          "detective": 34,
+          "dorm": 46,
+          "theatre": 41,
+          "holiday": 46,
+          "hunt": 9
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "light",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "ceiling",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.424328,
+          0.415916,
+          0.443244
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.221622,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "Candle",
+      "model": "relicta_models\\models\\interier\\props\\svecha.p3d",
+      "category": "light",
+      "chunkType": "ITEM",
+      "dimensions": {
+        "value": [
+          0.0631532,
+          0.0615809,
+          0.167862
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 112,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 37,
+        "perMapCounts": {
+          "minimap": 23,
+          "saloonv2": 41,
+          "barony": 6,
+          "detective": 3,
+          "dorm": 9,
+          "truba": 26,
+          "theatre": 4
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "light",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.0631532,
+          0.061581,
+          0.1678622
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.0839311,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SquareWoodenBox",
+      "model": "a3\\props_f_enoch\\industrial\\supplies\\woodenbox_02_f.p3d",
+      "category": "container",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.0031,
+          1.0031,
+          0.973388
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 177,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 14,
+        "perMapCounts": {
+          "minimap": 21,
+          "saloonv2": 43,
+          "barony": 18,
+          "detective": 16,
+          "dorm": 41,
+          "truba": 15,
+          "theatre": 16,
+          "holiday": 7
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "container",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.003098,
+          1.003096,
+          0.973388
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.486694,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SteelGreenCabinet",
+      "model": "ml\\ml_object_new\\model_14_10\\shkafsin.p3d",
+      "category": "container",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          0.6485,
+          1.2026,
+          1.557
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 64,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 61,
+        "perMapCounts": {
+          "minimap": 12,
+          "saloonv2": 16,
+          "barony": 1,
+          "detective": 2,
+          "dorm": 13,
+          "truba": 13,
+          "theatre": 3,
+          "holiday": 4
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "container",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.6485,
+          1.2026,
+          1.557
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.7785,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BoardWoodenBox",
+      "model": "metro_ob\\model\\box_wood_close.p3d",
+      "category": "container",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          0.694398,
+          1.4272,
+          0.819132
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 63,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 8,
+        "frequencyRank": 62,
+        "perMapCounts": {
+          "minimap": 12,
+          "saloonv2": 14,
+          "barony": 3,
+          "detective": 9,
+          "dorm": 3,
+          "truba": 19,
+          "theatre": 2,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "container",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "floor",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": "vertical",
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.6,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.694398,
+          1.427196,
+          0.819132
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.409566,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SmallDirtGrey",
+      "model": "ml_shabut\\nvprops\\gryazyuka5.p3d",
+      "category": "decoration",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          6.08292,
+          8.29796,
+          2.00618
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 296,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 10,
+        "perMapCounts": {
+          "minimap": 40,
+          "saloonv2": 41,
+          "barony": 113,
+          "dorm": 12,
+          "truba": 70,
+          "theatre": 11,
+          "holiday": 9
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "decoration",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          6.08292,
+          8.29796,
+          2.00618
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.00309,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "DirtCraterLong",
+      "model": "a3\\structures_f_enoch\\military\\training\\craterlong_02_f.p3d",
+      "category": "decoration",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          7.97072,
+          11.4696,
+          1.85689
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 166,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 18,
+        "perMapCounts": {
+          "minimap": 13,
+          "saloonv2": 25,
+          "barony": 6,
+          "dorm": 32,
+          "truba": 83,
+          "holiday": 7
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "decoration",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          7.97072,
+          11.46962,
+          1.85689
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.928445,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BigGreenRock",
+      "model": "a3\\rocks_f_exp\\cliff\\cliff_wall_long_f.p3d",
+      "category": "rock",
+      "chunkType": "DECOR",
+      "dimensions": {
+        "value": [
+          45.8243,
+          18.7417,
+          23.0336
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 167,
+        "mapsUsedIn": [
+          "barony",
+          "truba"
+        ],
+        "mapCount": 2,
+        "frequencyRank": 17,
+        "perMapCounts": {
+          "barony": 1,
+          "truba": 166
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "rock",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          45.8242,
+          18.7417,
+          23.0336
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -11.5168,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BigDarkRock",
+      "model": "a3\\rocks_f\\water\\w_sharprock_monolith.p3d",
+      "category": "rock",
+      "chunkType": "DECOR",
+      "dimensions": {
+        "value": [
+          17.0878,
+          28.6191,
+          19.9099
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 118,
+        "mapsUsedIn": [
+          "barony",
+          "saloonv2"
+        ],
+        "mapCount": 2,
+        "frequencyRank": 35,
+        "perMapCounts": {
+          "saloonv2": 6,
+          "barony": 112
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "rock",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          17.08776,
+          28.619,
+          19.90994
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -9.95497,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "MediumPileOfDirtAndStones",
+      "model": "ca\\structures\\castle\\a_castle_walls_5_d_ruins.p3d",
+      "category": "rock",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          13.2185,
+          6.11108,
+          2.90057
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 300,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 9,
+        "perMapCounts": {
+          "minimap": 1,
+          "saloonv2": 33,
+          "barony": 3,
+          "dorm": 195,
+          "truba": 47,
+          "holiday": 21
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "rock",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          13.21846,
+          6.11108,
+          2.90056
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.45028,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ConcreteGarbage",
+      "model": "ca\\structures\\ruins\\rubble_concrete_03.p3d",
+      "category": "garbage",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          6.49775,
+          1.99375,
+          0.470599
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 24,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 190,
+        "perMapCounts": {
+          "minimap": 2,
+          "saloonv2": 7,
+          "barony": 9,
+          "dorm": 1,
+          "theatre": 3,
+          "holiday": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "garbage",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          6.49776,
+          1.993754,
+          0.470598
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.235299,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SheetMetalGarbage1",
+      "model": "ca\\structures\\ruins\\rubble_metal_plates_03.p3d",
+      "category": "garbage",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          3.2445,
+          3.72656,
+          0.862008
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 7,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 494,
+        "perMapCounts": {
+          "minimap": 1,
+          "saloonv2": 2,
+          "barony": 1,
+          "dorm": 1,
+          "theatre": 1,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "garbage",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          3.2445,
+          3.72656,
+          0.862008
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.431004,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "LogDebris1",
+      "model": "relicta_models2\\debris\\s_wooden_debris7\\s_wooden_debris7.p3d",
+      "category": "debris",
+      "chunkType": "ITEM",
+      "dimensions": {
+        "value": [
+          0.342334,
+          1.24646,
+          0.286837
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 14,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 305,
+        "perMapCounts": {
+          "minimap": 3,
+          "saloonv2": 2,
+          "barony": 6,
+          "dorm": 1,
+          "theatre": 1,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "debris",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.342334,
+          1.246462,
+          0.286836
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.143418,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "ClothDebris1",
+      "model": "relicta_models2\\debris\\s_cloth_debris\\s_cloth_debris.p3d",
+      "category": "debris",
+      "chunkType": "ITEM",
+      "dimensions": {
+        "value": [
+          0.450067,
+          0.363279,
+          0.115989
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 30,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre"
+        ],
+        "mapCount": 6,
+        "frequencyRank": 151,
+        "perMapCounts": {
+          "minimap": 4,
+          "saloonv2": 5,
+          "barony": 5,
+          "dorm": 11,
+          "theatre": 1,
+          "holiday": 4
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "debris",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          0.450066,
+          0.363278,
+          0.1159886
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.0579943,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BigMushroom3",
+      "model": "veg_gliese\\tx7.p3d",
+      "category": "mushroom",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.79848,
+          3.23777,
+          7.8187
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 16,
+        "mapsUsedIn": [
+          "barony",
+          "holiday",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 4,
+        "frequencyRank": 273,
+        "perMapCounts": {
+          "barony": 2,
+          "truba": 2,
+          "theatre": 10,
+          "holiday": 2
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "mushroom",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.798482,
+          3.23778,
+          7.8187
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -3.90935,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "SmallMushroom1",
+      "model": "veg_gliese\\tw2.p3d",
+      "category": "mushroom",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.15337,
+          2.01721,
+          2.14092
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 19,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "truba"
+        ],
+        "mapCount": 3,
+        "frequencyRank": 248,
+        "perMapCounts": {
+          "barony": 10,
+          "dorm": 1,
+          "truba": 8
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "mushroom",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.15336,
+          2.0172,
+          2.14092
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.07046,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "PowerGenerator",
+      "model": "relicta_models\\models\\interier\\controlpanel.p3d",
+      "category": "industrial",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.59248,
+          1.26659,
+          1.32834
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 12,
+        "mapsUsedIn": [
+          "barony",
+          "detective",
+          "dorm",
+          "holiday",
+          "hunt",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 9,
+        "frequencyRank": 339,
+        "perMapCounts": {
+          "minimap": 1,
+          "saloonv2": 2,
+          "barony": 1,
+          "detective": 2,
+          "dorm": 2,
+          "truba": 1,
+          "theatre": 1,
+          "holiday": 1,
+          "hunt": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "industrial",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.59248,
+          1.266586,
+          1.32834
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -0.66417,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "IndPipeValve",
+      "model": "ca\\buildings2\\ind_pipeline\\indpipe1\\indpipe1_valve.p3d",
+      "category": "industrial",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          1.61688,
+          7.59445,
+          2.13481
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 17,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "holiday",
+          "minimap",
+          "saloonv2",
+          "theatre",
+          "truba"
+        ],
+        "mapCount": 7,
+        "frequencyRank": 266,
+        "perMapCounts": {
+          "minimap": 2,
+          "saloonv2": 4,
+          "barony": 1,
+          "dorm": 2,
+          "truba": 4,
+          "theatre": 3,
+          "holiday": 1
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "industrial",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          1.616878,
+          7.59445,
+          2.1348
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.0674,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    },
+    {
+      "classname": "BigConcretePipe",
+      "model": "ca\\structures_e\\misc\\misc_construction\\misc_concpipeline_ep1.p3d",
+      "category": "industrial",
+      "chunkType": "STRUCTURE",
+      "dimensions": {
+        "value": [
+          2.80471,
+          3.81361,
+          2.66622
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "meaning": "Fresh boundingBoxReal AABB dimensions; not collision mesh"
+      },
+      "usage": {
+        "totalCount": 165,
+        "mapsUsedIn": [
+          "barony",
+          "dorm",
+          "minimap",
+          "saloonv2",
+          "truba"
+        ],
+        "mapCount": 5,
+        "frequencyRank": 19,
+        "perMapCounts": {
+          "minimap": 15,
+          "saloonv2": 22,
+          "barony": 12,
+          "dorm": 1,
+          "truba": 115
+        },
+        "source": "mapUsageDerived"
+      },
+      "semantic": {
+        "category": "industrial",
+        "source": "ruleDerived",
+        "confidence": 0.75,
+        "reviewed": false,
+        "evidence": "Curated candidate selection using source family, declared model and measured dataset usage; contact/orientation await engine/human review"
+      },
+      "placementType": {
+        "value": "free",
+        "source": "ruleDerived",
+        "confidence": 0.6,
+        "reviewed": false,
+        "evidence": "Curated intended attachment; fresh bounds do not verify contact",
+        "status": "APPROXIMATE"
+      },
+      "orientation": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0,
+        "reviewed": false
+      },
+      "availability": "LIVE_PROBE_VERIFIED",
+      "generatorAllowed": false,
+      "reviewRequired": [
+        "contact and semantic orientation",
+        "functional clearance"
+      ],
+      "historicalDimensions": {
+        "value": [
+          2.80472,
+          3.81362,
+          2.66622
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "ruleDerived",
+        "status": "UNKNOWN",
+        "confidence": 0
+      },
+      "supportAssumptions": {
+        "value": -1.33311,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "confidence": 0.4,
+        "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
+      }
+    }
+  ]
+}

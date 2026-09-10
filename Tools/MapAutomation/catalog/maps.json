@@ -1,0 +1,3393 @@
+{
+  "minimap": {
+    "source": "Src/Editor/Bin/Maps/Minimap.cpp",
+    "sha256": "8d63967195b3e18a0e469906d96a8d58bd1ecca6f7f2d2af88bfad274d38915b",
+    "sourceEntitiesCount": 3177,
+    "entityKinds": {
+      "Group": 3,
+      "Object": 3168,
+      "Layer": 6
+    },
+    "sourceObjectCount": 3168,
+    "parsedRelevantObjects": 3164,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      },
+      {
+        "entityId": 6548,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 3062,
+        "parsed": 3062
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1742/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item1786/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item1844/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item1853/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item1916/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3059/Entities",
+        "declared": 1,
+        "parsed": 1
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Minimap.sqf",
+      "sha256": "2dc5cb904eedb0cf102ef39eee8cb8ab57d32c3e39148bb4cfddf54d76c1e9a7",
+      "directInitCount": 3164,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 3164,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "BlockDirt",
+        353
+      ],
+      [
+        "Decor",
+        129
+      ],
+      [
+        "BlockStone",
+        98
+      ],
+      [
+        "LargeConcreteWallWithReinforcement",
+        62
+      ],
+      [
+        "BlockBrick",
+        61
+      ],
+      [
+        "IStruct",
+        58
+      ],
+      [
+        "SteelThinWallMedium",
+        52
+      ],
+      [
+        "LampCeiling",
+        46
+      ],
+      [
+        "MediumBetonWall",
+        43
+      ],
+      [
+        "SmallDirtBrown",
+        43
+      ]
+    ],
+    "chunkCounts": {
+      "DECOR": 687,
+      "STRUCTURE": 1970,
+      "ITEM": 507
+    },
+    "chunkDisagreements": {}
+  },
+  "saloonv2": {
+    "source": "Src/Editor/Bin/Maps/SaloonV2.cpp",
+    "sha256": "27785692cb5331847fc644afddbcbad81cb188f44ac7ab45cc3875536c1e0c61",
+    "sourceEntitiesCount": 3826,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 3710,
+      "Layer": 113,
+      "Trigger": 1
+    },
+    "sourceObjectCount": 3710,
+    "parsedRelevantObjects": 3707,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item0/Entities",
+        "declared": 230,
+        "parsed": 230
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item1/Entities",
+        "declared": 66,
+        "parsed": 66
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item2/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities",
+        "declared": 36,
+        "parsed": 36
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item0/Entities",
+        "declared": 54,
+        "parsed": 54
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item1/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item2/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item3/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item4/Entities",
+        "declared": 104,
+        "parsed": 104
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities/Item5/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item0/Entities",
+        "declared": 58,
+        "parsed": 58
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item1/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item2/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item3/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item4/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities/Item0/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities/Item1/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities/Item2/Entities",
+        "declared": 28,
+        "parsed": 28
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities/Item3/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item0/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item1/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item1/Entities/Item6/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item2/Entities",
+        "declared": 113,
+        "parsed": 113
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item3/Entities",
+        "declared": 56,
+        "parsed": 56
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item4/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item5/Entities",
+        "declared": 24,
+        "parsed": 24
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities/Item6/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities",
+        "declared": 168,
+        "parsed": 168
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities",
+        "declared": 223,
+        "parsed": 223
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item3/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item4/Entities",
+        "declared": 46,
+        "parsed": 46
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item5/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item6/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item7/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item8/Entities",
+        "declared": 66,
+        "parsed": 66
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item0/Entities/Item216/Entities/Item9/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item1/Entities",
+        "declared": 82,
+        "parsed": 82
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item2/Entities",
+        "declared": 60,
+        "parsed": 60
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item3/Entities",
+        "declared": 62,
+        "parsed": 62
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item4/Entities",
+        "declared": 78,
+        "parsed": 78
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item5/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item6/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item7/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item0/Entities",
+        "declared": 83,
+        "parsed": 83
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item1/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item2/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item3/Entities",
+        "declared": 27,
+        "parsed": 27
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item4/Entities",
+        "declared": 49,
+        "parsed": 49
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item5/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item6/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item7/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item8/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item9/Entities/Item9/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities/Item0/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities/Item0/Entities/Item0/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities/Item0/Entities/Item1/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities/Item0/Entities/Item2/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities/Item10/Entities/Item1/Entities",
+        "declared": 22,
+        "parsed": 22
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item4/Entities",
+        "declared": 68,
+        "parsed": 68
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item5/Entities",
+        "declared": 75,
+        "parsed": 75
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item6/Entities",
+        "declared": 91,
+        "parsed": 91
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item6/Entities/Item89/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item0/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item0/Entities/Item1/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item0/Entities/Item2/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item0/Entities/Item3/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item1/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item2/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item3/Entities",
+        "declared": 40,
+        "parsed": 40
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item3/Entities/Item21/Entities",
+        "declared": 104,
+        "parsed": 104
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item3/Entities/Item22/Entities",
+        "declared": 25,
+        "parsed": 25
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item3/Entities/Item23/Entities",
+        "declared": 38,
+        "parsed": 38
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item4/Entities",
+        "declared": 22,
+        "parsed": 22
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item5/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item15/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item15/Entities/Item0/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities",
+        "declared": 59,
+        "parsed": 59
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item0/Entities",
+        "declared": 74,
+        "parsed": 74
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item2/Entities",
+        "declared": 91,
+        "parsed": 91
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item2/Entities/Item77/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item2/Entities/Item78/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item3/Entities",
+        "declared": 65,
+        "parsed": 65
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item4/Entities",
+        "declared": 26,
+        "parsed": 26
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities/Item5/Entities",
+        "declared": 153,
+        "parsed": 153
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item10/Entities",
+        "declared": 183,
+        "parsed": 183
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item0/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item1/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item6/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item7/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item7/Entities/Item1/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item7/Entities/Item2/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item7/Entities/Item3/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities/Item7/Entities/Item4/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities",
+        "declared": 52,
+        "parsed": 52
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities",
+        "declared": 12,
+        "parsed": 12
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/SaloonV2.sqf",
+      "sha256": "566d8876a44646d0e2d4c12f32fb8d7d3916f1c80ff6e3bbd35c7ea22899c1c8",
+      "directInitCount": 3707,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 3707,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "LargeConcreteWallWithReinforcement",
+        238
+      ],
+      [
+        "BlockBrick",
+        173
+      ],
+      [
+        "BlockStone",
+        143
+      ],
+      [
+        "IStruct",
+        76
+      ],
+      [
+        "Decor",
+        73
+      ],
+      [
+        "ThickConcreteFloorMedium",
+        62
+      ],
+      [
+        "BigStoneWall",
+        61
+      ],
+      [
+        "WoodenDoor",
+        58
+      ],
+      [
+        "LampCeiling",
+        57
+      ],
+      [
+        "BrickThinWall",
+        46
+      ]
+    ],
+    "chunkCounts": {
+      "DECOR": 569,
+      "STRUCTURE": 2368,
+      "ITEM": 770
+    },
+    "chunkDisagreements": {}
+  },
+  "barony": {
+    "source": "Src/Editor/Bin/Maps/Barony.cpp",
+    "sha256": "185f43dfb61fad374fa7ae359251b64a12d442adddea317716d95235e26634ca",
+    "sourceEntitiesCount": 2868,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 2812,
+      "Layer": 54
+    },
+    "sourceObjectCount": 2812,
+    "parsedRelevantObjects": 2809,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item0/Entities",
+        "declared": 61,
+        "parsed": 61
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item1/Entities",
+        "declared": 67,
+        "parsed": 67
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item2/Entities",
+        "declared": 177,
+        "parsed": 177
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item0/Entities",
+        "declared": 163,
+        "parsed": 163
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item1/Entities",
+        "declared": 121,
+        "parsed": 121
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities/Item0/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities/Item2/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities/Item3/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item3/Entities",
+        "declared": 99,
+        "parsed": 99
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item4/Entities",
+        "declared": 66,
+        "parsed": 66
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item5/Entities",
+        "declared": 144,
+        "parsed": 144
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item6/Entities",
+        "declared": 146,
+        "parsed": 146
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities",
+        "declared": 80,
+        "parsed": 80
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item1/Entities",
+        "declared": 116,
+        "parsed": 116
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item2/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item8/Entities",
+        "declared": 98,
+        "parsed": 98
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item9/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item10/Entities",
+        "declared": 123,
+        "parsed": 123
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item11/Entities",
+        "declared": 126,
+        "parsed": 126
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item12/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item13/Entities",
+        "declared": 54,
+        "parsed": 54
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item14/Entities",
+        "declared": 113,
+        "parsed": 113
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item15/Entities",
+        "declared": 69,
+        "parsed": 69
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item0/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item0/Entities/Item0/Entities",
+        "declared": 41,
+        "parsed": 41
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item0/Entities/Item1/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item0/Entities/Item2/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item0/Entities/Item3/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item1/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item1/Entities/Item0/Entities",
+        "declared": 155,
+        "parsed": 155
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item1/Entities/Item1/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item1/Entities/Item2/Entities",
+        "declared": 63,
+        "parsed": 63
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item1/Entities/Item3/Entities",
+        "declared": 272,
+        "parsed": 272
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item2/Entities",
+        "declared": 56,
+        "parsed": 56
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item16/Entities/Item3/Entities",
+        "declared": 70,
+        "parsed": 70
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item17/Entities",
+        "declared": 62,
+        "parsed": 62
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item17/Entities/Item0/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item17/Entities/Item1/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item17/Entities/Item2/Entities",
+        "declared": 27,
+        "parsed": 27
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item17/Entities/Item3/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item18/Entities",
+        "declared": 23,
+        "parsed": 23
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item18/Entities/Item9/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item18/Entities/Item10/Entities",
+        "declared": 1,
+        "parsed": 1
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Barony.sqf",
+      "sha256": "91e857a60e3ec5b908bd814123b3f5be8b6f78c0f316abd8c0a190a613c91bcb",
+      "directInitCount": 2809,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 2809,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "BlockDirt",
+        115
+      ],
+      [
+        "SmallDirtGrey",
+        113
+      ],
+      [
+        "BigDarkRock",
+        112
+      ],
+      [
+        "ShortPipeBlueMetal",
+        108
+      ],
+      [
+        "ConcreteGreenSmallFloor",
+        75
+      ],
+      [
+        "LargeConcreteWallWithReinforcement",
+        73
+      ],
+      [
+        "TinFence",
+        67
+      ],
+      [
+        "BlockStone",
+        63
+      ],
+      [
+        "ShortRottenBoards",
+        51
+      ],
+      [
+        "SmallStoneRoad",
+        44
+      ]
+    ],
+    "chunkCounts": {
+      "STRUCTURE": 1920,
+      "DECOR": 371,
+      "ITEM": 518
+    },
+    "chunkDisagreements": {}
+  },
+  "detective": {
+    "source": "Src/Editor/Bin/Maps/Detective.cpp",
+    "sha256": "bd32bf23574069d2f64f10fe4218b825a609a9108d2e891144df059405aecb51",
+    "sourceEntitiesCount": 1091,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 1088,
+      "Layer": 1
+    },
+    "sourceObjectCount": 1088,
+    "parsedRelevantObjects": 1085,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 1068,
+        "parsed": 1068
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1047/Entities",
+        "declared": 21,
+        "parsed": 21
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/detective.sqf",
+      "sha256": "88bf12b65f09da6edb67476dc379021f9c3e7e7e6b78521d919bc7d453780eea",
+      "directInitCount": 1085,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 1085,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "Decor",
+        97
+      ],
+      [
+        "IStruct",
+        74
+      ],
+      [
+        "LargeConcreteWallWithReinforcement",
+        52
+      ],
+      [
+        "LampCeiling",
+        34
+      ],
+      [
+        "BrickThinWall",
+        28
+      ],
+      [
+        "BlockDirt",
+        25
+      ],
+      [
+        "EffectAsStruct",
+        21
+      ],
+      [
+        "SteelRustyStairs",
+        19
+      ],
+      [
+        "SmallSteelPlate",
+        17
+      ],
+      [
+        "SquareWoodenBox",
+        16
+      ]
+    ],
+    "chunkCounts": {
+      "DECOR": 152,
+      "STRUCTURE": 728,
+      "ITEM": 205
+    },
+    "chunkDisagreements": {}
+  },
+  "dorm": {
+    "source": "Src/Editor/Bin/Maps/Dorm.cpp",
+    "sha256": "b4e093c50f6c3d763d079d34c2e6ce8664e2691ce999b20ad51ae36ee87d7b52",
+    "sourceEntitiesCount": 2629,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 2555,
+      "Layer": 72
+    },
+    "sourceObjectCount": 2555,
+    "parsedRelevantObjects": 2552,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities",
+        "declared": 59,
+        "parsed": 59
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item4/Entities",
+        "declared": 28,
+        "parsed": 28
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item5/Entities",
+        "declared": 26,
+        "parsed": 26
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item6/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities",
+        "declared": 56,
+        "parsed": 56
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities",
+        "declared": 62,
+        "parsed": 62
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item10/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item11/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item12/Entities",
+        "declared": 53,
+        "parsed": 53
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item13/Entities",
+        "declared": 23,
+        "parsed": 23
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities/Item0/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities/Item1/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities/Item2/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities/Item3/Entities",
+        "declared": 95,
+        "parsed": 95
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item14/Entities/Item4/Entities",
+        "declared": 38,
+        "parsed": 38
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item15/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities",
+        "declared": 92,
+        "parsed": 92
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item0/Entities",
+        "declared": 69,
+        "parsed": 69
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item1/Entities",
+        "declared": 64,
+        "parsed": 64
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item2/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item3/Entities",
+        "declared": 67,
+        "parsed": 67
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities",
+        "declared": 68,
+        "parsed": 68
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities/Item1/Entities",
+        "declared": 33,
+        "parsed": 33
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities/Item2/Entities",
+        "declared": 116,
+        "parsed": 116
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities/Item3/Entities",
+        "declared": 25,
+        "parsed": 25
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item0/Entities",
+        "declared": 59,
+        "parsed": 59
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item1/Entities",
+        "declared": 58,
+        "parsed": 58
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities",
+        "declared": 28,
+        "parsed": 28
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities",
+        "declared": 24,
+        "parsed": 24
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item11/Entities",
+        "declared": 59,
+        "parsed": 59
+      },
+      {
+        "path": "Mission/Entities/Item12/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item13/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item14/Entities",
+        "declared": 33,
+        "parsed": 33
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item0/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item1/Entities",
+        "declared": 69,
+        "parsed": 69
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item2/Entities",
+        "declared": 125,
+        "parsed": 125
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item3/Entities",
+        "declared": 143,
+        "parsed": 143
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item4/Entities",
+        "declared": 103,
+        "parsed": 103
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item5/Entities",
+        "declared": 254,
+        "parsed": 254
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item6/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item8/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item9/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item10/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item11/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities/Item12/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item16/Entities",
+        "declared": 53,
+        "parsed": 53
+      },
+      {
+        "path": "Mission/Entities/Item17/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item0/Entities",
+        "declared": 27,
+        "parsed": 27
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item1/Entities",
+        "declared": 33,
+        "parsed": 33
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item0/Entities",
+        "declared": 42,
+        "parsed": 42
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item1/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item2/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item3/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item4/Entities",
+        "declared": 58,
+        "parsed": 58
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item5/Entities",
+        "declared": 49,
+        "parsed": 49
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item2/Entities/Item0/Entities/Item6/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item18/Entities/Item3/Entities",
+        "declared": 7,
+        "parsed": 7
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Dorm.sqf",
+      "sha256": "bf20deb1ec4935a586d6899fc11a87ca2ee125977fa7404e9387d3af2e70550d",
+      "directInitCount": 2552,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 2552,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "MediumPileOfDirtAndStones",
+        195
+      ],
+      [
+        "BlockStone",
+        165
+      ],
+      [
+        "BigStoneWall",
+        164
+      ],
+      [
+        "BlockBrick",
+        122
+      ],
+      [
+        "IStruct",
+        65
+      ],
+      [
+        "LampCeiling",
+        46
+      ],
+      [
+        "SquareWoodenBox",
+        41
+      ],
+      [
+        "DirtCraterLong",
+        32
+      ],
+      [
+        "Paper",
+        30
+      ],
+      [
+        "BrickThinWall",
+        27
+      ]
+    ],
+    "chunkCounts": {
+      "STRUCTURE": 1409,
+      "ITEM": 617,
+      "DECOR": 526
+    },
+    "chunkDisagreements": {}
+  },
+  "truba": {
+    "source": "Src/Editor/Bin/Maps/Truba.cpp",
+    "sha256": "0d06d26ad51cd3b3ecfa0a9a74b650c07826d234f8c0f6493ac0f40532138eaa",
+    "sourceEntitiesCount": 3179,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 3107,
+      "Layer": 70
+    },
+    "sourceObjectCount": 3107,
+    "parsedRelevantObjects": 3104,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item0/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item1/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item2/Entities",
+        "declared": 46,
+        "parsed": 46
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities",
+        "declared": 38,
+        "parsed": 38
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities",
+        "declared": 148,
+        "parsed": 148
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities",
+        "declared": 40,
+        "parsed": 40
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item4/Entities",
+        "declared": 94,
+        "parsed": 94
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item5/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item6/Entities",
+        "declared": 145,
+        "parsed": 145
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities",
+        "declared": 14,
+        "parsed": 14
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item0/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities/Item2/Entities",
+        "declared": 40,
+        "parsed": 40
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities/Item0/Entities",
+        "declared": 22,
+        "parsed": 22
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities/Item1/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item0/Entities",
+        "declared": 383,
+        "parsed": 383
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item1/Entities",
+        "declared": 84,
+        "parsed": 84
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item2/Entities",
+        "declared": 170,
+        "parsed": 170
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item0/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item1/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item2/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item3/Entities",
+        "declared": 61,
+        "parsed": 61
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item4/Entities",
+        "declared": 84,
+        "parsed": 84
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item0/Entities",
+        "declared": 80,
+        "parsed": 80
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item1/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item2/Entities",
+        "declared": 23,
+        "parsed": 23
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item3/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item7/Entities",
+        "declared": 69,
+        "parsed": 69
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item0/Entities",
+        "declared": 58,
+        "parsed": 58
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item1/Entities",
+        "declared": 249,
+        "parsed": 249
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities",
+        "declared": 113,
+        "parsed": 113
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item3/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item4/Entities",
+        "declared": 134,
+        "parsed": 134
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item5/Entities",
+        "declared": 74,
+        "parsed": 74
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item6/Entities",
+        "declared": 37,
+        "parsed": 37
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item0/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item1/Entities",
+        "declared": 23,
+        "parsed": 23
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item2/Entities",
+        "declared": 37,
+        "parsed": 37
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item3/Entities",
+        "declared": 55,
+        "parsed": 55
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item4/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item0/Entities/Item5/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item1/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item2/Entities",
+        "declared": 71,
+        "parsed": 71
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item3/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item4/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item5/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item6/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item7/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities/Item8/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities",
+        "declared": 71,
+        "parsed": 71
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item11/Entities",
+        "declared": 47,
+        "parsed": 47
+      },
+      {
+        "path": "Mission/Entities/Item11/Entities/Item2/Entities",
+        "declared": 96,
+        "parsed": 96
+      },
+      {
+        "path": "Mission/Entities/Item12/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item13/Entities",
+        "declared": 178,
+        "parsed": 178
+      },
+      {
+        "path": "Mission/Entities/Item14/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities",
+        "declared": 7,
+        "parsed": 7
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Truba.sqf",
+      "sha256": "bd87ee126ca1c6818b1eee7de6e2b4a06f29b6248edead3b144fe0dbf7164d3d",
+      "directInitCount": 3104,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 3104,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "BlockStone",
+        286
+      ],
+      [
+        "BigGreenRock",
+        166
+      ],
+      [
+        "BlockDirt",
+        160
+      ],
+      [
+        "TrapEnabled",
+        132
+      ],
+      [
+        "BigConcretePipe",
+        115
+      ],
+      [
+        "DirtCraterLong",
+        83
+      ],
+      [
+        "IStruct",
+        72
+      ],
+      [
+        "EffectAsStruct",
+        71
+      ],
+      [
+        "SmallDirtGrey",
+        70
+      ],
+      [
+        "Svetlolik",
+        55
+      ]
+    ],
+    "chunkCounts": {
+      "STRUCTURE": 1637,
+      "ITEM": 669,
+      "DECOR": 798
+    },
+    "chunkDisagreements": {}
+  },
+  "theatre": {
+    "source": "Src/Editor/Bin/Maps/Theatre.cpp",
+    "sha256": "9f4a2556e1d5e0770eb50dc5ef3469c4896273f484677efe6ccc4f3f509aba6e",
+    "sourceEntitiesCount": 2408,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 2327,
+      "Layer": 79
+    },
+    "sourceObjectCount": 2327,
+    "parsedRelevantObjects": 2324,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item0/Entities/Item0/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item2/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item0/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item1/Entities",
+        "declared": 24,
+        "parsed": 24
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item2/Entities",
+        "declared": 14,
+        "parsed": 14
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item3/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item4/Entities",
+        "declared": 97,
+        "parsed": 97
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item5/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item6/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item6/Entities/Item0/Entities",
+        "declared": 38,
+        "parsed": 38
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item6/Entities/Item1/Entities",
+        "declared": 57,
+        "parsed": 57
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item7/Entities",
+        "declared": 83,
+        "parsed": 83
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item8/Entities",
+        "declared": 14,
+        "parsed": 14
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item9/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item9/Entities/Item0/Entities",
+        "declared": 226,
+        "parsed": 226
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item9/Entities/Item1/Entities",
+        "declared": 61,
+        "parsed": 61
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item3/Entities/Item10/Entities",
+        "declared": 111,
+        "parsed": 111
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item0/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item1/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item2/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item3/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item4/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item5/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item6/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item6/Entities/Item0/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item6/Entities/Item1/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item7/Entities",
+        "declared": 27,
+        "parsed": 27
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item8/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item8/Entities/Item0/Entities",
+        "declared": 59,
+        "parsed": 59
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item8/Entities/Item1/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item4/Entities/Item9/Entities",
+        "declared": 94,
+        "parsed": 94
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities/Item0/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities/Item1/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities/Item2/Entities",
+        "declared": 33,
+        "parsed": 33
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities/Item3/Entities",
+        "declared": 35,
+        "parsed": 35
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item5/Entities/Item5/Entities",
+        "declared": 58,
+        "parsed": 58
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item0/Entities",
+        "declared": 24,
+        "parsed": 24
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item1/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item2/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item3/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item3/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item4/Entities",
+        "declared": 64,
+        "parsed": 64
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item5/Entities",
+        "declared": 47,
+        "parsed": 47
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item6/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item7/Entities",
+        "declared": 34,
+        "parsed": 34
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities/Item6/Entities/Item8/Entities",
+        "declared": 70,
+        "parsed": 70
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item0/Entities",
+        "declared": 152,
+        "parsed": 152
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities",
+        "declared": 60,
+        "parsed": 60
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item0/Entities",
+        "declared": 63,
+        "parsed": 63
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item1/Entities/Item50/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item2/Entities",
+        "declared": 204,
+        "parsed": 204
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item3/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item4/Entities",
+        "declared": 102,
+        "parsed": 102
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities/Item5/Entities",
+        "declared": 39,
+        "parsed": 39
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities",
+        "declared": 14,
+        "parsed": 14
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item0/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item1/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item2/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item3/Entities",
+        "declared": 44,
+        "parsed": 44
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item4/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item5/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item6/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item7/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item8/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item9/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item10/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item11/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities/Item12/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities",
+        "declared": 20,
+        "parsed": 20
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Theatre.sqf",
+      "sha256": "04a7a23fedb2d7e1f5c6e958ee8751c7fa56acf1768f2763910f79db43893e0a",
+      "directInitCount": 2324,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 2324,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "BlockBrick",
+        186
+      ],
+      [
+        "SmallBlueConcreteWall",
+        159
+      ],
+      [
+        "ConcreteSmallFloor2",
+        151
+      ],
+      [
+        "SheetMetalTinFence",
+        89
+      ],
+      [
+        "ThickLightConcreteColumn",
+        85
+      ],
+      [
+        "WoodenSmallFloor",
+        77
+      ],
+      [
+        "MediumWoodenWall",
+        67
+      ],
+      [
+        "SpirtBottle",
+        59
+      ],
+      [
+        "SmallTileFloor1",
+        53
+      ],
+      [
+        "ConcretePanel",
+        50
+      ]
+    ],
+    "chunkCounts": {
+      "STRUCTURE": 1641,
+      "ITEM": 358,
+      "DECOR": 325
+    },
+    "chunkDisagreements": {}
+  },
+  "holiday": {
+    "source": "Src/Editor/Bin/Maps/Holiday.cpp",
+    "sha256": "15a15acf7386e9aa06ec7df17c5bab29cd5825d199229f8c3fbe3c8b7d48a931",
+    "sourceEntitiesCount": 2109,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 2005,
+      "Layer": 102
+    },
+    "sourceObjectCount": 2005,
+    "parsedRelevantObjects": 2002,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item0/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item2/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item3/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item4/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item5/Entities",
+        "declared": 46,
+        "parsed": 46
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item6/Entities",
+        "declared": 43,
+        "parsed": 43
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item7/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item8/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item9/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item3/Entities/Item10/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item0/Entities",
+        "declared": 41,
+        "parsed": 41
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item1/Entities",
+        "declared": 70,
+        "parsed": 70
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item2/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item3/Entities",
+        "declared": 46,
+        "parsed": 46
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item4/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item5/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item5/Entities/Item0/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item5/Entities/Item1/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item5/Entities/Item2/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item4/Entities/Item5/Entities/Item3/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item0/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item1/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item2/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item3/Entities",
+        "declared": 40,
+        "parsed": 40
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item4/Entities",
+        "declared": 36,
+        "parsed": 36
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item5/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item6/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item7/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item8/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item9/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item5/Entities/Item10/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item0/Entities",
+        "declared": 21,
+        "parsed": 21
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item1/Entities",
+        "declared": 84,
+        "parsed": 84
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item2/Entities",
+        "declared": 55,
+        "parsed": 55
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item3/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item4/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item5/Entities",
+        "declared": 53,
+        "parsed": 53
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item6/Entities",
+        "declared": 124,
+        "parsed": 124
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item7/Entities",
+        "declared": 187,
+        "parsed": 187
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item8/Entities",
+        "declared": 12,
+        "parsed": 12
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item0/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item1/Entities",
+        "declared": 48,
+        "parsed": 48
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item2/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item3/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item4/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item5/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item6/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item7/Entities",
+        "declared": 24,
+        "parsed": 24
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item9/Entities/Item8/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item10/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item11/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item12/Entities",
+        "declared": 14,
+        "parsed": 14
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item13/Entities",
+        "declared": 7,
+        "parsed": 7
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item14/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item15/Entities",
+        "declared": 34,
+        "parsed": 34
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item16/Entities",
+        "declared": 19,
+        "parsed": 19
+      },
+      {
+        "path": "Mission/Entities/Item6/Entities/Item17/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities",
+        "declared": 11,
+        "parsed": 11
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item0/Entities",
+        "declared": 9,
+        "parsed": 9
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item1/Entities",
+        "declared": 29,
+        "parsed": 29
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item1/Entities/Item27/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item2/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item3/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item4/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item5/Entities",
+        "declared": 42,
+        "parsed": 42
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item6/Entities",
+        "declared": 6,
+        "parsed": 6
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item7/Entities",
+        "declared": 5,
+        "parsed": 5
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item8/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item9/Entities",
+        "declared": 39,
+        "parsed": 39
+      },
+      {
+        "path": "Mission/Entities/Item8/Entities/Item10/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities",
+        "declared": 10,
+        "parsed": 10
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item1/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item2/Entities",
+        "declared": 30,
+        "parsed": 30
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item3/Entities",
+        "declared": 16,
+        "parsed": 16
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item4/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item5/Entities",
+        "declared": 46,
+        "parsed": 46
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item6/Entities",
+        "declared": 17,
+        "parsed": 17
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item7/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item8/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item9/Entities/Item9/Entities",
+        "declared": 20,
+        "parsed": 20
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item0/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item1/Entities",
+        "declared": 42,
+        "parsed": 42
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item2/Entities",
+        "declared": 31,
+        "parsed": 31
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item3/Entities",
+        "declared": 15,
+        "parsed": 15
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item4/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item5/Entities",
+        "declared": 2,
+        "parsed": 2
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item6/Entities",
+        "declared": 4,
+        "parsed": 4
+      },
+      {
+        "path": "Mission/Entities/Item10/Entities/Item7/Entities",
+        "declared": 3,
+        "parsed": 3
+      },
+      {
+        "path": "Mission/Entities/Item11/Entities",
+        "declared": 116,
+        "parsed": 116
+      },
+      {
+        "path": "Mission/Entities/Item12/Entities",
+        "declared": 8,
+        "parsed": 8
+      },
+      {
+        "path": "Mission/Entities/Item13/Entities",
+        "declared": 18,
+        "parsed": 18
+      },
+      {
+        "path": "Mission/Entities/Item14/Entities",
+        "declared": 13,
+        "parsed": 13
+      },
+      {
+        "path": "Mission/Entities/Item15/Entities",
+        "declared": 17,
+        "parsed": 17
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Holiday.sqf",
+      "sha256": "0e9e4b002ce99e5bc3a9e6862f466e67a6839722ead5017e4a25b77b41c4eb9c",
+      "directInitCount": 2002,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 2002,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "WoodenSmallFloor",
+        83
+      ],
+      [
+        "SpirtBottle",
+        81
+      ],
+      [
+        "IStruct",
+        46
+      ],
+      [
+        "LampCeiling",
+        46
+      ],
+      [
+        "BlockStone",
+        40
+      ],
+      [
+        "ShortRottenBoards",
+        40
+      ],
+      [
+        "TinBigFence",
+        31
+      ],
+      [
+        "BigStoneWall",
+        31
+      ],
+      [
+        "BigSmoothStone",
+        31
+      ],
+      [
+        "BlockDirt",
+        30
+      ]
+    ],
+    "chunkCounts": {
+      "STRUCTURE": 1431,
+      "ITEM": 427,
+      "DECOR": 144
+    },
+    "chunkDisagreements": {}
+  },
+  "hunt": {
+    "source": "Src/Editor/Bin/Maps/Hunt.cpp",
+    "sha256": "5bd5f665780efea667b2dac7eb1945edd9a304c984146c83a5e64c6959b09602",
+    "sourceEntitiesCount": 429,
+    "entityKinds": {
+      "Group": 2,
+      "Object": 426,
+      "Layer": 1
+    },
+    "sourceObjectCount": 426,
+    "parsedRelevantObjects": 423,
+    "excludedObjects": [
+      {
+        "entityId": 1,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 19,
+        "config": "B_Survivor_F",
+        "reason": "nonRelictaObject"
+      },
+      {
+        "entityId": 2205,
+        "config": "Land_Orange_01_F",
+        "reason": "commonStorage"
+      }
+    ],
+    "entitiesContainers": [
+      {
+        "path": "Mission/Entities",
+        "declared": 419,
+        "parsed": 419
+      },
+      {
+        "path": "Mission/Entities/Item0/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item1/Entities",
+        "declared": 1,
+        "parsed": 1
+      },
+      {
+        "path": "Mission/Entities/Item410/Entities",
+        "declared": 8,
+        "parsed": 8
+      }
+    ],
+    "parserErrors": [],
+    "provenance": "mapUsageDerived",
+    "runtimeComparison": {
+      "source": "Src/host/MapManager/Maps/Hunt.sqf",
+      "sha256": "3dc3e5058913fbddd94f57ae95ea84558c87c33b52bf9ec200439781193bda27",
+      "directInitCount": 423,
+      "classCountDifferences": {},
+      "meaning": "Compiled map may be older, probability-gated, or have author code; not added to editor counts"
+    },
+    "recognizedSourceClasses": 423,
+    "unknownClasses": {},
+    "topClasses": [
+      [
+        "BlockDirt",
+        151
+      ],
+      [
+        "IStruct",
+        134
+      ],
+      [
+        "Egg",
+        42
+      ],
+      [
+        "Decor",
+        26
+      ],
+      [
+        "SteelBrownContainer",
+        13
+      ],
+      [
+        "SteelMedicalBox",
+        10
+      ],
+      [
+        "LampCeiling",
+        9
+      ],
+      [
+        "SpawnPoint",
+        8
+      ],
+      [
+        "Campfire",
+        5
+      ],
+      [
+        "TorchHolderCharged",
+        5
+      ]
+    ],
+    "chunkCounts": {
+      "DECOR": 177,
+      "STRUCTURE": 171,
+      "ITEM": 75
+    },
+    "chunkDisagreements": {}
+  }
+}

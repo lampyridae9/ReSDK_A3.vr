@@ -1,0 +1,2529 @@
+{
+  "radiusMeters": 15,
+  "source": "mapUsageDerived",
+  "meaning": "3D origins; non-terrain neighbors; not contact/support proof; top20 per map and anchor class",
+  "maps": {
+    "minimap": {
+      "BlockBrick": {
+        "anchorCount": 61,
+        "neighbors": [
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 174,
+            "anchorsWithNeighbor": 39,
+            "medianOriginDeltaZ": 0.688129
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 171,
+            "anchorsWithNeighbor": 47,
+            "medianOriginDeltaZ": 3.215471000000001
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 85,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": -0.10792900000000216
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 66,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 7.227257000000002
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 63,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": -1.8348829999999978
+          },
+          {
+            "classname": "MediumBetonWall",
+            "pairCount": 54,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 6.922212999999999
+          },
+          {
+            "classname": "MedicalCurtainSmall",
+            "pairCount": 49,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 6.626241999999998
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 38,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 9.314013000000003
+          },
+          {
+            "classname": "SteelThinWallMedium",
+            "pairCount": 36,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 8.407755000000002
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 33,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": 8.395578
+          },
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 32,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.942292000000002
+          },
+          {
+            "classname": "SmallChair",
+            "pairCount": 29,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": 5.6325590000000005
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.165194999999997
+          },
+          {
+            "classname": "BigFileCabinet",
+            "pairCount": 25,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.593250000000001
+          },
+          {
+            "classname": "Shelves",
+            "pairCount": 24,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 6.321057
+          },
+          {
+            "classname": "ConcretePanel2",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.427556999999997
+          },
+          {
+            "classname": "TinFence",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 10.579937000000001
+          },
+          {
+            "classname": "RustyCell",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": -6.394270000000002
+          },
+          {
+            "classname": "ConcreteSmallFloor1",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.489456000000001
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 20,
+            "anchorsWithNeighbor": 12,
+            "medianOriginDeltaZ": 8.250087000000004
+          }
+        ]
+      },
+      "BlockDirt": {
+        "anchorCount": 353,
+        "neighbors": [
+          {
+            "classname": "Decor",
+            "pairCount": 406,
+            "anchorsWithNeighbor": 156,
+            "medianOriginDeltaZ": -0.18387200000000092
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 221,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": 6.3880669999999995
+          },
+          {
+            "classname": "SteelThinWallMedium",
+            "pairCount": 212,
+            "anchorsWithNeighbor": 66,
+            "medianOriginDeltaZ": 0.19525700000000157
+          },
+          {
+            "classname": "SleepingMatras",
+            "pairCount": 212,
+            "anchorsWithNeighbor": 76,
+            "medianOriginDeltaZ": 5.518461000000002
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 206,
+            "anchorsWithNeighbor": 135,
+            "medianOriginDeltaZ": 4.969187000000002
+          },
+          {
+            "classname": "CollectionSpawnPoint",
+            "pairCount": 186,
+            "anchorsWithNeighbor": 69,
+            "medianOriginDeltaZ": -1.3749869999999973
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 186,
+            "anchorsWithNeighbor": 126,
+            "medianOriginDeltaZ": -1.5351319999999973
+          },
+          {
+            "classname": "SoupPlate",
+            "pairCount": 159,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": 0.9993950000000034
+          },
+          {
+            "classname": "NormalClayWall",
+            "pairCount": 150,
+            "anchorsWithNeighbor": 62,
+            "medianOriginDeltaZ": 4.970846000000002
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 149,
+            "anchorsWithNeighbor": 122,
+            "medianOriginDeltaZ": 4.251137
+          },
+          {
+            "classname": "Grave",
+            "pairCount": 149,
+            "anchorsWithNeighbor": 24,
+            "medianOriginDeltaZ": -2.890575000000002
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 145,
+            "anchorsWithNeighbor": 46,
+            "medianOriginDeltaZ": 1.3760200000000005
+          },
+          {
+            "classname": "ShortRottenBoards",
+            "pairCount": 133,
+            "anchorsWithNeighbor": 57,
+            "medianOriginDeltaZ": 0.15103300000000175
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 133,
+            "anchorsWithNeighbor": 43,
+            "medianOriginDeltaZ": -2.612397999999999
+          },
+          {
+            "classname": "SteelCanopySmall",
+            "pairCount": 126,
+            "anchorsWithNeighbor": 60,
+            "medianOriginDeltaZ": 6.115444
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 121,
+            "anchorsWithNeighbor": 42,
+            "medianOriginDeltaZ": -1.4389649999999996
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 119,
+            "anchorsWithNeighbor": 94,
+            "medianOriginDeltaZ": 1.7817590000000045
+          },
+          {
+            "classname": "MediumBetonWall",
+            "pairCount": 113,
+            "anchorsWithNeighbor": 38,
+            "medianOriginDeltaZ": -0.37199200000000054
+          },
+          {
+            "classname": "SmallSteelRustyFence",
+            "pairCount": 113,
+            "anchorsWithNeighbor": 26,
+            "medianOriginDeltaZ": -2.274787
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 106,
+            "anchorsWithNeighbor": 46,
+            "medianOriginDeltaZ": -5.167279000000001
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 98,
+        "neighbors": [
+          {
+            "classname": "Decor",
+            "pairCount": 306,
+            "anchorsWithNeighbor": 67,
+            "medianOriginDeltaZ": -1.7545350000000042
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 239,
+            "anchorsWithNeighbor": 66,
+            "medianOriginDeltaZ": -0.5912210000000009
+          },
+          {
+            "classname": "SteelThinWallMedium",
+            "pairCount": 180,
+            "anchorsWithNeighbor": 36,
+            "medianOriginDeltaZ": -4.361345
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 142,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": -6.790089000000002
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 137,
+            "anchorsWithNeighbor": 51,
+            "medianOriginDeltaZ": -0.9232060000000004
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 108,
+            "anchorsWithNeighbor": 49,
+            "medianOriginDeltaZ": 2.3466720000000016
+          },
+          {
+            "classname": "MediumBetonWall",
+            "pairCount": 98,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": -4.130023999999999
+          },
+          {
+            "classname": "TinFence",
+            "pairCount": 95,
+            "anchorsWithNeighbor": 30,
+            "medianOriginDeltaZ": -6.047265000000003
+          },
+          {
+            "classname": "NormalClayWall",
+            "pairCount": 93,
+            "anchorsWithNeighbor": 27,
+            "medianOriginDeltaZ": -3.3094769999999976
+          },
+          {
+            "classname": "SmallChair",
+            "pairCount": 90,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": -1.221042999999998
+          },
+          {
+            "classname": "LampWall",
+            "pairCount": 89,
+            "anchorsWithNeighbor": 39,
+            "medianOriginDeltaZ": 0.9434799999999974
+          },
+          {
+            "classname": "RedButton",
+            "pairCount": 88,
+            "anchorsWithNeighbor": 50,
+            "medianOriginDeltaZ": -1.361149000000001
+          },
+          {
+            "classname": "SteelThinWallSmall",
+            "pairCount": 87,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": -1.9635390000000008
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 83,
+            "anchorsWithNeighbor": 55,
+            "medianOriginDeltaZ": -2.880713
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 75,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 6.642243999999998
+          },
+          {
+            "classname": "SteelGreenDoor",
+            "pairCount": 75,
+            "anchorsWithNeighbor": 42,
+            "medianOriginDeltaZ": -2.4512409999999996
+          },
+          {
+            "classname": "Tumbler",
+            "pairCount": 71,
+            "anchorsWithNeighbor": 23,
+            "medianOriginDeltaZ": 1.142906
+          },
+          {
+            "classname": "ClayWallBig",
+            "pairCount": 69,
+            "anchorsWithNeighbor": 36,
+            "medianOriginDeltaZ": 6.527065
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 66,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 0.32699399999999557
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 5.560192999999998
+          }
+        ]
+      }
+    },
+    "saloonv2": {
+      "BlockBrick": {
+        "anchorCount": 173,
+        "neighbors": [
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 723,
+            "anchorsWithNeighbor": 119,
+            "medianOriginDeltaZ": -9.179068999999998
+          },
+          {
+            "classname": "ThickConcreteFloorMedium",
+            "pairCount": 242,
+            "anchorsWithNeighbor": 102,
+            "medianOriginDeltaZ": -7.177253
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 240,
+            "anchorsWithNeighbor": 103,
+            "medianOriginDeltaZ": 7.550640000000001
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 209,
+            "anchorsWithNeighbor": 65,
+            "medianOriginDeltaZ": 5.743267000000003
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 156,
+            "anchorsWithNeighbor": 71,
+            "medianOriginDeltaZ": 5.961604999999999
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 139,
+            "anchorsWithNeighbor": 86,
+            "medianOriginDeltaZ": 8.731058
+          },
+          {
+            "classname": "WoodenDebris6",
+            "pairCount": 133,
+            "anchorsWithNeighbor": 19,
+            "medianOriginDeltaZ": 6.001201000000002
+          },
+          {
+            "classname": "CollectionSpawnPoint",
+            "pairCount": 130,
+            "anchorsWithNeighbor": 73,
+            "medianOriginDeltaZ": 7.6163770000000035
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 128,
+            "anchorsWithNeighbor": 78,
+            "medianOriginDeltaZ": -9.554742999999998
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 125,
+            "anchorsWithNeighbor": 59,
+            "medianOriginDeltaZ": 8.752882000000003
+          },
+          {
+            "classname": "SmallChair",
+            "pairCount": 125,
+            "anchorsWithNeighbor": 52,
+            "medianOriginDeltaZ": 6.015421
+          },
+          {
+            "classname": "TinBigFence",
+            "pairCount": 107,
+            "anchorsWithNeighbor": 30,
+            "medianOriginDeltaZ": 6.376308000000002
+          },
+          {
+            "classname": "SteelThinWallSmall",
+            "pairCount": 104,
+            "anchorsWithNeighbor": 39,
+            "medianOriginDeltaZ": 8.612063000000003
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 99,
+            "anchorsWithNeighbor": 58,
+            "medianOriginDeltaZ": 6.9397049999999965
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 96,
+            "anchorsWithNeighbor": 55,
+            "medianOriginDeltaZ": 6.237211000000002
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 91,
+            "anchorsWithNeighbor": 78,
+            "medianOriginDeltaZ": 9.200023999999999
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 90,
+            "anchorsWithNeighbor": 64,
+            "medianOriginDeltaZ": 5.220177
+          },
+          {
+            "classname": "Candle",
+            "pairCount": 80,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 6.20562
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 76,
+            "anchorsWithNeighbor": 35,
+            "medianOriginDeltaZ": -0.1537659999999974
+          },
+          {
+            "classname": "SmallStone",
+            "pairCount": 74,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 5.732345000000002
+          }
+        ]
+      },
+      "BlockDirt": {
+        "anchorCount": 6,
+        "neighbors": [
+          {
+            "classname": "BunchOfShit",
+            "pairCount": 27,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 4.509947
+          },
+          {
+            "classname": "Candle",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.914854999999999
+          },
+          {
+            "classname": "OldGraveFence3",
+            "pairCount": 16,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.784718000000002
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 15,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.015595000000001
+          },
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 12,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.839518000000002
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 12,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.420819000000002
+          },
+          {
+            "classname": "OldGraveFence2",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.666928000000002
+          },
+          {
+            "classname": "OldGraveFence",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.696484000000002
+          },
+          {
+            "classname": "OldGraveFence4",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.612572
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 11.408840000000001
+          },
+          {
+            "classname": "TinBigFence",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.480998
+          },
+          {
+            "classname": "Tumannik",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.435272000000001
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 4.680974000000003
+          },
+          {
+            "classname": "Shovel",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.79992
+          },
+          {
+            "classname": "OldTombstone3",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.744557
+          },
+          {
+            "classname": "Grave3",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.626874000000001
+          },
+          {
+            "classname": "Grave2",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.800377000000001
+          },
+          {
+            "classname": "OldTombstoneGrave",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.288262
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 8.638277000000002
+          },
+          {
+            "classname": "SheetMetalGarbage",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 6.68017
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 143,
+        "neighbors": [
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 909,
+            "anchorsWithNeighbor": 110,
+            "medianOriginDeltaZ": 7.820942200000001
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 225,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": 6.705031000000002
+          },
+          {
+            "classname": "ThickConcreteFloorMedium",
+            "pairCount": 179,
+            "anchorsWithNeighbor": 82,
+            "medianOriginDeltaZ": 9.822758199999999
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 154,
+            "anchorsWithNeighbor": 72,
+            "medianOriginDeltaZ": 5.237863000000001
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 143,
+            "anchorsWithNeighbor": 63,
+            "medianOriginDeltaZ": 6.0506072
+          },
+          {
+            "classname": "MetalAndConcreteRuins",
+            "pairCount": 117,
+            "anchorsWithNeighbor": 81,
+            "medianOriginDeltaZ": 5.4475652
+          },
+          {
+            "classname": "MediumBetonWall",
+            "pairCount": 113,
+            "anchorsWithNeighbor": 24,
+            "medianOriginDeltaZ": 8.1051112
+          },
+          {
+            "classname": "BigConcretePipe",
+            "pairCount": 109,
+            "anchorsWithNeighbor": 41,
+            "medianOriginDeltaZ": 6.4526080000000015
+          },
+          {
+            "classname": "ThickConcreteFloorSmall",
+            "pairCount": 107,
+            "anchorsWithNeighbor": 35,
+            "medianOriginDeltaZ": 9.347758000000002
+          },
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 91,
+            "anchorsWithNeighbor": 61,
+            "medianOriginDeltaZ": 4.884940200000001
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 87,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 5.9312591999999995
+          },
+          {
+            "classname": "BigLuxuryClayWall",
+            "pairCount": 85,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 7.361257999999999
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 76,
+            "anchorsWithNeighbor": 61,
+            "medianOriginDeltaZ": 5.334354000000001
+          },
+          {
+            "classname": "BigConcreteWallDestroyed",
+            "pairCount": 69,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": 7.624464
+          },
+          {
+            "classname": "Tooth",
+            "pairCount": 67,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 6.0224422
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 65,
+            "anchorsWithNeighbor": 32,
+            "medianOriginDeltaZ": 7.445268200000001
+          },
+          {
+            "classname": "Candle",
+            "pairCount": 61,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 6.5845272
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 60,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 12.028780000000001
+          },
+          {
+            "classname": "GlassBottle",
+            "pairCount": 60,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 6.238709
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 57,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 8.306878999999999
+          }
+        ]
+      }
+    },
+    "barony": {
+      "BlockBrick": {
+        "anchorCount": 0,
+        "neighbors": []
+      },
+      "BlockDirt": {
+        "anchorCount": 115,
+        "neighbors": [
+          {
+            "classname": "ShortPipeBlueMetal",
+            "pairCount": 475,
+            "anchorsWithNeighbor": 66,
+            "medianOriginDeltaZ": 9.144493000000004
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 459,
+            "anchorsWithNeighbor": 91,
+            "medianOriginDeltaZ": 5.178351999999997
+          },
+          {
+            "classname": "TinFence",
+            "pairCount": 399,
+            "anchorsWithNeighbor": 71,
+            "medianOriginDeltaZ": 5.9141229999999965
+          },
+          {
+            "classname": "ShortRottenBoards",
+            "pairCount": 299,
+            "anchorsWithNeighbor": 43,
+            "medianOriginDeltaZ": 6.478942999999994
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 290,
+            "anchorsWithNeighbor": 58,
+            "medianOriginDeltaZ": 5.388573000000001
+          },
+          {
+            "classname": "WoodenSmallFence",
+            "pairCount": 193,
+            "anchorsWithNeighbor": 40,
+            "medianOriginDeltaZ": 6.828545000000005
+          },
+          {
+            "classname": "SheetMetalTinFence",
+            "pairCount": 138,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 6.195572000000006
+          },
+          {
+            "classname": "WoodPole2",
+            "pairCount": 135,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 6.443985000000005
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 125,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": 5.550041000000007
+          },
+          {
+            "classname": "MediumFenceOfSheetsAndBoards",
+            "pairCount": 112,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": 6.473632999999992
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 109,
+            "anchorsWithNeighbor": 40,
+            "medianOriginDeltaZ": 6.001076000000005
+          },
+          {
+            "classname": "NormalClayWall",
+            "pairCount": 107,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 6.386680999999996
+          },
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 97,
+            "anchorsWithNeighbor": 27,
+            "medianOriginDeltaZ": 5.424689999999998
+          },
+          {
+            "classname": "MediumWoodenWall",
+            "pairCount": 97,
+            "anchorsWithNeighbor": 23,
+            "medianOriginDeltaZ": 6.374755999999998
+          },
+          {
+            "classname": "ConcretePanel",
+            "pairCount": 94,
+            "anchorsWithNeighbor": 26,
+            "medianOriginDeltaZ": 5.479873999999995
+          },
+          {
+            "classname": "ConcreteLongPole",
+            "pairCount": 93,
+            "anchorsWithNeighbor": 30,
+            "medianOriginDeltaZ": 5.000762999999999
+          },
+          {
+            "classname": "ThickLightConcreteColumn",
+            "pairCount": 92,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 6.179419999999993
+          },
+          {
+            "classname": "SpawnPoint",
+            "pairCount": 88,
+            "anchorsWithNeighbor": 43,
+            "medianOriginDeltaZ": 6.544860999999997
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 87,
+            "anchorsWithNeighbor": 65,
+            "medianOriginDeltaZ": 4.807159000000006
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 86,
+            "anchorsWithNeighbor": 26,
+            "medianOriginDeltaZ": 4.070945999999999
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 63,
+        "neighbors": [
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 273,
+            "anchorsWithNeighbor": 40,
+            "medianOriginDeltaZ": 7.695945999999999
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 194,
+            "anchorsWithNeighbor": 51,
+            "medianOriginDeltaZ": 5.068119000000003
+          },
+          {
+            "classname": "ThickConcreteFloorMedium",
+            "pairCount": 79,
+            "anchorsWithNeighbor": 30,
+            "medianOriginDeltaZ": 9.709656000000003
+          },
+          {
+            "classname": "SmallGrayStone",
+            "pairCount": 78,
+            "anchorsWithNeighbor": 14,
+            "medianOriginDeltaZ": 5.623443999999999
+          },
+          {
+            "classname": "MediumConcreteWall",
+            "pairCount": 60,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 7.357368000000001
+          },
+          {
+            "classname": "SmallSteelRustyFence",
+            "pairCount": 56,
+            "anchorsWithNeighbor": 11,
+            "medianOriginDeltaZ": 7.5948139999999995
+          },
+          {
+            "classname": "ConcretePole",
+            "pairCount": 54,
+            "anchorsWithNeighbor": 16,
+            "medianOriginDeltaZ": 7.068942999999997
+          },
+          {
+            "classname": "ShortPipeBlueMetal",
+            "pairCount": 49,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 7.394489
+          },
+          {
+            "classname": "MediumBetonWall",
+            "pairCount": 44,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 9.623184000000002
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 34,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 6.774436999999992
+          },
+          {
+            "classname": "ConcreteGreenSmallFloor",
+            "pairCount": 32,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 9.703109999999995
+          },
+          {
+            "classname": "ConcreteGarbage",
+            "pairCount": 32,
+            "anchorsWithNeighbor": 26,
+            "medianOriginDeltaZ": 5.749156999999997
+          },
+          {
+            "classname": "SteelThinWallSmall",
+            "pairCount": 30,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 6.7309569999999965
+          },
+          {
+            "classname": "ThickLightConcreteColumn",
+            "pairCount": 29,
+            "anchorsWithNeighbor": 11,
+            "medianOriginDeltaZ": 7.845779
+          },
+          {
+            "classname": "SmallChair4",
+            "pairCount": 29,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.892184999999998
+          },
+          {
+            "classname": "GlassGoblet",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 6.414435999999995
+          },
+          {
+            "classname": "FoodPlate",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 6.4703289999999924
+          },
+          {
+            "classname": "MediumWoodenWall",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 6.721054000000002
+          },
+          {
+            "classname": "SteelBlueCase",
+            "pairCount": 27,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.445259
+          },
+          {
+            "classname": "ConcreteLongPole",
+            "pairCount": 26,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 8.368171999999987
+          }
+        ]
+      }
+    },
+    "detective": {
+      "BlockBrick": {
+        "anchorCount": 6,
+        "neighbors": [
+          {
+            "classname": "IStruct",
+            "pairCount": 33,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 2.023207000000003
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 32,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 1.3457049999999988
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 25,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 7.9423410000000025
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 25,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.420082000000001
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 22,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 2.663056000000001
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 6.3810579999999995
+          },
+          {
+            "classname": "StripedChair",
+            "pairCount": 12,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 7.509846
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 11,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.317526999999998
+          },
+          {
+            "classname": "GlassGoblet",
+            "pairCount": 9,
+            "anchorsWithNeighbor": 1,
+            "medianOriginDeltaZ": 7.6796250000000015
+          },
+          {
+            "classname": "Bench1",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.729738000000001
+          },
+          {
+            "classname": "NewIndPipeUUP",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 0.996576000000001
+          },
+          {
+            "classname": "StoneSmallLadder",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.93196
+          },
+          {
+            "classname": "RatCage",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 6.1355460000000015
+          },
+          {
+            "classname": "SteelThinWallMedium",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 4.825157000000001
+          },
+          {
+            "classname": "LampKeroseneHolder",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 7.610606000000001
+          },
+          {
+            "classname": "SteelGreenDoor",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 8.108158000000003
+          },
+          {
+            "classname": "CampfireBig",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.692088999999999
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 7.585055999999998
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 10.036683
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 8.353895999999999
+          }
+        ]
+      },
+      "BlockDirt": {
+        "anchorCount": 25,
+        "neighbors": [
+          {
+            "classname": "IStruct",
+            "pairCount": 144,
+            "anchorsWithNeighbor": 20,
+            "medianOriginDeltaZ": 6.5715080000000015
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 86,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": 7.113358
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 75,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 6.502556
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 49,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.915005999999998
+          },
+          {
+            "classname": "GlassGoblet",
+            "pairCount": 40,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 11.226725
+          },
+          {
+            "classname": "StripedChair",
+            "pairCount": 33,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 11.623247000000001
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 9.023842
+          },
+          {
+            "classname": "BigConcretePanel",
+            "pairCount": 20,
+            "anchorsWithNeighbor": 11,
+            "medianOriginDeltaZ": 5.487355999999998
+          },
+          {
+            "classname": "NewIndPipeUUP",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.605277999999998
+          },
+          {
+            "classname": "TreeRoots1",
+            "pairCount": 14,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.4477899999999995
+          },
+          {
+            "classname": "TreeRoots",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.606406999999999
+          },
+          {
+            "classname": "RustyCell",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 7.148382000000002
+          },
+          {
+            "classname": "Tumbler",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 7.168405000000002
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 9,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.860625000000001
+          },
+          {
+            "classname": "Candle",
+            "pairCount": 9,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.744499000000001
+          },
+          {
+            "classname": "SmallSheetMetalHouse",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 8.641772
+          },
+          {
+            "classname": "TreeRoots2",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 8.234256000000002
+          },
+          {
+            "classname": "SteelGridDoor",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 7.091537000000001
+          },
+          {
+            "classname": "ChairLibrary",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 12.033678
+          },
+          {
+            "classname": "SmallSheetMetalHouse2",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 3,
+            "medianOriginDeltaZ": 5.962762999999999
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 10,
+        "neighbors": [
+          {
+            "classname": "IStruct",
+            "pairCount": 123,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 5.508635000000002
+          },
+          {
+            "classname": "CandleDisabled",
+            "pairCount": 58,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.105
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 56,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.789142999999999
+          },
+          {
+            "classname": "StoneSmallLadder",
+            "pairCount": 46,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.9230560000000025
+          },
+          {
+            "classname": "ConcreteLongPole",
+            "pairCount": 46,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 8.282969999999999
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 44,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.3409960000000005
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 41,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 9.694378
+          },
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 36,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.615490000000001
+          },
+          {
+            "classname": "StripedChair",
+            "pairCount": 33,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.334748000000001
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 28,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.065396
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 27,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 6.198057000000002
+          },
+          {
+            "classname": "GlassGoblet",
+            "pairCount": 25,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 6.076426000000001
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 24,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 0.9967059999999996
+          },
+          {
+            "classname": "BoardWoodenBox",
+            "pairCount": 24,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 9.257116
+          },
+          {
+            "classname": "Egg",
+            "pairCount": 23,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 5.788326000000001
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 2,
+            "medianOriginDeltaZ": 1.3746570000000027
+          },
+          {
+            "classname": "Shelves",
+            "pairCount": 19,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.413857
+          },
+          {
+            "classname": "LuxuryClayWall",
+            "pairCount": 19,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 10.236683
+          },
+          {
+            "classname": "LuxuryRedCurtain",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.930707999999999
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 8.9757
+          }
+        ]
+      }
+    },
+    "dorm": {
+      "BlockBrick": {
+        "anchorCount": 122,
+        "neighbors": [
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 678,
+            "anchorsWithNeighbor": 119,
+            "medianOriginDeltaZ": 4.846233000000002
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 415,
+            "anchorsWithNeighbor": 122,
+            "medianOriginDeltaZ": 2.4321589999999986
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 107,
+            "anchorsWithNeighbor": 55,
+            "medianOriginDeltaZ": 5.285375999999999
+          },
+          {
+            "classname": "BigStoneWall2",
+            "pairCount": 75,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 2.5734580000000022
+          },
+          {
+            "classname": "TrapEnabled",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 34,
+            "medianOriginDeltaZ": 5.565016
+          },
+          {
+            "classname": "SmallStoneFragments",
+            "pairCount": 50,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": 5.341749
+          },
+          {
+            "classname": "ConcreteSmallFloor",
+            "pairCount": 45,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.52346
+          },
+          {
+            "classname": "ConcreteSmallFloor1",
+            "pairCount": 41,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 8.02346
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 36,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 5.265703000000002
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 23,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": 0.43369100000000316
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 23,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 7.063797000000001
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 23,
+            "anchorsWithNeighbor": 16,
+            "medianOriginDeltaZ": 5.797518
+          },
+          {
+            "classname": "Paper",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 6.145682999999998
+          },
+          {
+            "classname": "WoodBaton",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 5.6621950000000005
+          },
+          {
+            "classname": "OrangeCapet",
+            "pairCount": 14,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.663639000000003
+          },
+          {
+            "classname": "OrganicDebris1",
+            "pairCount": 13,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 5.841111999999999
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 12,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 7.140999000000001
+          },
+          {
+            "classname": "LampKeroseneHolderCharged",
+            "pairCount": 11,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 6.320506999999999
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 6.490297000000002
+          },
+          {
+            "classname": "WoodenSmallFence1",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 8.277067000000002
+          }
+        ]
+      },
+      "BlockDirt": {
+        "anchorCount": 6,
+        "neighbors": [
+          {
+            "classname": "BunchOfShit",
+            "pairCount": 27,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 4.509947
+          },
+          {
+            "classname": "Candle",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.914854000000002
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.015596000000002
+          },
+          {
+            "classname": "OldGraveFence3",
+            "pairCount": 16,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.784718000000002
+          },
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 13,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.355701
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 12,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.420818000000001
+          },
+          {
+            "classname": "OldGraveFence2",
+            "pairCount": 10,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 5.666927000000001
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 9,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 11.033840999999999
+          },
+          {
+            "classname": "OldGraveFence",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.696484000000002
+          },
+          {
+            "classname": "OldGraveFence4",
+            "pairCount": 8,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.612572
+          },
+          {
+            "classname": "TinBigFence",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 6.480997000000002
+          },
+          {
+            "classname": "Tumannik",
+            "pairCount": 7,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.435272999999999
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 6,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 4.680973000000002
+          },
+          {
+            "classname": "Shovel",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.799918999999999
+          },
+          {
+            "classname": "Grave2",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.800377000000001
+          },
+          {
+            "classname": "OldTombstoneGrave",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.288261000000002
+          },
+          {
+            "classname": "Grave3",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.626873
+          },
+          {
+            "classname": "OldTombstone3",
+            "pairCount": 5,
+            "anchorsWithNeighbor": 5,
+            "medianOriginDeltaZ": 5.744555999999999
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 8.638276999999999
+          },
+          {
+            "classname": "Grave1",
+            "pairCount": 4,
+            "anchorsWithNeighbor": 4,
+            "medianOriginDeltaZ": 5.695114
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 165,
+        "neighbors": [
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 620,
+            "anchorsWithNeighbor": 131,
+            "medianOriginDeltaZ": -8.240060999999997
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 405,
+            "anchorsWithNeighbor": 157,
+            "medianOriginDeltaZ": -7.738553000000003
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 236,
+            "anchorsWithNeighbor": 44,
+            "medianOriginDeltaZ": 5.781305000000003
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 172,
+            "anchorsWithNeighbor": 51,
+            "medianOriginDeltaZ": 6.0514360000000025
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 166,
+            "anchorsWithNeighbor": 40,
+            "medianOriginDeltaZ": 8.481877999999998
+          },
+          {
+            "classname": "Paper",
+            "pairCount": 131,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 6.635803000000003
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 118,
+            "anchorsWithNeighbor": 40,
+            "medianOriginDeltaZ": 5.805311000000003
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 116,
+            "anchorsWithNeighbor": 75,
+            "medianOriginDeltaZ": -8.664559999999998
+          },
+          {
+            "classname": "SteelThinWallSmall",
+            "pairCount": 111,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 7.2170559999999995
+          },
+          {
+            "classname": "RedButton",
+            "pairCount": 108,
+            "anchorsWithNeighbor": 28,
+            "medianOriginDeltaZ": 7.110140000000001
+          },
+          {
+            "classname": "WoodenBucket",
+            "pairCount": 105,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 6.0581299999999985
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 101,
+            "anchorsWithNeighbor": 38,
+            "medianOriginDeltaZ": 6.662213999999999
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 100,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 7.123797000000003
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 100,
+            "anchorsWithNeighbor": 52,
+            "medianOriginDeltaZ": 7.3520910000000015
+          },
+          {
+            "classname": "GlassBottle",
+            "pairCount": 97,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 8.633313999999999
+          },
+          {
+            "classname": "BigStoneWall2",
+            "pairCount": 94,
+            "anchorsWithNeighbor": 66,
+            "medianOriginDeltaZ": 0.9509550000000004
+          },
+          {
+            "classname": "BrickThinWallDoorway",
+            "pairCount": 91,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 7.063794999999999
+          },
+          {
+            "classname": "SmallStone",
+            "pairCount": 89,
+            "anchorsWithNeighbor": 23,
+            "medianOriginDeltaZ": 5.464945
+          },
+          {
+            "classname": "WhiteBrickWall",
+            "pairCount": 84,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 6.695257000000002
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 76,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": 7.147435999999999
+          }
+        ]
+      }
+    },
+    "truba": {
+      "BlockBrick": {
+        "anchorCount": 0,
+        "neighbors": []
+      },
+      "BlockDirt": {
+        "anchorCount": 160,
+        "neighbors": [
+          {
+            "classname": "BigConcretePipe",
+            "pairCount": 433,
+            "anchorsWithNeighbor": 53,
+            "medianOriginDeltaZ": 2.872600000000002
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 204,
+            "anchorsWithNeighbor": 28,
+            "medianOriginDeltaZ": 6.377733000000003
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 147,
+            "anchorsWithNeighbor": 56,
+            "medianOriginDeltaZ": 1.9038370000000029
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 103,
+            "anchorsWithNeighbor": 55,
+            "medianOriginDeltaZ": 4.300838000000002
+          },
+          {
+            "classname": "BunchOfShit",
+            "pairCount": 83,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 5.6060503
+          },
+          {
+            "classname": "GlassBottle",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 5.688018
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 42,
+            "anchorsWithNeighbor": 19,
+            "medianOriginDeltaZ": 4.981064000000002
+          },
+          {
+            "classname": "BigSmoothStone",
+            "pairCount": 35,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": -2.6751775999999996
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 34,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 6.392347000000001
+          },
+          {
+            "classname": "WoodenSmallFence",
+            "pairCount": 31,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.786145999999999
+          },
+          {
+            "classname": "SteelCanopySmall",
+            "pairCount": 29,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 6.9102000000000015
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 27,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": 4.9815913
+          },
+          {
+            "classname": "OldBrickWallMedium1",
+            "pairCount": 23,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 6.670472999999998
+          },
+          {
+            "classname": "WoodenSmallBench",
+            "pairCount": 20,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.693672000000001
+          },
+          {
+            "classname": "HighMetalConstruction",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 4.6358692999999995
+          },
+          {
+            "classname": "MotherBunchOfShit",
+            "pairCount": 18,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.4335673
+          },
+          {
+            "classname": "SleepingMatras",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 8,
+            "medianOriginDeltaZ": 5.588182
+          },
+          {
+            "classname": "SpawnPoint",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 6.528421
+          },
+          {
+            "classname": "SquareWoodenBox",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": 6.070166
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 16,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 5.45528
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 286,
+        "neighbors": [
+          {
+            "classname": "TrapEnabled",
+            "pairCount": 418,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 5.794591999999998
+          },
+          {
+            "classname": "DirtCraterLong",
+            "pairCount": 254,
+            "anchorsWithNeighbor": 155,
+            "medianOriginDeltaZ": 5.501659
+          },
+          {
+            "classname": "ShortRottenBoards",
+            "pairCount": 237,
+            "anchorsWithNeighbor": 63,
+            "medianOriginDeltaZ": 5.489715
+          },
+          {
+            "classname": "SmallDirtGrey",
+            "pairCount": 231,
+            "anchorsWithNeighbor": 133,
+            "medianOriginDeltaZ": 5.2599716
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 214,
+            "anchorsWithNeighbor": 141,
+            "medianOriginDeltaZ": 7.452363599999999
+          },
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 191,
+            "anchorsWithNeighbor": 116,
+            "medianOriginDeltaZ": 5.172056000000001
+          },
+          {
+            "classname": "Svetlolik",
+            "pairCount": 174,
+            "anchorsWithNeighbor": 99,
+            "medianOriginDeltaZ": 6.0237458
+          },
+          {
+            "classname": "Yaichnik",
+            "pairCount": 144,
+            "anchorsWithNeighbor": 103,
+            "medianOriginDeltaZ": 6.077353400000001
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 138,
+            "anchorsWithNeighbor": 63,
+            "medianOriginDeltaZ": 6.259885999999998
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 137,
+            "anchorsWithNeighbor": 60,
+            "medianOriginDeltaZ": 7.511415000000003
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 125,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": 7.638513
+          },
+          {
+            "classname": "WoodenChair",
+            "pairCount": 123,
+            "anchorsWithNeighbor": 38,
+            "medianOriginDeltaZ": 6.747999000000004
+          },
+          {
+            "classname": "MetalAndConcreteRuins",
+            "pairCount": 121,
+            "anchorsWithNeighbor": 87,
+            "medianOriginDeltaZ": 5.409371999999999
+          },
+          {
+            "classname": "SmallDirtBrown",
+            "pairCount": 118,
+            "anchorsWithNeighbor": 94,
+            "medianOriginDeltaZ": 5.283201999999999
+          },
+          {
+            "classname": "BigConcretePipe",
+            "pairCount": 117,
+            "anchorsWithNeighbor": 35,
+            "medianOriginDeltaZ": 10.0521341
+          },
+          {
+            "classname": "SmallPileOfConcreteFragments",
+            "pairCount": 116,
+            "anchorsWithNeighbor": 74,
+            "medianOriginDeltaZ": 5.753021200000001
+          },
+          {
+            "classname": "Gnilokornik",
+            "pairCount": 108,
+            "anchorsWithNeighbor": 80,
+            "medianOriginDeltaZ": 6.628813300000001
+          },
+          {
+            "classname": "Meatflower",
+            "pairCount": 100,
+            "anchorsWithNeighbor": 88,
+            "medianOriginDeltaZ": 7.203865
+          },
+          {
+            "classname": "TinFence",
+            "pairCount": 99,
+            "anchorsWithNeighbor": 43,
+            "medianOriginDeltaZ": 6.410131000000003
+          },
+          {
+            "classname": "MediumPileGreenStones",
+            "pairCount": 94,
+            "anchorsWithNeighbor": 55,
+            "medianOriginDeltaZ": 5.521875000000001
+          }
+        ]
+      }
+    },
+    "theatre": {
+      "BlockBrick": {
+        "anchorCount": 186,
+        "neighbors": [
+          {
+            "classname": "SheetMetalTinFence",
+            "pairCount": 412,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 8.121299999999998
+          },
+          {
+            "classname": "SmallBlueConcreteWall",
+            "pairCount": 347,
+            "anchorsWithNeighbor": 24,
+            "medianOriginDeltaZ": 7.445259
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 294,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 7.610844
+          },
+          {
+            "classname": "ConcretePanel",
+            "pairCount": 289,
+            "anchorsWithNeighbor": 64,
+            "medianOriginDeltaZ": 5.508164000000001
+          },
+          {
+            "classname": "ConcreteSmallFloor2",
+            "pairCount": 222,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 9.397461
+          },
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 170,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 6.470210999999999
+          },
+          {
+            "classname": "StreetLamp",
+            "pairCount": 149,
+            "anchorsWithNeighbor": 99,
+            "medianOriginDeltaZ": 9.210957
+          },
+          {
+            "classname": "SmallWhiteConcretePillar",
+            "pairCount": 138,
+            "anchorsWithNeighbor": 19,
+            "medianOriginDeltaZ": 7.4182169999999985
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 120,
+            "anchorsWithNeighbor": 41,
+            "medianOriginDeltaZ": 6.901038999999997
+          },
+          {
+            "classname": "MediumWoodenWall",
+            "pairCount": 118,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 7.877724000000001
+          },
+          {
+            "classname": "HospitalBench",
+            "pairCount": 112,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 6.568184000000002
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 102,
+            "anchorsWithNeighbor": 26,
+            "medianOriginDeltaZ": 6.715851000000001
+          },
+          {
+            "classname": "BigConcretePanel",
+            "pairCount": 96,
+            "anchorsWithNeighbor": 50,
+            "medianOriginDeltaZ": 5.6485369999999975
+          },
+          {
+            "classname": "ThickLightConcreteColumn",
+            "pairCount": 88,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 8.475811
+          },
+          {
+            "classname": "SpawnPoint",
+            "pairCount": 82,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 8.037999
+          },
+          {
+            "classname": "OldBrickWallMedium",
+            "pairCount": 74,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 6.716965000000002
+          },
+          {
+            "classname": "SmallTileFloor1",
+            "pairCount": 69,
+            "anchorsWithNeighbor": 13,
+            "medianOriginDeltaZ": 4.744183
+          },
+          {
+            "classname": "StripedChair",
+            "pairCount": 66,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.216946
+          },
+          {
+            "classname": "SmallSteelRustyFence",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 7.219814999999997
+          },
+          {
+            "classname": "ThickConcreteFloorMedium",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 0.448757999999998
+          }
+        ]
+      },
+      "BlockDirt": {
+        "anchorCount": 0,
+        "neighbors": []
+      },
+      "BlockStone": {
+        "anchorCount": 0,
+        "neighbors": []
+      }
+    },
+    "holiday": {
+      "BlockBrick": {
+        "anchorCount": 0,
+        "neighbors": []
+      },
+      "BlockDirt": {
+        "anchorCount": 30,
+        "neighbors": [
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 305,
+            "anchorsWithNeighbor": 14,
+            "medianOriginDeltaZ": 5.869085
+          },
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 269,
+            "anchorsWithNeighbor": 28,
+            "medianOriginDeltaZ": 6.905955999999998
+          },
+          {
+            "classname": "ShortRottenBoards",
+            "pairCount": 130,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": 5.757664
+          },
+          {
+            "classname": "LargeConcreteWallWithReinforcement",
+            "pairCount": 105,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 4.553206999999999
+          },
+          {
+            "classname": "ConcretePanelDamaged",
+            "pairCount": 92,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 5.454320999999998
+          },
+          {
+            "classname": "CaseBedroomMedium",
+            "pairCount": 89,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 7.5279229999999995
+          },
+          {
+            "classname": "MediumWoodenWall",
+            "pairCount": 86,
+            "anchorsWithNeighbor": 9,
+            "medianOriginDeltaZ": 7.000348999999998
+          },
+          {
+            "classname": "TinBigFence",
+            "pairCount": 85,
+            "anchorsWithNeighbor": 19,
+            "medianOriginDeltaZ": 7.672604999999999
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 83,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 9.856878
+          },
+          {
+            "classname": "RedButton",
+            "pairCount": 78,
+            "anchorsWithNeighbor": 23,
+            "medianOriginDeltaZ": 8.354256999999999
+          },
+          {
+            "classname": "SmallRadiator",
+            "pairCount": 75,
+            "anchorsWithNeighbor": 24,
+            "medianOriginDeltaZ": 7.478423999999999
+          },
+          {
+            "classname": "TimberLog",
+            "pairCount": 71,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 5.627508000000001
+          },
+          {
+            "classname": "BrickThinWall",
+            "pairCount": 70,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 8.420060999999999
+          },
+          {
+            "classname": "BrickThinWallSmall",
+            "pairCount": 66,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 8.674028000000002
+          },
+          {
+            "classname": "MediumConcreteFloor1",
+            "pairCount": 64,
+            "anchorsWithNeighbor": 16,
+            "medianOriginDeltaZ": 9.956821
+          },
+          {
+            "classname": "WoodenDoor",
+            "pairCount": 63,
+            "anchorsWithNeighbor": 23,
+            "medianOriginDeltaZ": 8.640384
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 62,
+            "anchorsWithNeighbor": 21,
+            "medianOriginDeltaZ": 9.213642
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 57,
+            "anchorsWithNeighbor": 16,
+            "medianOriginDeltaZ": 5.519617
+          },
+          {
+            "classname": "SigaretteDisabled",
+            "pairCount": 56,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 7.8618369999999995
+          },
+          {
+            "classname": "EffectAsStruct",
+            "pairCount": 49,
+            "anchorsWithNeighbor": 27,
+            "medianOriginDeltaZ": 7.449373
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 40,
+        "neighbors": [
+          {
+            "classname": "WoodenSmallFloor",
+            "pairCount": 225,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 6.17469
+          },
+          {
+            "classname": "SpirtBottle",
+            "pairCount": 145,
+            "anchorsWithNeighbor": 24,
+            "medianOriginDeltaZ": 7.149075999999999
+          },
+          {
+            "classname": "ShortRottenBoards",
+            "pairCount": 143,
+            "anchorsWithNeighbor": 18,
+            "medianOriginDeltaZ": 5.948344999999998
+          },
+          {
+            "classname": "WhiteBrickWall",
+            "pairCount": 133,
+            "anchorsWithNeighbor": 14,
+            "medianOriginDeltaZ": 7.320257
+          },
+          {
+            "classname": "MediumLightWall",
+            "pairCount": 120,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 7.320257
+          },
+          {
+            "classname": "IStruct",
+            "pairCount": 113,
+            "anchorsWithNeighbor": 30,
+            "medianOriginDeltaZ": 8.791704000000001
+          },
+          {
+            "classname": "MediumWoodenWall",
+            "pairCount": 103,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 4.525709000000001
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 99,
+            "anchorsWithNeighbor": 32,
+            "medianOriginDeltaZ": 9.110994
+          },
+          {
+            "classname": "TinBigFence",
+            "pairCount": 83,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 6.355997
+          },
+          {
+            "classname": "RedButton",
+            "pairCount": 80,
+            "anchorsWithNeighbor": 31,
+            "medianOriginDeltaZ": 7.763861999999998
+          },
+          {
+            "classname": "ConcretePanelDamaged",
+            "pairCount": 80,
+            "anchorsWithNeighbor": 15,
+            "medianOriginDeltaZ": 5.320257
+          },
+          {
+            "classname": "SmallFenceMadeOfSticks",
+            "pairCount": 80,
+            "anchorsWithNeighbor": 10,
+            "medianOriginDeltaZ": 6.051709999999998
+          },
+          {
+            "classname": "SmallStoneRoad",
+            "pairCount": 79,
+            "anchorsWithNeighbor": 19,
+            "medianOriginDeltaZ": 5.421052999999999
+          },
+          {
+            "classname": "BigStoneWall",
+            "pairCount": 74,
+            "anchorsWithNeighbor": 35,
+            "medianOriginDeltaZ": 7.807156999999998
+          },
+          {
+            "classname": "ConcretePole",
+            "pairCount": 74,
+            "anchorsWithNeighbor": 12,
+            "medianOriginDeltaZ": 7.261415000000001
+          },
+          {
+            "classname": "MediumPileOfDirtAndStones",
+            "pairCount": 73,
+            "anchorsWithNeighbor": 29,
+            "medianOriginDeltaZ": 4.764055000000001
+          },
+          {
+            "classname": "WoodenSmallFence",
+            "pairCount": 67,
+            "anchorsWithNeighbor": 16,
+            "medianOriginDeltaZ": 5.951616
+          },
+          {
+            "classname": "ConcreteSmallFloor2",
+            "pairCount": 66,
+            "anchorsWithNeighbor": 7,
+            "medianOriginDeltaZ": 9.273456000000001
+          },
+          {
+            "classname": "CaseBedroom",
+            "pairCount": 65,
+            "anchorsWithNeighbor": 20,
+            "medianOriginDeltaZ": 6.300572999999998
+          },
+          {
+            "classname": "CaseBedroomMedium",
+            "pairCount": 54,
+            "anchorsWithNeighbor": 22,
+            "medianOriginDeltaZ": 6.784467000000001
+          }
+        ]
+      }
+    },
+    "hunt": {
+      "BlockBrick": {
+        "anchorCount": 0,
+        "neighbors": []
+      },
+      "BlockDirt": {
+        "anchorCount": 151,
+        "neighbors": [
+          {
+            "classname": "IStruct",
+            "pairCount": 1088,
+            "anchorsWithNeighbor": 149,
+            "medianOriginDeltaZ": 5.227090199999999
+          },
+          {
+            "classname": "Egg",
+            "pairCount": 298,
+            "anchorsWithNeighbor": 41,
+            "medianOriginDeltaZ": 5.372239199999999
+          },
+          {
+            "classname": "Decor",
+            "pairCount": 193,
+            "anchorsWithNeighbor": 98,
+            "medianOriginDeltaZ": 5.5103784000000005
+          },
+          {
+            "classname": "SteelBrownContainer",
+            "pairCount": 103,
+            "anchorsWithNeighbor": 73,
+            "medianOriginDeltaZ": 5.542960000000001
+          },
+          {
+            "classname": "LampCeiling",
+            "pairCount": 78,
+            "anchorsWithNeighbor": 56,
+            "medianOriginDeltaZ": -4.941876999999998
+          },
+          {
+            "classname": "SteelMedicalBox",
+            "pairCount": 78,
+            "anchorsWithNeighbor": 45,
+            "medianOriginDeltaZ": 5.327960300000001
+          },
+          {
+            "classname": "SpawnPoint",
+            "pairCount": 70,
+            "anchorsWithNeighbor": 69,
+            "medianOriginDeltaZ": -0.694306000000001
+          },
+          {
+            "classname": "TorchHolderCharged",
+            "pairCount": 42,
+            "anchorsWithNeighbor": 32,
+            "medianOriginDeltaZ": 5.468948899999999
+          },
+          {
+            "classname": "Campfire",
+            "pairCount": 38,
+            "anchorsWithNeighbor": 37,
+            "medianOriginDeltaZ": 5.2663656
+          },
+          {
+            "classname": "StreetLampEnabled",
+            "pairCount": 33,
+            "anchorsWithNeighbor": 33,
+            "medianOriginDeltaZ": -0.9260799999999989
+          },
+          {
+            "classname": "CaveAxe",
+            "pairCount": 26,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 5.281613800000001
+          },
+          {
+            "classname": "CampfireBig",
+            "pairCount": 25,
+            "anchorsWithNeighbor": 25,
+            "medianOriginDeltaZ": 5.7105289
+          },
+          {
+            "classname": "CombatKnife",
+            "pairCount": 24,
+            "anchorsWithNeighbor": 20,
+            "medianOriginDeltaZ": 6.645959999999999
+          },
+          {
+            "classname": "LampKerosene",
+            "pairCount": 21,
+            "anchorsWithNeighbor": 20,
+            "medianOriginDeltaZ": 6.949536
+          },
+          {
+            "classname": "LampKeroseneHolderCharged",
+            "pairCount": 17,
+            "anchorsWithNeighbor": 17,
+            "medianOriginDeltaZ": 5.8710626
+          },
+          {
+            "classname": "ShortSword",
+            "pairCount": 6,
+            "anchorsWithNeighbor": 6,
+            "medianOriginDeltaZ": -0.6922689999999996
+          }
+        ]
+      },
+      "BlockStone": {
+        "anchorCount": 0,
+        "neighbors": []
+      }
+    }
+  }
+}

@@ -2,6 +2,11 @@
 
 Архитектурный source of truth: [полный план](../../Docs/AI_MAP_GENERATOR_PLAN.md).
 
+Завершённый milestone: **Phase 2 — Object Catalog + Geometry + Map Usage Mining — PASS**.
+Реализация, формат данных и отдельный engine test: [CATALOG.md](CATALOG.md).
+Практический отчёт: [Phase 2](../../Docs/AI_MAP_GENERATOR_PHASE2_REPORT.md).
+Ниже сохранены результаты завершённой Phase 1; повторять её для анализа карт не нужно.
+
 **Статус: PASS. Внутренние операции, Copy/Paste identity и внешний Python → Eden → Python
 transport подтверждены в настоящем Eden 2026-09-09.**
 

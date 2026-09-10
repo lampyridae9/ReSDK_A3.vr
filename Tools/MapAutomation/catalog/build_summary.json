@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "sourceDuplicates": [],
+  "mapObjectConservation": true,
+  "unknownMapClasses": {},
+  "pending": [],
+  "manualReview": [
+    "contact and semantic orientation",
+    "functional clearance"
+  ]
+}
