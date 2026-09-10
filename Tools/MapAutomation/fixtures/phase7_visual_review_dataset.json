@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "scope": "AI_AutomationProbe only",
+  "status": "LIVE_ACCEPTANCE_PAIR_CAPTURED_REMAINING_CASES_DECLARED",
+  "cases": [
+    {"id":"clean_01","kind":"clean","source":"phase6-bedroom-capacity-1","expected":{"acceptable":true,"categories":[],"targets":[]}},
+    {"id":"clean_02","kind":"clean","source":"phase6-bedroom-capacity-2","expected":{"acceptable":true,"categories":[],"targets":[]},"actual":{"reviewId":"critic_155b1c7597164195bd37a36d7df371ee","overall":"PASS","revision":20}},
+    {"id":"clean_03","kind":"clean","source":"phase6-bedroom-capacity-3","expected":{"acceptable":true,"categories":[],"targets":[]}},
+    {"id":"clean_04","kind":"clean","source":"phase6-bedroom-parallel-beds","expected":{"acceptable":true,"categories":[],"targets":[]}},
+    {"id":"clean_05","kind":"clean","source":"phase6-bedroom-opposite-beds","expected":{"acceptable":true,"categories":[],"targets":[]}},
+    {"id":"defect_chair_relation","kind":"intentional_defect","mutation":"re-place seating_001 without preferredNear while retaining hard PASS","expected":{"acceptable":false,"categories":["RELATION_MISMATCH"],"targets":["seating_001","work_surface_001"]},"actual":{"beforeReviewId":"critic_f7944d568541490ebd841c4f9c53046f","afterReviewId":"critic_6004258f25f24a489909534df61c3b86","beforeOverall":"REPAIR","afterOverall":"PASS","repairsApplied":1}},
+    {"id":"defect_orientation","kind":"intentional_defect","mutation":"choose alternate allowed yaw for seating_001 while retaining hard PASS","expected":{"acceptable":false,"categories":["ORIENTATION_AWKWARD"],"targets":["seating_001"]}},
+    {"id":"defect_cabinet_composition","kind":"intentional_defect","mutation":"valid central storage_001 candidate outside hard circulation clearance","expected":{"acceptable":false,"categories":["COMPOSITION_IMBALANCE"],"targets":["storage_001"]}},
+    {"id":"defect_crowding","kind":"intentional_defect","mutation":"valid minimum-clearance grouping","expected":{"acceptable":false,"categories":["EXCESSIVE_CROWDING","SPACING_AWKWARD"],"targets":[]}},
+    {"id":"defect_duplicate_bed_grounding","kind":"intentional_defect","mutation":"awkward yaw on sleeping_002 in two-identical-bed room","expected":{"acceptable":false,"categories":["ORIENTATION_AWKWARD"],"targets":["sleeping_002"],"note":"classname overlay alone is intentionally ambiguous"}}
+  ]
+}

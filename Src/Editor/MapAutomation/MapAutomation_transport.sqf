@@ -125,7 +125,9 @@ function(ma_transportDispatch)
         if !(_x isEqualType createHashMap) then {_errors pushBack ["VIEW_MUST_BE_OBJECT",_forEachIndex]; continue};
         _views pushBack [
             _x getOrDefault ["positionASL",[]],_x getOrDefault ["targetASL",[]],
-            _x getOrDefault ["fov",-1]
+            _x getOrDefault ["fov",-1],_x getOrDefault ["viewId",format ["view_%1",_forEachIndex]],
+            _x getOrDefault ["cameraRole",format ["view_%1",_forEachIndex]],
+            _x getOrDefault ["captureClassOverlay",false]
         ];
     } forEach _externalViews;
     if (_errors isNotEqualTo []) exitWith {[_requestId,"FAIL",[],[["INVALID_VIEWS",_errors]]] call ma_transportResponse};

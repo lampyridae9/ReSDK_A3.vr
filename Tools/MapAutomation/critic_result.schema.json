@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Relicta Room Vision Critic Result v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "overall", "issues", "recapture"],
+  "properties": {
+    "schemaVersion": {"type": "integer", "const": 1},
+    "overall": {"type": "string", "enum": ["PASS", "REPAIR", "RECAPTURE", "UNRESOLVED"]},
+    "issues": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["issueId", "category", "severity", "confidence", "grounding", "targets", "views", "observation", "evidenceKind", "repairGoal"],
+        "properties": {
+          "issueId": {"type": "string", "pattern": "^visual_[0-9]{3}$"},
+          "category": {"type": "string", "enum": ["VISUAL_FLOATING_OR_SUNK", "VISUAL_CLIPPING", "RELATION_MISMATCH", "ORIENTATION_AWKWARD", "SPACING_AWKWARD", "ENTRANCE_VISUALLY_BLOCKED", "COMPOSITION_IMBALANCE", "EXCESSIVE_EMPTY_SPACE", "EXCESSIVE_CROWDING", "VISIBILITY_OCCLUSION", "LIGHTING_PLACEMENT_AWKWARD", "UNRESOLVED"]},
+          "severity": {"type": "string", "enum": ["high", "medium", "low", "info"]},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "grounding": {"type": "string", "enum": ["GROUNDED", "UNRESOLVED"]},
+          "targets": {"type": "array", "maxItems": 3, "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"}},
+          "views": {"type": "array", "maxItems": 6, "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_.-]{0,63}$"}},
+          "observation": {"type": "string", "minLength": 1, "maxLength": 500},
+          "evidenceKind": {"type": "string", "const": "VISUAL_OBSERVATION"},
+          "repairGoal": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["type", "subject", "reference"],
+            "properties": {
+              "type": {"type": "string", "enum": ["REPOSITION", "REORIENT", "REGROUP", "MOVE_AWAY", "MOVE_NEAR", "RETRY_PLACEMENT", "DROP_OPTIONAL", "REQUEST_RECAPTURE", "NO_ACTION"]},
+              "subject": {"type": ["string", "null"]},
+              "reference": {"type": ["string", "null"]}
+            }
+          }
+        }
+      }
+    },
+    "recapture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requested", "cameraRoles", "reason"],
+      "properties": {
+        "requested": {"type": "boolean"},
+        "cameraRoles": {"type": "array", "maxItems": 2, "items": {"type": "string", "enum": ["entrance", "opposite_corner", "overview"]}},
+        "reason": {"type": ["string", "null"], "maxLength": 300}
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
 - Geometry Foundation: PHASE 2 COMPLETE — 41/41 Core probed; 41 M2C MATCH; explicit geometry/contact UNKNOWN fields retained
 - Placement Solver: PHASE 3 COMPLETE — live Eden acceptance PASS, 9 generator-enabled curated assets
 - Room Generator: PHASE 6 COMPLETE — full natural-language live generation PASS
-- Vision Feedback: NOT STARTED
+- Vision Feedback: PHASE 7 COMPLETE — LIVE DEFECT/REPAIR/API ACCEPTANCE PASS
 - Building Generator: NOT STARTED
 - City Generator: NOT STARTED
 
@@ -66,7 +66,7 @@ capture metadata, replay/regenerate и safe-by-default CLI реализован�
 3 sizes × 5 seeds: 60 controlled outcomes, 45 SUCCESS / 15 INFEASIBLE, navigation valid во всех
 SUCCESS. Финальный live acceptance выполнил uncached LLM planning, one-patch apply, actual read-back,
 final spatial validation, три screenshots, manual visual review и ownership cleanup с восстановлением
-исходного fingerprint. Отчёт: [Phase 6 results](AI_MAP_GENERATOR_PHASE6_REPORT.md). Phase 7 — `NEXT`.
+исходного fingerprint. Отчёт: [Phase 6 results](AI_MAP_GENERATOR_PHASE6_REPORT.md). Phase 7 также завершена (`PASS`).
 
 ## Roadmap Revision — 2026-09-10
 
@@ -82,7 +82,7 @@ Automation Round-Trip и каталога нумерация зафиксиро�
 | 4 | Pattern System / Room Semantics: RoomPattern, roles, zones, semantic relations, AssetResolver, RoomPlan, Planner Contract | PASS |
 | 5 | LLM Planner Integration: natural language → structured semantic plan | PASS |
 | 6 | AI Single Room Generator: первый полный AI generation loop | PASS |
-| 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | NEXT |
+| 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | PASS — live defect → grounded repair → solver correction → fresh visual PASS |
 | 8 | Building Generator | PLANNED |
 | 9 | District Generator | PLANNED |
 | 10 | City Generator + Gamemode Integration | PLANNED |

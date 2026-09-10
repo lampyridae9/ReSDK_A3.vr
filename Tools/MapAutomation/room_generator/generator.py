@@ -240,16 +240,21 @@ class RoomGenerator:
                 floor=next(s for s in shell.scene.surfaces.values() if s.type=="floor");x,y,z=floor.origin
                 half=max(floor.half_extents);poses=[
                     {"name":"entrance","positionASL":[x,y-half+0.8,z+dz+1.7],"targetASL":[x,y,z+dz+0.8],"fov":0.8},
-                    {"name":"opposite_corner","positionASL":[x+half+1,y+half+1,z+dz+2.2],"targetASL":[x,y,z+dz+0.7],"fov":0.8},
+                    {"name":"opposite_corner","positionASL":[x+half-0.6,y+half-0.6,z+dz+1.8],"targetASL":[x,y,z+dz+0.7],"fov":0.8},
                     {"name":"overview","positionASL":[x+half+3,y-half-3,z+dz+half+3],"targetASL":[x,y,z+dz+0.6],"fov":0.9}]
                 # One view per transport response keeps the duplicate SQF test artifact
                 # below FileManager's bounded Read buffer and isolates capture failures.
                 result.screenshots=[]
-                for pose in poses:
-                    capture=self.gateway.capture(applied["revision"],[{"positionASL":pose["positionASL"],"targetASL":pose["targetASL"],"fov":pose["fov"]}])
+                for pose_index,pose in enumerate(poses):
+                    capture=self.gateway.capture(applied["revision"],[{"positionASL":pose["positionASL"],"targetASL":pose["targetASL"],"fov":pose["fov"],
+                        "viewId":pose["name"],"cameraRole":pose["name"],"captureClassOverlay":True}])
                     if len(capture["result"])!=1:raise TransportError("capture did not return exactly one view")
                     result.screenshots.append({"generationId":generation_id,"roomId":room_id,"revision":applied["revision"],
                         "cameraPose":pose,"artifact":capture["result"][0]})
+                    # Arma may reject an immediately following screenshot command even
+                    # after the paired files exist. Keep Eden requests independent and
+                    # allow the engine capture pipeline to drain between camera roles.
+                    if pose_index+1<len(poses) and capture["result"][0].get("classOverlayPath"):time.sleep(5)
             final=self.gateway.inspect(applied["revision"]);result.scene_fingerprint_after=_fingerprint(final["result"])
             result.transaction["state"]="COMMITTED";result.transaction["revisionCommitted"]=applied["revision"]
             result.status=GenerationStatus.SUCCESS;self._transition(result,GenerationLifecycle.COMPLETE)

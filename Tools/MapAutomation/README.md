@@ -338,3 +338,29 @@ touching unrelated objects:
 ```powershell
 python Tools/MapAutomation/run_room_generator.py --cleanup-generation Tools/MapAutomation/artifacts/generations/<generationId>.json --timeout 60
 ```
+
+## Phase 7 vision review / bounded repair
+
+Phase 7 is review-only by default. After a live Phase 6 generation with paired captures:
+
+```powershell
+python Tools/MapAutomation/run_phase7.py Tools/MapAutomation/artifacts/generations/<generation>.json
+```
+
+Explicit bounded live repair (AI supplies no transforms; Phase 3 resolves them):
+
+```powershell
+python Tools/MapAutomation/run_phase7.py Tools/MapAutomation/artifacts/generations/<generation>.json --repair --max-repairs 2 --interactive
+```
+
+PNG files are read directly by Python. Eden transport carries paths and compact metadata only.
+If the editor class UI is not rasterized by Arma's screenshot command, the critic capture bundle
+adds a semantic ID/class fallback overlay from the known manifest and camera pose. The live
+acceptance run detected a solver-valid chair/table relation defect, applied one solver-gated
+repair, and returned PASS on fresh captures. See `Docs/AI_MAP_GENERATOR_PHASE7_REPORT.md`.
+
+Developer-only deterministic acceptance defect:
+
+```powershell
+python Tools/MapAutomation/inject_phase7_defect.py Tools/MapAutomation/artifacts/generations/<generation>.json --shell medium --live-start-delay 10
+```
