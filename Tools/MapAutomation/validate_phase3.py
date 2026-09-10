@@ -39,6 +39,10 @@ def validate(require_live=False):
         support=row.get('support',{});check(support.get('provenance') in PROVENANCE,name+': invalid support provenance')
         if support.get('surfaceTypes'):
             check(isinstance(support.get('localPlaneZ'),(int,float)) and math.isfinite(support['localPlaneZ']),name+': invalid support plane')
+        calibration=row.get('edenCalibration')
+        if calibration is not None:
+            check(calibration.get('provenance') in PROVENANCE,name+': invalid Eden calibration provenance')
+            check(isinstance(calibration.get('modelBoundsOffsetZ'),(int,float)) and math.isfinite(calibration['modelBoundsOffsetZ']),name+': invalid Eden bounds calibration')
         for volume in row.get('clearanceVolumes',[]):
             check(len(volume.get('localCenter',[]))==3 and len(volume.get('halfExtents',[]))==3,name+': invalid clearance shape')
             check(all(isinstance(v,(int,float)) and math.isfinite(v) and v>0 for v in volume.get('halfExtents',[])),name+': invalid clearance extents')
@@ -58,6 +62,7 @@ def validate(require_live=False):
     if LIVE.exists():
         live=load(LIVE)
         check(live.get('status')=='PASS','latest live evidence is not PASS')
+        check(live.get('catalogVersion')==policy.get('catalogVersion'),'live evidence belongs to an older spatial catalog version')
         check(live.get('sceneUnchanged') is True,'live cleanup did not preserve scene')
         check(live.get('productionMapsTouched') is False,'live evidence touched a production map')
         check(set(live.get('curatedClasses',[]))==EXPECTED,'live curated class set mismatch')

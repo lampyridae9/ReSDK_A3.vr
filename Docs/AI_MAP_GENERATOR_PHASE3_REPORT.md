@@ -1,5 +1,17 @@
 # Phase 3 — Placement Solver + Spatial Validation
 
+## GROUNDING CORRECTION — 2026-09-10
+
+Live visual review of the Phase 4 bedroom invalidated the original assumption that raw
+`visualBounds.minZ` is directly usable as an Eden position offset. It lifted `SingleWhiteBed`,
+`SmallWoodenTable`, `SteelGreenCabinet` and `WoodenDoor` above the support surface by exactly
+0.473423, 0.432296, 0.7785 and 1.11276 m. Spatial catalog version
+`phase2-live-v1+phase3-spatial-v2` adds explicit `edenCalibration`: support position is the floor
+height, while measured bounds and clearance volumes are rebased into that Eden frame. Chair was
+already effectively zero-offset. Phase 3 unit tests and live read-back were repeated; latest live
+artifact is `Tools/MapAutomation/artifacts/phase3_live_20260910_041430.json`. A subsequent Phase 4
+capture visually confirms floor contact for the corrected assets. Scene cleanup remains verified.
+
 ## STATUS
 
 `PASS` — deterministic implementation, primitive tests и live Eden acceptance завершены.
@@ -99,19 +111,20 @@ door и отдельного ConcretePanel smoke probe создавался то
 ## LIVE EDEN TESTS
 
 PASS 2026-09-10 на `AI_AutomationProbe`, session `probe_2026_9_10_1_9_12_283`.
-Start revision 0, create patch revision 1, cleanup revision 2. Создано и прочитано обратно 13
+После grounding correction spatial v2 тест повторён: revisions 20→21→22. Создано и прочитано обратно 13
 временных объектов, представляющих все девять curated классов. Для bed/table/chair/storage/light
 повторная проверка actual Eden transforms дала 0 diagnostics; путь entrance → bed usable region —
 20 grid points. A–L дали ожидаемые positive/negative коды, deterministic и dry-run подтверждены.
 После удаления `sceneUnchanged=true`; production maps не открывались и не изменялись.
 
 Evidence: `Tools/MapAutomation/artifacts/phase3_live_latest.json` и timestamped transcript
-`Tools/MapAutomation/artifacts/phase3_live_20260910_031055.json`.
+`Tools/MapAutomation/artifacts/phase3_live_20260910_041430.json`.
 
 ## VERIFIED / APPROXIMATE / UNKNOWN
 
 - VERIFIED: Phase 2 live class/model/bounds; pure solver invariants и unit tests.
-- APPROXIMATE: occupied OBB, support/contact planes, semantic fronts, clearance, door sweep,
+- HUMAN VERIFIED: Eden grounding calibration for bed, table, cabinet and door.
+- APPROXIMATE: occupied OBB, remaining support/contact planes, semantic fronts, clearance, door sweep,
   navigation agent/grid parameters.
 - UNKNOWN: exact collision mesh, exact door animated collision/opening direction, authoritative
   player capsule, arbitrary sloped supports, terrain placement.

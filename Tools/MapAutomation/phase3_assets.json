@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "catalogVersion": "phase2-live-v1+phase3-spatial-v1",
+  "catalogVersion": "phase2-live-v1+phase3-spatial-v2",
   "status": "LIVE_VERIFIED_PHASE3",
   "coordinateConvention": {
     "solverSpace": "WORLD",
@@ -188,10 +188,15 @@
         "surfaceTypes": [
           "floor"
         ],
-        "localPlaneZ": -1.11276,
+        "localPlaneZ": 0.0,
         "alignment": "same",
-        "provenance": "approximate",
-        "evidence": "curated contact plane at fresh visualBounds minZ"
+        "provenance": "humanVerified",
+        "evidence": "Live Phase 4 screenshot review: Eden position must equal the floor support height; visualBounds minZ produced a visible 1.11276 m air gap"
+      },
+      "edenCalibration": {
+        "modelBoundsOffsetZ": 1.11276,
+        "provenance": "humanVerified",
+        "evidence": "Rebase engine-measured door bounds and clearance into the visually verified Eden placement frame"
       },
       "semanticFront": {
         "value": [
@@ -312,6 +317,8 @@
       "provenance": {
         "bounds": "engineMeasured",
         "animation": "engineMeasured",
+        "support": "humanVerified",
+        "edenCalibration": "humanVerified",
         "occupiedVolume": "approximate",
         "doorSweep": "approximate"
       }
@@ -324,10 +331,15 @@
         "surfaceTypes": [
           "floor"
         ],
-        "localPlaneZ": -0.473423,
+        "localPlaneZ": 0.0,
         "alignment": "same",
-        "provenance": "approximate",
-        "evidence": "curated contact plane at fresh visualBounds minZ"
+        "provenance": "humanVerified",
+        "evidence": "Live Phase 4 visual review: Eden position must equal the floor support height; visualBounds minZ produced a visible 0.473423 m air gap"
+      },
+      "edenCalibration": {
+        "modelBoundsOffsetZ": 0.473423,
+        "provenance": "humanVerified",
+        "evidence": "Rebase engine-measured model bounds into the visually verified Eden placement frame"
       },
       "semanticFront": {
         "value": [
@@ -380,7 +392,8 @@
       },
       "provenance": {
         "bounds": "engineMeasured",
-        "support": "approximate",
+        "support": "humanVerified",
+        "edenCalibration": "humanVerified",
         "occupiedVolume": "approximate",
         "clearance": "approximate"
       }
@@ -393,10 +406,15 @@
         "surfaceTypes": [
           "floor"
         ],
-        "localPlaneZ": -0.432296,
+        "localPlaneZ": 0.0,
         "alignment": "same",
-        "provenance": "approximate",
-        "evidence": "curated contact plane at fresh visualBounds minZ"
+        "provenance": "humanVerified",
+        "evidence": "Live Phase 4 visual review: Eden position must equal the floor support height; visualBounds minZ produced a visible 0.432296 m air gap"
+      },
+      "edenCalibration": {
+        "modelBoundsOffsetZ": 0.432296,
+        "provenance": "humanVerified",
+        "evidence": "Rebase engine-measured model bounds into the visually verified Eden placement frame"
       },
       "semanticFront": {
         "value": null,
@@ -416,7 +434,8 @@
       "clearanceVolumes": [],
       "provenance": {
         "bounds": "engineMeasured",
-        "support": "approximate",
+        "support": "humanVerified",
+        "edenCalibration": "humanVerified",
         "occupiedVolume": "approximate"
       }
     },
@@ -492,10 +511,15 @@
         "surfaceTypes": [
           "floor"
         ],
-        "localPlaneZ": -0.7785,
+        "localPlaneZ": 0.0,
         "alignment": "same",
-        "provenance": "approximate",
-        "evidence": "curated contact plane at fresh visualBounds minZ"
+        "provenance": "humanVerified",
+        "evidence": "Live Phase 4 visual review: Eden position must equal the floor support height; visualBounds minZ produced a visible 0.7785 m air gap"
+      },
+      "edenCalibration": {
+        "modelBoundsOffsetZ": 0.7785,
+        "provenance": "humanVerified",
+        "evidence": "Rebase engine-measured model bounds and clearance into the visually verified Eden placement frame"
       },
       "semanticFront": {
         "value": [
@@ -543,7 +567,8 @@
       ],
       "provenance": {
         "bounds": "engineMeasured",
-        "support": "approximate",
+        "support": "humanVerified",
+        "edenCalibration": "humanVerified",
         "occupiedVolume": "approximate",
         "clearance": "approximate"
       }

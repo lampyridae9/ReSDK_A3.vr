@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "poor_bedroom",
+  "roomType": "bedroom",
+  "styles": ["poor", "utilitarian", "neutral"],
+  "capacity": {"people": {"min": 1, "preferred": 2, "max": 4}},
+  "requirements": [
+    {"function": "entrance", "priority": "required", "cardinality": {"min": 1, "preferred": 1, "max": 1}},
+    {"function": "sleeping", "priority": "required", "cardinality": {"min": 1, "preferred": 2, "max": 4}},
+    {"function": "storage", "priority": "required", "cardinality": {"min": 1, "preferred": 1, "max": 2}},
+    {"function": "lighting", "priority": "required", "cardinality": {"min": 1, "preferred": 1, "max": 1}},
+    {"function": "circulation", "priority": "required", "cardinality": {"min": 1, "preferred": 1, "max": 1}},
+    {"function": "work_surface", "priority": "preferred", "cardinality": {"min": 0, "preferred": 1, "max": 1}},
+    {"function": "seating", "priority": "optional", "cardinality": {"min": 0, "preferred": 1, "max": 2}}
+  ],
+  "strategies": ["parallel_beds", "opposite_beds", "adjacent_beds"],
+  "relations": {
+    "sleeping": [
+      {"kind": "againstWall", "target": "strategyWall", "hard": true},
+      {"kind": "accessibleFrom", "target": "entrance_001", "hard": true},
+      {"kind": "mustNotBlock", "target": "circulation_001", "hard": true}
+    ],
+    "storage": [
+      {"kind": "againstWall", "target": "strategyWall", "hard": true},
+      {"kind": "accessibleFrom", "target": "entrance_001", "hard": true}
+    ],
+    "lighting": [],
+    "work_surface": [{"kind": "awayFrom", "target": "entrance_001", "hard": false}],
+    "seating": [{"kind": "groupedWith", "target": "work_surface_001", "hard": false}]
+  },
+  "provenance": {
+    "style": "humanVerified",
+    "assetDefaults": "ruleDerived+mapUsageDerived",
+    "layoutDefaults": "ruleDerived",
+    "evidence": "Phase 2 dataset usage supports the selected common assets; automatic bedroom boundaries were not inferred."
+  }
+}

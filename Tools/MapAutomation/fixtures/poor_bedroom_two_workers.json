@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "intent": "create_room",
+  "roomType": "bedroom",
+  "style": ["poor", "utilitarian"],
+  "capacity": {"people": 2},
+  "requirements": {"sleeping": 2, "storage": 1, "lighting": 1},
+  "preferences": {"workSurface": true, "seating": true, "compact": true},
+  "seed": 89543
+}

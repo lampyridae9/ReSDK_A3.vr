@@ -5,6 +5,13 @@
 Завершённый milestone: **Phase 2 — Object Catalog + Geometry + Map Usage Mining — PASS**.
 Реализация, формат данных и отдельный engine test: [CATALOG.md](CATALOG.md).
 Практический отчёт: [Phase 2](../../Docs/AI_MAP_GENERATOR_PHASE2_REPORT.md).
+Phase 3 Placement Solver и Phase 4 Pattern System также завершены со статусом `PASS`.
+Phase 4 добавляет `poor_bedroom`, строгий Planner Contract, RoomPlan/stable slots,
+AssetResolver с hard gate `generatorAllowed`, semantic diagnostics и полный Phase 3 dry-run.
+Проверка: `python Tools/MapAutomation/validate_phase4.py --require-live`. Live demonstration
+создаёт временную спальню только в `AI_AutomationProbe`, валидирует read-back и удаляет её:
+`python Tools/MapAutomation/run_phase4_live.py`. Отчёт:
+[Phase 4](../../Docs/AI_MAP_GENERATOR_PHASE4_REPORT.md).
 Ниже сохранены результаты завершённой Phase 1; повторять её для анализа карт не нужно.
 
 **Статус: PASS. Внутренние операции, Copy/Paste identity и внешний Python → Eden → Python

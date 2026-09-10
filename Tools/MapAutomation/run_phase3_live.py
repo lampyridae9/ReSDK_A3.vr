@@ -36,7 +36,7 @@ def composition_scene(assets,base=(4600.0,4600.0,10.134262)):
         ResolvedObject.create('p3_wall_a',assets['ConcreteGreenWall'],SpatialTransform((x-1.68,y-3.696442,z+2.11962))),
         ResolvedObject.create('p3_wall_b',assets['ConcreteGreenWall'],SpatialTransform((x+1.68,y-3.696442,z+2.11962))),
     ]
-    door=ResolvedObject.create('p3_door',assets['WoodenDoor'],SpatialTransform((x+3.15,y+1.8,z+1.11276),(0,0,90)))
+    door=ResolvedObject.create('p3_door',assets['WoodenDoor'],SpatialTransform((x+3.15,y+1.8,z),(0,0,90)))
     return SceneState('room_1',region,{'floor_1':floor,'south_wall':south,'ceiling_1':ceiling},walls+[door],(x+2.55,y+1.8),[]),walls,door
 
 
@@ -76,8 +76,8 @@ def diagnostics_matrix(solver,scene,results,door):
     floating=ResolvedObject.create('floating',bed.asset,SpatialTransform((bed.transform.position[0],bed.transform.position[1],bed.transform.position[2]+.2),bed.transform.rotation_deg))
     penetration=ResolvedObject.create('penetration',bed.asset,SpatialTransform((bed.transform.position[0],bed.transform.position[1],bed.transform.position[2]-.2),bed.transform.rotation_deg))
     wall_cross=ResolvedObject.create('wall_cross',bed.asset,SpatialTransform((bed.transform.position[0],scene.surfaces['south_wall'].origin[1]-.2,bed.transform.position[2]),bed.transform.rotation_deg))
-    table_cross=ResolvedObject.create('table_cross',solver.assets['SmallWoodenTable'],SpatialTransform((bed.transform.position[0],bed.transform.position[1],floor.origin[2]+.432296)))
-    cabinet_sweep=ResolvedObject.create('cabinet_sweep',solver.assets['SteelGreenCabinet'],SpatialTransform((door.transform.position[0]-.7,door.transform.position[1],floor.origin[2]+.7785),(0,0,90)))
+    table_cross=ResolvedObject.create('table_cross',solver.assets['SmallWoodenTable'],SpatialTransform((bed.transform.position[0],bed.transform.position[1],floor.origin[2])))
+    cabinet_sweep=ResolvedObject.create('cabinet_sweep',solver.assets['SteelGreenCabinet'],SpatialTransform((door.transform.position[0]-.7,door.transform.position[1],floor.origin[2]),(0,0,90)))
     clean_objects=[o for o in scene.objects if o.id not in {'p3_bed','p3_table','p3_chair','p3_storage','p3_light'}]
     collision_scene=SceneState(scene.region_id,scene.region_polygon,scene.surfaces,clean_objects+[bed],scene.entrance,[])
     accessible,path=solver.access.validate(scene,solver._interaction_target(bed),bed.id)
@@ -192,7 +192,7 @@ def run(timeout: float,interactive: bool=False) -> Path:
     scene_unchanged=final['result']==initial_scene
     if not scene_unchanged: raise TransportError('cleanup did not restore the initial scene')
     artifact={
-        'schemaVersion':1,'status':'PASS','createdAtUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
+        'schemaVersion':1,'status':'PASS','catalogVersion':config['catalogVersion'],'createdAtUtc':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),
         'sessionId':caps['sessionId'],'startRevision':initial['revision'],'endRevision':final['revision'],
         'curatedClasses':sorted(CURATED),'classDiagnostics':caps['result']['classDiagnostics'],
         'primitiveTests':matrix,'composition':[r.json() for r in results],

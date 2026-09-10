@@ -46,6 +46,16 @@ Phase 3 реализует deterministic placement layer на curated interior s
 RoomPattern, LLM, генератор комнаты или Vision Critic. Текущие результаты и воспроизведение:
 [Phase 3 report](AI_MAP_GENERATOR_PHASE3_REPORT.md).
 
+Phase 4: `PASS`. Реализован детерминированный слой `Structured Room Brief → RoomPattern →
+RoomPlan → SemanticSlot → AssetResolver → PlacementIntent[] → Phase 3 dryRun`. Первый pattern
+`poor_bedroom` поддерживает 1–4 жильцов, required/preferred/optional cardinality, три стратегии,
+stable semantic IDs, feasibility preflight и structured diagnostics. Строгий Planner Contract
+запрещает transforms, код и произвольные classname. Manual fixture для двух рабочих прошёл
+offline и live Eden demonstration с read-back/cleanup; Phase 1–3 остаются `PASS`.
+После visual review support transforms переведены на spatial catalog v2: bed, table, cabinet и
+door откалиброваны в Eden placement frame и повторно подтверждены live screenshots.
+Отчёт: [Phase 4 results](AI_MAP_GENERATOR_PHASE4_REPORT.md). Phase 5 — `NEXT`.
+
 ## Roadmap Revision — 2026-09-10
 
 Ранний roadmap ниже отражал порядок исследовательских прототипов. После завершения реального
@@ -57,8 +67,8 @@ Automation Round-Trip и каталога нумерация зафиксиро�
 | 1 | Automation / Identity / Transport: Python ↔ Eden, stable IDs, revisions, typed ScenePatch, read-back, screenshots, safe-stop | PASS |
 | 2 | Object Catalog / Geometry / Existing Map Mining: live reflection, geometry profiles, Core Asset Set, human-made maps | PASS |
 | 3 | Placement Solver / Spatial Validation: support, orientation, OBB, clearance, doors, accessibility, deterministic candidates | PASS |
-| 4 | Pattern System / Room Semantics: RoomPattern, roles, zones, semantic relations, AssetResolver, RoomPlan, Planner Contract | NEXT; NOT STARTED |
-| 5 | LLM Planner Integration: natural language → structured semantic plan | PLANNED |
+| 4 | Pattern System / Room Semantics: RoomPattern, roles, zones, semantic relations, AssetResolver, RoomPlan, Planner Contract | PASS |
+| 5 | LLM Planner Integration: natural language → structured semantic plan | NEXT |
 | 6 | AI Single Room Generator: первый полный AI generation loop | PLANNED |
 | 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | PLANNED |
 | 8 | Building Generator | PLANNED |

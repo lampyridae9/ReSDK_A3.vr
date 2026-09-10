@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "styles": {
+    "poor": {"provenance": "humanVerified"},
+    "utilitarian": {"provenance": "ruleDerived"},
+    "neutral": {"provenance": "ruleDerived"}
+  },
+  "roles": {
+    "sleeping": [{"classname": "SingleWhiteBed", "category": "bed", "placement": "floor", "style": ["poor", "utilitarian", "neutral"], "provenance": "ruleDerived+mapUsageDerived"}],
+    "storage": [{"classname": "SteelGreenCabinet", "category": "container", "requiredCapability": "container", "placement": "floor", "style": ["poor", "utilitarian"], "provenance": "ruleDerived+mapUsageDerived"}],
+    "lighting": [{"classname": "LampCeiling", "category": "light", "requiredCapability": "light", "placement": "ceiling", "style": ["poor", "utilitarian", "neutral"], "provenance": "ruleDerived+mapUsageDerived"}],
+    "work_surface": [{"classname": "SmallWoodenTable", "category": "table", "placement": "floor", "style": ["poor", "utilitarian", "neutral"], "provenance": "ruleDerived+mapUsageDerived"}],
+    "seating": [{"classname": "WoodenChair", "category": "chair", "requiredCapability": "seating", "placement": "floor", "style": ["poor", "utilitarian", "neutral"], "provenance": "ruleDerived+mapUsageDerived"}]
+  }
+}

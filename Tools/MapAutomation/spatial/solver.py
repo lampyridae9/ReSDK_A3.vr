@@ -33,10 +33,13 @@ def load_phase3_assets(policy: Path=POLICY) -> tuple[dict[str,AssetProfile],dict
     assets={}
     for row in doc['assets']:
         raw=row;name=raw['classname'];g=geometry[name]
-        bounds=tuple(_vec3(x) for x in g['visualBounds']['value'])
+        calibration=raw.get('edenCalibration',{})
+        offset_z=float(calibration.get('modelBoundsOffsetZ',0.0))
+        bounds=tuple((float(x[0]),float(x[1]),float(x[2])+offset_z) for x in g['visualBounds']['value'])
         if raw.get('geometrySha256') and raw['geometrySha256']!=hashlib.sha256(json.dumps(g['visualBounds']['value'],separators=(',',':')).encode()).hexdigest():
             raise ValueError(name+': curated metadata geometry binding changed')
-        clear=tuple(ClearanceVolume(x['role'],_vec3(x['localCenter']),_vec3(x['halfExtents']),x['provenance'],float(x['confidence'])) for x in raw.get('clearanceVolumes',[]))
+        clear=tuple(ClearanceVolume(x['role'],(float(x['localCenter'][0]),float(x['localCenter'][1]),float(x['localCenter'][2])+offset_z),
+            _vec3(x['halfExtents']),x['provenance'],float(x['confidence'])) for x in raw.get('clearanceVolumes',[]))
         front=_vec3(raw['semanticFront']['value']) if raw['semanticFront']['value'] is not None else None
         back=_vec3(raw['semanticBack']['value']) if raw['semanticBack']['value'] is not None else None
         assets[name]=AssetProfile(name,bounds,raw['placementType'],raw['support']['localPlaneZ'],tuple(raw['support']['surfaceTypes']),
