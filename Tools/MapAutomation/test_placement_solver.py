@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import copy
+import math
 import unittest
 
 from spatial.model import OBB, PlacementIntent, ResolvedObject, SceneState, SpatialTransform, SupportSurface
@@ -118,6 +119,13 @@ class SpatialPrimitiveTests(unittest.TestCase):
     def test_intent_contract_rejects_transforms(self):
         with self.assertRaises(ValueError):
             PlacementIntent.from_json({'id':'x','asset':'SingleWhiteBed','region':'room_1','onSurface':'floor_1','position':[0,0,0]})
+
+    def test_preferred_near_scores_target_object(self):
+        state=room(objects=[obj('table','SmallWoodenTable',(1.5,1.5,0))])
+        intent=PlacementIntent('chair','WoodenChair','room_1','floor_1',soft=('Compact',),seed=7,preferred_near='table')
+        result=self.solver.resolve(intent,state)
+        self.assertEqual('VALID',result.status)
+        self.assertLess(math.dist(result.placement.transform.position[:2],(1.5,1.5)),2.0)
 
 
 if __name__=='__main__': unittest.main(verbosity=2)

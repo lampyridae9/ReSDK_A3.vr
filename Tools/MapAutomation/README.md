@@ -304,3 +304,37 @@ PNG-файлы требуют ручного просмотра: `REQUIRES MANUA
 из-за которой старый `copy_paste.sqfdata` не перезаписывался, устранена сериализацией проверки.
 Phase 1 — **PASS**. Следующий milestone — только
 `Phase 2 — Object Catalog + Geometry Foundation`; он здесь не начинается.
+
+## Phase 6 — one-command room generation
+
+Safe default is a complete offline dry-run (Eden is not changed):
+
+```powershell
+python Tools/MapAutomation/run_room_generator.py "Создай бедную спальню для двух рабочих. Нужны две кровати, хранение вещей и свет. Если хватает места — стол и стул." --seed 12345 --shell medium
+```
+
+Replay a saved brief without an LLM call:
+
+```powershell
+python Tools/MapAutomation/run_room_generator.py --brief Tools/MapAutomation/fixtures/poor_bedroom_two_workers.json --seed 200 --shell large
+```
+
+Live execution is explicit and restricted by the existing gateway to `AI_AutomationProbe`.
+Interactive mode applies one transaction, validates actual read-back, captures entrance/opposite
+corner/overview views, and waits before deleting only generation-owned IDs:
+
+```powershell
+python Tools/MapAutomation/run_room_generator.py "Создай бедную спальню для двух рабочих" --live --interactive --seed 12345 --shell medium
+```
+
+`--plan-only`, `--dry-run`, `--live`, `--seed`, `--shell`, `--candidate-limit`, bounded search
+budgets, `--interactive`, and explicit `--keep` are supported. Generation JSON artifacts live in
+`Tools/MapAutomation/artifacts/generations`; the 60-case matrix is
+`Tools/MapAutomation/artifacts/phase6_generation_matrix.json`.
+
+If Eden was reloaded after a transport interruption, recover a kept/partial generation without
+touching unrelated objects:
+
+```powershell
+python Tools/MapAutomation/run_room_generator.py --cleanup-generation Tools/MapAutomation/artifacts/generations/<generationId>.json --timeout 60
+```

@@ -261,17 +261,21 @@ class PatternPipeline:
     def _intent(self, slot: SemanticSlot, plan: RoomPlan, scene: SceneState) -> PlacementIntent:
         hard = ["OnSurface", "InsideRegion", "AvoidIntersection", "KeepClearance"]
         soft = []
-        wall = None; reachable = False
+        wall = None; reachable = False; preferred_near = None
         for rel in slot.relations:
             if rel.kind == "againstWall": wall = rel.target; hard.append("AgainstWall"); soft.append("PreferWallCenter")
             elif rel.kind == "accessibleFrom": reachable = True; hard.append("Reachable")
-            elif rel.kind in {"near", "groupedWith"}: soft.append("Compact")
+            elif rel.kind in {"near", "groupedWith"}: soft.append("Compact"); preferred_near = rel.target
             elif rel.kind in {"awayFrom", "mustNotBlock"}: soft.append("MaximizeCirculation")
         surface = next((k for k, v in sorted(scene.surfaces.items()) if v.type == slot.placement), None)
         if surface is None: raise ValueError("missing support surface for "+slot.placement)
         unique = lambda xs: tuple(dict.fromkeys(xs))
         return PlacementIntent(slot.id, slot.asset or "", scene.region_id, surface, wall, unique(hard), unique(soft), reachable, None,
-            plan.seed + slot.index + sum(ord(c) for c in slot.function))
+            plan.seed + slot.index + sum(ord(c) for c in slot.function), preferred_near)
+
+    def placement_intent(self, slot: SemanticSlot, plan: RoomPlan, scene: SceneState) -> PlacementIntent:
+        """Public semantic translation boundary for orchestration layers."""
+        return self._intent(slot, plan, scene)
 
     def validate_plan(self, plan: RoomPlan) -> list[SemanticDiagnostic]:
         return self.validator.validate(plan)

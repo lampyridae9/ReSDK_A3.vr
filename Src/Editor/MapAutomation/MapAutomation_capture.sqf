@@ -65,7 +65,15 @@ function(ma_captureViews)
     } forEach _views;
     _camera cameraEffect ["terminate","back"];
     camDestroy _camera;
-    get3DENCamera cameraEffect ["internal","back"];
+    // get3DENCamera can transiently be objNull after an off-screen capture. Calling
+    // cameraEffect on it aborts this scheduled transport worker after PNG creation,
+    // leaving the request without a response and preventing ownership cleanup.
+    private _edenCamera = get3DENCamera;
+    if !(_edenCamera isEqualTo objNull) then {
+        _edenCamera cameraEffect ["internal","back"];
+    } else {
+        _errors pushBack ["EDEN_CAMERA_RESTORE_UNAVAILABLE","Screenshots exist; editor camera was not restored"];
+    };
     ma_busy = false;
     if (ma_engineErrors isNotEqualTo []) then {_errors pushBack ["ENGINE_SCRIPT_ERRORS",ma_engineErrors]};
     if ((call ma_fingerprint) isNotEqualTo ma_baseline || {ma_revision != _revision}) then {

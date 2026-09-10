@@ -33,6 +33,7 @@
       "maxItems": 2,
       "items": {"type": "number"}
     },
+    "preferredNear": {"type": ["string", "null"], "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
     "seed": {"type": "integer"}
   }
 }

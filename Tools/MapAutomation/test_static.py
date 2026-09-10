@@ -61,6 +61,13 @@ class FixtureTests(unittest.TestCase):
 
 
 class SourceChecks(unittest.TestCase):
+    def test_large_reports_do_not_use_bounded_file_read(self):
+        text = (MODULE / "MapAutomation_tests.sqf").read_text(encoding="utf-8")
+        body = text.split("function(ma_test_record)", 1)[1].split("function(ma_test_compare)", 1)[0]
+        self.assertIn("count _text <= 4096", body)
+        self.assertIn("call file_exists", body)
+        self.assertLess(body.index("count _text <= 4096"), body.index("call file_read"))
+
     def test_roundtrip_uses_checked_async_copy(self):
         text = (MODULE / "MapAutomation_tests.sqf").read_text(encoding="utf-8")
         self.assertIn("call file_copyAsync", text)

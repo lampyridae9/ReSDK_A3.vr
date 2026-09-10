@@ -8,14 +8,14 @@
 - Existing Map Usage Mining: COMPLETE — 9 maps, 21170 placed objects, runtime counts matched
 - Geometry Foundation: PHASE 2 COMPLETE — 41/41 Core probed; 41 M2C MATCH; explicit geometry/contact UNKNOWN fields retained
 - Placement Solver: PHASE 3 COMPLETE — live Eden acceptance PASS, 9 generator-enabled curated assets
-- Room Generator: NOT STARTED
+- Room Generator: PHASE 6 COMPLETE — full natural-language live generation PASS
 - Vision Feedback: NOT STARTED
 - Building Generator: NOT STARTED
 - City Generator: NOT STARTED
 
 ## Current Milestone
 
-`Phase 3 — Placement Solver + Spatial Validation`
+`Phase 7 — Vision Feedback / Repair`
 
 Архитектурный source of truth. Ниже сохранён полный результат исследовательской фазы; описания предлагаемых систем не являются утверждением об их реализации. Текущий ход реализации и инструкции тестирования: [MapAutomation README](../Tools/MapAutomation/README.md).
 
@@ -54,7 +54,19 @@ stable semantic IDs, feasibility preflight и structured diagnostics. Строг
 offline и live Eden demonstration с read-back/cleanup; Phase 1–3 остаются `PASS`.
 После visual review support transforms переведены на spatial catalog v2: bed, table, cabinet и
 door откалиброваны в Eden placement frame и повторно подтверждены live screenshots.
-Отчёт: [Phase 4 results](AI_MAP_GENERATOR_PHASE4_REPORT.md). Phase 5 — `NEXT`.
+Отчёт: [Phase 4 results](AI_MAP_GENERATOR_PHASE4_REPORT.md).
+
+Phase 5: `PASS`. OpenAI Structured Outputs Planner переводит русский/английский natural-language
+request в строгий brief; cache/replay, bounded repair, token/latency artifacts и one-call live path
+подтверждены. Отчёт: [Phase 5 results](AI_MAP_GENERATOR_PHASE5_REPORT.md).
+
+Phase 6: `PASS`. Orchestration, shell inspection, one-brief pipeline, bounded deterministic backtracking,
+optional degradation, one-patch transaction, actual read-back validation, ownership, cleanup,
+capture metadata, replay/regenerate и safe-by-default CLI реализованы. Offline matrix 4 capacities ×
+3 sizes × 5 seeds: 60 controlled outcomes, 45 SUCCESS / 15 INFEASIBLE, navigation valid во всех
+SUCCESS. Финальный live acceptance выполнил uncached LLM planning, one-patch apply, actual read-back,
+final spatial validation, три screenshots, manual visual review и ownership cleanup с восстановлением
+исходного fingerprint. Отчёт: [Phase 6 results](AI_MAP_GENERATOR_PHASE6_REPORT.md). Phase 7 — `NEXT`.
 
 ## Roadmap Revision — 2026-09-10
 
@@ -68,9 +80,9 @@ Automation Round-Trip и каталога нумерация зафиксиро�
 | 2 | Object Catalog / Geometry / Existing Map Mining: live reflection, geometry profiles, Core Asset Set, human-made maps | PASS |
 | 3 | Placement Solver / Spatial Validation: support, orientation, OBB, clearance, doors, accessibility, deterministic candidates | PASS |
 | 4 | Pattern System / Room Semantics: RoomPattern, roles, zones, semantic relations, AssetResolver, RoomPlan, Planner Contract | PASS |
-| 5 | LLM Planner Integration: natural language → structured semantic plan | NEXT |
-| 6 | AI Single Room Generator: первый полный AI generation loop | PLANNED |
-| 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | PLANNED |
+| 5 | LLM Planner Integration: natural language → structured semantic plan | PASS |
+| 6 | AI Single Room Generator: первый полный AI generation loop | PASS |
+| 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | NEXT |
 | 8 | Building Generator | PLANNED |
 | 9 | District Generator | PLANNED |
 | 10 | City Generator + Gamemode Integration | PLANNED |

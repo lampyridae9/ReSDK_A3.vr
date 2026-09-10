@@ -196,6 +196,19 @@ class SolverResult:
             'score':self.score,'navigationPath':self.path,'dryRun':self.dry_run,'scenePatch':self.scene_patch}
 
 
+@dataclass
+class CandidateBatch:
+    """Ranked, already hard-validated alternatives for one placement intent."""
+    intent: PlacementIntent
+    candidates: list[SolverResult]
+    rejected: list[dict[str,Any]]
+    generated: int
+
+    def json(self) -> dict[str,Any]:
+        return {'intent':self.intent.json(),'generated':self.generated,'valid':len(self.candidates),
+            'candidates':[x.json() for x in self.candidates],'rejectedCandidates':self.rejected}
+
+
 class PlacementSolver:
     HARD={'OnSurface','AgainstWall','InsideRegion','AvoidIntersection','KeepClearance','Reachable','FacingDirection'}
     SOFT={'PreferWallCenter','Compact','MaximizeCirculation'}
@@ -260,6 +273,9 @@ class PlacementSolver:
             u,_,_=scene.surfaces[intent.against_wall].coordinates(obj.transform.position);score-=abs(u)
         if 'Compact' in intent.soft and scene.objects:
             score-=min(math.dist(obj.transform.position[:2],x.transform.position[:2]) for x in scene.objects)*0.05
+        if intent.preferred_near:
+            target=next((x for x in scene.objects if x.id==intent.preferred_near),None)
+            if target is not None: score-=math.dist(obj.transform.position[:2],target.transform.position[:2])
         if 'MaximizeCirculation' in intent.soft and scene.objects:
             score+=min(math.dist(obj.transform.position[:2],x.transform.position[:2]) for x in scene.objects)*0.02
         # Seed is used only as a deterministic final tie breaker.
@@ -268,7 +284,13 @@ class PlacementSolver:
         score+=int.from_bytes(hashlib.sha256(token).digest()[:4],'big')/2**32*1e-9
         return score
 
-    def resolve(self,intent: PlacementIntent,scene: SceneState,*,dry_run: bool=True) -> SolverResult:
+    def resolve_candidates(self,intent: PlacementIntent,scene: SceneState,*,limit: int=5,dry_run: bool=True) -> CandidateBatch:
+        """Return up to ``limit`` ranked valid candidates without mutating ``scene``.
+
+        This is the bounded-search API used by higher-level generators.  ``resolve``
+        remains the stable best-candidate API and delegates to this method.
+        """
+        if limit < 1: raise ValueError('candidate limit must be positive')
         if intent.region!=scene.region_id: raise ValueError('PlacementIntent region not present')
         if intent.asset not in self.assets: raise ValueError('asset outside Phase 3 curated subset')
         asset=self.assets[intent.asset]
@@ -278,6 +300,8 @@ class PlacementSolver:
         if unknown: raise ValueError('unknown hard constraints: '+str(sorted(unknown)))
         unknown=set(intent.soft)-self.SOFT
         if unknown: raise ValueError('unknown soft preferences: '+str(sorted(unknown)))
+        if intent.preferred_near and intent.preferred_near not in {x.id for x in scene.objects}:
+            raise ValueError('preferredNear target missing')
         if 'AgainstWall' in intent.hard and not intent.against_wall: raise ValueError('AgainstWall constraint requires againstWall')
         if ('FacingDirection' in intent.hard or intent.facing_direction is not None) and (intent.facing_direction is None or asset.semantic_front is None):
             raise ValueError('FacingDirection requires a direction and curated semanticFront')
@@ -301,10 +325,19 @@ class PlacementSolver:
             if diags:
                 rejected.append({'index':index,'transform':t.gateway(),'diagnostics':[d.json() for d in diags]})
             else: valid.append((self._score(obj,intent,scene,index),index,obj,path))
-        if not valid:
-            diagnostic=Diagnostic('NO_VALID_CANDIDATE',(intent.id,),{'generated':len(transforms),'rejected':len(rejected)},'ruleDerived','relax soft intent or change hard spatial inputs')
-            return SolverResult('FAIL',intent,None,[diagnostic],rejected,None,[],dry_run,None)
-        score,index,obj,path=max(valid,key=lambda row:(row[0],-row[1]))
-        patch={'operations':[{'operation':'create','arguments':{'semanticId':obj.id,'class':obj.asset.classname,
-            **obj.transform.gateway(),'parentId':''}}]}
-        return SolverResult('VALID',intent,obj,[],rejected,score,path,dry_run,patch)
+        ranked=sorted(valid,key=lambda row:(-row[0],row[1]))[:limit]
+        candidates=[]
+        for score,index,obj,path in ranked:
+            patch={'operations':[{'operation':'create','arguments':{'semanticId':obj.id,'class':obj.asset.classname,
+                **obj.transform.gateway(),'parentId':''}}]}
+            candidates.append(SolverResult('VALID',intent,obj,[],[],score,path,dry_run,patch))
+        return CandidateBatch(intent,candidates,rejected,len(transforms))
+
+    def resolve(self,intent: PlacementIntent,scene: SceneState,*,dry_run: bool=True) -> SolverResult:
+        batch=self.resolve_candidates(intent,scene,limit=1,dry_run=dry_run)
+        if batch.candidates:
+            result=batch.candidates[0]
+            result.rejected=batch.rejected
+            return result
+        diagnostic=Diagnostic('NO_VALID_CANDIDATE',(intent.id,),{'generated':batch.generated,'rejected':len(batch.rejected)},'ruleDerived','relax soft intent or change hard spatial inputs')
+        return SolverResult('FAIL',intent,None,[diagnostic],batch.rejected,None,[],dry_run,None)

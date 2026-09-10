@@ -7,7 +7,14 @@ function(ma_test_record)
     private _path = "Tools\MapAutomation\artifacts\" + _name + ".sqfdata";
     private _text = str _result;
     private _written = [_path,_text] call file_write;
-    if (!_written || {([_path] call file_read) isNotEqualTo _text}) then {
+    // FileManager Read has a small fixed return buffer. Large capture reports can
+    // be written successfully but cannot be read back through that API; attempting
+    // it raises a runtime error and kills the transport loop before JSON response.
+    private _verified = _written && {[_path] call file_exists};
+    if (_verified && {count _text <= 4096}) then {
+        _verified = ([_path] call file_read) isEqualTo _text;
+    };
+    if (!_verified) then {
         diag_log text ("[MapAutomation] REPORT_WRITE_FAILED " + _path + "; use RPT / uiNamespace ma_lastResult");
     };
     diag_log text format ["[MapAutomation] TEST %1: %2",_name,_result];

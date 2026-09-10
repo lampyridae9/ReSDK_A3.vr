@@ -249,12 +249,13 @@ class PlacementIntent:
     reachable: bool = False
     facing_direction: Vec2 | None = None
     seed: int = 0
+    preferred_near: str | None = None
 
     @classmethod
     def from_json(cls,value: dict[str,Any]) -> "PlacementIntent":
         required={"id","asset","region","onSurface"}
         if not isinstance(value,dict) or not required <= value.keys(): raise ValueError("invalid PlacementIntent required fields")
-        known=required|{"againstWall","hardConstraints","softPreferences","requirements","facingDirection","seed","schemaVersion"}
+        known=required|{"againstWall","hardConstraints","softPreferences","requirements","facingDirection","seed","preferredNear","schemaVersion"}
         if set(value)-known: raise ValueError("unknown PlacementIntent fields: "+str(sorted(set(value)-known)))
         requirements=value.get("requirements",{})
         default_hard=("OnSurface","InsideRegion","AvoidIntersection","KeepClearance")
@@ -262,10 +263,11 @@ class PlacementIntent:
             str(value['againstWall']) if value.get('againstWall') is not None else None,
             tuple(value.get('hardConstraints',default_hard)),tuple(value.get('softPreferences',[])),
             bool(requirements.get('reachable',False)),tuple(value['facingDirection']) if value.get('facingDirection') else None,
-            int(value.get('seed',0)))
+            int(value.get('seed',0)),str(value['preferredNear']) if value.get('preferredNear') else None)
 
     def json(self) -> dict[str,Any]:
         return {"schemaVersion":1,"id":self.id,"asset":self.asset,"region":self.region,
             "onSurface":self.on_surface,"againstWall":self.against_wall,"hardConstraints":list(self.hard),
             "softPreferences":list(self.soft),"requirements":{"reachable":self.reachable},
-            "facingDirection":list(self.facing_direction) if self.facing_direction else None,"seed":self.seed}
+            "facingDirection":list(self.facing_direction) if self.facing_direction else None,"seed":self.seed,
+            "preferredNear":self.preferred_near}
