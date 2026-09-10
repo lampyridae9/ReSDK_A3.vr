@@ -153,8 +153,29 @@ Manifest помечается незавершённым до записи и CO
 Неподтверждённые semantic front/contact/clearance остаются UNKNOWN или APPROXIMATE;
 `reviewed=false` сам по себе не блокирует Phase 2 PASS и не разрешает размещение без проверок.
 
-## Следующая фаза
+## Phase 3 — Placement Solver / Spatial Validation
 
-Placement Solver не реализован. Для Phase 3 отдельно спроектировать
-контакты/OBB broad phase, ориентацию, clearance, дверь/проход, deterministic patches и
-малый набор положительных/отрицательных spatial checks в отдельной test map.
+Phase 3 использует этот каталог без повторного mining карт. Curated policy находится в
+`../phase3_assets.json`, контракт intent — в `../placement_intent.schema.json`, а чистая
+реализация координат, OBB/SAT, support, clearance, local accessibility и deterministic
+candidate generation — в `../spatial/`.
+
+Проверка без Eden:
+
+```powershell
+python Tools/MapAutomation/test_placement_solver.py
+python Tools/MapAutomation/validate_phase3.py
+```
+
+После открытия `AI_AutomationProbe` и перекомпиляции editor-only модулей:
+
+```powershell
+python Tools/MapAutomation/run_phase3_live.py --timeout 45
+python Tools/MapAutomation/finalize_phase3.py
+python Tools/MapAutomation/validate_phase3.py --require-live
+```
+
+Live runner выполняет dry-run, создаёт typed ScenePatch с временной interior composition,
+проверяет actual read-back всех девяти curated классов, запускает positive/negative spatial
+checks и удаляет весь batch. `generatorAllowed=true` устанавливает отдельный finalizer только
+при полном live PASS с `sceneUnchanged=true`; остальные 32 Core Asset остаются запрещены.

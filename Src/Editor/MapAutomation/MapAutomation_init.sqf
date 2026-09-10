@@ -12,7 +12,13 @@ init_function(ma_initialize)
     ma_transportCache = createHashMap;
     ma_catalogGeneration = str diag_tickTime;
     ma_mapName = "AI_AutomationProbe";
-    ma_allowedClasses = ["BigConcreteFloor","ConcreteGreenWall","WoodenArch"];
+    // Phase 1 fixtures plus the deliberately small Phase 3 interior subset.
+    // Inclusion is a transport safety allowlist, not generator authorization.
+    ma_allowedClasses = [
+        "BigConcreteFloor","WoodenArch",
+        "ConcretePanel","WoodenSmallFloor","ConcreteGreenWall","WoodenDoor",
+        "SingleWhiteBed","SmallWoodenTable","WoodenChair","SteelGreenCabinet","LampCeiling"
+    ];
     ma_busy = false;
     ma_engineErrors = [];
     ma_saveSerial = 0;

@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 1,
+  "catalogVersion": "phase2-live-v1+phase3-spatial-v1",
+  "status": "LIVE_VERIFIED_PHASE3",
+  "coordinateConvention": {
+    "solverSpace": "WORLD",
+    "gatewaySpace": "EDEN",
+    "positionOrder": [
+      "x",
+      "y",
+      "z"
+    ],
+    "rotationDegrees": [
+      "pitch",
+      "roll",
+      "yaw"
+    ],
+    "yaw": "Arma clockwise heading: 0 points local +Y north, 90 points east +X",
+    "scope": "upright scale=1 interior placement; ATL/ASL conversion requires an explicit offset"
+  },
+  "tolerances": {
+    "supportGap": 0.02,
+    "penetration": 0.02,
+    "supportBounds": 0.01,
+    "normalDegrees": 1.0,
+    "intersection": 0.005,
+    "clearance": 0.005,
+    "region": 0.01,
+    "wallGap": 0.05,
+    "wallEndMargin": 0.1,
+    "candidateStep": 0.25,
+    "actualReadback": 0.02
+  },
+  "navigationAgent": {
+    "radius": 0.35,
+    "height": 1.8,
+    "minimumPassageWidth": 0.8,
+    "gridResolution": 0.25,
+    "provenance": "approximate",
+    "evidence": "No authoritative player capsule dimensions found. HPAstar samples at +0.4 m, but that is not a radius. Prototype interior values require gameplay review."
+  },
+  "assets": [
+    {
+      "classname": "ConcretePanel",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [],
+        "localPlaneZ": null,
+        "alignment": "same",
+        "provenance": "unknown"
+      },
+      "semanticFront": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "semanticBack": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90
+        ]
+      },
+      "providedSurfaces": [
+        {
+          "type": "floor",
+          "localPlane": {
+            "axis": "+Z",
+            "offset": 0.0922552
+          },
+          "halfExtents": [
+            1.01802,
+            2.00591
+          ],
+          "provenance": "approximate",
+          "evidence": "fresh visualBounds top face; not Geometry/ROADWAY contact"
+        }
+      ],
+      "clearanceVolumes": [],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "occupiedVolume": "approximate",
+        "placement": "approximate"
+      }
+    },
+    {
+      "classname": "WoodenSmallFloor",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [],
+        "localPlaneZ": null,
+        "alignment": "same",
+        "provenance": "unknown"
+      },
+      "semanticFront": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "semanticBack": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90
+        ]
+      },
+      "providedSurfaces": [
+        {
+          "type": "floor",
+          "localPlane": {
+            "axis": "+Z",
+            "offset": 0.134262
+          },
+          "halfExtents": [
+            1.91356,
+            1.77017
+          ],
+          "provenance": "approximate",
+          "evidence": "fresh visualBounds top face; not Geometry/ROADWAY contact"
+        }
+      ],
+      "clearanceVolumes": [],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "occupiedVolume": "approximate",
+        "placement": "approximate"
+      }
+    },
+    {
+      "classname": "ConcreteGreenWall",
+      "placementType": "wall",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [],
+        "localPlaneZ": null,
+        "alignment": "same",
+        "provenance": "unknown"
+      },
+      "semanticFront": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "semanticBack": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90,
+          180,
+          270
+        ]
+      },
+      "providedSurfaces": [
+        {
+          "type": "wall",
+          "localPlane": {
+            "axis": "+Y",
+            "offset": 0.396442
+          },
+          "halfExtents": [
+            1.68861,
+            2.11962
+          ],
+          "provenance": "approximate",
+          "evidence": "fresh visualBounds face; semantic interior side supplied by caller"
+        }
+      ],
+      "clearanceVolumes": [],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "occupiedVolume": "approximate",
+        "placement": "approximate"
+      }
+    },
+    {
+      "classname": "WoodenDoor",
+      "placementType": "free",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "floor"
+        ],
+        "localPlaneZ": -1.11276,
+        "alignment": "same",
+        "provenance": "approximate",
+        "evidence": "curated contact plane at fresh visualBounds minZ"
+      },
+      "semanticFront": {
+        "value": [
+          0,
+          1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.7,
+        "evidence": "xlamdoorpos is on positive-Y face"
+      },
+      "semanticBack": {
+        "value": [
+          0,
+          -1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.7
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90,
+          180,
+          270
+        ]
+      },
+      "clearanceVolumes": [
+        {
+          "role": "doorSweep",
+          "localCenter": [
+            -0.667856,
+            -0.0337174,
+            0
+          ],
+          "halfExtents": [
+            1.46,
+            1.46,
+            1.11276
+          ],
+          "provenance": "approximate",
+          "confidence": 0.65
+        },
+        {
+          "role": "approach",
+          "localCenter": [
+            0,
+            0.715548,
+            0
+          ],
+          "halfExtents": [
+            0.75,
+            0.6,
+            1.0
+          ],
+          "provenance": "approximate",
+          "confidence": 0.65
+        },
+        {
+          "role": "approach",
+          "localCenter": [
+            0,
+            -0.715548,
+            0
+          ],
+          "halfExtents": [
+            0.75,
+            0.6,
+            1.0
+          ],
+          "provenance": "approximate",
+          "confidence": 0.65
+        }
+      ],
+      "doorProfile": {
+        "portalLocal": [
+          [
+            -0.730551,
+            0,
+            -1.11276
+          ],
+          [
+            0.730551,
+            0,
+            1.11276
+          ]
+        ],
+        "closedOccupiedVolume": {
+          "source": "visualBounds",
+          "provenance": "approximate"
+        },
+        "openingSweep": {
+          "clearanceRole": "doorSweep",
+          "method": "conservative full radial box around hinge",
+          "provenance": "approximate"
+        },
+        "approachClearance": {
+          "clearanceRole": "approach",
+          "provenance": "approximate"
+        },
+        "hinge": {
+          "axisLocal": [
+            -0.667856,
+            -0.0337174,
+            -1.00733
+          ],
+          "side": "negativeX",
+          "provenance": "approximate"
+        },
+        "closedPhase": 0,
+        "openPhase": 0.7,
+        "openingDirection": {
+          "value": null,
+          "provenance": "unknown"
+        }
+      },
+      "provenance": {
+        "bounds": "engineMeasured",
+        "animation": "engineMeasured",
+        "occupiedVolume": "approximate",
+        "doorSweep": "approximate"
+      }
+    },
+    {
+      "classname": "SingleWhiteBed",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "floor"
+        ],
+        "localPlaneZ": -0.473423,
+        "alignment": "same",
+        "provenance": "approximate",
+        "evidence": "curated contact plane at fresh visualBounds minZ"
+      },
+      "semanticFront": {
+        "value": [
+          0,
+          1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.65,
+        "evidence": "curated foot/approach end for long-axis wall placement"
+      },
+      "semanticBack": {
+        "value": [
+          0,
+          -1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.65
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90,
+          180,
+          270
+        ]
+      },
+      "clearanceVolumes": [
+        {
+          "role": "usable",
+          "localCenter": [
+            0,
+            1.59318,
+            0
+          ],
+          "halfExtents": [
+            0.55,
+            0.45,
+            0.55
+          ],
+          "provenance": "approximate",
+          "confidence": 0.65
+        }
+      ],
+      "preferredWallRelation": {
+        "side": "semanticBack",
+        "gap": 0.05,
+        "provenance": "approximate"
+      },
+      "provenance": {
+        "bounds": "engineMeasured",
+        "support": "approximate",
+        "occupiedVolume": "approximate",
+        "clearance": "approximate"
+      }
+    },
+    {
+      "classname": "SmallWoodenTable",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "floor"
+        ],
+        "localPlaneZ": -0.432296,
+        "alignment": "same",
+        "provenance": "approximate",
+        "evidence": "curated contact plane at fresh visualBounds minZ"
+      },
+      "semanticFront": {
+        "value": null,
+        "provenance": "unknown",
+        "reason": "approximately symmetric table has no required front"
+      },
+      "semanticBack": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90
+        ]
+      },
+      "clearanceVolumes": [],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "support": "approximate",
+        "occupiedVolume": "approximate"
+      }
+    },
+    {
+      "classname": "WoodenChair",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "floor"
+        ],
+        "localPlaneZ": -2.85993e-16,
+        "alignment": "same",
+        "provenance": "approximate",
+        "evidence": "curated contact plane at fresh visualBounds minZ"
+      },
+      "semanticFront": {
+        "value": [
+          0,
+          1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.6,
+        "evidence": "curated Arma model-forward assumption; requires visual review"
+      },
+      "semanticBack": {
+        "value": [
+          0,
+          -1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.6
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90,
+          180,
+          270
+        ]
+      },
+      "clearanceVolumes": [
+        {
+          "role": "usable",
+          "localCenter": [
+            0,
+            0.666039,
+            0.5
+          ],
+          "halfExtents": [
+            0.32,
+            0.35,
+            0.5
+          ],
+          "provenance": "approximate",
+          "confidence": 0.6
+        }
+      ],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "support": "approximate",
+        "occupiedVolume": "approximate",
+        "clearance": "approximate"
+      }
+    },
+    {
+      "classname": "SteelGreenCabinet",
+      "placementType": "floor",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "floor"
+        ],
+        "localPlaneZ": -0.7785,
+        "alignment": "same",
+        "provenance": "approximate",
+        "evidence": "curated contact plane at fresh visualBounds minZ"
+      },
+      "semanticFront": {
+        "value": [
+          0,
+          1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.6,
+        "evidence": "curated cabinet access-face assumption; requires visual review"
+      },
+      "semanticBack": {
+        "value": [
+          0,
+          -1,
+          0
+        ],
+        "provenance": "approximate",
+        "confidence": 0.6
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0,
+          90,
+          180,
+          270
+        ]
+      },
+      "clearanceVolumes": [
+        {
+          "role": "open",
+          "localCenter": [
+            0,
+            1.0013,
+            0
+          ],
+          "halfExtents": [
+            0.35,
+            0.4,
+            0.7785
+          ],
+          "provenance": "approximate",
+          "confidence": 0.55
+        }
+      ],
+      "provenance": {
+        "bounds": "engineMeasured",
+        "support": "approximate",
+        "occupiedVolume": "approximate",
+        "clearance": "approximate"
+      }
+    },
+    {
+      "classname": "LampCeiling",
+      "placementType": "ceiling",
+      "generatorAllowed": true,
+      "support": {
+        "surfaceTypes": [
+          "ceiling"
+        ],
+        "localPlaneZ": 0.221622,
+        "alignment": "opposed",
+        "provenance": "approximate",
+        "evidence": "curated attachment plane at fresh visualBounds maxZ"
+      },
+      "semanticFront": {
+        "value": null,
+        "provenance": "unknown",
+        "reason": "rotationally symmetric fixture; no useful horizontal front"
+      },
+      "semanticBack": {
+        "value": null,
+        "provenance": "unknown"
+      },
+      "orientation": {
+        "allowedYawDegrees": [
+          0
+        ]
+      },
+      "clearanceVolumes": [],
+      "lightDirectionLocal": {
+        "value": [
+          0,
+          0,
+          -1
+        ],
+        "provenance": "engineMeasured",
+        "evidence": "light_1_pos/light_1_dir memory selections"
+      },
+      "provenance": {
+        "bounds": "engineMeasured",
+        "support": "approximate",
+        "occupiedVolume": "approximate"
+      }
+    }
+  ],
+  "liveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
+}

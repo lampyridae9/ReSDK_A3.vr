@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "requireLive": true,
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "curatedAssets": 9,
+    "generatorAllowed": 9,
+    "unitTests": 15,
+    "liveReadbackObjects": 13
+  },
+  "liveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
+}

@@ -7,7 +7,7 @@
 - Object Catalog: PHASE 2 COMPLETE — live reflection: 2894 OOP / 2305 GameObject / 2182 editor-placeable
 - Existing Map Usage Mining: COMPLETE — 9 maps, 21170 placed objects, runtime counts matched
 - Geometry Foundation: PHASE 2 COMPLETE — 41/41 Core probed; 41 M2C MATCH; explicit geometry/contact UNKNOWN fields retained
-- Placement Solver: NOT STARTED
+- Placement Solver: PHASE 3 COMPLETE — live Eden acceptance PASS, 9 generator-enabled curated assets
 - Room Generator: NOT STARTED
 - Vision Feedback: NOT STARTED
 - Building Generator: NOT STARTED
@@ -15,7 +15,7 @@
 
 ## Current Milestone
 
-`Phase 2 — Object Catalog + Geometry Foundation + Existing Map Usage Mining`
+`Phase 3 — Placement Solver + Spatial Validation`
 
 Архитектурный source of truth. Ниже сохранён полный результат исследовательской фазы; описания предлагаемых систем не являются утверждением об их реализации. Текущий ход реализации и инструкции тестирования: [MapAutomation README](../Tools/MapAutomation/README.md).
 
@@ -42,12 +42,79 @@ degenerate профиль явно UNKNOWN. LandContact не дал named select
 APPROXIMATE или UNKNOWN там, где engine evidence недостаточно.
 Отчёт: [Phase 2 results](AI_MAP_GENERATOR_PHASE2_REPORT.md).
 Воспроизведение и отдельный engine test: [Catalog guide](../Tools/MapAutomation/CATALOG.md).
-Следующая согласованная фаза — **Phase 3: Placement Solver + Spatial Validation**,
-но она не начинается до отдельного проектирования и закрытия оставшихся Phase 2 проверок.
+Phase 3 реализует deterministic placement layer на curated interior subset. Она не включает
+RoomPattern, LLM, генератор комнаты или Vision Critic. Текущие результаты и воспроизведение:
+[Phase 3 report](AI_MAP_GENERATOR_PHASE3_REPORT.md).
 
-Нумерация в историческом roadmap ниже сохранена как исследовательский baseline:
-его Early capture/round-trip уже включён в завершённую Phase 1, а Object catalog теперь
-является текущей Phase 2 вместе с existing-map mining. Текущий milestone выше приоритетен.
+## Roadmap Revision — 2026-09-10
+
+Ранний roadmap ниже отражал порядок исследовательских прототипов. После завершения реального
+Automation Round-Trip и каталога нумерация зафиксирована заново, не меняя историю Phase 1/2:
+
+| Phase | Назначение | Статус |
+|---:|---|---|
+| 0 | Research: editor architecture, map lifecycle, object system, feasibility | COMPLETE |
+| 1 | Automation / Identity / Transport: Python ↔ Eden, stable IDs, revisions, typed ScenePatch, read-back, screenshots, safe-stop | PASS |
+| 2 | Object Catalog / Geometry / Existing Map Mining: live reflection, geometry profiles, Core Asset Set, human-made maps | PASS |
+| 3 | Placement Solver / Spatial Validation: support, orientation, OBB, clearance, doors, accessibility, deterministic candidates | PASS |
+| 4 | Pattern System / Room Semantics: RoomPattern, roles, zones, semantic relations, AssetResolver, RoomPlan, Planner Contract | NEXT; NOT STARTED |
+| 5 | LLM Planner Integration: natural language → structured semantic plan | PLANNED |
+| 6 | AI Single Room Generator: первый полный AI generation loop | PLANNED |
+| 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | PLANNED |
+| 8 | Building Generator | PLANNED |
+| 9 | District Generator | PLANNED |
+| 10 | City Generator + Gamemode Integration | PLANNED |
+| 11 | RP Evaluation | PLANNED |
+| 12 | Optimization / Scale | PLANNED |
+
+## AI Architecture: Planner / Solver / Critic
+
+**Planner** — будущая LLM/reasoning model — отвечает на вопрос «что строить?»: назначение,
+required/optional functions, стиль, социальная функция, отношения элементов, high-level pattern
+и дизайнерские компромиссы. Planner выдаёт семантическое намерение и не вычисляет world transforms.
+
+**Solver** — детерминированный код — отвечает на вопрос «как физически разместить?»: support,
+orientation, точные transforms, intersections, clearance, door sweep, accessibility, генерация и
+оценка candidates, затем typed ScenePatch. Именно этот слой создаётся в Phase 3.
+
+**Critic** — будущий vision/reasoning слой — оценивает внешний вид и функцию по screenshots,
+scene metadata, diagnostics и semantic structure. Он возвращает структурированные repair goals.
+Critic не изменяет Eden: исправления снова разрешает Solver и применяет MapAutomation.
+
+```text
+Designer
+   ↓
+Natural-language request
+   ↓
+LLM Planner
+   ↓
+Semantic Design Plan
+   ↓
+Pattern System
+   ↓
+Placement Solver
+   ↓
+Spatial Validators
+   ↓
+ScenePatch
+   ↓
+MapAutomation
+   ↓
+Eden
+   ↓
+Screenshots + Runtime Validation
+   ↓
+Vision Critic
+   ↓
+Repair Goals
+   ↓
+Placement Solver
+```
+
+Фундаментальная граница: Planner может потребовать «две кровати вдоль стен с центральным
+проходом», но не задаёт `SingleWhiteBed position/rotation`. Он передаёт `PlacementIntent`,
+например asset `SingleWhiteBed`, relation `againstWall`, `keepAccessible=true`; Solver находит
+валидный transform. `PlacementIntent` намеренно не содержит координат.
 
 ## 1. Executive Summary
 
@@ -1078,7 +1145,10 @@ LootSystem загружает YAML, имеет шаблоны и теги, ве�
 
 ---
 
-## 15. Development Roadmap
+## 15. Historical Development Roadmap
+
+Этот раздел сохранён как исследовательский baseline. Актуальная нумерация и статусы находятся
+в **Roadmap Revision — 2026-09-10** в начале документа.
 
 | Этап | Цель и реализация | Зависимости | Критерий готовности |
 |---|---|---|---|

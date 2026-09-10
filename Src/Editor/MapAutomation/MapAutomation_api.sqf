@@ -341,6 +341,7 @@ function(ma_getCapabilities)
     ["OK",createHashMapFromArray [
         ["protocolVersion",1],["internalOnly",false],["transport",true],
         ["catalogVersion",1],["catalogOperations",["catalogPage","probeGeometry"]],
+        ["spatialVersion",1],["spatialExecution","ScenePatch only; solver runs outside Eden"],
         ["classes",ma_allowedClasses],["scale",1],["properties",["name","desc"]],
         ["transformSpace","Eden position attribute; rotation degrees"],
         ["classDiagnostics",ma_allowedClasses apply {[_x,[_x] call ma_classDiagnostics]}],

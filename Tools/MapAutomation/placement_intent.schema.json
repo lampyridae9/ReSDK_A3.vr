@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "relicta.mapautomation/placement-intent-v1",
+  "title": "PlacementIntent",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "id", "asset", "region", "onSurface"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,63}$"},
+    "asset": {"type": "string"},
+    "region": {"type": "string"},
+    "onSurface": {"type": "string"},
+    "againstWall": {"type": ["string", "null"]},
+    "hardConstraints": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["OnSurface", "AgainstWall", "InsideRegion", "AvoidIntersection", "KeepClearance", "Reachable", "FacingDirection"]}
+    },
+    "softPreferences": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["PreferWallCenter", "Compact", "MaximizeCirculation"]}
+    },
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {"reachable": {"type": "boolean"}}
+    },
+    "facingDirection": {
+      "type": ["array", "null"],
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "number"}
+    },
+    "seed": {"type": "integer"}
+  }
+}

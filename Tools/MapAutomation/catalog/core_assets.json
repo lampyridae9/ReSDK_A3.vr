@@ -340,7 +340,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -367,7 +367,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "WoodenSmallFloor",
@@ -429,7 +431,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -456,7 +458,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "ConcreteSmallFloor2",
@@ -686,7 +690,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -713,7 +717,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "BrickThinWall",
@@ -870,7 +876,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -897,7 +903,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "SteelDoorThinSmall",
@@ -1139,7 +1147,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -1166,7 +1174,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "SleepingMatras",
@@ -1501,7 +1511,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -1528,7 +1538,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "WoodenChair",
@@ -1592,7 +1604,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -1619,7 +1631,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "ChairCasual",
@@ -2057,7 +2071,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -2084,7 +2098,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "Candle",
@@ -2334,7 +2350,7 @@
         "reviewed": false
       },
       "availability": "LIVE_PROBE_VERIFIED",
-      "generatorAllowed": false,
+      "generatorAllowed": true,
       "reviewRequired": [
         "contact and semantic orientation",
         "functional clearance"
@@ -2361,7 +2377,9 @@
         "status": "APPROXIMATE",
         "confidence": 0.4,
         "meaning": "AABB minimum Z in canonical model basis; assumed support plane, not measured contact"
-      }
+      },
+      "phase3SpatialProfile": "Tools/MapAutomation/phase3_assets.json",
+      "phase3LiveEvidence": "Tools/MapAutomation/artifacts/phase3_live_latest.json"
     },
     {
       "classname": "BoardWoodenBox",
