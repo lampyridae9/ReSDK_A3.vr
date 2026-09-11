@@ -341,12 +341,69 @@ function(ma_getCapabilities)
     ["OK",createHashMapFromArray [
         ["protocolVersion",1],["internalOnly",false],["transport",true],
         ["catalogVersion",1],["catalogOperations",["catalogPage","probeGeometry"]],
+        ["buildOperations",["buildProbe","launchRuntimeProbe"]],
         ["spatialVersion",1],["spatialExecution","ScenePatch only; solver runs outside Eden"],
         ["classes",ma_allowedClasses],["scale",1],["properties",["name","desc"]],
         ["transformSpace","Eden position attribute; rotation degrees"],
         ["classDiagnostics",ma_allowedClasses apply {[_x,[_x] call ma_classDiagnostics]}],
         ["transportKind","FileManager JSON queue"],["engineStatus","READY_IN_PROBE"]
     ]] call ma_response
+}
+
+// Save both editor map representations and build the runtime SQF without
+// changing any Eden entity.  Restricted to the dedicated automation probe.
+function(ma_buildProbe)
+{
+    if (!canSuspend) exitWith {["FAIL",[],["BUILD_REQUIRES_SPAWN"]] call ma_response};
+    if (!(call ma_isProbe) || {!ma_ready} || {ma_busy} || {ma_stopped}) exitWith {
+        ["FAIL",[],["NOT_READY_PROBE"]] call ma_response
+    };
+    private _before = call ma_fingerprint;
+    private _errors = [];
+    ma_busy = true;
+    ma_engineErrors = [];
+    private _serial = ma_saveSerial;
+    do3DENAction "MissionSave";
+    private _deadline = diag_tickTime + 8;
+    waitUntil {uiSleep 0.05; ma_saveSerial > _serial || {diag_tickTime > _deadline}};
+    if (ma_saveSerial <= _serial) then {_errors pushBack "MISSION_SAVE_TIMEOUT"};
+
+    [false] call mm_saveCurrentMapToFile;
+    private _sourcePath = core_path_maps + "/" + ma_mapName + core_path_binarizedMapFileExt;
+    private _sourceText = [_sourcePath] call file_read;
+    if (_sourceText == "") then {_errors pushBack "SOURCE_MAP_COPY_EMPTY"};
+
+    private _built = ["no-success-info","no-bake-object-info","no-ecode-logs"] call mm_build;
+    private _buildPath = mm_folderSaveMaps + "/" + ma_mapName + mm_internal_defaultMapExt;
+    private _buildText = [_buildPath] call file_read;
+    if (!_built) then {_errors pushBack ["MAP_BUILD_FAILED",mm_internal_errorCount,mm_internal_threadErrorText]};
+    if (_buildText == "") then {_errors pushBack "RUNTIME_MAP_EMPTY"};
+
+    private _after = call ma_fingerprint;
+    if (_after isNotEqualTo _before) then {
+        _errors pushBack "SCENE_CHANGED_DURING_BUILD";
+        ma_stopped = true;
+        call ma_storeState;
+    };
+    ma_busy = false;
+    [if (_errors isEqualTo []) then {"OK"} else {"FAIL"},createHashMapFromArray [
+        ["sourcePath",_sourcePath],["sourceCharacters",count _sourceText],
+        ["buildPath",_buildPath],["buildCharacters",count _buildText],
+        ["sceneUnchanged",_after isEqualTo _before],["objectCount",count (call ma_sceneData)]
+    ],_errors] call ma_response
+}
+
+// The response is persisted before the delayed switch to MissionPreview.
+function(ma_launchRuntimeProbe)
+{
+    if (!(call ma_isProbe) || {!ma_ready} || {ma_busy} || {ma_stopped}) exitWith {
+        ["FAIL",[],["NOT_READY_PROBE"]] call ma_response
+    };
+    private _buildPath = mm_folderSaveMaps + "/" + ma_mapName + mm_internal_defaultMapExt;
+    if (([_buildPath] call file_read) == "") exitWith {["FAIL",[],["BUILD_ARTIFACT_MISSING"]] call ma_response};
+    [] spawn {uiSleep 0.75; [[],[]] call sim_internal_processLaunchSim;};
+    ["OK",createHashMapFromArray [["launchScheduled",true],["buildPath",_buildPath]],
+        ["RUNTIME_VISUAL_AND_TRAVERSAL_CONFIRMATION_REQUIRED"]] call ma_response
 }
 
 function(ma_nextCopyId)

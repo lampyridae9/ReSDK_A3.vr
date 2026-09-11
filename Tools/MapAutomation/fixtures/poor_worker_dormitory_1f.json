@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "intent": "create_building",
+  "buildingType": "poor_worker_dormitory",
+  "style": ["poor", "utilitarian"],
+  "floors": 1,
+  "capacity": {"residents": 4},
+  "requirements": {"bedrooms": 2, "entrances": 1, "storage": false},
+  "preferences": {"centralCorridor": true, "compact": true, "bedroomsAwayFromEntrance": true},
+  "seed": 8101
+}

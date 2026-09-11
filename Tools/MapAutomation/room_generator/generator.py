@@ -153,7 +153,7 @@ class RoomGenerator:
         return placements
 
     def generate_room(self, request: str, shell: ExistingRoomShell, options: GenerationOptions=GenerationOptions(),
-        *, planner_brief: dict[str,Any]|None=None, room_id: str="room_001") -> GenerationResult:
+        *, planner_brief: dict[str,Any]|None=None, room_id: str="room_001", slot_namespace: str|None=None) -> GenerationResult:
         generation_id="generation_"+uuid.uuid4().hex[:16];started=self._now_ms()
         result=GenerationResult(generation_id,room_id,GenerationStatus.PLACEMENT_FAILED,GenerationLifecycle.CREATED,
             [{"state":"CREATED","atMs":started}],request)
@@ -175,7 +175,7 @@ class RoomGenerator:
             result.planner_result={"status":"REPLAYED","attemptCount":0,"validatedOutput":brief}
         result.timings.setdefault("llmMs",int((time.perf_counter()-planner_started)*1000));result.planner_brief=copy.deepcopy(brief)
         self._transition(result,GenerationLifecycle.PLANNED)
-        try:plan=self.pipeline.create_plan(brief,shell.scene,room_id=room_id)
+        try:plan=self.pipeline.create_plan(brief,shell.scene,room_id=room_id,slot_namespace=slot_namespace)
         except (ValueError,KeyError) as exc:return self._fail(result,GenerationStatus.PATTERN_FAILED,"PATTERN_FAILED",{"message":str(exc)})
         result.room_plan=plan.json();pattern_hash=hashlib.sha256(PATTERN_PATH.read_bytes()).hexdigest()
         result.reproducibility={"plannerBrief":copy.deepcopy(brief),"seed":brief["seed"],"patternId":plan.pattern_id,

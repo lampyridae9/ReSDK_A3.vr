@@ -364,3 +364,49 @@ Developer-only deterministic acceptance defect:
 ```powershell
 python Tools/MapAutomation/inject_phase7_defect.py Tools/MapAutomation/artifacts/generations/<generation>.json --shell medium --live-start-delay 10
 ```
+
+## Phase 8 building generation
+
+The MVP is deliberately limited to an orthogonal `poor_worker_dormitory`. Safe default is a
+full dry-run: BuildingBrief validation, deterministic layout, shell plan, RoomGenerator dry-runs,
+building accessibility, and budget report without an Eden mutation.
+
+```powershell
+python Tools/MapAutomation/run_building_generator.py --brief Tools/MapAutomation/fixtures/poor_worker_dormitory_2f.json --dry-run --width 12 --depth 9 --seed 1234
+```
+
+Natural-language plan-only and isolated layout-only modes:
+
+```powershell
+python Tools/MapAutomation/run_building_generator.py "Создай бедное двухэтажное общежитие для восьми рабочих" --plan-only --seed 1234
+python Tools/MapAutomation/run_building_generator.py --brief Tools/MapAutomation/fixtures/poor_worker_dormitory_2f.json --layout-only --width 12 --depth 9
+```
+
+`--shell-only` skips furnishing. Live mode is restricted by the existing gateway to
+`AI_AutomationProbe`, applies dependency-ordered batches of at most 32 objects, reads each batch
+back, and cleans every object owned by the logical building transaction unless `--keep` or
+`--interactive` is supplied.
+
+```powershell
+python Tools/MapAutomation/run_building_generator.py --brief Tools/MapAutomation/fixtures/poor_worker_dormitory_1f.json --live --shell-only --width 12 --depth 9
+```
+
+Two-floor live apply intentionally fails closed while `SteelRustyStairs` lacks a Phase 3 spatial
+profile and runtime traversal evidence. Offline multi-floor representation remains available and
+is labelled `APPROXIMATE`; do not change `stairGeneratorAllowed` without the curated live review.
+
+After recompiling the editor-only modules, capture a scene-preserving Phase 8 vertical-asset review with:
+
+```powershell
+python Tools/MapAutomation/run_phase8_vertical_live.py --class SteelRustyStairs --timeout 45
+python Tools/MapAutomation/run_phase8_vertical_live.py --class StoneBigLadderDouble --timeout 45
+```
+
+The transport allowlist entries only permit the controlled probe; they do not grant generator authorization.
+Keep `stairGeneratorAllowed=false` until geometry, lower/upper approaches, storey rise and captures have all been reviewed.
+
+Run the 24 Phase 8 tests and 54-case layout matrix with:
+
+```powershell
+python Tools/MapAutomation/validate_phase8.py
+```

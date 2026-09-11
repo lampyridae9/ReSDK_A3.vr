@@ -53,11 +53,26 @@ class MapAutomationRoomGateway:
     def capture(self, revision: int, views: list[dict[str,Any]]) -> dict[str,Any]:
         response=self._send("captureViews",revision,{"views":views});self._ok("captureViews",response);return response
 
+    def probe_geometry(self, revision: int, classname: str) -> dict[str,Any]:
+        response=self._send("probeGeometry",revision,{"classname":classname});self._ok("probeGeometry",response);return response
+
+    def build_probe(self, revision: int) -> dict[str,Any]:
+        response=self._send("buildProbe",revision);self._ok("buildProbe",response);return response
+
+    def launch_runtime_probe(self, revision: int) -> dict[str,Any]:
+        response=self._send("launchRuntimeProbe",revision);self._ok("launchRuntimeProbe",response);return response
+
     def cleanup(self, semantic_ids: list[str], expected_revision: int) -> dict[str,Any]:
         state=self.inspect(expected_revision);present={row["semanticId"] for row in state["result"]}
         operations=[{"operation":"delete","arguments":{"semanticId":sid}} for sid in reversed(semantic_ids) if sid in present]
         if not operations: return state
-        return self.apply(operations,state["revision"])
+        # The Phase 1 gateway accepts at most 32 operations per patch.  Cleanup
+        # must obey the same physical transport limit as creation while keeping
+        # the logical transaction revision-monotonic.
+        response=state
+        for offset in range(0,len(operations),32):
+            response=self.apply(operations[offset:offset+32],response["revision"])
+        return response
 
 
 class TransactionApplyError(TransportError):

@@ -17,7 +17,8 @@ init_function(ma_initialize)
     ma_allowedClasses = [
         "BigConcreteFloor","WoodenArch",
         "ConcretePanel","WoodenSmallFloor","ConcreteGreenWall","WoodenDoor",
-        "SingleWhiteBed","SmallWoodenTable","WoodenChair","SteelGreenCabinet","LampCeiling"
+        "SingleWhiteBed","SmallWoodenTable","WoodenChair","SteelGreenCabinet","LampCeiling",
+        "SteelRustyStairs","StoneBigLadderDouble","BrickThinWall"
     ];
     ma_busy = false;
     ma_engineErrors = [];

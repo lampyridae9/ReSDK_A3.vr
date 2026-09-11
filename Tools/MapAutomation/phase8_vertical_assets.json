@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reviewMethod": "Live Eden geometry probe plus scene-preserving three-view human visual review",
+  "reviewedAt": "2026-09-11",
+  "candidates": [
+    {
+      "class": "SteelRustyStairs",
+      "geometryDimensions": [1.80919, 7.83294, 5.70242],
+      "visualResult": "Straight steep flight; too long and too tall for the compact two-storey prototype",
+      "generatorAllowed": false,
+      "artifact": "Tools/MapAutomation/artifacts/phase8_vertical_steelrustystairs_latest.json"
+    },
+    {
+      "class": "StoneBigLadderDouble",
+      "geometryDimensions": [3.1, 6.00222, 3.3],
+      "visualResult": "U-shaped double flight with integrated lower and upper platforms",
+      "generatorAllowed": true,
+      "artifact": "Tools/MapAutomation/artifacts/phase8_vertical_stonebigladderdouble_latest.json"
+    }
+  ],
+  "selectedClass": "StoneBigLadderDouble",
+  "selectionReason": "Measured height matches the 3.3 m storey and its compact U-shaped footprint fits a 3.3 m corridor core.",
+  "playerTraversalVerification": "APPROXIMATE_PENDING_RUNTIME"
+}

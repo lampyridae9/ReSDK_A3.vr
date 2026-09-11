@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "poor-worker-dormitory-v1",
+  "provenance": "APPROXIMATE curated prototype",
+  "storeyHeight": 3.3,
+  "wallHeight": 3.0,
+  "wallThickness": 0.2,
+  "corridorWidth": 3.3,
+  "portalWidth": 1.0,
+  "portalApproachDepth": 0.8,
+  "roomTypes": {
+    "bedroom": {"minWidth": 3.4, "minDepth": 3.8, "minimumArea": 13.0, "preferredArea": 18.0, "provenance": "APPROXIMATE"},
+    "storage_room": {"minWidth": 2.0, "minDepth": 2.0, "minimumArea": 4.0, "preferredArea": 7.0, "provenance": "APPROXIMATE"}
+  },
+  "structure": {
+    "floorAsset": "ConcretePanel",
+    "floorModule": [2.03604, 4.01182],
+    "wallAsset": "BrickThinWall",
+    "wallModuleLength": 6.0,
+    "wallModuleHeight": 3.0,
+    "doorAsset": "WoodenDoor",
+    "stairAsset": "StoneBigLadderDouble",
+    "stairGeneratorAllowed": true,
+    "stairFootprint": [3.1, 6.00222],
+    "stairModelOriginZOffset": 1.65,
+    "stairLandingDepth": 1.0,
+    "stairEvidence": "13 map instances; live visual/Geometry AABB 3.1 x 6.00222 x 3.3; U-shaped double flight with integrated platforms; scene-preserving three-view review",
+    "stairVerification": "ENGINE_MEASURED+HUMAN_VISUAL; player traversal remains APPROXIMATE"
+  },
+  "search": {"maxLayoutCandidates": 4, "maxPartitionAttempts": 4, "timeBudgetMs": 1000}
+}

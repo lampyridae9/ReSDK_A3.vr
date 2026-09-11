@@ -1,7 +1,15 @@
 {
-  "integrity": "PASS",
-  "phase2Status": "PASS",
-  "errors": [],
+  "integrity": "FAIL",
+  "phase2Status": "FAIL",
+  "errors": [
+    "Generated output changed: core_assets.json",
+    "Input changed: Tools/MapAutomation/build_catalog.py",
+    "Input changed: Tools/MapAutomation/catalog_parser.py",
+    "Input changed: Tools/MapAutomation/ingest_live_catalog.py",
+    "Input changed: Tools/MapAutomation/compare_live_catalog.py",
+    "Input changed: Tools/MapAutomation/export_catalog.py",
+    "Input changed: Src/Editor/MapAutomation/MapAutomation_catalog.sqf"
+  ],
   "warnings": [
     "am_nuka_empty: model absent from M2C",
     "AmmoPBM: model absent from M2C",

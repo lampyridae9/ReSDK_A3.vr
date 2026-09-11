@@ -214,7 +214,8 @@ class PatternPipeline:
         if not matches: raise PlannerContractError("no pattern for roomType/style")
         return sorted(matches, key=lambda p: p.id)[0]
 
-    def create_plan(self, raw_brief: Any, scene: SceneState, *, room_id: str = "room_001") -> RoomPlan:
+    def create_plan(self, raw_brief: Any, scene: SceneState, *, room_id: str = "room_001",
+        slot_namespace: str | None = None) -> RoomPlan:
         brief = validate_planner_brief(raw_brief); pattern = self.select_pattern(brief)
         if scene.entrance is None: raise ValueError("room context has no entrance")
         walls = sorted(k for k, v in scene.surfaces.items() if v.type == "wall")
@@ -241,6 +242,15 @@ class PatternPipeline:
                     rels.append(SemanticRelation(rel.kind, target, rel.hard))
                 slots.append(SemanticSlot(f"{requirement.function}_{index:03d}", requirement.function,
                     requirement.priority, index, placement, tuple(rels), tuple(brief["style"])))
+        if slot_namespace:
+            # MapAutomation's semantic-ID grammar intentionally excludes dots.
+            # A double underscore preserves an unambiguous room namespace while
+            # remaining valid in Eden transport and generated SQF metadata.
+            prefix=slot_namespace+"__"
+            mapping={slot.id:prefix+slot.id for slot in slots}
+            for slot in slots:
+                slot.id=mapping[slot.id]
+                slot.relations=tuple(SemanticRelation(rel.kind,mapping.get(rel.target,rel.target),rel.hard) for rel in slot.relations)
         return RoomPlan(room_id, pattern.id, pattern.room_type, tuple(brief["style"]), brief["capacity"]["people"], brief["seed"],
             self.asset_resolver.phase3["catalogVersion"], scene.region_id, "entrance_001", tuple(sorted(scene.surfaces)), strategy, slots)
 

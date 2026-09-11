@@ -10,12 +10,12 @@
 - Placement Solver: PHASE 3 COMPLETE — live Eden acceptance PASS, 9 generator-enabled curated assets
 - Room Generator: PHASE 6 COMPLETE — full natural-language live generation PASS
 - Vision Feedback: PHASE 7 COMPLETE — LIVE DEFECT/REPAIR/API ACCEPTANCE PASS
-- Building Generator: NOT STARTED
+- Building Generator: PHASE 8 PARTIAL — offline and single-floor live acceptance PASS; stairs/runtime acceptance blocked
 - City Generator: NOT STARTED
 
 ## Current Milestone
 
-`Phase 7 — Vision Feedback / Repair`
+`Phase 8 — Building Generator`
 
 Архитектурный source of truth. Ниже сохранён полный результат исследовательской фазы; описания предлагаемых систем не являются утверждением об их реализации. Текущий ход реализации и инструкции тестирования: [MapAutomation README](../Tools/MapAutomation/README.md).
 
@@ -68,6 +68,18 @@ SUCCESS. Финальный live acceptance выполнил uncached LLM planni
 final spatial validation, три screenshots, manual visual review и ownership cleanup с восстановлением
 исходного fingerprint. Отчёт: [Phase 6 results](AI_MAP_GENERATOR_PHASE6_REPORT.md). Phase 7 также завершена (`PASS`).
 
+Phase 8: `PARTIAL`. Реализованы strict BuildingBrief и `building-planner-v1`, deterministic
+BuildingPlan/BuildingGraph, bounded orthogonal BuildingLayoutSolver, FloorPlan, shared WallSegment,
+semantic Portal/VerticalConnection, corridor/exterior connectivity, BuildingAccessibilityValidator,
+optional-room degradation, building ownership/cleanup, staged bounded apply, shell/layout/dry-run CLI
+и BuildingBudgetReport. Real natural-language planner test, 24 offline tests, 54-case matrix и полные
+одно-/двухэтажные dry-runs проходят. После `call ma_reconcile` single-floor shell-only и fully furnished live
+acceptance завершились `SUCCESS`: до 70 owned objects, staged read-back, filesystem captures, manual exterior/
+overview/room review и пакетная cleanup с точным восстановлением исходного fingerprint. По live evidence высота
+этажа согласована с measured wall AABB, а floor/roof grid больше не оставляет uncovered border. `SteelRustyStairs`
+не включён в generator allowlist: нет Phase-3-style spatial profile и runtime traversal proof. Save/build/runtime
+load не завершён, поэтому Phase 9 не готова. Отчёт: [Phase 8 results](AI_MAP_GENERATOR_PHASE8_REPORT.md).
+
 ## Roadmap Revision — 2026-09-10
 
 Ранний roadmap ниже отражал порядок исследовательских прототипов. После завершения реального
@@ -83,7 +95,7 @@ Automation Round-Trip и каталога нумерация зафиксиро�
 | 5 | LLM Planner Integration: natural language → structured semantic plan | PASS |
 | 6 | AI Single Room Generator: первый полный AI generation loop | PASS |
 | 7 | Vision Feedback / Repair: screenshots → repair goals → deterministic correction | PASS — live defect → grounded repair → solver correction → fresh visual PASS |
-| 8 | Building Generator | PLANNED |
+| 8 | Building Generator | PARTIAL — offline + 1F live PASS; 2F stairs/runtime pending |
 | 9 | District Generator | PLANNED |
 | 10 | City Generator + Gamemode Integration | PLANNED |
 | 11 | RP Evaluation | PLANNED |
