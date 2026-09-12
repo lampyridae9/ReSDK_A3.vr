@@ -3738,7 +3738,7 @@
   },
   {
     "classname": "TeleportExit",
-    "model": null,
+    "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
     "totalCount": 17,
     "perMapCounts": {
       "minimap": 9,
@@ -6094,7 +6094,7 @@
   },
   {
     "classname": "TeleportBase",
-    "model": null,
+    "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
     "totalCount": 8,
     "perMapCounts": {
       "minimap": 2,

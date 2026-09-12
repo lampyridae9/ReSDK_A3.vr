@@ -1,12 +1,12 @@
 {
-  "schemaVersion": 1,
-  "id": "poor-worker-dormitory-v1",
+  "schemaVersion": 2,
+  "id": "poor-worker-dormitory-v2",
   "provenance": "APPROXIMATE curated prototype",
   "storeyHeight": 3.3,
   "wallHeight": 3.0,
   "wallThickness": 0.2,
-  "corridorWidth": 3.3,
-  "portalWidth": 1.0,
+  "corridorWidth": 3.2,
+  "portalWidth": 1.55,
   "portalApproachDepth": 0.8,
   "roomTypes": {
     "bedroom": {"minWidth": 3.4, "minDepth": 3.8, "minimumArea": 13.0, "preferredArea": 18.0, "provenance": "APPROXIMATE"},
@@ -18,7 +18,23 @@
     "wallAsset": "BrickThinWall",
     "wallModuleLength": 6.0,
     "wallModuleHeight": 3.0,
+    "maxWallJointAdjustment": 0.05,
+    "doorClearWidth": 1.55,
+    "wallModules": [
+      {"asset": "BrickThinWall", "length": 6.0, "minZ": -1.5, "height": 3.0, "material": "brick", "roles": ["solid", "exterior", "interior"]},
+      {"asset": "BrickThinWallSmall", "length": 3.0, "minZ": -1.5, "height": 3.0, "material": "brick", "roles": ["solid", "exterior", "interior"]},
+      {"asset": "SteelThinWallMedium", "length": 2.97915, "minZ": -0.0437775, "height": 2.8621, "material": "sheet_metal", "roles": ["solid", "exterior", "interior"]},
+      {"asset": "SteelThinWallSmall", "length": 1.4611, "minZ": -1.5, "height": 3.0, "material": "sheet_metal", "roles": ["solid", "exterior", "interior"]},
+      {"asset": "MediumWoodenWall", "length": 2.59514, "minZ": -1.43246, "height": 2.86493, "material": "wood", "roles": ["solid", "interior"]}
+    ],
+    "windowModules": [
+      {"asset": "BrickThinWallWindow", "length": 6.0, "minZ": -1.5, "height": 3.0, "material": "brick"},
+      {"asset": "BrickThinWallWindow2", "length": 6.0, "minZ": -1.5, "height": 3.0, "material": "brick"},
+      {"asset": "BrickThinWallWindow3", "length": 6.0, "minZ": -1.5, "height": 3.0, "material": "brick"}
+    ],
     "doorAsset": "WoodenDoor",
+    "doorWidth": 1.4611,
+    "doorMinZ": -1.11276,
     "stairAsset": "StoneBigLadderDouble",
     "stairGeneratorAllowed": true,
     "stairFootprint": [3.1, 6.00222],

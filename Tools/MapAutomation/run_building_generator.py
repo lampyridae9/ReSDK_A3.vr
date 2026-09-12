@@ -28,7 +28,7 @@ def main()->None:
     modes.add_argument("--dry-run",action="store_true");modes.add_argument("--live",action="store_true")
     parser.add_argument("--brief",type=Path,help="BuildingBrief or saved building artifact; skips LLM")
     parser.add_argument("--origin",type=float,nargs=3,default=(4700,4700,10.134262),metavar=("X","Y","Z"))
-    parser.add_argument("--width",type=float,default=12);parser.add_argument("--depth",type=float,default=9);parser.add_argument("--max-floors",type=int,default=2)
+    parser.add_argument("--width",type=float,default=12);parser.add_argument("--depth",type=float,default=10.05624);parser.add_argument("--max-floors",type=int,default=2)
     parser.add_argument("--seed",type=int);parser.add_argument("--shell-only",action="store_true")
     parser.add_argument("--max-layout-candidates",type=int,default=4);parser.add_argument("--max-partition-attempts",type=int,default=4)
     parser.add_argument("--time-budget-ms",type=int,default=1000);parser.add_argument("--timeout",type=float,default=45)

@@ -57617,6 +57617,77 @@
       }
     },
     {
+      "model": "sterben_top\\am_items\\misc\\junk\\9battery\\9vbattery.p3d",
+      "configs": [
+        "new9vbattery_fam"
+      ],
+      "visualBounds": {
+        "value": [
+          [
+            -0.0385903,
+            -0.0242355,
+            -0.0633295
+          ],
+          [
+            0.0385903,
+            0.0242355,
+            0.0633295
+          ]
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "freshness": "HISTORICAL_M2C_NOT_REPROBED",
+        "evidence": "Src/M2C.sqf / GenerateModelData: boundingBoxReal"
+      },
+      "dimensions": {
+        "value": [
+          0.0771806,
+          0.048471,
+          0.126659
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "geometryBounds": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "pivot": {
+        "value": [
+          0,
+          0,
+          0
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "model-space origin; not support point or Eden position"
+      },
+      "occupiedVolume": {
+        "value": 0.0004738339614360534,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB volume, NOT collision volume"
+      },
+      "supportPlane": {
+        "value": -0.0633295,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB minimum Z, not LandContact"
+      },
+      "orientation": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      }
+    },
+    {
       "model": "sterben_top\\am_items\\misc\\junk\\ashtray\\ashtray.p3d",
       "configs": [
         "ashtray_fam"
@@ -65269,6 +65340,77 @@
       },
       "supportPlane": {
         "value": -0.3209,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB minimum Z, not LandContact"
+      },
+      "orientation": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      }
+    },
+    {
+      "model": "sterben_top\\am_items\\props\\military\\5mmammo\\5mm_ammo.p3d",
+      "configs": [
+        "5mm_ammo_fam"
+      ],
+      "visualBounds": {
+        "value": [
+          [
+            -0.400635,
+            -0.282501,
+            -0.140451
+          ],
+          [
+            0.400635,
+            0.282501,
+            0.140451
+          ]
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "freshness": "HISTORICAL_M2C_NOT_REPROBED",
+        "evidence": "Src/M2C.sqf / GenerateModelData: boundingBoxReal"
+      },
+      "dimensions": {
+        "value": [
+          0.80127,
+          0.565002,
+          0.280902
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "geometryBounds": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "pivot": {
+        "value": [
+          0,
+          0,
+          0
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "model-space origin; not support point or Eden position"
+      },
+      "occupiedVolume": {
+        "value": 0.12716971538679106,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB volume, NOT collision volume"
+      },
+      "supportPlane": {
+        "value": -0.140451,
         "source": "ruleDerived",
         "status": "APPROXIMATE",
         "meaning": "AABB minimum Z, not LandContact"
@@ -79059,6 +79201,77 @@
       },
       "supportPlane": {
         "value": -0.194199,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB minimum Z, not LandContact"
+      },
+      "orientation": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "semanticFront": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      }
+    },
+    {
+      "model": "a3\\structures_f_bootcamp\\vr\\blocks\\vr_block_02_f.p3d",
+      "configs": [
+        "land_vr_block_02_f"
+      ],
+      "visualBounds": {
+        "value": [
+          [
+            -6,
+            -6,
+            -2
+          ],
+          [
+            6,
+            6,
+            2
+          ]
+        ],
+        "source": "engineMeasured",
+        "status": "VERIFIED",
+        "freshness": "HISTORICAL_M2C_NOT_REPROBED",
+        "evidence": "Src/M2C.sqf / GenerateModelData: boundingBoxReal"
+      },
+      "dimensions": {
+        "value": [
+          12,
+          12,
+          4
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "evidence": "M2C AABB max-min"
+      },
+      "geometryBounds": {
+        "value": null,
+        "source": "source",
+        "status": "UNKNOWN"
+      },
+      "pivot": {
+        "value": [
+          0,
+          0,
+          0
+        ],
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "model-space origin; not support point or Eden position"
+      },
+      "occupiedVolume": {
+        "value": 576,
+        "source": "ruleDerived",
+        "status": "APPROXIMATE",
+        "meaning": "AABB volume, NOT collision volume"
+      },
+      "supportPlane": {
+        "value": -2,
         "source": "ruleDerived",
         "status": "APPROXIMATE",
         "meaning": "AABB minimum Z, not LandContact"

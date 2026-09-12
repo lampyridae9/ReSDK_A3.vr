@@ -370,14 +370,14 @@ function(ma_buildProbe)
 
     [false] call mm_saveCurrentMapToFile;
     private _sourcePath = core_path_maps + "/" + ma_mapName + core_path_binarizedMapFileExt;
-    private _sourceText = [_sourcePath] call file_read;
-    if (_sourceText == "") then {_errors pushBack "SOURCE_MAP_COPY_EMPTY"};
+    private _sourceExists = [_sourcePath] call file_exists;
+    if (!_sourceExists) then {_errors pushBack "SOURCE_MAP_COPY_MISSING"};
 
     private _built = ["no-success-info","no-bake-object-info","no-ecode-logs"] call mm_build;
     private _buildPath = mm_folderSaveMaps + "/" + ma_mapName + mm_internal_defaultMapExt;
-    private _buildText = [_buildPath] call file_read;
     if (!_built) then {_errors pushBack ["MAP_BUILD_FAILED",mm_internal_errorCount,mm_internal_threadErrorText]};
-    if (_buildText == "") then {_errors pushBack "RUNTIME_MAP_EMPTY"};
+    private _buildExists = [_buildPath,false] call file_exists;
+    if (!_buildExists) then {_errors pushBack "RUNTIME_MAP_MISSING"};
 
     private _after = call ma_fingerprint;
     if (_after isNotEqualTo _before) then {
@@ -387,8 +387,8 @@ function(ma_buildProbe)
     };
     ma_busy = false;
     [if (_errors isEqualTo []) then {"OK"} else {"FAIL"},createHashMapFromArray [
-        ["sourcePath",_sourcePath],["sourceCharacters",count _sourceText],
-        ["buildPath",_buildPath],["buildCharacters",count _buildText],
+        ["sourcePath",_sourcePath],["sourceExists",_sourceExists],
+        ["buildPath",_buildPath],["buildExists",_buildExists],
         ["sceneUnchanged",_after isEqualTo _before],["objectCount",count (call ma_sceneData)]
     ],_errors] call ma_response
 }
@@ -400,7 +400,7 @@ function(ma_launchRuntimeProbe)
         ["FAIL",[],["NOT_READY_PROBE"]] call ma_response
     };
     private _buildPath = mm_folderSaveMaps + "/" + ma_mapName + mm_internal_defaultMapExt;
-    if (([_buildPath] call file_read) == "") exitWith {["FAIL",[],["BUILD_ARTIFACT_MISSING"]] call ma_response};
+    if !([_buildPath,false] call file_exists) exitWith {["FAIL",[],["BUILD_ARTIFACT_MISSING"]] call ma_response};
     [] spawn {uiSleep 0.75; [[],[]] call sim_internal_processLaunchSim;};
     ["OK",createHashMapFromArray [["launchScheduled",true],["buildPath",_buildPath]],
         ["RUNTIME_VISUAL_AND_TRAVERSAL_CONFIRMATION_REQUIRED"]] call ma_response

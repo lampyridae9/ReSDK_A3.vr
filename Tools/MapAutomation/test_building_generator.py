@@ -23,7 +23,7 @@ def brief(floors:int=2,bedrooms:int=4,residents:int=8,seed:int=1234,storage:bool
     value["requirements"]["storage"]=storage;value["capacity"]["residents"]=residents;value["seed"]=seed;return value
 
 
-def layout(value:dict|None=None,width:float=12,depth:float=9):
+def layout(value:dict|None=None,width:float=12,depth:float=10.05624):
     value=value or brief();plan=expand_building_plan(value)
     return plan,BuildingLayoutSolver().solve(plan,BuildingFootprint((100,100,10),width,depth,2),value,BuildingOptions(mode="layout-only",seed=value["seed"]))
 
@@ -87,10 +87,10 @@ class Phase8Tests(unittest.TestCase):
     def test_10_required_rooms_connected(self):
         plan,made=layout();self.assertFalse(any(x["code"]=="ROOM_DISCONNECTED" for x in BuildingAccessibilityValidator().validate(made,plan)))
     def test_11_room_generator_reuse_without_llm_per_room(self):
-        rooms=FakeRoomGenerator();result=BuildingGenerator(room_generator=rooms,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),building_brief=brief())
+        rooms=FakeRoomGenerator();result=BuildingGenerator(room_generator=rooms,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
         self.assertEqual(BuildingStatus.SUCCESS,result.status);self.assertEqual(4,len(rooms.calls));self.assertEqual(0,result.metrics["llmCalls"])
     def test_12_hierarchical_ids_and_ownership(self):
-        result=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),building_brief=brief())
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
         ids=[x["semanticId"] for x in result.ownership["objects"]];self.assertEqual(len(ids),len(set(ids)));self.assertTrue(any(x.startswith("bedroom_001__") for x in ids))
     def test_13_required_room_failure_is_infeasible(self):
         _,made=layout(width=5,depth=5);self.assertEqual("INFEASIBLE",made.feasibility)
@@ -111,28 +111,47 @@ class Phase8Tests(unittest.TestCase):
         _,a=layout();_,b=layout();self.assertEqual(a.fingerprint(),b.fingerprint())
     def test_19_dry_run_does_not_call_gateway(self):
         gateway=FakeGateway();before=copy.deepcopy(gateway.objects)
-        result=BuildingGenerator(room_generator=FakeRoomGenerator(),gateway=gateway,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),building_brief=brief())
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(),gateway=gateway,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
         self.assertEqual(before,gateway.objects);self.assertEqual(BuildingStatus.SUCCESS,result.status)
     def test_20_required_partial_room_failure_aborts_before_apply(self):
         gateway=FakeGateway();before=copy.deepcopy(gateway.objects)
-        result=BuildingGenerator(room_generator=FakeRoomGenerator(4),gateway=gateway,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),BuildingOptions(mode="live"),building_brief=brief())
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(4),gateway=gateway,artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),BuildingOptions(mode="live"),building_brief=brief())
         self.assertEqual(BuildingStatus.ROOM_GENERATION_FAILED,result.status);self.assertEqual(before,gateway.objects)
     def test_21_budget_report(self):
-        result=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),building_brief=brief())
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
         self.assertGreater(result.budget["totalObjects"],0);self.assertIn("objectsPerChunk",result.budget)
     def test_22_single_floor_live_shell_and_cleanup(self):
         gateway=FakeGateway();generator=BuildingGenerator(room_generator=FakeRoomGenerator(),gateway=gateway,artifact_dir=ARTIFACTS)
-        result=generator.generate("fixture",BuildingFootprint((100,100,10),12,9,2),BuildingOptions(mode="live",shell_only=True,keep_result=True,capture=False),building_brief=brief(1,2,4))
+        result=generator.generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),BuildingOptions(mode="live",shell_only=True,keep_result=True,capture=False),building_brief=brief(1,2,4))
         self.assertEqual(BuildingStatus.SUCCESS,result.status);generator.cleanup(result);self.assertEqual(["user_keep"],[x["semanticId"] for x in gateway.objects])
     def test_23_two_floor_live_shell_and_cleanup(self):
         gateway=FakeGateway();generator=BuildingGenerator(room_generator=FakeRoomGenerator(),gateway=gateway,artifact_dir=ARTIFACTS)
-        result=generator.generate("fixture",BuildingFootprint((100,100,10),12,9,2),BuildingOptions(mode="live",shell_only=True,keep_result=True,capture=False),building_brief=brief())
+        result=generator.generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),BuildingOptions(mode="live",shell_only=True,keep_result=True,capture=False),building_brief=brief())
         self.assertEqual(BuildingStatus.SUCCESS,result.status)
         self.assertTrue(any(x["arguments"]["class"]=="StoneBigLadderDouble" for x in result.shell_operations))
         generator.cleanup(result);self.assertEqual(["user_keep"],[x["semanticId"] for x in gateway.objects])
     def test_24_room_failure_is_not_success(self):
-        result=BuildingGenerator(room_generator=FakeRoomGenerator(1),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,9,2),building_brief=brief())
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(1),artifact_dir=ARTIFACTS).generate("fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
         self.assertEqual(BuildingStatus.ROOM_GENERATION_FAILED,result.status)
+
+    def test_25_shell_uses_real_module_palette_and_aligned_floors(self):
+        result=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).generate(
+            "fixture",BuildingFootprint((100,100,10),12,10.05624,2),building_brief=brief())
+        self.assertEqual(BuildingStatus.SUCCESS,result.status)
+        walls=[x for x in result.shell_operations if x["stage"]=="walls"]
+        classes={x["arguments"]["class"] for x in walls}
+        self.assertTrue({"BrickThinWallSmall","SteelThinWallSmall","MediumWoodenWall"}&classes)
+        self.assertTrue(any("Window" in name for name in classes))
+        self.assertEqual({10,13.3},{round(x["arguments"]["position"][2],4) for x in walls})
+        floors=[x for x in result.shell_operations if x["stage"]=="floors" and "floor_001" in x["arguments"]["semanticId"]]
+        xs=sorted({round(x["arguments"]["position"][0],5) for x in floors})
+        ys=sorted({round(x["arguments"]["position"][1],5) for x in floors})
+        self.assertTrue(all(abs((b-a)-4.01182)<1e-4 for a,b in zip(xs,xs[1:])))
+        self.assertTrue(all(abs((b-a)-2.03604)<1e-4 for a,b in zip(ys,ys[1:])))
+
+    def test_26_door_openings_are_wider_than_the_measured_door(self):
+        profile=BuildingGenerator(room_generator=FakeRoomGenerator(),artifact_dir=ARTIFACTS).profile
+        self.assertGreaterEqual(profile["structure"]["doorClearWidth"],profile["structure"]["doorWidth"]+.04)
 
 
 if __name__=="__main__":unittest.main(verbosity=2)

@@ -1,6 +1,6 @@
 # AI Map Generator — Phase 8 Building Generator
 
-Дата: 2026-09-11  
+Дата: 2026-09-12
 Scope: одно автономное здание типа `poor_worker_dormitory`; Phase 9 не начиналась.
 
 ## BUILDING ARCHITECTURE
@@ -42,8 +42,8 @@ Search ограничен `maxLayoutCandidates`, `maxPartitionAttempts` и `time
 ## FLOOR PLAN
 
 Каждый этаж хранит index, elevation, footprint, spaces, walls, portals и vertical connections. Storey height
-4.23924 m берётся из verified live AABB выбранного `ConcreteGreenWall`, а не из LLM. Совпадение высоты стены и
-межэтажного перекрытия подтверждено live capture; gameplay/contact semantics остаются `APPROXIMATE`.
+3.3 m привязан к live AABB выбранного stair module; `BrickThinWall` имеет measured height 3.0 m. Эти значения
+хранятся в BuildingProfile, а не приходят от LLM; gameplay/contact semantics остаются `APPROXIMATE`.
 
 ## ROOM PARTITIONING
 
@@ -52,13 +52,13 @@ width. Prototype bedroom constraints: min 3.4 × 3.8 m, minimum 13 m², preferre
 
 ## CORRIDORS
 
-Corridor — отдельное circulation space шириной минимум 1.5 m. Он не вызывает RoomGenerator и может быть пустым.
+Corridor — отдельное circulation space шириной 3.3 m под выбранное stair core. Он не вызывает RoomGenerator и может быть пустым.
 Exterior entrance, все room portals и stair connection входят в один accessibility graph.
 
 ## WALLS / FLOORS
 
 Shared walls представлены один раз как floor-owned atomic `WallSegment` с одним или двумя owners. Shell pass
-использует реальные allowlisted `ConcretePanel` и `ConcreteGreenWall`. Их модули не масштабируются. Floor grid
+использует реальные allowlisted `ConcretePanel` и `BrickThinWall`. Их модули не масштабируются. Floor grid
 теперь использует полное покрытие footprint с детерминированным overlap вместо незакрытого border; wall runs
 раскладываются с выравниванием крайних модулей. Live overview не показал очевидных сквозных щелей, стены и roof
 совпадают по высоте. Точный collision/contact overlap модулей остаётся `APPROXIMATE`.
@@ -71,11 +71,12 @@ profile. Реальный building-level door runtime test не завершён
 
 ## VERTICAL CONNECTION / STAIRS
 
-`VerticalConnection` связывает corridor этажей и резервирует lower/upper landing regions. Dataset evidence:
-`SteelRustyStairs` встречается 63 раза в шести картах (detective 19, saloonv2 11, dorm 1, barony 1).
-Однако asset отсутствует в Phase 3 spatial subset и не имеет traversal proof. `stairGeneratorAllowed=false`;
-двухэтажный live apply fail-closed до отдельного curated review. Статус: `APPROXIMATE` representation,
-`UNKNOWN` gameplay traversal.
+`VerticalConnection` связывает corridor этажей и резервирует occupied footprint и lower/upper landing regions.
+Live geometry и трёхракурсный review сравнили два реальных кандидата. `SteelRustyStairs` измерен как
+1.80919 × 7.83294 × 5.70242 и отклонён как слишком высокий/длинный. Выбран `StoneBigLadderDouble`:
+3.1 × 6.00222 × 3.3, U-shaped double flight с интегрированными площадками. `stairGeneratorAllowed=true`.
+Solver размещает его в corridor core и удаляет четыре модуля перекрытия второго этажа под stairwell opening.
+Ориентация и высота `ENGINE_MEASURED+HUMAN_VISUAL`; gameplay traversal остаётся `APPROXIMATE`.
 
 ## ROOM GENERATOR INTEGRATION
 
@@ -104,15 +105,16 @@ physical portals и semantic portal edges. Local room navigation остаётс�
 Каждый planned operation записывает generationId, buildingId, floorId, ownerId, semanticId и stage в artifact.
 Apply order: floors → walls → doors → stairs → furniture → lights. Одна logical transaction физически разбита
 на read-back batches максимум по 32 операции; cleanup также пакетный и удаляет только generation-owned IDs.
-После reconcile реальные shell-only (58 objects) и fully furnished (70 objects) транзакции завершились `SUCCESS`.
+После reconcile реальные 1F shell-only (58 objects), 1F fully furnished (70 objects) и 2F fully furnished
+(109 objects) транзакции завершились `SUCCESS`.
 Cleanup прошёл за 2/3 delete batches соответственно и оба раза восстановил исходные 4 объекта и точный fingerprint
 `ca3a8e07…b87b3`.
 
 ## PERFORMANCE / CHUNK BUDGET
 
 `BuildingBudgetReport` считает total/STRUCTURE/ITEM/DECOR, 10 m chunk distribution и informational hotspots.
-Threshold не объявлен engine limit. После structural-contact correction single-floor full dry-run: 70 objects,
-5986 ms; two-floor: 123 objects, 11977 ms. Рост вызван полным покрытием floor/roof без масштабирования модулей.
+Threshold не объявлен engine limit. Финальный single-floor full dry-run: 70 objects; two-floor: 109 objects.
+Второй этаж содержит контролируемый проём из четырёх floor modules под лестницу.
 
 ## EXISTING MAP REFERENCES
 
@@ -138,25 +140,30 @@ furnished live acceptance. Финальный artifact `building_generation_302d
 
 ## TWO-FLOOR ACCEPTANCE
 
-Offline full dry-run `4 bedrooms / 2 corridors / entrance / vertical connection / capacity 8`: `SUCCESS`,
-123 objects, 5 portals, all required rooms graph-reachable. Live two-floor acceptance намеренно заблокирован
-непроверенным stair asset.
+Offline и live `4 bedrooms / 2 corridors / entrance / vertical connection / capacity 8`: `SUCCESS`.
+Финальный live artifact `building_generation_727065a40ed54419.json`: 109 owned objects, 7 staged batches,
+4 RoomGenerator results `SUCCESS`, 5 portals, один `StoneBigLadderDouble`, все required rooms graph-reachable.
+Две предшествующие попытки доказали building-wide rollback: после screenshot failure удалены все 109 объектов
+и восстановлен точный исходный fingerprint; финальная транзакция оставлена для runtime acceptance.
 
 ## VISION / HUMAN REVIEW
 
-Phase 7 не переписывалась. Live captures проверены вручную для exterior, floor overview и representative furnished
-bedroom. Исправлены две найденные ошибки: storey height не совпадал с wall AABB, а camera poses не переводили ATL
-в ASL. Повторные кадры показывают замкнутый одноэтажный shell, ровный roof/floor и мебель внутри спальни без
-очевидного прохождения через внешнюю стену. Полный stair view и runtime human review остаются `UNKNOWN`.
+Phase 7 не переписывалась. 1F exterior/floor/room captures и отдельные трёхракурсные captures обоих stair assets
+проверены вручную. В текущей Arma-сессии поздние building screenshots начали возвращать
+`SCREENSHOT_COMMAND_FAILED_AFTER_RETRY`; теперь это отдельная structured diagnostic и не превращает уже
+подтверждённую building transaction в apply failure. 2F runtime визуальный осмотр и capsule traversal остаются
+`APPROXIMATE`, а не выдаются за автоматическую проверку.
 
 ## RUNTIME BUILD / LOAD TEST
 
-Не выполнен: до save/build/runtime необходимо завершить structurally valid live shell и stair review.
-Статус: `UNKNOWN`.
+`PASS` для save/build/load. `buildProbe` сохранил `AI_AutomationProbe.cpp`, собрал
+`Src/host/MapManager/Maps/AI_AutomationProbe.sqf` и подтвердил неизменность Eden scene. Runtime script содержит
+113 объектов: 109 generation-owned + 4 исходных. RPT зафиксировал Mission start, CBA PreInit/PostInit и mission ID;
+ошибок generated map script не обнаружено. Player traversal лестницы остаётся `APPROXIMATE`.
 
 ## TEST MATRIX
 
-24/24 Phase 8 unit tests PASS. Matrix 54/54 controlled outcomes PASS. Artifact:
+26/26 Phase 8 unit tests PASS. Matrix 54/54 controlled outcomes PASS. Artifact:
 `Tools/MapAutomation/artifacts/phase8_offline_matrix.json`.
 
 ## METRICS
@@ -164,15 +171,15 @@ bedroom. Исправлены две найденные ошибки: storey hei
 - Real Building Planner: 1 LLM call, 3396 ms.
 - Single-floor dry-run: layout attempts 1, rooms 2, portals 3, objects 70, total 5986 ms.
 - Single-floor live furnished: rooms 2, portals 3, objects 70, 6 apply batches, total 15201 ms, cleanup `CLEAN`.
-- Two-floor dry-run: layout attempts 1, rooms 4, portals 5, objects 123, total 11977 ms.
+- Two-floor final live: layout attempts 1, rooms 4, portals 5, objects 109, 7 apply batches.
+- Runtime build: 113 serialized objects; source/build artifacts present; scene unchanged; Mission PreInit/PostInit PASS.
 - Vision calls: 0.
 
 ## REGRESSION
 
-Phase 4 PatternSystem: 15/15 PASS. Phase 6 RoomGenerator: 17/17 PASS. Полный discovery после
-Phase 8 дал 129/130 PASS; единственный pre-existing catalog-integrity failure сообщает о stale generated
-hashes (`core_assets.json` и catalog builder inputs), а не о Building Generator. Полный Phase 1–7 green
-regression поэтому не заявляется.
+Phase 4 PatternSystem: 15/15 PASS. Phase 6 RoomGenerator: 17/17 PASS. После штатного catalog rebuild,
+повторного наложения live evidence и восстановления ровно девяти generator-enabled Phase 3 assets полный
+discovery завершился 130/130 PASS. Catalog integrity и Phase 1–7 regression зелёные.
 
 ## FILES CREATED
 
@@ -184,13 +191,18 @@ regression поэтому не заявляется.
 - `Tools/MapAutomation/test_building_generator.py`
 - `Tools/MapAutomation/validate_phase8.py`
 - `Tools/MapAutomation/fixtures/poor_worker_dormitory_{1f,2f}.json`
+- `Tools/MapAutomation/phase8_vertical_assets.json`
+- `Tools/MapAutomation/run_phase8_vertical_live.py`
+- `Tools/MapAutomation/run_phase8_runtime.py`
 
 ## FILES MODIFIED
 
 - `Tools/MapAutomation/semantic/pipeline.py` — opt-in safe slot namespace.
 - `Tools/MapAutomation/room_generator/generator.py` — namespace passthrough.
 - `Tools/MapAutomation/room_generator/gateway.py` — revision-safe cleanup batches по 32 операции.
-- `Tools/MapAutomation/building_profile.json` — storey height привязан к measured wall module height.
+- `Tools/MapAutomation/building_profile.json` — storey height и stair core привязаны к measured assets.
+- `Src/Editor/MapAutomation/{MapAutomation_api,MapAutomation_transport,MapAutomation_init}.sqf` — controlled
+  build/runtime operations and narrow class allowlist.
 - `Tools/MapAutomation/README.md` — Phase 8 CLI and fail-closed policy.
 - `Docs/AI_MAP_GENERATOR_PLAN.md` — current milestone/status.
 
@@ -203,24 +215,33 @@ Production maps не изменены.
 Strict planner boundary; real semantic planner call; deterministic plan/layout; seed reproducibility/variation;
 rect containment/non-overlap; shared wall/portal graph; exterior-to-room connectivity; RoomGenerator reuse;
 required failure; optional degradation; dry-run immutability; budget report; offline 1F/2F acceptance.
-Также verified: 1F live shell/full furnishing, staged read-back, three filesystem captures, manual 1F visual review,
-building-wide cleanup >32 objects и точное восстановление исходной сцены.
+Также verified: 1F and 2F live furnishing, selected stair geometry/orientation, staged read-back, filesystem captures,
+building-wide cleanup >32 objects, exact scene restoration, save/build artifacts, runtime mission PreInit/PostInit.
 
 ### APPROXIMATE
 
-Room size prototypes; 1.5 m corridor; structural contact/collision; wall/floor module overlap;
-door sweep/approach; `SteelRustyStairs` footprint and landings; chunk hotspot warning threshold.
+Room size prototypes; 3.3 m corridor; structural contact/collision; wall/floor module overlap; stairwell opening;
+door sweep/approach; player traversal of `StoneBigLadderDouble`; chunk hotspot warning threshold.
 
 ### UNKNOWN
 
-Player capsule gameplay traversal; stair traversal/orientation; door runtime interaction; save/build/runtime load;
-sustained building-scale performance.
+Door runtime interaction and sustained building-scale performance.
+
+### HUMAN REVIEW REGRESSION — 2026-09-12
+
+The retained 2F building failed visual acceptance. The v1 shell assembler placed fixed 6 m walls
+inside arbitrary residual spans, including sub-metre spans beside portals; door clear width was
+smaller than the measured door; floor panels were compressed into overlapping grids. The v2
+assembler now merges collinear wall segments, reserves measured-width openings, uses bounded
+one-dimensional packing across brick/wood/sheet-metal modules, adds window sections, uses GOLib's
+floor-based structure placement frame, and keeps floor modules at native pitch. Offline regression is
+26/26. A fresh live visual review is still required before Phase 8 can return to PASS.
 
 ## LIMITATIONS
 
 Only rectangular upright worker dormitories are supported. No polygonal shell, universal room catalog,
-clutter pass, whole-building Vision Critic, district, street or city generation. Door openings have no separate
-curated lintel module, and non-scaled structural modules intentionally overlap to cover arbitrary footprints.
+clutter pass, whole-building Vision Critic, district, street or city generation. Stairwell edge protection,
+player traversal, door swing and the new mixed-material shell still require live acceptance.
 
 ## PHASE 8 STATUS
 

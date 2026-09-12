@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import itertools
 import json
 import math
 from pathlib import Path
@@ -30,14 +31,58 @@ CATALOG=ROOT/"Tools/MapAutomation/catalog/objects.json"
 def _gateway_id(value:str)->str:return value.replace(".","__")
 
 
+def _physical_wall_runs(floor:Any)->list[dict[str,Any]]:
+    """Merge semantic wall fragments into buildable collinear envelope runs."""
+    groups:dict[tuple[str,float,bool],list[Any]]={}
+    for wall in floor.walls:
+        horizontal=abs(wall.start[1]-wall.end[1])<1e-6
+        key=("H" if horizontal else "V",round(wall.start[1] if horizontal else wall.start[0],6),wall.exterior)
+        groups.setdefault(key,[]).append(wall)
+    runs=[]
+    for (axis,fixed,exterior),walls in sorted(groups.items()):
+        walls.sort(key=lambda w:w.start[0] if axis=="H" else w.start[1])
+        current=[];start=end=None
+        for wall in walls:
+            a=wall.start[0] if axis=="H" else wall.start[1];b=wall.end[0] if axis=="H" else wall.end[1]
+            if current and abs(a-end)>1e-5:
+                runs.append({"axis":axis,"fixed":fixed,"start":start,"end":end,"exterior":exterior,"walls":current})
+                current=[];start=None
+            if not current:start=a
+            current.append(wall);end=b
+        if current:runs.append({"axis":axis,"fixed":fixed,"start":start,"end":end,"exterior":exterior,"walls":current})
+    return runs
+
+
+def _fit_wall_modules(length:float,modules:list[dict[str,Any]],max_adjustment:float,variant:int)->tuple[list[dict[str,Any]],float]:
+    """Bounded exact-ish one-dimensional packing; never overhangs a wall run."""
+    candidates=[];max_count=min(9,max(1,math.ceil(length/min(m["length"] for m in modules))+1))
+    for count in range(1,max_count+1):
+        for indexes in itertools.combinations_with_replacement(range(len(modules)),count):
+            chosen=[modules[i] for i in indexes];total=sum(m["length"] for m in chosen)
+            adjustment=abs(length-total)/(count-1 if count>1 else 2)
+            if adjustment<=max_adjustment+1e-9:
+                materials=len({m["material"] for m in chosen})
+                candidates.append(((round(adjustment,8),count,-materials,tuple(indexes)),chosen,(length-total)/(count-1) if count>1 else 0.0))
+    if not candidates:raise ValueError(f"WALL_RUN_UNTILABLE length={length:.3f} tolerance={max_adjustment:.3f}")
+    _,chosen,seam=min(candidates,key=lambda row:row[0])
+    chosen=list(chosen)
+    if len(chosen)>1:
+        shift=variant%len(chosen);chosen=chosen[shift:]+chosen[:shift]
+    return chosen,seam
+
+
 def _room_shell(room:SpacePlan,portal:PortalPlan,elevation:float,storey_height:float)->ExistingRoomShell:
     r=room.rect;x,y=r.center;z=elevation
     owner=room.id
     px,py=portal.center
-    if abs(px-r.x)<1e-6:entrance=(px+.45,py);door_position=(px-.08,py,z);yaw=90;portal_side="west"
-    elif abs(px-r.x2)<1e-6:entrance=(px-.45,py);door_position=(px+.08,py,z);yaw=90;portal_side="east"
-    elif abs(py-r.y)<1e-6:entrance=(px,py+.45);door_position=(px,py-.08,z);yaw=0;portal_side="south"
-    else:entrance=(px,py-.45);door_position=(px,py+.08,z);yaw=0;portal_side="north"
+    # Keep the navigation seed a full approach-clearance inside the room.
+    # The former 0.45 m inset could round onto an inflated boundary cell for
+    # module-derived room widths such as 4.35 m, rejecting every candidate.
+    approach_inset=.8
+    if abs(px-r.x)<1e-6:entrance=(px+approach_inset,py);door_position=(px-.08,py,z);yaw=90;portal_side="west"
+    elif abs(px-r.x2)<1e-6:entrance=(px-approach_inset,py);door_position=(px+.08,py,z);yaw=90;portal_side="east"
+    elif abs(py-r.y)<1e-6:entrance=(px,py+approach_inset);door_position=(px,py-.08,z);yaw=0;portal_side="south"
+    else:entrance=(px,py-approach_inset);door_position=(px,py+.08,z);yaw=0;portal_side="north"
     surfaces={
         f"{owner}.floor":SupportSurface(f"{owner}.floor","floor",owner,(x,y,z),(0,0,1),(1,0,0),(0,1,0),(r.width/2,r.depth/2)),
         f"{owner}.ceiling":SupportSurface(f"{owner}.ceiling","ceiling",owner,(x,y,z+storey_height),(0,0,-1),(1,0,0),(0,1,0),(r.width/2,r.depth/2)),
@@ -48,8 +93,10 @@ def _room_shell(room:SpacePlan,portal:PortalPlan,elevation:float,storey_height:f
         "south":((x,r.y,z+storey_height/2),(0,1,0),(1,0,0),(max(.1,r.width/2-.2),storey_height/2)),
         "west":((r.x,y,z+storey_height/2),(1,0,0),(0,1,0),(max(.1,r.depth/2-.2),storey_height/2)),
     }
-    opposite={"east":"west","west":"east","north":"south","south":"north"}[portal_side]
-    ordered=[opposite,{"east":"west","west":"east","north":"south","south":"north"}[opposite]]+[s for s in ("north","south","east","west") if s not in {opposite,portal_side}]
+    # Phase 4's parallel-bed pattern targets the first wall deterministically.
+    # Keep the same world-facing wall on mirrored rooms: the curated bed's
+    # interaction clearance is not proven mirror-symmetric in model space.
+    ordered=["west","east","north","south"]
     for index,side in enumerate(ordered,1):
         origin,normal,u_axis,half=wall_specs[side];sid=f"{owner}.wall_{index}_{side}"
         surfaces[sid]=SupportSurface(sid,"wall",owner,origin,normal,u_axis,(0,0,1),half)
@@ -80,51 +127,62 @@ class BuildingGenerator:
 
     def _shell_operations(self,layout:BuildingLayout)->tuple[list[dict[str,Any]],list[dict[str,Any]]]:
         operations=[];warnings=[];structure=self.profile["structure"];floor_w,floor_d=structure["floorModule"]
-        # One floor grid per storey plus a roof grid. The modules are never scaled.
-        levels=[(f.id,f.elevation) for f in layout.floors]+[("roof",layout.floors[-1].elevation+self.profile["storeyHeight"])]
+        # Pick the unscaled panel orientation with the smallest boundary error,
+        # then keep native pitch. This removes the previous coplanar floor overlap.
         outer=layout.floors[0].footprint
+        floor_candidates=[]
+        for yaw,mw,md in ((0,floor_w,floor_d),(90,floor_d,floor_w)):
+            nx=max(1,round(outer.width/mw));ny=max(1,round(outer.depth/md))
+            floor_candidates.append((max(abs(nx*mw-outer.width),abs(ny*md-outer.depth)),yaw,mw,md,nx,ny))
+        edge_error,floor_yaw,mw,md,nx,ny=min(floor_candidates)
+        if edge_error>.15:raise ValueError(f"FLOOR_GRID_UNTILABLE edgeError={edge_error:.3f}")
+        levels=[(f.id,f.elevation) for f in layout.floors]+[("roof",layout.floors[-1].elevation+self.profile["storeyHeight"])]
+        grid_x0=outer.center[0]-nx*mw/2+mw/2;grid_y0=outer.center[1]-ny*md/2+md/2
         for level_id,z in levels:
             opening=next((v.occupied_region for f in layout.floors for v in f.vertical_connections if v.to_floor==level_id),None)
-            nx=max(1,math.ceil(outer.width/floor_w));ny=max(1,math.ceil(outer.depth/floor_d))
-            pitch_x=0 if nx==1 else (outer.width-floor_w)/(nx-1)
-            pitch_y=0 if ny==1 else (outer.depth-floor_d)/(ny-1)
-            overlap_x=max(0,nx*floor_w-outer.width);overlap_y=max(0,ny*floor_d-outer.depth)
-            if overlap_x>.1 or overlap_y>.1:warnings.append({"code":"STRUCTURAL_CONTACT_APPROXIMATE","owner":level_id,
-                "moduleOverlap":[round(overlap_x,3),round(overlap_y,3)],"uncoveredBorder":[0,0]})
             for ix in range(nx):
                 for iy in range(ny):
-                    cx=outer.x+floor_w/2+ix*pitch_x;cy=outer.y+floor_d/2+iy*pitch_y
+                    cx=grid_x0+ix*mw;cy=grid_y0+iy*md
                     if opening and opening.contains(cx,cy):
                         warnings.append({"code":"STAIRWELL_OPENING_APPROXIMATE","owner":level_id,"moduleGridIndex":[ix,iy]})
                         continue
                     sid=f"building_001__{level_id}__floor_module_{ix*ny+iy+1:03d}"
                     operations.append({"operation":"create","arguments":{"semanticId":sid,"class":structure["floorAsset"],
-                        "position":[cx,cy,z-.0922552],
-                        "rotation":[0,0,0],"scale":1,"parentId":level_id},"stage":"floors"})
+                        "position":[cx,cy,z-.0922552],"rotation":[0,0,floor_yaw],"scale":1,"parentId":level_id},"stage":"floors"})
+        modules=structure["wallModules"];max_adjustment=structure["maxWallJointAdjustment"]
         for floor in layout.floors:
-            portal_by_wall={p.wall_segment:p for p in floor.portals}
-            for wall in floor.walls:
-                portal=portal_by_wall.get(wall.id);horizontal=abs(wall.start[1]-wall.end[1])<1e-6
-                length=wall.length;module=structure["wallModuleLength"];runs=[]
+            portals={p.wall_segment:p for p in floor.portals}
+            for run_index,run in enumerate(_physical_wall_runs(floor),1):
+                associated=[portals[w.id] for w in run["walls"] if w.id in portals]
+                if len(associated)>1:raise ValueError("MULTIPLE_PORTALS_ON_PHYSICAL_WALL_RUN")
+                portal=associated[0] if associated else None;length=run["end"]-run["start"]
+                intervals=[(run["start"],run["end"])]
                 if portal:
-                    along=portal.center[0] if horizontal else portal.center[1];start=wall.start[0] if horizontal else wall.start[1]
-                    cut0=along-portal.width/2-start;cut1=along+portal.width/2-start;runs=[(0,max(0,cut0)),(min(length,cut1),length)]
-                else:runs=[(0,length)]
+                    along=portal.center[0] if run["axis"]=="H" else portal.center[1]
+                    half=structure["doorClearWidth"]/2
+                    intervals=[(run["start"],along-half),(along+half,run["end"])]
                 module_index=0
-                for run0,run1 in runs:
-                    run=run1-run0
-                    if run<=.25:continue
-                    count=max(1,round(run/module));pitch=0 if count==1 else (run-module)/(count-1)
-                    mismatch=abs(count*module-run)
-                    if mismatch>.15:warnings.append({"code":"WALL_MODULE_CONTACT_APPROXIMATE","wallSegment":wall.id,
-                        "runLength":round(run,3),"moduleCount":count,"aggregateMismatch":round(count*module-run,3)})
-                    for i in range(count):
-                        module_index+=1;t=run0+run/2 if count==1 else run0+module/2+i*pitch
-                        x=wall.start[0]+(t if horizontal else 0);y=wall.start[1]+(0 if horizontal else t)
-                        sid=_gateway_id(f"building_001__{wall.id}__module_{module_index:03d}");yaw=0 if horizontal else 90
-                        operations.append({"operation":"create","arguments":{"semanticId":sid,"class":structure["wallAsset"],
-                            "position":[x,y,floor.elevation+(self.profile["storeyHeight"]-structure["wallModuleHeight"])/2+structure["wallModuleHeight"]/2],"rotation":[0,0,yaw],"scale":1,
-                            "parentId":_gateway_id(wall.id)},"stage":"walls"})
+                for interval_index,(start,end) in enumerate(intervals):
+                    span=end-start
+                    if span<=.25:continue
+                    chosen,seam=_fit_wall_modules(span,modules,max_adjustment,
+                        floor.index*31+run_index*7+interval_index)
+                    cursor=start
+                    for item_index,item in enumerate(chosen):
+                        module_index+=1;center=cursor+item["length"]/2
+                        asset=item["asset"]
+                        if run["exterior"] and not portal and item["length"]==6.0 and structure.get("windowModules"):
+                            windows=structure["windowModules"];asset=windows[(floor.index+run_index+item_index)%len(windows)]["asset"]
+                        x=center if run["axis"]=="H" else run["fixed"]
+                        y=run["fixed"] if run["axis"]=="H" else center
+                        run_id=f"{floor.id}.physical_wall_{run_index:03d}"
+                        sid=_gateway_id(f"building_001__{run_id}__module_{module_index:03d}")
+                        operations.append({"operation":"create","arguments":{"semanticId":sid,"class":asset,
+                            # GOLib's structure placement frame is floor-based;
+                            # applying the raw model AABB minZ here lifts walls twice.
+                            "position":[x,y,floor.elevation+item.get("positionZOffset",0)],"rotation":[0,0,0 if run["axis"]=="H" else 90],"scale":1,
+                            "parentId":_gateway_id(run_id)},"stage":"walls"})
+                        cursor+=item["length"]+seam
             for portal in floor.portals:
                 horizontal=abs(next(w for w in floor.walls if w.id==portal.wall_segment).start[1]-next(w for w in floor.walls if w.id==portal.wall_segment).end[1])<1e-6
                 operations.append({"operation":"create","arguments":{"semanticId":f"building_001__{portal.id}","class":portal.door_asset,
@@ -165,7 +223,9 @@ class BuildingGenerator:
         if layout.feasibility=="INFEASIBLE":return self._fail(result,BuildingStatus.INFEASIBLE,"BUILDING_INFEASIBLE",{"diagnostics":layout.diagnostics})
         access=self.accessibility.validate(layout,plan)
         if access:return self._fail(result,BuildingStatus.VALIDATION_FAILED,"BUILDING_ACCESSIBILITY_FAILED",{"diagnostics":access})
-        shell_ops,shell_warnings=self._shell_operations(layout);result.shell_operations=shell_ops;result.diagnostics.extend(shell_warnings)
+        try:shell_ops,shell_warnings=self._shell_operations(layout)
+        except ValueError as exc:return self._fail(result,BuildingStatus.VALIDATION_FAILED,"BUILDING_SHELL_INVALID",{"message":str(exc)})
+        result.shell_operations=shell_ops;result.diagnostics.extend(shell_warnings)
         if options.mode=="layout-only":
             result.status=BuildingStatus.SUCCESS;result.metrics["totalGenerationLatencyMs"]=self._ms()-started;return self._save(result)
         furnishing=[];room_started=time.perf_counter();room_backtracks=0
@@ -232,9 +292,15 @@ class BuildingGenerator:
                     poses.extend([("floor_002",[x+footprint.width,y-footprint.depth,upper+dz+10],[x,y,upper+dz+1]),
                         ("stairs",[x,y+footprint.depth,z+dz+4],[x,y,z+dz+2])])
                 for name,pos,target in poses:
-                    captured=self.gateway.capture(revision,[{"viewId":name,"cameraRole":name,"positionASL":pos,
-                        "targetASL":target,"fov":.9,"captureClassOverlay":name=="representative_room"}])
-                    result.screenshots.append({"viewId":name,"revision":revision,"artifact":captured["result"][0]})
+                    try:
+                        captured=self.gateway.capture(revision,[{"viewId":name,"cameraRole":name,"positionASL":pos,
+                            "targetASL":target,"fov":.9,"captureClassOverlay":name=="representative_room"}])
+                        result.screenshots.append({"viewId":name,"revision":revision,"artifact":captured["result"][0]})
+                    except TransportError as exc:
+                        # Capture is a post-commit review aid.  A transient OS
+                        # screenshot failure must not roll back a structurally
+                        # valid building or masquerade as an Eden apply failure.
+                        result.diagnostics.append({"code":"BUILDING_CAPTURE_FAILED","viewId":name,"message":str(exc)})
             final=self.gateway.inspect(revision);result.transaction["sceneFingerprintAfter"]=_fingerprint(final["result"])
             result.status=BuildingStatus.SUCCESS
             if not options.keep_result:self.cleanup(result)

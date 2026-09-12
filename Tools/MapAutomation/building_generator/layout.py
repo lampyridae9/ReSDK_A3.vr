@@ -146,7 +146,12 @@ class BuildingLayoutSolver:
             stair_depth=self.profile["structure"]["stairFootprint"][1] if brief["floors"]>1 else 0
             landing_depth=self.profile["structure"].get("stairLandingDepth",0) if brief["floors"]>1 else 0
             longitudinal=fp.depth if axis=="Y" else fp.width
-            free_center=max(portal_width/2+.2,(longitudinal-stair_depth-landing_depth)/2)
+            # Keep bedroom doors in a clean service bay before the stair landing.
+            # The old midpoint formula pushed openings against the wall end, which
+            # left sub-metre fragments that no real wall module could fill.
+            free_length=longitudinal-stair_depth-landing_depth if brief["floors"]>1 else longitudinal
+            free_center=min(2.25,free_length-portal_width/2-.02)
+            free_center=max(portal_width/2+.02,free_center)
             for room in [s for s in spaces if s.kind=="bedroom"]:
                 if axis=="Y":
                     along=min(max(y0+free_center,room.rect.y+portal_width/2+.1),room.rect.y2-portal_width/2-.1)

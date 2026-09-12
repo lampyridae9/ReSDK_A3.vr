@@ -177,7 +177,7 @@
       "count": 161,
       "maps": 6,
       "chunkType": "STRUCTURE",
-      "model": "a3\\structures_f\\system\\cluttercutter_small_f.p3d",
+      "model": "a3\\structures_f_bootcamp\\vr\\blocks\\vr_block_02_f.p3d",
       "category": "unclassified"
     },
     {
@@ -2418,7 +2418,7 @@
       "count": 17,
       "maps": 5,
       "chunkType": "STRUCTURE",
-      "model": null,
+      "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
       "category": "unclassified"
     },
     {
@@ -4074,7 +4074,7 @@
       "count": 8,
       "maps": 3,
       "chunkType": "STRUCTURE",
-      "model": null,
+      "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
       "category": "unclassified"
     },
     {
@@ -9155,7 +9155,7 @@
         "count": 161,
         "maps": 6,
         "chunkType": "STRUCTURE",
-        "model": "a3\\structures_f\\system\\cluttercutter_small_f.p3d",
+        "model": "a3\\structures_f_bootcamp\\vr\\blocks\\vr_block_02_f.p3d",
         "category": "unclassified"
       },
       {
@@ -10676,7 +10676,7 @@
         "count": 17,
         "maps": 5,
         "chunkType": "STRUCTURE",
-        "model": null,
+        "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
         "category": "unclassified"
       },
       {
@@ -11756,7 +11756,7 @@
         "count": 8,
         "maps": 3,
         "chunkType": "STRUCTURE",
-        "model": null,
+        "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
         "category": "unclassified"
       },
       {
@@ -19152,7 +19152,7 @@
       "count": 161,
       "maps": 6,
       "chunkType": "STRUCTURE",
-      "model": "a3\\structures_f\\system\\cluttercutter_small_f.p3d",
+      "model": "a3\\structures_f_bootcamp\\vr\\blocks\\vr_block_02_f.p3d",
       "category": "unclassified"
     },
     {
@@ -20178,7 +20178,7 @@
       "count": 17,
       "maps": 5,
       "chunkType": "STRUCTURE",
-      "model": null,
+      "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
       "category": "unclassified"
     },
     {
@@ -22320,7 +22320,7 @@
       "count": 8,
       "maps": 3,
       "chunkType": "STRUCTURE",
-      "model": null,
+      "model": "a3\\structures_f_bootcamp\\vr\\helpers\\vr_3dselector_01_f.p3d",
       "category": "unclassified"
     },
     {

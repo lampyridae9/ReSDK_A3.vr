@@ -4,10 +4,7 @@
   "liveGameObjectClasses": 2305,
   "editorPlaceableClasses": 2182,
   "sourceOnly": [],
-  "liveOnly": [
-    "5mm_ammo",
-    "9vbattery"
-  ],
+  "liveOnly": [],
   "coreProbed": 41,
   "coreExpected": 41,
   "m2cComparisonCounts": {
