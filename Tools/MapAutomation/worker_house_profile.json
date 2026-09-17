@@ -5,6 +5,7 @@
   "storeyHeight": 3.305,
   "wallHeight": 3.0,
   "wallThickness": 0.3,
+  "furnitureWallClearance": 0.3,
   "corridorWidth": 7.52152,
   "portalWidth": 1.5645600000000002,
   "portalApproachDepth": 0.8,

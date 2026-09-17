@@ -15,6 +15,9 @@ load("CommonGameAspects.sqf");
 
 load("GMTemplate\GM_Template.sqf");
 	load("GMTemplate\GM_Template_Roles.sqf");
+#ifdef EDITOR
+load("GMTemplate\GM_MapAutomationProbe.sqf");
+#endif
 
 load("Detective\GM_Detective.sqf");
 	load("Detective\DetectiveModeRoles.sqf");

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import time
 import uuid
+from dataclasses import replace
 from typing import Any
 
 from planner import PlannerInput, PlannerStatus
@@ -187,7 +188,24 @@ class RoomGenerator:
         self._transition(result,GenerationLifecycle.RESOLVING)
         feasibility=self.pipeline.feasibility(plan,shell.scene);result.metrics["feasibility"]=feasibility
         if feasibility=="INFEASIBLE":return self._fail(result,GenerationStatus.INFEASIBLE,"PATTERN_INFEASIBLE",{"stage":"preflight"})
-        self._transition(result,GenerationLifecycle.PLACING);placements=self._place(plan,shell,options,result)
+        self._transition(result,GenerationLifecycle.PLACING)
+        # Try each declared pattern at most once, sharing the original search budget.
+        strategies=[plan.strategy]+[s for s in self.pipeline.select_pattern(brief).strategies if s!=plan.strategy]
+        deadline=time.perf_counter()+options.search_timeout_ms/1000
+        attempts=[];nodes=0;backtracks=0;placements=None
+        for strategy in strategies:
+            remaining=int((deadline-time.perf_counter())*1000)
+            if remaining<1 or nodes>=options.max_search_nodes or backtracks>options.max_backtracks:break
+            plan=self.pipeline.create_plan(brief,shell.scene,room_id=room_id,slot_namespace=slot_namespace,strategy=strategy)
+            result.placement_intents=[];result.dropped_optional=[];result.resolved_assets=[]
+            placements=self._place(plan,shell,replace(options,search_timeout_ms=remaining,
+                max_search_nodes=options.max_search_nodes-nodes,max_backtracks=options.max_backtracks-backtracks),result)
+            attempt={"strategy":strategy,"status":"SUCCESS" if placements is not None else "INFEASIBLE",
+                "searchNodes":result.metrics.get("searchNodes",0),"backtracks":result.metrics.get("backtracks",0)}
+            attempts.append(attempt);nodes+=attempt["searchNodes"];backtracks+=attempt["backtracks"]
+            if placements is not None:break
+        result.metrics.update({"strategyAttempts":attempts,"searchNodes":nodes,"backtracks":backtracks})
+        result.reproducibility["selectedStrategy"]=plan.strategy
         result.room_plan=plan.json()
         if placements is None:
             code="SEARCH_BUDGET_EXHAUSTED" if result.metrics.get("searchBudgetExhausted") else "REQUIRED_PLACEMENT_INFEASIBLE"

@@ -407,7 +407,13 @@ function(ma_launchRuntimeProbe)
     };
     private _buildPath = mm_folderSaveMaps + "/" + ma_mapName + mm_internal_defaultMapExt;
     if !([_buildPath,false] call file_exists) exitWith {["FAIL",[],["BUILD_ARTIFACT_MISSING"]] call ma_response};
-    [] spawn {uiSleep 0.75; [[],[]] call sim_internal_processLaunchSim;};
+    [] spawn {
+        uiSleep 0.75;
+        [["autoGamemode","startGame"],[
+            ["startGamemodeName","GMMapAutomationProbe"],
+            ["startRoleName","RMapAutomationProbe"]
+        ]] call sim_internal_processLaunchSim;
+    };
     ["OK",createHashMapFromArray [["launchScheduled",true],["buildPath",_buildPath]],
         ["RUNTIME_VISUAL_AND_TRAVERSAL_CONFIRMATION_REQUIRED"]] call ma_response
 }

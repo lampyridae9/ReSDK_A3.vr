@@ -27,6 +27,7 @@ def main()->None:
     modes=parser.add_mutually_exclusive_group();modes.add_argument("--plan-only",action="store_true");modes.add_argument("--layout-only",action="store_true")
     modes.add_argument("--dry-run",action="store_true");modes.add_argument("--live",action="store_true")
     parser.add_argument("--brief",type=Path,help="BuildingBrief or saved building artifact; skips LLM")
+    parser.add_argument("--profile",type=Path,help="calibrated building geometry profile")
     parser.add_argument("--origin",type=float,nargs=3,default=(4700,4700,10.134262),metavar=("X","Y","Z"))
     parser.add_argument("--width",type=float,default=12);parser.add_argument("--depth",type=float,default=10.05624);parser.add_argument("--max-floors",type=int,default=2)
     parser.add_argument("--seed",type=int);parser.add_argument("--shell-only",action="store_true")
@@ -51,7 +52,8 @@ def main()->None:
     if args.interactive and not args.live:parser.error('--interactive requires --live')
     def review(stage,result):
         input(f'{stage}: generation {result.generation_id} is kept in Eden. Enter to continue review...')
-    generator=BuildingGenerator(planner_service=planner_service,gateway=gateway,review_callback=review if args.interactive else None)
+    profile=json.loads(args.profile.read_text(encoding="utf-8")) if args.profile else None
+    generator=BuildingGenerator(planner_service=planner_service,gateway=gateway,profile=profile,review_callback=review if args.interactive else None)
     options=BuildingOptions(mode,args.seed,args.shell_only,True,args.keep or args.interactive,args.max_layout_candidates,
         args.max_partition_attempts,args.time_budget_ms)
     result=generator.generate(args.prompt or "replay saved worker dormitory brief",

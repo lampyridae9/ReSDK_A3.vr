@@ -215,13 +215,15 @@ class PatternPipeline:
         return sorted(matches, key=lambda p: p.id)[0]
 
     def create_plan(self, raw_brief: Any, scene: SceneState, *, room_id: str = "room_001",
-        slot_namespace: str | None = None) -> RoomPlan:
+        slot_namespace: str | None = None, strategy: str | None = None) -> RoomPlan:
         brief = validate_planner_brief(raw_brief); pattern = self.select_pattern(brief)
         if scene.entrance is None: raise ValueError("room context has no entrance")
         walls = sorted(k for k, v in scene.surfaces.items() if v.type == "wall")
         if not walls: raise ValueError("room context has no wall surfaces")
         digest = hashlib.sha256(f'{pattern.id}|{brief["seed"]}|{self.asset_resolver.phase3["catalogVersion"]}'.encode()).digest()
-        strategy = pattern.strategies[int.from_bytes(digest[:4], "big") % len(pattern.strategies)]
+        if strategy is not None and strategy not in pattern.strategies:
+            raise ValueError("unknown pattern strategy: "+strategy)
+        strategy = strategy or pattern.strategies[int.from_bytes(digest[:4], "big") % len(pattern.strategies)]
         slots = [
             SemanticSlot("entrance_001", "entrance", "required", 1, "virtual", (), tuple(brief["style"]), status="SATISFIED"),
             SemanticSlot("circulation_001", "circulation", "required", 1, "virtual", (), tuple(brief["style"]), status="SATISFIED"),

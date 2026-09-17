@@ -96,7 +96,7 @@ def _fit_wall_modules(length:float,modules:list[dict[str,Any]],max_adjustment:fl
     return chosen,seam
 
 
-def _room_shell(room:SpacePlan,portal:PortalPlan,elevation:float,storey_height:float)->ExistingRoomShell:
+def _room_shell(room:SpacePlan,portal:PortalPlan,elevation:float,storey_height:float,wall_clearance:float=0)->ExistingRoomShell:
     r=room.rect;x,y=r.center;z=elevation
     owner=room.id
     px,py=portal.center
@@ -108,6 +108,10 @@ def _room_shell(room:SpacePlan,portal:PortalPlan,elevation:float,storey_height:f
     elif abs(px-r.x2)<1e-6:entrance=(px-approach_inset,py);door_position=(px+.08,py,z);yaw=90;portal_side="east"
     elif abs(py-r.y)<1e-6:entrance=(px,py+approach_inset);door_position=(px,py-.08,z);yaw=0;portal_side="south"
     else:entrance=(px,py-approach_inset);door_position=(px,py+.08,z);yaw=0;portal_side="north"
+    # Reserve the full wall bearing width before solving furniture placement.
+    if wall_clearance:
+        r=Rect(r.x+wall_clearance,r.y+wall_clearance,r.width-2*wall_clearance,r.depth-2*wall_clearance)
+        x,y=r.center
     surfaces={
         f"{owner}.floor":SupportSurface(f"{owner}.floor","floor",owner,(x,y,z),(0,0,1),(1,0,0),(0,1,0),(r.width/2,r.depth/2)),
         f"{owner}.ceiling":SupportSurface(f"{owner}.ceiling","ceiling",owner,(x,y,z+storey_height),(0,0,-1),(1,0,0),(0,1,0),(r.width/2,r.depth/2)),
@@ -204,7 +208,7 @@ class BuildingGenerator:
                 if slot["type"]!="bedroom":continue
                 floor=next(x for x in layout.floors if x.id==slot["floorId"]);room=next(x for x in floor.spaces if x.id==slot["id"])
                 portal=next(x for x in floor.portals if x.to_space==room.id)
-                room_result=self.room_generator.generate_room("deterministic building bedroom",_room_shell(room,portal,floor.elevation,self.profile['ceilingOffset']),
+                room_result=self.room_generator.generate_room("deterministic building bedroom",_room_shell(room,portal,floor.elevation,self.profile['ceilingOffset'],self.profile.get('furnitureWallClearance',0)),
                     GenerationOptions("dry-run",slot["roomBrief"]["seed"],capture=False),planner_brief=slot["roomBrief"],room_id=room.id,slot_namespace=room.id)
                 result.room_generations.append({"roomId":room.id,"status":room_result.status.value,"roomPlan":room_result.room_plan,
                     "placements":room_result.placements,"droppedOptional":room_result.dropped_optional,"metrics":room_result.metrics,

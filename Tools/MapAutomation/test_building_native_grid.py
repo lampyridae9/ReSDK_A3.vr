@@ -8,6 +8,8 @@ from building_generator import BuildingFootprint,BuildingOptions,BuildingLayoutS
 from building_generator.structure import (StructuralAssembler,BuildingShellValidator,load_structural_assets,
     tile_native_floor,rotate,anchor_position,physical_bounds,FloorAssemblyValidator,FloorLevel)
 from building_generator.generator import validate_transform_readback
+from building_generator.generator import BuildingGenerator, _room_shell
+from room_generator import RoomGenerator, GenerationOptions
 from transport import TransportError
 
 BASE=Path(__file__).resolve().parent
@@ -25,6 +27,37 @@ def native_shell():
 
 
 class NativeGridTests(unittest.TestCase):
+    def test_bounded_strategy_fallback_preserves_seed_and_required_beds(self):
+        layout,_,_,_=native_shell();floor=layout.floors[1]
+        room=next(s for s in floor.spaces if s.kind=='bedroom')
+        portal=next(p for p in floor.portals if p.to_space==room.id)
+        brief=json.loads((BASE/'fixtures/poor_bedroom_two_workers.json').read_text())
+        brief['seed']=1236
+        result=RoomGenerator().generate_room('fallback regression',_room_shell(room,portal,floor.elevation,3),
+            GenerationOptions(seed=1236,capture=False),planner_brief=brief,room_id=room.id,slot_namespace=room.id)
+        self.assertEqual(result.status.value,'SUCCESS')
+        self.assertEqual([a['strategy'] for a in result.metrics['strategyAttempts']],['opposite_beds','parallel_beds'])
+        self.assertEqual(result.planner_brief['seed'],1236)
+        self.assertEqual(sum(p['asset']=='SingleWhiteBed' for p in result.placements),2)
+        self.assertLessEqual(result.metrics['searchNodes'],128)
+        self.assertTrue(result.metrics['navigationResult']['reachable'])
+
+    def test_furnished_worker_house_with_wall_bearing_clearance(self):
+        profile=json.loads((BASE/'worker_house_profile.json').read_text())
+        brief=json.loads((BASE/'fixtures/worker_house_recovery_2f.json').read_text())
+        result=BuildingGenerator(profile=profile).generate('recovery regression',
+            BuildingFootprint((5040,4700,10),12,12),BuildingOptions(),building_brief=brief)
+        self.assertEqual(result.status.value,'SUCCESS')
+        self.assertEqual(sum(p['asset']=='SingleWhiteBed' for r in result.room_generations for p in r['placements']),4)
+        self.assertEqual(sum(op['stage']=='guards' for op in result.shell_operations),5)
+        layout,_,_,_=native_shell()
+        for floor in layout.floors:
+            for room in (s for s in floor.spaces if s.kind=='bedroom'):
+                portal=next(p for p in floor.portals if p.to_space==room.id)
+                shell=_room_shell(room,portal,floor.elevation,3,.3)
+                self.assertAlmostEqual(min(x for x,y in shell.scene.region_polygon),room.rect.x+.3)
+                self.assertAlmostEqual(max(x for x,y in shell.scene.region_polygon),room.rect.x2-.3)
+
     def test_measured_euler_axes(self):
         expected=[[.719727,-.425781,.548295],[.604004,.773438,-.192630],[-.341797,.469727,.813798]]
         for point,target in zip(([1,0,0],[0,1,0],[0,0,1]),expected):
