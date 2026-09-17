@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import copy
+from dataclasses import replace
 import hashlib
 import json
 from pathlib import Path
@@ -39,8 +40,8 @@ def expand_building_plan(brief:dict[str,Any],profile:dict[str,Any]|None=None)->B
             slots.append(slot);graph.add_node(room_id,"room",floorId=floor_id,required=True,capacity=capacities[cursor])
             graph.add_edge(floor_id,room_id,"contains");cursor+=1
     if brief["requirements"]["storage"]:
-        slot={"id":"storage_001","type":"storage_room","floorId":"floor_001","required":False,"capacity":0,"roomBrief":None}
-        slots.append(slot);graph.add_node("storage_001","room",floorId="floor_001",required=False,roomType="storage_room")
+        slot={"id":"storage_001","type":"storage_room","floorId":"floor_001","required":True,"capacity":0,"roomBrief":None}
+        slots.append(slot);graph.add_node("storage_001","room",floorId="floor_001",required=True,roomType="storage_room")
         graph.add_edge("floor_001","storage_001","contains")
     return BuildingPlan(building_id,brief["buildingType"],tuple(brief["style"]),brief["seed"],profile["storeyHeight"],slots,graph,
         {"buildingPlanner":"building-planner-v1","buildingProfile":profile["id"],"layoutSolver":"building-layout-v1"})
@@ -88,6 +89,8 @@ class BuildingLayoutSolver:
         variants=[]
         digest=int.from_bytes(hashlib.sha256(f'{plan.seed}|{footprint.width}|{footprint.depth}'.encode()).digest()[:4],"big")
         axes=["Y","X"] if digest%2==0 else ["X","Y"]
+        if self.profile.get('layoutMode')=='one-sided-native-grid':
+            axes=['Y']
         for axis in axes:
             for mirror in ((digest//2)%2==0,(digest//2)%2!=0):variants.append((axis,mirror))
         limit=min(options.max_layout_candidates,options.max_partition_attempts,len(variants));last=[]
@@ -124,19 +127,20 @@ class BuildingLayoutSolver:
         for floor_index in range(brief["floors"]):
             floor_id=f"floor_{floor_index+1:03d}";corridor_id=f"corridor_{floor_index+1:03d}"
             slots=[x for x in plan.room_slots if x["floorId"]==floor_id]
-            if axis=="Y":corridor=Rect(x0+(fp.width-corridor_width)/2,y0,corridor_width,fp.depth)
+            one_sided=self.profile.get('layoutMode')=='one-sided-native-grid'
+            if axis=="Y":corridor=Rect(x0+(fp.width-corridor_width)/(1 if one_sided else 2),y0,corridor_width,fp.depth)
             else:corridor=Rect(x0,y0+(fp.depth-corridor_width)/2,fp.width,corridor_width)
             spaces=[SpacePlan(corridor_id,"corridor",floor_id,True,0,corridor)]
             # Alternate slots across the corridor.  This keeps required bedroom
             # doors near the entrance end when an optional room subdivides one
             # side, leaving the far end available for the stair core.
-            groups=[slots[::2],slots[1::2]]
-            if mirror:groups.reverse()
+            groups=[slots,[]] if one_sided else [slots[::2],slots[1::2]]
+            if mirror and not one_sided:groups.reverse()
             for side,group in enumerate(groups):
                 if not group:continue
                 for pos,slot in enumerate(group):
                     if axis=="Y":
-                        width=(fp.width-corridor_width)/2;depth=fp.depth/len(group)
+                        width=(fp.width-corridor_width)/(1 if one_sided else 2);depth=fp.depth/len(group)
                         rect=Rect(x0 if side==0 else corridor.x2,y0+pos*depth,width,depth)
                     else:
                         width=fp.width/len(group);depth=(fp.depth-corridor_width)/2
@@ -152,9 +156,9 @@ class BuildingLayoutSolver:
             free_length=longitudinal-stair_depth-landing_depth if brief["floors"]>1 else longitudinal
             free_center=min(2.25,free_length-portal_width/2-.02)
             free_center=max(portal_width/2+.02,free_center)
-            for room in [s for s in spaces if s.kind=="bedroom"]:
+            for room in [s for s in spaces if s.kind in {"bedroom","storage_room"}]:
                 if axis=="Y":
-                    along=min(max(y0+free_center,room.rect.y+portal_width/2+.1),room.rect.y2-portal_width/2-.1)
+                    along=room.rect.y+self.profile['portalModuleOffset'] if one_sided else min(max(y0+free_center,room.rect.y+portal_width/2+.1),room.rect.y2-portal_width/2-.1)
                     center=(corridor.x if room.rect.x<corridor.x else corridor.x2,along)
                 else:
                     along=min(max(x0+free_center,room.rect.x+portal_width/2+.1),room.rect.x2-portal_width/2-.1)
@@ -165,6 +169,7 @@ class BuildingLayoutSolver:
                 graph.add_edge(corridor_id,room.id,"connectedByDoor",portalId=portal.id);graph.add_edge(room.id,corridor_id,"accessibleFrom",portalId=portal.id)
             if floor_index==0:
                 center=(corridor.center[0],y0) if axis=="Y" else (x0,corridor.center[1])
+                if one_sided:center=(corridor.x+self.profile['portalModuleOffset'],y0)
                 wall=_wall_for(walls,corridor_id,"EXTERIOR",center,True);portal_counter+=1
                 entrance=PortalPlan(f"portal_{portal_counter:03d}",floor_id,"EXTERIOR",corridor_id,wall.id,center,portal_width,door,True)
                 portals.append(entrance);graph.add_node(entrance.id,"portal",floorId=floor_id,role="entrance")
@@ -182,9 +187,34 @@ class BuildingLayoutSolver:
             vertical=VerticalConnectionPlan("stairs_001","stairs",floors[0].id,floors[1].id,occupied,landing,landing,
                 structure["stairAsset"],self.profile["portalApproachDepth"],yaw,
                 structure.get("stairModelOriginZOffset",0),structure.get("stairVerification","APPROXIMATE"))
+            if structure.get('stairCoreLocal'):
+                cx,cy=structure['stairCoreLocal'];cx+=fp.origin[0];cy+=fp.origin[1]
+                occupied=Rect(cx-sw/2,cy-sd/2,sw,sd)
+                ow,od=structure['stairOpeningSize']
+                vertical=VerticalConnectionPlan('stairs_001','stairs',floors[0].id,floors[1].id,
+                    occupied,Rect(cx-1.5,cy-1.8,1,.9),Rect(cx-1,cy-3.5,2,2),
+                    structure['stairAsset'],self.profile['portalApproachDepth'],0,
+                    structure.get('stairModelOriginZOffset',0),structure['stairVerification'],
+                    Rect(cx-ow/2,cy-od/2,ow,od))
             floors[0].vertical_connections.append(vertical);floors[1].vertical_connections.append(vertical)
             graph.add_node(vertical.id,"vertical_connection",verification=vertical.verification)
             graph.add_edge(floors[0].spaces[0].id,floors[1].spaces[0].id,"verticalConnection",connectionId=vertical.id)
+        inset=self.profile.get('exteriorWallInset',0)
+        if inset:
+            for floor in floors:
+                shifts={}
+                for i,wall in enumerate(floor.walls):
+                    if not wall.exterior:continue
+                    horizontal=abs(wall.start[1]-wall.end[1])<1e-6
+                    axis=1 if horizontal else 0
+                    center=fp.origin[axis]
+                    delta=inset if wall.start[axis]<center else -inset
+                    start=list(wall.start);end=list(wall.end);start[axis]+=delta;end[axis]+=delta
+                    floor.walls[i]=replace(wall,start=tuple(start),end=tuple(end));shifts[wall.id]=(axis,delta)
+                for i,portal in enumerate(floor.portals):
+                    if portal.wall_segment in shifts:
+                        axis,delta=shifts[portal.wall_segment];center=list(portal.center);center[axis]+=delta
+                        floor.portals[i]=replace(portal,center=tuple(center))
         return floors,graph
 
     def _hard_validate(self,floors:list[FloorPlan],fp:BuildingFootprint)->list[dict[str,Any]]:

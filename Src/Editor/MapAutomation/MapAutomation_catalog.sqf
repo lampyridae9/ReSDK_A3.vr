@@ -73,6 +73,15 @@ function(ma_probeGeometry)
     params ["_args"];
     if (!(call ma_isProbe) || {ma_busy} || {ma_stopped}) exitWith {["FAIL",[],["NOT_READY_PROBE"]] call ma_response};
     private _class = _args getOrDefault ["classname",""];
+    // Data-only, bounded model-space rays. No client code or scene mutation.
+    private _rays = _args getOrDefault ["surfaceRays",[]];
+    if !(_rays isEqualType [] && {count _rays <= 256}) exitWith {["FAIL",[],["INVALID_SURFACE_RAYS"]] call ma_response};
+    private _badRay = _rays findIf {
+        !(_x isEqualType [] && {count _x == 3} && {(_x select 2) in ["GEOM","VIEW","ROADWAY"]} && {
+            ((_x select [0,2]) findIf {!(_x isEqualType [] && {count _x == 3} && {(_x findIf {!(_x isEqualType 0) || {!finite _x} || {abs _x > 100}}) == -1})}) == -1
+        })
+    };
+    if (_badRay != -1) exitWith {["FAIL",[],["INVALID_SURFACE_RAY",_badRay]] call ma_response};
     if !(_class isEqualType "" && {_class in (call ma_catalogClasses)}) exitWith {["FAIL",[],["UNKNOWN_CLASS"]] call ma_response};
     private _profile = [_class] call ma_catalogProfile;
     if (!(_profile get "editorPlaceable") || {_profile get "effectClass"}) exitWith {["FAIL",[],["NOT_STATIC_PLACEABLE_MODEL"]] call ma_response};
@@ -117,6 +126,19 @@ function(ma_probeGeometry)
                 ["interpretation","This engine rejects Roadway as a selectionNames LOD enum; absence is not asserted"]
             ]];
             _result set ["lodEvidence",_lodEvidence];
+            private _surfaceSamples = [];
+            {
+                _x params ["_start","_end","_lod"];
+                private _hits = lineIntersectsSurfaces [_obj modelToWorldWorld _start,_obj modelToWorldWorld _end,objNull,objNull,true,8,_lod,"NONE",false];
+                _hits = _hits select {(_x select 2) isEqualTo _obj || {(_x select 3) isEqualTo _obj}};
+                _surfaceSamples pushBack (createHashMapFromArray [
+                    ["ray",_x],["hits",_hits apply {createHashMapFromArray [
+                        ["positionModel",(_x select 0) vectorDiff (_obj modelToWorldWorld [0,0,0])],
+                        ["normal",_x select 1],["selections",_x select 4]
+                    ]}]
+                ]);
+            } forEach _rays;
+            _result set ["surfaceSamples",_surfaceSamples];
             true
         }
     };

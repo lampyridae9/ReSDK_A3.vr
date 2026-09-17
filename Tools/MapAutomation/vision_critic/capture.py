@@ -39,7 +39,7 @@ def render_semantic_overlay(clean_path:str,overlay_path:str,generation:dict[str,
         image=source.convert("RGB");draw=ImageDraw.Draw(image);width,height=image.size
         try:font=ImageFont.truetype("arial.ttf",max(18,height//45))
         except OSError:font=ImageFont.load_default()
-        focal=height/(2*math.tan(float(pose.get("fov",.8))/2));points={}
+        focal=height/(2*math.tan(float(pose.get("fov",.8))/2));points={};label_boxes=[]
         for row in generation.get("placements",[]):
             position=(row.get("transform") or {}).get("position")
             if not position:continue
@@ -47,15 +47,18 @@ def render_semantic_overlay(clean_path:str,overlay_path:str,generation:dict[str,
             if depth<=.1:continue
             sx=width/2+dot(delta,right)*focal/depth;sy=height/2-dot(delta,up)*focal/depth
             if not (-80<=sx<=width+80 and -80<=sy<=height+80):continue
-            points[row["id"]]=(sx,sy);label=f'{row["id"]} · {row.get("asset","")}'
+            label=row['id'] if generation.get('semanticOnly') else f'{row["id"]} · {row.get("asset","")}'
             box=draw.textbbox((sx+13,sy-15),label,font=font,stroke_width=2)
+            if generation.get('avoidLabelOverlap') and any(box[0]<b[2]+10 and box[2]>b[0]-10 and box[1]<b[3]+10 and box[3]>b[1]-10 for b in label_boxes):continue
+            label_boxes.append(box);points[row["id"]]=(sx,sy)
             draw.rectangle((box[0]-5,box[1]-3,box[2]+5,box[3]+3),fill=(10,10,10),outline=(255,210,0),width=2)
             draw.ellipse((sx-7,sy-7,sx+7,sy+7),fill=(255,210,0),outline=(0,0,0),width=2)
             draw.text((sx+13,sy-15),label,font=font,fill=(255,255,255),stroke_width=1,stroke_fill=(0,0,0))
         chair=points.get("seating_001");table=points.get("work_surface_001")
         if chair and table:draw.line((chair[0],chair[1],table[0],table[1]),fill=(255,70,210),width=4)
         draw.rectangle((12,12,505,48),fill=(10,10,10),outline=(255,210,0),width=2)
-        draw.text((22,17),"SEMANTIC CLASS OVERLAY · generated objects",font=font,fill=(255,255,255))
+        title='BUILDING STRUCTURE · semantic IDs' if generation.get('semanticOnly') else 'SEMANTIC CLASS OVERLAY · generated objects'
+        draw.text((22,17),title,font=font,fill=(255,255,255))
         image.save(overlay_path,"PNG")
 
 

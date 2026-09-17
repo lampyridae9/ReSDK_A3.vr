@@ -53,8 +53,10 @@ class MapAutomationRoomGateway:
     def capture(self, revision: int, views: list[dict[str,Any]]) -> dict[str,Any]:
         response=self._send("captureViews",revision,{"views":views});self._ok("captureViews",response);return response
 
-    def probe_geometry(self, revision: int, classname: str) -> dict[str,Any]:
-        response=self._send("probeGeometry",revision,{"classname":classname});self._ok("probeGeometry",response);return response
+    def probe_geometry(self, revision: int, classname: str, surface_rays=None) -> dict[str,Any]:
+        arguments={"classname":classname}
+        if surface_rays is not None: arguments["surfaceRays"]=surface_rays
+        response=self._send("probeGeometry",revision,arguments);self._ok("probeGeometry",response);return response
 
     def build_probe(self, revision: int) -> dict[str,Any]:
         response=self._send("buildProbe",revision);self._ok("buildProbe",response);return response

@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "id": "poor-worker-dormitory-recovery-v3",
-  "provenance": "EDEN_MEASURED_ENVELOPE; shell assembly and runtime acceptance required",
-  "storeyHeight": 3.1845104,
+  "id": "worker-house-native-grid-v1",
+  "provenance": "Native Eden anchors and measured lintel pose; acceptance pending",
+  "storeyHeight": 3.305,
   "wallHeight": 3.0,
   "wallThickness": 0.3,
-  "corridorWidth": 3.2,
-  "portalWidth": 1.55,
+  "corridorWidth": 7.52152,
+  "portalWidth": 1.5645600000000002,
   "portalApproachDepth": 0.8,
   "roomTypes": {
     "bedroom": {
@@ -25,16 +25,16 @@
     }
   },
   "structure": {
-    "floorAsset": "ConcretePanel",
+    "floorAsset": "MediumConcreteFloor",
     "floorModule": [
-      2.03604,
-      4.01182
+      3,
+      6
     ],
     "wallAsset": "BrickThinWall",
     "wallModuleLength": 6.0,
     "wallModuleHeight": 3.0,
     "maxWallJointAdjustment": 0.05,
-    "doorClearWidth": 1.55,
+    "doorClearWidth": 1.5645600000000002,
     "wallModules": [
       {
         "asset": "BrickThinWall",
@@ -131,7 +131,7 @@
     "doorWidth": 1.461102,
     "doorMinZ": -1.11276,
     "stairAsset": "StoneBigLadderDouble",
-    "stairGeneratorAllowed": false,
+    "stairGeneratorAllowed": true,
     "stairFootprint": [
       3.1,
       6.00222
@@ -139,13 +139,28 @@
     "stairModelOriginZOffset": 2.999999999997449e-05,
     "stairLandingDepth": 1.0,
     "stairEvidence": "13 map instances; live visual/Geometry AABB 3.1 x 6.00222 x 3.3; U-shaped double flight with integrated platforms; scene-preserving three-view review",
-    "stairVerification": "EDEN_MEASURED_ENVELOPE; landing surfaces and profile rise compatibility unverified"
+    "stairVerification": "ROADWAY_SAMPLED; runtime traversal pending",
+    "lintelAsset": "ConcreteSmallPole",
+    "mixedFloorOrientations": true,
+    "stairCoreLocal": [
+      1.5,
+      0
+    ],
+    "stairOpeningSize": [
+      3,
+      6
+    ],
+    "stairGuardAsset": "SteelThinWallSmall"
   },
   "search": {
     "maxLayoutCandidates": 4,
     "maxPartitionAttempts": 4,
     "timeBudgetMs": 1000
   },
-  "floorThickness": 0.1845104,
-  "ceilingOffset": 3.0
+  "floorThickness": 0.305,
+  "ceilingOffset": 3,
+  "layoutMode": "one-sided-native-grid",
+  "contactTolerance": 0.025,
+  "portalModuleOffset": 2.2607600000000003,
+  "exteriorWallInset": 0.15
 }

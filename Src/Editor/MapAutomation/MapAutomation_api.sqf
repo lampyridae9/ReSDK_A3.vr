@@ -66,6 +66,12 @@ function(ma_readObject)
         ["identity",+(_hd get "__ai")],["class",_hd get "class"],
         ["position",_o call golib_om_getPosition],["positionASL",getPosASL _o],["rotation",_o call golib_om_getRotation],
         ["vectorDir",vectorDir _o],["vectorUp",vectorUp _o],
+        // Structural audit: keep model origin distinct from Eden placing point.
+        ["modelOriginASL",_o modelToWorldWorld [0,0,0]],
+        ["modelAxesWorld",[[1,0,0],[0,1,0],[0,0,1]] apply {(_o modelToWorldWorld _x) vectorDiff (_o modelToWorldWorld [0,0,0])}],
+        ["placingPointModel",(getModelInfo _o) select 3],
+        ["visualBoundsModel",boundingBoxReal _o],
+        ["geometryBoundsModel",boundingBoxReal [_o,"Geometry"]],
         ["scale",getObjectScale _o],["customProps",_keys apply {[_x,_props get _x]}],
         ["edenId",get3DENEntityID _o],["rawInit",(_o get3DENAttribute "init") select 0]
     ]

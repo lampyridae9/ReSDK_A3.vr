@@ -116,13 +116,15 @@ class VerticalConnectionPlan:
     yaw: float=0
     model_origin_z_offset: float=0
     verification: str="APPROXIMATE"
+    opening_region: Rect|None=None
 
     def json(self)->dict[str,Any]:
         return {"id":self.id,"type":self.type,"fromFloor":self.from_floor,"toFloor":self.to_floor,
             "occupiedRegion":self.occupied_region.json(),
             "entryRegionLower":self.entry_region_lower.json(),"entryRegionUpper":self.entry_region_upper.json(),
             "asset":self.asset,"clearance":self.clearance,"yaw":self.yaw,
-            "modelOriginZOffset":self.model_origin_z_offset,"verification":self.verification}
+            "modelOriginZOffset":self.model_origin_z_offset,"verification":self.verification,
+            "floorOpening":self.opening_region.json() if self.opening_region else None}
 
 
 @dataclass
@@ -224,11 +226,13 @@ class BuildingResult:
     screenshots: list[dict[str,Any]]=field(default_factory=list)
     reproducibility: dict[str,Any]=field(default_factory=dict)
     artifact_path: str|None=None
+    structural_plan: dict[str,Any]|None=None
+    shell_validation: dict[str,Any]=field(default_factory=dict)
 
     def json(self)->dict[str,Any]:
-        return {"schemaVersion":1,"generationId":self.generation_id,"status":self.status.value,"request":self.request,
+        return {"schemaVersion":2,"generationId":self.generation_id,"status":self.status.value,"request":self.request,
             "buildingBrief":self.building_brief,"buildingPlan":self.building_plan,"buildingLayout":self.building_layout,
             "roomGenerations":self.room_generations,"shellOperations":self.shell_operations,"diagnostics":self.diagnostics,
             "buildingBudgetReport":self.budget,"metrics":self.metrics,"ownership":self.ownership,
             "transaction":self.transaction,"screenshots":self.screenshots,"reproducibility":self.reproducibility,
-            "artifactPath":self.artifact_path}
+            "artifactPath":self.artifact_path,"structuralPlan":self.structural_plan,"shellValidation":self.shell_validation}

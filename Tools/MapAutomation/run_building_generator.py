@@ -33,7 +33,7 @@ def main()->None:
     parser.add_argument("--max-layout-candidates",type=int,default=4);parser.add_argument("--max-partition-attempts",type=int,default=4)
     parser.add_argument("--time-budget-ms",type=int,default=1000);parser.add_argument("--timeout",type=float,default=45)
     parser.add_argument("--model",default=os.getenv("RELICTA_PLANNER_MODEL","gpt-5.6-luna"));parser.add_argument("--no-cache",action="store_true")
-    parser.add_argument("--interactive",action="store_true",help="keep a successful live building until Enter, then clean it up")
+    parser.add_argument("--interactive",action="store_true",help="pause at review stages; retain the building unless DELETE is explicitly entered")
     parser.add_argument("--keep",action="store_true");parser.add_argument("--cleanup-generation",type=Path)
     args=parser.parse_args();mode="live" if args.live else "plan-only" if args.plan_only else "layout-only" if args.layout_only else "dry-run"
     gateway=MapAutomationRoomGateway(args.timeout) if mode=="live" or args.cleanup_generation else None
@@ -48,14 +48,18 @@ def main()->None:
         key=os.getenv("OPENAI_API_KEY","")
         if not key:parser.exit(2,"BUILDING_PLANNER_FAILED: OPENAI_API_KEY is not set; use --brief for replay.\n")
         planner_service=BuildingPlannerService(OpenAIResponsesProvider(key,args.model),model=args.model,timeout=args.timeout,cache_enabled=not args.no_cache)
-    generator=BuildingGenerator(planner_service=planner_service,gateway=gateway)
+    if args.interactive and not args.live:parser.error('--interactive requires --live')
+    def review(stage,result):
+        input(f'{stage}: generation {result.generation_id} is kept in Eden. Enter to continue review...')
+    generator=BuildingGenerator(planner_service=planner_service,gateway=gateway,review_callback=review if args.interactive else None)
     options=BuildingOptions(mode,args.seed,args.shell_only,True,args.keep or args.interactive,args.max_layout_candidates,
         args.max_partition_attempts,args.time_budget_ms)
     result=generator.generate(args.prompt or "replay saved worker dormitory brief",
         BuildingFootprint(tuple(args.origin),args.width,args.depth,args.max_floors),options,building_brief=brief)
     print(json.dumps(result.json(),ensure_ascii=False,indent=2))
     if args.interactive and result.status==BuildingStatus.SUCCESS:
-        input("Building is visible in AI_AutomationProbe. Press Enter to clean up...");generator.cleanup(result);generator._save(result)
+        if not args.keep and input('Type DELETE to clean up this generation, or Enter to keep it: ').strip()=='DELETE':
+            generator.cleanup(result);generator._save(result)
     if result.status not in {BuildingStatus.SUCCESS,BuildingStatus.INFEASIBLE}:raise SystemExit(1)
 
 

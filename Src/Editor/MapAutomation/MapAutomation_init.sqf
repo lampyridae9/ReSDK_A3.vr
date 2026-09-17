@@ -20,7 +20,9 @@ init_function(ma_initialize)
         "SingleWhiteBed","SmallWoodenTable","WoodenChair","SteelGreenCabinet","LampCeiling",
         "SteelRustyStairs","StoneBigLadderDouble","BrickThinWall","BrickThinWallSmall",
         "BrickThinWallWindow","BrickThinWallWindow2","BrickThinWallWindow3",
-        "SteelThinWallSmall","SteelThinWallMedium","MediumWoodenWall"
+        "SteelThinWallSmall","SteelThinWallMedium","MediumWoodenWall",
+        "MediumConcreteFloor","MediumConcreteFloor1",
+        "BrickThinWallDoorwayCenter","BrickThinWallDoorwayBig","Wicket","ConcreteSmallPole"
     ];
     ma_busy = false;
     ma_engineErrors = [];
